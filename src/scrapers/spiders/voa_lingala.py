@@ -1,14 +1,13 @@
 import scrapy
-import lxml.html
-from scrapy.spiders import CrawlSpider, Rule
+from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 from src.scrapers.items import WebsiteItem
-from pathlib import Path
+from src.scrapers.spiders.base import BaseSpider
 from scrapy.selector import Selector
 
 
 
-class LingalaSiteScraper(CrawlSpider):
+class VoaLingalaScraper(BaseSpider):
     name = 'voa_lingala'
     allowed_domains = ['voalingala.com']
     start_urls = ['https://www.voalingala.com/']
@@ -34,18 +33,3 @@ class LingalaSiteScraper(CrawlSpider):
         with open(filename, 'w') as f:
             f.write(f"{website_item['summary']} \n {website_item['text_content']}")
         self.log(f'Saved file {filename}')
-
-    def create_filename(self, title):
-        base_folder = Path.cwd().parent.joinpath("data", 'raw', "lingala_articles", self.name)
-        base_folder.mkdir(mode=0o777, parents=True, exist_ok=True)
-        filename = base_folder.joinpath(title)
-        return filename
-
-    def get_text_from_html(self, html_content):
-        """
-        given a html content passed in parameter return the corresponding content
-
-        Args:
-            html_content ([type]): [description]
-        """
-        return lxml.html.fromstring(html_content).text_content().strip()
