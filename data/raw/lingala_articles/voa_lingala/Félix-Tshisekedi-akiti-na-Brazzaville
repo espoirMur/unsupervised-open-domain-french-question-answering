@@ -1,0 +1,236 @@
+Mokonzi ya sika ya RDC akiti na libanda ya pepo ya Mayaya, na Brazzaville, esika wapi ayambami na moninga wa ye ya Congo-Brazzaville, Denis Sassou Nguesso. 
+ Félix Tshisekedi ayambami mpe bituluku ya bato.
+Atamboli koleka 300 mètres mpe apesi mbote na ba ye bayaki koyamba ye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Feric.kabamba.5095%2Fvideos%2F114474983004557%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+
+Nsima, akoti na motuka ye na Denis Sassou Nguesso mpe bakeyi na Palais du peuple mpo na masolo.
+Na mpokwa nde bazwami na limpati monene.
+Lobi vendredi nde liyebisi ezali kozelema mpo na masolo maye ya Brazzaville.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Martin Fayulu amemi makambo na Cour africaine des droits l’homme
+
+
+
+
+
+
+Nzokande président Félix Tshisekedi awuti Nairobi, na Kenya epayi wapi azalaki banda lobi moleki.
+Akutanaki kuta na moninga wa ye, mokonzi ya ekolo Kenya, Uhuru Kenyatta oyo alaki kopesa RDC maboko mpo kokende liboso.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Félix Tshisekedi asololi na Uhuru Kenyatta mpe Raïla Odinga na Nairobi
+
+
+
+
+
+
+Uhuru Kenyatta alobaki lobi ete expérience ya mboka na ye ekosunga RDC na botongi démocratie.
+Kasi Félix Tshisekedi akutanaki mpe na mokambi ya opposition ya Kenya, Raïla Odinga oyo alobi mpe te mboka na ye ekosunga mpo na coopération économique mpe ba infrastructures.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCongolesebusinessevent%2Fvideos%2F367068980785898%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+Yambo na Kenya, Félix Tshiskedi abandaki mobembo wa ye wa yambo na Angola, o’mokolo mwa lundi moleki. Asalolaki na mokambi ya Angola Joao Lourenço mpo na bondeko mpe coopération économique.

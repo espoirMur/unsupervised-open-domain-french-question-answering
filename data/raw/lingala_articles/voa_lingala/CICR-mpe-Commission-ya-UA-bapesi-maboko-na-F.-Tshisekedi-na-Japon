@@ -1,0 +1,155 @@
+Présidence Félix Tshisekedi akutani na mokambi ya misala ya molongo ya Croix rouge mpe na mokambi ya Commission ya Union africaine, na masolo ya pembeni ya TICAD (bokutani ya sambo ya molongo mpo na ntobwa ya Afrika na Yokohama, na Japon). 
+ Peter Maurer mokambi ya CICR (Comité international ya Croix rouge) alobi nsima ya masolo na ye Félix Tshisekedi ete mosala na ye mokopesa maboko ya Congo démocratique mpo na kobunisa bokono ya Ebola.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;A useful meeting with DR Congo President Tshisekedi at \u0026lt;a href=\"https://twitter.com/hashtag/TICAD7?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TICAD7\u0026lt;/a\u0026gt;. We spoke on the humanitarian needs of internally displaced people and the situation of detainees. We also appreciated the dedication of DRC Red Cross volunteers in fighting the deadly \u0026lt;a href=\"https://twitter.com/hashtag/Ebola?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Ebola\u0026lt;/a\u0026gt; outbreak. \u0026lt;a href=\"https://t.co/BcQzMwVEsh\"\u0026gt;pic.twitter.com/BcQzMwVEsh\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Peter Maurer (@PMaurerICRC) \u0026lt;a href=\"https://twitter.com/PMaurerICRC/status/1166980582150201344?ref_src=twsrc%5Etfw\"\u0026gt;August 29, 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Tosololi mpo na bosenga na bato baye bakima bitumba mpe mpo oyo etali bakengemi. Tolibeli mpe lolenge basali (volontaires) ya Croix rouge ya RDC bamipesa na bitumba na bokomo bobe ya Ebola," ekomi Peter Maurer, na compte Twitter na ye.
+Ebola ebomi koleka bato 1.990 na na koleka mobu moko na monyele ya mboka Congo démocratique.
+Nzokande mokambi ya Commission ya Union africaine, Moussa Faki Mahamat ye mpe asololaki na Félix Tshisekedi.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;J%27ai eu l%27occasion, en marge des travaux de la \u0026lt;a href=\"https://twitter.com/hashtag/TICAD7?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TICAD7\u0026lt;/a\u0026gt;, de féliciter le Présidént Félix Tshisekedi \u0026lt;a href=\"https://twitter.com/fatshi13?ref_src=twsrc%5Etfw\"\u0026gt;@fatshi13\u0026lt;/a\u0026gt; pour la formation de son gouvernement et réitérer la disponibilité de la Commission de l%27Union africaine à travailler avec lui. \u0026lt;a href=\"https://t.co/lGVqp5VSC8\"\u0026gt;pic.twitter.com/lGVqp5VSC8\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Moussa Faki Mahamat (@AUC_MoussaFaki) \u0026lt;a href=\"https://twitter.com/AUC_MoussaFaki/status/1167027191252545541?ref_src=twsrc%5Etfw\"\u0026gt;August 29, 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Nazwi libaku ya kokutana na président Félix Tshsiekedi mpo kopesa ye longonya nsima na botiyami ya mbulamatari mpe mpo na kolaka ye ete Commission ya Union africaine ekozala wana mpo na kosala elongo na ye," akomi na compte Twitter na ye.
+Félix Tshisekedi azali na Tokyo na Japon banda mikolo misatu.

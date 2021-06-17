@@ -1,0 +1,78 @@
+President Felix Tshisekedi akutani na Mgr Fridolin Ambongo, episkopo ya lokumu ya archdiocese ya Kinshasa na cite ya Union africaine. 
+ Nsima na bokutani liye, Mgr Ambongo alobi ete ayaki komona mokonzi ya ekolo mpo na masolo na ntina ya boluki nenge nini ya kotambolo elongo ya ye mpe komema liboso lolenge na ye ya komona mpo na bolamu ya bana mboka, eyebisi post ya Twitter moko ya presidence ya RDC.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;Mgr. Fridolin Ambongo, Archevêque de Kinshasa, après sa première rencontre avec le Chef de l’Etat Félix-Antoine Tshisekedi : «Je suis venu le rencontrer pour échanger et voir comment l’accompagner et faire avancer sa vision pour le bien-être du peuple» \u0026lt;a href=\"https://t.co/l4FxDc6o8a\"\u0026gt;pic.twitter.com/l4FxDc6o8a\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1121793576688422913?ref_src=twsrc%5Etfw\"\u0026gt;26 April 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+O’mokolo ya mposo, president Tshisekedi asololaki na episkopo ya lokumu ya Kinshasa, Laurent Monsengwo.

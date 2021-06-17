@@ -1,0 +1,98 @@
+Président Félix Tshisekedi asengi, na mobembo na ye na Windhoek, na Namibie, ete SADC (lingomba ya ntombwa ya bikolo ya Afrique australe) kosunga RDC mpo na kimya na yango. 
+ Mokambi ya sika ya RDC na mokokani wa ye ya Nambie, Hage Geingob, basololaki na bapanzi sango nsima ya masolo kati na bango mibale na engumba mokonzi ya Namibie.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Media Briefing of DRC President, H.E Felix Tshisekedi Tshilombo Official visit to Namibia \u0026lt;a href=\"https://t.co/29g4PG8MtZ\"\u0026gt;https://t.co/29g4PG8MtZ\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Presidency | Republic of Namibia (@NamPresidency) \u0026lt;a href=\"https://twitter.com/NamPresidency/status/1100400952790667265?ref_src=twsrc%5Etfw\"\u0026gt;26 February 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+"Mpo na kolobela développement, esengeli yambo kolobela kimya. Boyebi ete mboka na ngayi, RDC, ezali na mobulu mpo na ba groupes armés. Babomaka batu, babotolaka biloko, mpe basala mombongo epekisami ya ba matières précieuses na biso. Na lolenge wana, ezali mpasi ko développer mboka. Yango wana toyei kosenga lisungi ya bandeko na biso ya SADC na nzela ya président Hage Geingob mpo na kosilisa mobulu ya lolenge nyonso na mboka na biso mpe komema kimya," elobi M. Tshisekedi Bempeni ya mokonzi Geingob.
+"Tozali kosepela mpo tozuwaki lisungi mbangu mepza epayi ya président Hage Geingob mpe ya SADC. Sik’oyo, but (mongete) na biso ezali tobatela équilibre liye lizali naino makasi te mpe komema yango kowumela mpo ete soki lobi na suka ya mandat na ngayi bana ya mboka na biso bakani kopona moto mosusu, tosala passation mosusu ya bokonzi na kimya," elimbolia M. Tshisekedi.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Tshisekedi alobi boyokani na Kabila ezali mpo na kosala gouvernement
+
+
+
+
+
+
+Mokonzi Tshisekdi akomaki mardi na Windhoek mpo mobembo na ye.

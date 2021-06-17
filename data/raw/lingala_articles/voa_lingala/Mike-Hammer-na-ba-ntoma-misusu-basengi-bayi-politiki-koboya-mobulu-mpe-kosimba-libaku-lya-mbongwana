@@ -1,0 +1,158 @@
+Ntoma ya Amerkia na Kinshasa, Mike Hammer, abwaki mbela ya kimya na bayi polilitiki mpe bana ya RDC na matata mazali na mboka. Atie manzaka na mokanda ya mbela elongo na ba ntoma ya Canada, Royaume-Uni, Suisse, Corée ya Sud mpe Japon. 
+ "Etats-Unis ezali kopesa maboko na makasi masalami mpo na kokoma na makambo Congo elingi mpe (USA) esengi bato banso bazali na makambo maye kozwa libaku liye mpe komipekisa mobulu," ekomi na Twitter M. Hammer.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Voir le tweet de mon ami \u0026lt;a href=\"https://twitter.com/USAmbDRC?ref_src=twsrc%5Etfw\"\u0026gt;@USAmbDRC\u0026lt;/a\u0026gt; et le communiqué de \u0026lt;a href=\"https://twitter.com/USEmbKinshasa?ref_src=twsrc%5Etfw\"\u0026gt;@USEmbKinshasa\u0026lt;/a\u0026gt; et de cinq autres ambassades à Kinshasa. Les États-Unis 🇺🇸 continuent de soutenir les habitants de la \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; 🇨🇩 et leur volonté de démocratie et de bonne gouvernance. \u0026lt;a href=\"https://t.co/9ilQPWlxnp\"\u0026gt;https://t.co/9ilQPWlxnp\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Dr. J. Peter Pham (@DrJPPham) \u0026lt;a href=\"https://twitter.com/DrJPPham/status/1336416614527479808?ref_src=twsrc%5Etfw\"\u0026gt;December 8, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"RDC ezali na libaku ya kosala malamu bobongolami makambu bosengeli, yango ekomema mbongwana eye bana mboka Congo balingi," ebakisi M. Hammer.
+Wuto mikolo mibale, bitumba bizali kongala na Assemblée nationale kati na bayi ngambo ya président Tshisekedi na bayi ngambo ya mokonzi ya kala Joseph Kabila, na likambo litali mokanda ya kosenga bolongwi Bureau ya Assemblée nationale bakeli mibeko bayike batie manzaka.
+Nsima na bitumba ya mardi, bakeli mibeko 279 bakota na likita libengisamaki na kalaka mokonzi ya Assemblée nationale.
+Ministre ya Fonction publique apesaki kalaka mokonzi eye etumbu na kopemisaka ye na mosala mpo na mbeba eye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La RDC a l’occasion historique d mener à bien l réformes nécessaires qui apporteront le changement q l Congolais souhaitent. L États-Unis 🇺🇸appuient l efforts visant à atteindre cet objectif et appellent tous les acteurs à saisir cette opportunité \u0026amp; d s%27abstenir d toute violence \u0026lt;a href=\"https://t.co/S1K70RGFvO\"\u0026gt;https://t.co/S1K70RGFvO\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Mike “Nzita” Hammer (@USAmbDRC) \u0026lt;a href=\"https://twitter.com/USAmbDRC/status/1336405146545303552?ref_src=twsrc%5Etfw\"\u0026gt;December 8, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Kasi bakeli mibeko bazali na likita lyango batie Bureau ya mwa ntango na esika mpe yango ebengisi bokutani o’mokolo mwa jeudi mpo Bureau ya Jeanine Mabunda motambwisi ya Assemblée na basungi baye bayeba na koya kopesa biyano na bango.
+Peter Phan, molakisi ya elongi ya kala ya Amerika na Grands lacs ye mpe apesi maboko na ntoma Hammer.
+"Etats-Unis ezali kokoba kopesa maboko na bana bans oba RDC mpe bolingo na démocratie mpe bokambi bolamu," ekomi Peter Pham na Twitter na ye.
+Elongo na bantoma ba Canada, Corée ya Sud, Japon, Royaume-Uni mpe Suisse, M. Hammer atie manzaka na mbela ebwaki na ba Congolais

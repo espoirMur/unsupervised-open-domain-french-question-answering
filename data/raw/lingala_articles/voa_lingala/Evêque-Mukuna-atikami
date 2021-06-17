@@ -1,0 +1,158 @@
+Tribunal ya grande instance ya Kinshasa/Gombe etiki Evêque Pascal Mukunal nsima na bosambisami ya bozongeli bwa ye na kofundama na kozwa na makasi mwasi wa nkondo mosungi wa ye Nkatshi, Mamie Tshibola. 
+ Sango yango epesami na mokambi molandi ya lingomba "Eveil patriotique" mpe motambwisi ya ASADHO (Association africaine pour la défense des droits de l’homme), Me Jean-Claude Katende.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: Enfin, l%27évêque Mukuna est acquitté et sort bientôt de la prison. La justice a rétabli la vérité.\u0026lt;/p\u0026gt;— Jean Claude Katende (@JeanClaudekat2) \u0026lt;a href=\"https://twitter.com/JeanClaudekat2/status/1297944126982324225?ref_src=twsrc%5Etfw\"\u0026gt;August 24, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Suka suka évêque Mukana atikami mpe akobima kala te na boloko. Misala mya bosembo mizongisi bosolo," ekomi M. Katende na Twitter.
+Me KAtende alobi te mokolo M. Mukuna akobima kasi ekoki kozala mardi 25 août 2020, kolanda basambeli ba ye.
+Bilili mpe bililingi bya bosangani bwa bango bipanzanaki na ba réseauz sociaux mpe bimemaki nungu nungu.
+Evêque Mukuna afundamaki mpe na kokanga mikanda mya ndako mya nkondo Nkatshi mpe kobangisa Mme Tshibola na munduki.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: La libération de l%27évêque Mukuna n%27est pas une victoire de l%27éveil patriotique sur ceux qui n%27avaient pas compris le sens de son combat,c%27est une victoire qui appartient à tous ceux qui veulent que le Congo avance. La joie qui sort de partout au Congo est un signe positif.\u0026lt;/p\u0026gt;— Jean Claude Katende (@JeanClaudekat2) \u0026lt;a href=\"https://twitter.com/JeanClaudekat2/status/1297960060505784321?ref_src=twsrc%5Etfw\"\u0026gt;August 24, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Bobimisami bwa episkopo Mukuna bozali elonga ya 'éveil patriotique' te likolo na baye basosolaki te ntina ya bitumba na ye, ezali elonga ya baye banso balingi ete Congo ekende liboso. Esengo ewuti bisika binso na Congo ezali elombo elamu," ebakisi Me Katende.
+Evêque Mukuna aboyaki bazuzi bazalaki kosambisa ye na Tribunal ya grande instance ya Kinshasa/Kalamu mpe afundaki mokambi ya tribunal eye kolukela ye makambo.
+Makambo mango matindamaki na TGI Kinshasa/Gombe.
+Mposo moleki, Mme Mamie Tshibola akangamaki mpe atindamaki na bokolo ya Makala/CPRK mpo na kopanza ba photos/bilili ya bosambisami boye bozalaki ya huis clos.

@@ -1,0 +1,98 @@
+Bakonzi ya bikolo mpe bakambi ya ba gouvernements ya Union africaine babengami o’mokolo ya minei na bokutani ya "likolo" mpo na makambo ya RDC, elakisi liyebisi ya misala ya Afrika maye. 
+ "Président ya Rwanda mpe président en exercice ya l'Union africaine (UA), nkumu Paul Kagame azali na makanisi ya kobengisa bokutani ya masolo ya likolo bakonzi ya bikolo mpe ba bakambi ya ba gouvernements mpo na makambo ya République démocratique du Congo," elobi mokanda liye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;On the margins of \u0026lt;a href=\"https://twitter.com/hashtag/ADSW?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#ADSW\u0026lt;/a\u0026gt; I consulted President Lourenço of Angola on the \u0026lt;a href=\"https://twitter.com/hashtag/DRC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#DRC\u0026lt;/a\u0026gt; situation, which SADC has been following with great interest. A Double Troika will jointly convene, preceding a consultative meeting with the African Union on the same issue, on 17 Jan 2019, Addis Ababa.\u0026lt;/p\u0026gt;— Hage G. Geingob (@hagegeingob) \u0026lt;a href=\"https://twitter.com/hagegeingob/status/1085137360000561153?ref_src=twsrc%5Etfw\"\u0026gt;15 January 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Bokutani liye ekolanda masolo ya kati ya SADC, eyebisi liyebisi.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Ba juges ya Cour constitutionnelle bakoti "kinzonzi" mpo na bosengi ya Fayulu
+
+
+
+
+
+
+RDC ezali na nkwkoso na nsima ya maponami.
+Cour constitutionnelle ezali kotala bosengi ya candidat Martin Fayulu oyo aboyi ba résultats ya CENI maye masakoli Félix Tshisekedi molongi ya présidentielle na 38,57%.

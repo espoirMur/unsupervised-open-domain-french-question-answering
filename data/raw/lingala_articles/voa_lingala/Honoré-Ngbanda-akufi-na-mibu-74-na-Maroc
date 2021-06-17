@@ -1,0 +1,84 @@
+Honoré Ngbanda Nzambo Ko Atumba, mokambi ya misala mya bokengi ya kala ya RDC ntango ya Zaïre mpe Comsieller spécial mpo ya bokengi ya nkondo Mobutu Sese Seko, mokonzi ya kala, akufi o’mokolo mwa eyenga na Agadir na Maroc. 
+ M. Ngbanda akufi na COVID-19, kolanda lopitalo epayi wapi liwa likutani na ye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La famille NGBANDA à l’immense tristesse de vous annoncer le départ auprès du Seigneur du mari, père, frère et grand-père, Honoré NGBANDA NZAMBO KO ATUMBA, survenu ce matin du 21 mars 2021. \u0026lt;a href=\"https://t.co/WqafL5yI23\"\u0026gt;pic.twitter.com/WqafL5yI23\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Candide OKEKE (@CandideOkeke) \u0026lt;a href=\"https://twitter.com/CandideOkeke/status/1373647687191498759?ref_src=twsrc%5Etfw\"\u0026gt;March 21, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Libota lya Ngbanda lizali na mpasi enene ya kosakola bokeyi epayi ya Nkolo, ya mobali, ndeko mpe nkoko na yango Honoré Ngbanda Nzambo Ko Atumba, na ntongo ya lelo le 21 mars 2021," eyebisi libota lya ye na liyebisi.
+M. Ngbanda zalaki na mibu 74.
+Azalaki kokamba APARECO (Alliance des patriotes résistants congolais) lingomba lya botelemi akelaki mwa mibu nsima na bokweyisami ya bokonzi ya M. Mobutu na 1998.
+Bokweyisami ya Mobutu bokutaki ya Togo epayi wapi azalaki koluka lisungi na bitumba ya AFDL limemaki Laurent-Désiré Kabila na bokonzi na lisunga ya Rwanda, Ouganda mpe Burundi.
+M. Ngbanda akambi misala mya bokengi mya mboka na ntango ya M. Mobutu, CND/DDE (Centre national de documentation/Déperatmenet de la documentation extérieure) na 1975.
+Na 1979. Akomaki mokambi molandi y aya misala myango na nkombo ya sika SNI (Service national d’Intelligence) nsima mbongwana na yango mpe nsima na kozala ntoma ya Zaïre na Bruxelles.
+Azongaki lisusu bomakambi ya misala mya bokengi ntango ezongaki na nkombo ya AND na 1985.
+Akomaki mwa ba buku nsima na bokweyisami ya M. Mobutu mpe akobaki kotelemela bitumba bya Rwanda na RDC.

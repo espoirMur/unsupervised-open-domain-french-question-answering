@@ -1,0 +1,82 @@
+Bakonzi baike na Etats-Unis bazali kozela bana Ekolo démocratique bapona moto andimama mpe ya nsomi na bokambi na CENI (Commission nationale électorale indépendante). 
+ Sénateur républicain Jim Risch ya U.S. Senate Foreign Relations Committee alobi yango nsima na ambassadeur Michael Hammer kosolola na cardinal Ambongo na Jean-Pierre Bemba.
+"Mbongwana na misala mya maponami mpe bitumba na kanianka ezali likonzi ya bobongolami na démocratie kati na RDC ya nsima ya Kabila. Nazali na esengo ya komona bobandi na yango nyonso. Kopona mokambi ya nsomi mpe andimama na banso na CENI ekozala momekano mokoya, ya litomba makasi,” ekomi na compte Twitter na ye Sénateur républicain Jim Risch ya Commission ya mboka bapaya ya Sénat ya Etats-Unis.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Electoral reform \u0026amp; fighting corruption are the bedrock of \u0026lt;a href=\"https://twitter.com/hashtag/democratic?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#democratic\u0026lt;/a\u0026gt; transformation in a post-\u0026lt;a href=\"https://twitter.com/hashtag/Kabila?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Kabila\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/DRC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#DRC\u0026lt;/a\u0026gt;. I%27m pleased to see momentum begin on both fronts. Choosing an independent \u0026amp; credible \u0026lt;a href=\"https://twitter.com/cenirdc?ref_src=twsrc%5Etfw\"\u0026gt;@cenirdc\u0026lt;/a\u0026gt; president is the next crucial test for the country%27s reform. \u0026lt;a href=\"https://t.co/ZuuggEQIRL\"\u0026gt;https://t.co/ZuuggEQIRL\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S. Senate Foreign Relations Committee (@SenateForeign) \u0026lt;a href=\"https://twitter.com/SenateForeign/status/1272557505881792518?ref_src=twsrc%5Etfw\"\u0026gt;June 15, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Sénateur Risch akomi yango ntango bakambi biyamba bazali kosolola mpo na kopona moto ya sika akozwa ebonga ya Corneille Nangaa na botambwisi CENI.
+Bakambi ba biyamba baykani nanu te.
+Vendredi, ambassadeur américain Michael Hammer akutani na cardinal Fridolin Ambongo.
+Masolo kitoko na tata Cardinal Ambongo. Tosololi likambo ya bitumba na COVID-19, bozangi bokengi na monyele ya RDC mpe bosenga ya instutitions démocratiques, kati na yango boponami bwa mokambi ya CENI ya nsomi mpe ayebisi mosala malamu, akomi mpe na Twitter ambassadeur Hammer.
+Ambassadeur ya Etats-Unis akutani mpe na Jean-Pierre Bemba moko na bakambi ba lingomba Lamuka eye eboyi, lokola ba espikopo ya katoliko mpe ya protestant, ete baye basalaki na M. Nangaa bazonga lisusu na bokambi bwa CENI, lokola nungu nungu ya kaniaka elobamaki mingi mpo na bango.

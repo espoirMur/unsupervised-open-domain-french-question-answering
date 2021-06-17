@@ -1,0 +1,80 @@
+Président Donald alobi Etats-Unis ezali na esengo ya kopesa maboko na makasi ya Félix Tshisekedi mpo na kobongisa mboka. Mokonzi ya Amerika atindeli mokambi RDC mokanda mpo na mibu 60 lipanda ya mboka eye le 30 juin. 
+ "Ntango eye 2020, mobu olobaki ezali mwa mosala, mozali kokoba ata mikakatano mya bokono bopanzani na molongo mobimba mpe bozongi na Ebola, Etats-Unis esepeli na kopesa maboko na makasi ma yo malukaka kobatela makoki ma bomoto, bitumba na kaniaka, mpe bokambi malamu, bonsomi bwa kosombitinya (libre marché), bokengi, bokolongono, ntombwa mpe kelasi," ekomi M. Tump.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;J%27ai présenté au Président Tshisekedi une lettre du Président Trump pour le féliciter ainsi que le peuple congolais à l%27occasion du 60e anniversaire de l%27indépendance. 🇺🇸 se réjouissent d’appuyer ses efforts visant «à lutter contre l corruption \u0026amp; à promouvoir l bonne gouvernance» \u0026lt;a href=\"https://t.co/irfqRcJ9hk\"\u0026gt;pic.twitter.com/irfqRcJ9hk\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Mike Hammer #PortezUnMasque (@USAmbDRC) \u0026lt;a href=\"https://twitter.com/USAmbDRC/status/1277206361173000193?ref_src=twsrc%5Etfw\"\u0026gt;June 28, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+"Nazali na elikya ete makasi mango makomema mbongwana bana ya Congo bazali kozela mpe makofungola nzela na mabaku malamu mpe lobi elamu eye Ekolo Congo démocratique esengeli na yango," ebakisi M. Trump.
+Ambassadeur ya USA na Kinshasa, Michael Hammer, "Nzita", lokola amibengaka, amemelaki mokanda yango dimanche na président Tshisekedi.
+Na mokanda mwango, M. Trump akundoli ete RDC ezali mboka ya lintomba mingi mpe Afrika ya kati mobimba ekozwa mingi na makasi mazali kosalama na ekolo eye na ntina ya kokolisa kimya mpe mabaku malamu mpo na nkita.

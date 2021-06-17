@@ -1,0 +1,81 @@
+Misala mya bosembo ya mampimnga (Cour militaire opérationelle) mikateli etumbu ya boloko ya libela na Ntabo Ntaberi to Sheka, mokambi ya NDC (Nduma Defense Congo) mpe mibu 15 na batomboki ba ye basusu babale. Bosambisami bwa bango bowumeli mibu mibale. 
+ "Cour militaire opérationnelle ewuti kokatela Ntabo Ntaberi alias Sheka elongo na basusu etumbu ya boloko ebandi na mibu 15 kino ya libela mpo na mbeba ya bomoto mpe mbeba ya bitumba." ekomi misala mya makoki ma bomoto na Nations unies (UNJHRO).
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La Cour militaire opérationnelle vient de condamner Ntabo Ntaberi alias Sheka et consorts à des peines allant de 15 ans de prison à la perpétuité pour crimes contre l’humanité et crime de guerre entre autres par meurtres, viols, pillages et recrutement d’enfants. 1/7 \u0026lt;a href=\"https://twitter.com/mbachelet?ref_src=twsrc%5Etfw\"\u0026gt;@mbachelet\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— UN Human Rights DRC (@unjhro) \u0026lt;a href=\"https://twitter.com/unjhro/status/1330924163297648648?ref_src=twsrc%5Etfw\"\u0026gt;November 23, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Na mbeba ya bomoto mpe ya bitumba ya Sheka mpe babundi baye etangami na koboma, kozwa basi na makasi mpe kokotisa ban ana mangomba ya basimba minduki,
+Misala mya makoki ma bomoto mya ONU milobi ete mikokoba kolandela mpe kolukaluka likolo lya mbeba ekasi ya sembo ya molongo ya makoki mabomoto mpe sembo ya molongo ya lisungi ya RDC (droit international des droits de l’homme et du droit international humanitaire en RDC).
+Misala mya molongo mwa makoki ma bomoto ma ONU milaki kopesa maboko na bakambi ba RDC na ntina ya kotia na misala bokelami bwa sembo etali mbeba ya makasi (justice transitionnelle).
+NDC elobaka ebundisaka FDLR. "Kati na le 30 juillet na le 2 août 2010, bitumba basalaki na mboka 13 bibomaki bato 287, mpe bato basusu 380, basi mibale mpe bana bazwamaki na makasi. NDC ezwaki mpe bana 154 lokola babundi na yangi," elobaki liyebi lya ONU.
+“Sheka” amizongisaki na na MONUSCO na juillet 2017.

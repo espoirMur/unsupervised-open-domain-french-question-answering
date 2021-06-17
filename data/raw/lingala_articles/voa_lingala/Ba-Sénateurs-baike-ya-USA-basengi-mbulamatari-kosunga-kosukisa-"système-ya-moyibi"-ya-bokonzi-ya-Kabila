@@ -1,0 +1,235 @@
+Ba Sénateurs libwa ya Etats-Unis basengi na mboka na mbango kopesa maboko mingi lisusu na mbongwana mpe bitumba président Félix Tshisekedi azali kosala na kaniaka. Mpo na bango, "esengeli kosukisa misala mya bokonzi ya kaniaka ya Kabila", mokonzi ya kala. 
+ Ba Sénateurs yango ya ngomba mibable (ba républicains mpe ba démocrates) bakomeli ministre ya Finaces (Secretary of the Treasury) Steven Mnuchin na ministre ya mambi ya bapaya (Secretary of State) Mike Popmpeo na ntina na yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;The administration has a historic opportunity to support \u0026lt;a href=\"https://twitter.com/hashtag/DRC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#DRC\u0026lt;/a\u0026gt; in reforming structural challenges like curbing high-level corruption \u0026amp; ending systematic violence against the \u0026lt;a href=\"https://twitter.com/hashtag/Congolese?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Congolese\u0026lt;/a\u0026gt; people. My bipartisan letter with @SenateMenendez \u0026amp; 7 others:\u0026lt;a href=\"https://t.co/OyX2cZGxPB\"\u0026gt;https://t.co/OyX2cZGxPB\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S. Senate Foreign Relations Committee (@SenateForeign) \u0026lt;a href=\"https://twitter.com/SenateForeign/status/1295474962795462660?ref_src=twsrc%5Etfw\"\u0026gt;August 17, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Mbulamatari (ya Etats-Unis) ezali na libaku lilamu ya kopesa maboko na RDC na mondenge ya mbongwana ya makasi lokola bitumba na kaniaka ya likolo mpe na moniokolo mosalamaka na bana ba Congo," elimboli Sénateur Jim Risch, républicain ya état ya Idaho na compte Twitter na ye, na moninga wa ye Bobo Menndez, sénateur démocrate ya New Jersey, elongo na basusu sambo ya Commission ya relations étrangères ya Sénat.
+"Etats-Unis ezali na libaku linene ya ... kosala elongo na basungi basusu mpo na kotonga ba institutions (misala mya mboka) mingi mpenza miye mibundisaka kaniaka mpe matongaka mboka ya mibeko," ekomi ba Sénateurs ya Amerika baye na mokanda batindeli bayi mbulamatari.
+Etats-Unis esi ekota na boyokani ya makasi mpo na ntombwa mpe kofulikisama (PP4PP) na RDC nsima na mobembo ya yambo Félix Tshisekedi asalaki na Washington ntango azwaki ebonga na ye na janvier 2019.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;«Nous apprécions l soutien bipartisan \u0026lt;a href=\"https://twitter.com/SenateForeign?ref_src=twsrc%5Etfw\"\u0026gt;@SenateForeign\u0026lt;/a\u0026gt; d partenariat avec Président Tshisekedi p un système de gouvernance réformé de la RDC qui donne la priorité au bien-être d tous l Congolais. \u0026lt;a href=\"https://twitter.com/USEmbKinshasa?ref_src=twsrc%5Etfw\"\u0026gt;@USEmbKinshasa\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt; se concentre sûr ces mêmes objectifs communs » \u0026lt;a href=\"https://twitter.com/AsstSecStateAF?ref_src=twsrc%5Etfw\"\u0026gt;@AsstSecStateAF\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/LMoNImDmFz\"\u0026gt;https://t.co/LMoNImDmFz\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S.Embassy Kinshasa (@USEmbKinshasa) \u0026lt;a href=\"https://twitter.com/USEmbKinshasa/status/1295728528470802435?ref_src=twsrc%5Etfw\"\u0026gt;August 18, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Sous secrétaire d’Etat ya Amerika mpo na Afrika, Tibor Nagy alobi na Twitter na ye "asepeli lolenge ngoma inso ya politiki ya Etats-Unis epesi maboko na boyokani na mbulamatari ya Tshisekedi mpo na mbongwana ya bokambi na Ekolo Congo demcoratique".
+Mpo na ba Sénateurs baye, "bokasi ya USA bosengeli bozala mingi na kobuka lingomba ya bokonzi na moyibi (système kleptocratique) ya président Kabila lokola bozwi ya bomengo ya monene ya bana Congo," kolanda mokanda bakomi.
+Président Tshisekedi, na ngambo na ye, asepeli ndenge ba Sénateurs ya Etats-Unis balingi kopesa ye maboko.
+"Tata mokonzi, Félix-Antoine Tshisekedi Tshilombo apesi losako na 'Committee on Forein Relations' ya Sénat eye epesi longanya na lolenge RDC ekeyi liboso na maye matali bonsomi, makoki ma bomoto, bokambi bolamu...," elakisi maloba ma présidence ya RDC na Twitter.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; 18.08.2020|\u0026lt;a href=\"https://twitter.com/hashtag/Kinshasa?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Kinshasa\u0026lt;/a\u0026gt; Le Chef de l’État, Félix-Antoine Tshisekedi Tshilombo salue la lettre du Committee on Foreign Relations(\u0026lt;a href=\"https://twitter.com/SenateForeign?ref_src=twsrc%5Etfw\"\u0026gt;@SenateForeign\u0026lt;/a\u0026gt; ) qui applaudit les avancées historiques en RDC dans des matières spécifiques de liberté, de droits de l’homme,de la bonne gouvernance,\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1295770808753717248?ref_src=twsrc%5Etfw\"\u0026gt;August 18, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Na kopesaka losako na bopesi maboko ya USA na nzela ya boyokani ya makasi mpo na kimya mpe bofulukisami, tata mokonzi alakisi lisusu mpiko na ye mpo na kobongisa makambo ya RDC na maye malobami," bekisi présidence ya RDC.
+"Soki tobundisi kaniaka te mpe mbano na yango likolo na nkwokoso ya bokambi, kobanda na bituma kino na maponami mpe makoki ma moto, ntango eye ya mokuse ya elikya ekoleka mpamba na nguya eye ememaki na ko kobebisa mboka na moyibi." ekebisi ba Sénateurs ba ye.
+Bakeli mibeko baye bayebisi mpe lisusu ete "soki mbulamatari ya Tshisekedi elakisi ete ekoki komema makombo liboso na kotelemelaka kaniaka mpe komema mbongwana mpo na kopesa eyano na bana ba Congo, ekolembisa système (Misala) ya moyibi eye ekangi mboka mpe etiki bana mboka mingi kobika na bobola mpe na bolembu ya monyokoli (bitumba)".
+Ba Sénateur baye balaki bango moko mpe kopesa maboko mpo na yango.

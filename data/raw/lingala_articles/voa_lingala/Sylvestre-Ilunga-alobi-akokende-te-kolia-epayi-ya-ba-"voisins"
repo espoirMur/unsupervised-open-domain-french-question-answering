@@ -1,0 +1,81 @@
+Sylvestre Ilunga Ilunkamba alobi akokende te kolia epayi ya "ba voisins" na bosukisi makomi abimisi nsima na kotika ebonga ya Ministre wa yambo. 
+ "Lokola moyembi moko ayebana alobaki, moloba maye : 'esengeli koyeba kolongwa na mesa ntango bilei bilongolami.' Kasi, nga nakolongwa te na mesa epayi biloko bilongwe mpo na kokende kolyia epayi ya bapaya nzinga nzinga (ba voisins)," ekomi M. Ilunga Ilunkamba.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Déclaration du Premier Ministre à la Presse ce 29 janvier 2021. \u0026lt;a href=\"https://t.co/bJVxHTEN4u\"\u0026gt;pic.twitter.com/bJVxHTEN4u\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— PrimatureRDC (@PrimatureRDC) \u0026lt;a href=\"https://twitter.com/PrimatureRDC/status/1355215865520779266?ref_src=twsrc%5Etfw\"\u0026gt;January 29, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Bolongwami bwa ye bosalami ntango baike ya FCC, lingomba lya mokonzi ya kala Joseph Kabila, eye ezalaki na bakeli mingi koleka (majorité), bakatisi ngambo ya Union sacrée, boyokani bwa sika mokonzi ya mboka Félix Tshisekedi azali kosala nsima na koboma libala kati na FCC na CACH.
+O’mwa minei, "Informateur" Modeste Bahati, oyo président Tshisekedi atiaki mpo na koluka majorité ya sika, asakolaki ete bakeli mibeko 397 bazali sika nsima na Union sacrée. Assemblée nationale ezalaka na bakeli mibeko 500. 
+Ministre wa yambo oyo alongwe, atikaki mokanda ya botiki mosala mwa ntango na mokonzi ya mboka Félix Tshisekedi nsima na kozwa mokanda ya Burea d’âge koyebisa ye mpo etalaki motion ya censure bakeli mibeko 367 bandimaki.
+Bondimi ya motion ya censure yango mosalamaki mardi. Bakeli mibeko 301 nde batiaki manzaka na motion yango.
+Na mokanda mwa ye, M. Ilunga apesi losako na mokonzi ya mboka Félix Tshisekedi nsima na kosalna na ye elongo sanza 25. Apesi mpe losako na mokonzi ya kala Joseph Kabila.

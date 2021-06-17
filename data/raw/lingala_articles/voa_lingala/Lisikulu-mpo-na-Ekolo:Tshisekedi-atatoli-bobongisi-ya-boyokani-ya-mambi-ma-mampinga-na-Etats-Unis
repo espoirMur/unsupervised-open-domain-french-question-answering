@@ -1,0 +1,178 @@
+Président Félixe Tshisekedi atatoli bozongi ya boyokani ya mambi ma mampinga na Etats-Unis. Alobi yango na lisikulu asali liboso lya Congrès lundi na Kinshasa. 
+ Liboso lya suku mibale ya Parlement (Assemblée nationale mpe Sénat), président Tshisekedi andimi ete mingi etikali ya kosala mpo na bokengi mpe bobateli ekolo.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvoalingala%2Fvideos%2F2703840239833686%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+Kasi apesi losaka na maye masi masalami na lisungi ya bikolo misusu.
+"Nakoloba ete na mobu moye 2020, mboka na biso ezongisi malamu boyokani mpo na maye matali mapinga na USA (boyokani yango) bomonisami na botieyi manzaka na mémorrandom (mokanda) ya boyokani," elobi Tshisekedi.
+Mbulamatari ya USA etiaki manzaka ba sanza eleki na bakonzi ba RDC mpo kozongela bondelo boye.
+Bayike ya ba officiers ya RDC bazali na Etats-Unis mpo na kolanda mateya, mingi mingi ya mambi matali makoki ma bomoto mpe misala ya kokamba.
+"USA ezali mosungi ya makasi ya RDC na bitumba na kaniaka, na bokono mpe botombolii kimya, lokola elobi mokonzi 'mboka na biso ewuti kobongisa bozongisi ya boyokani ya mampinga na USA '. Tozali nanu na misala ya kosala elongo na 2021 #PP4PP," ekomi na ngambo na yen toma ya Amerika Mike Hammer, na compte Twitter na ye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;USA est un partenaire solide d la RDC d l lutte contre la corruption, l maladie \u0026amp; l promotion d la paix, comme l%27a déclaré l président «notre pays vient de formaliser la reprise d la coopération militaire avec l USA» N avons encore d travail à faire ensemble en 2021 \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt; 🇺🇸🤝🇨🇩 \u0026lt;a href=\"https://t.co/vjsZ6oDI1M\"\u0026gt;pic.twitter.com/vjsZ6oDI1M\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Mike “Nzita” Hammer (@USAmbDRC) \u0026lt;a href=\"https://twitter.com/USAmbDRC/status/1338510398044205057?ref_src=twsrc%5Etfw\"\u0026gt;December 14, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Président Tshisekedi alobeli lisungi MONUSCO mpe bikolo bipesaka basoda na brigade ya intervention rapide FIB bazali kosala na monyele ya RDC.
+Mokonzi ya RDC asakoli bokelami ya eteyelo ya bitumba na RDC mobu mokoya, yango ewuti na boyokani na France, na ntina ya kobongisa mateya mpe kozongisa makoki ya ba officiers na makambo manso.
+M. Tshisekedi ayebisi mpe ete misala mya kotonga Académie ya Police mpe ya ministère ya Bobateli (Ministére de la Défense) na bopesi misolo mya Unon européenne, mikobanda na libandeli ly mobu 2021.

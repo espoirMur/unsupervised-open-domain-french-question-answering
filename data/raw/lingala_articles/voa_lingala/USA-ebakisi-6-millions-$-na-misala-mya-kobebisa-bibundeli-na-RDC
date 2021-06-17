@@ -1,0 +1,78 @@
+Etats-Unis ebakisi millioins motoba ya ba dollars na misala mya kobebisa bibundeli bibengami armes convetionnelles na Ekolo Congo démocratiques 
+ Ntoma ya Etats-Unis na Kinshasa, Mike Hammer alobi mboka na ye ezali na lipombo na kosunga RDC na nzela ya boyokani bosalama na mbulamatari ya président Félix Tshisekedi PP4PP.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Ds l cadre du \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt; avec l gouv d RDC, ns sommes fiers d’annoncer une contribution supplémentaire d $6M pr des projets d gestion d stocks d’armes en🇨🇩 afin d’endiguer l prolifération illicite d \u0026lt;a href=\"https://twitter.com/hashtag/SALW?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#SALW\u0026lt;/a\u0026gt; \u0026amp; renforcer la stabilité régionale. Lire tte l’annonce➡️\u0026lt;a href=\"https://t.co/fziKshADe1\"\u0026gt;https://t.co/fziKshADe1\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/GxcVuNwjlu\"\u0026gt;pic.twitter.com/GxcVuNwjlu\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S.Embassy Kinshasa (@USEmbKinshasa) \u0026lt;a href=\"https://twitter.com/USEmbKinshasa/status/1319244525911592961?ref_src=twsrc%5Etfw\"\u0026gt;October 22, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Amerika esunga na kobongisa bisika tuku mwambe na moko bya bobombi bibundeli, epesa mateya na bayi mombongo pene na nkama mibale mpe ebebisa tonnes nkoto yoko na nkama sambo ya masasi malekaka motango ya bosenga mpe bibundeli pene na 180.000," elobi ntoma Mike Hammer, kolanda liyebisi lya ambassade ya USA na Kinshasa.
+Wuto 2002, Etats-Unis esi epasa millions tuku misato na motoba na misala miye mya kobongisa bobateli mpe bosaleli na bokebi bibundeli mpe kobebisa bibundeli binso bizali na bosenga te.

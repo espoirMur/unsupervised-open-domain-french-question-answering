@@ -1,0 +1,158 @@
+Mokonzi ya Parquet ya Rutshuru, na Nord-Kivu, major Williams Mulanya akufi mardi na mpokwa na masasi ya basimba minduki na nzela ya Goma na Rutshuru-centre. 
+ "Nzoto ya mokonzi na biso etiami na ndaku ya malili. Akufaki nsima na kozwa masasi elongo na commandant ya 3409e régiment oyo amemami na lopitalo," elobi mosali moko ya parquet ya Rutshuru.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Le maj. William Assani, auditeur du parquet militaire détaché de Rutshuru, a été tué par balle hier soir à Katale (terr. de \u0026lt;a href=\"https://twitter.com/hashtag/Rutshuru?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Rutshuru\u0026lt;/a\u0026gt;, Nord \u0026lt;a href=\"https://twitter.com/hashtag/Kivu?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Kivu\u0026lt;/a\u0026gt;), sur la RN2. Le col. Lumbu, commandant du 3409e régiment, a été blessé dans le mm incident. Il y aurait 1 mort côté assaillants \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/hdpAChK3g3\"\u0026gt;pic.twitter.com/hdpAChK3g3\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Baromètre sécuritaire du Kivu (@KivuSecurity) \u0026lt;a href=\"https://twitter.com/KivuSecurity/status/1366988743048114176?ref_src=twsrc%5Etfw\"\u0026gt;March 3, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Basimba minduki babetaki masasi na molongo ya mituka na bango nsima na yango kokoma na Katale.
+Baromètre sécuritaire ya Kivu mpe endimi likambo lyango.
+Yango esalami kaka mposo moko nsima na liwa lya ntoma ya Italie Luca Attanasio na mobateli ya ekolo Italie, elongo na mokambi mutaka na bango ya RDC, le 22 février 2021 na Kibumba na 15 kms na Goma.
+Nzokande kaka na Nzinga nzinga, bakambi ba Parc ya national ya Virunga balobi ete bakufisi ba écogardes tuku mibale na mibale wuto mobu moko.
+Mokambi ya parc ya Virunga Emmanuel Demerode alobi basimba minduki basalaki bitumba koleka tuku minei na minei na ba civili na parc eye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"in\" dir=\"ltr\"\u0026gt;Ntoma ya Italie \u0026lt;a href=\"https://twitter.com/hashtag/LucaAttanasio?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#LucaAttanasio\u0026lt;/a\u0026gt; akufi na masasi na \u0026lt;a href=\"https://twitter.com/hashtag/Goma?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Goma\u0026lt;/a\u0026gt; mpe mbulamatari ya \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; elaki kokanga babomi \u0026lt;a href=\"https://twitter.com/hashtag/NtumbaNzeza?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#NtumbaNzeza\u0026lt;/a\u0026gt;\u0026lt;a href=\"https://t.co/EzC64qXK9r\"\u0026gt;https://t.co/EzC64qXK9r\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— VOA Lingala (@voalingala) \u0026lt;a href=\"https://twitter.com/voalingala/status/1363855190277951491?ref_src=twsrc%5Etfw\"\u0026gt;February 22, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Emmanuel Demerode akundoli ete ba écogardes bamekaki kobikisa notma Attasio kasi basimba minduki babomaki ntoma ya Italie, mobateli wa ye mpe mokumbi moutka na ye yambo ba écogardes bakoma mpe bakimaki.
+President Felix Tshisekedi azalaki na misa na Kinshasa mpo na kokanisa ntoma Attanasio na baye babomaki na ye elongo.
+Cardinal Fridolin Ambongo alobaki na mateya ma ye ete RDC ekomi benza na nse mpe esengeli manso masala mpo bobkengi bozonga.

@@ -1,0 +1,81 @@
+Mokonzi ya kala ya RDC Joseph Kabila azongi vendredi Kinshasa sanza minei nsima kozala mingi na etuka ya Haut-Katanga mpe mbala misusu libanda lyambo. 
+ "Mbula ya esengo enoki na Kinshasa; Nsima na pene na sanza minei na bozangi oyo bana ya Kinshasa babebangaka na bolingo Raïs, eza’ na nse ya manoko ya mapamboli nde J. Kabila akiti lisusu na mpepo na engumba mokozi," ekomi mosungi na ye ya sango Barbara Nzimbi na Twitter.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Il pleut de joie sur KINSHASA; Près de 4 mois sans celui que les Kinois appellent affectueusement RAÏS, C%27est sous cette pluie de bénédiction que J KABILA atterrit de nouveau dans la capitale.Pour rappel, c’est depuis le 11 décembre dernier, que J KABILA quittait KINSHASA.\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/cSresNw2mt\"\u0026gt;pic.twitter.com/cSresNw2mt\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— B A R B A R A - N Z I M B I (@BNzimbi) \u0026lt;a href=\"https://twitter.com/BNzimbi/status/1385506462047350786?ref_src=twsrc%5Etfw\"\u0026gt;April 23, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+M. Kabila allongwa Kinshasa le 11 décembre nsima na mokonzi ya sika Félix Tshisekedi kosakola ete akati boyokani ya bokambi mboka kati na CACH, lingomba lya ye, na FCC ya mokonzi ya kala.
+Baike ya lingomba mpe lisanga ya Kabila bakatisaki ngambo mpo na kokende na boyokani ya sika Union sacrée M. Tshisekedi akeli mpo na kokamba mboka.
+Bakambi ba Assemblée nationale mpe ya Sénat baye bawuta na FCC bawkeisamaki lokola mpe mbulamatari ekambamaki na ministre wa Yambo Sylvetre Ilunga Ilunkamba. 
+M. Kabila atiaki na esika misala mya kobongisa lingomba lya ye PPRD na lisanga FCC.
+M. Kabila asalaki mibembo o'libanda lya mboka. Akendaki na Emirats arabes unis mpe na Zambie, Zimbabwe mpe Tanzanie.

@@ -1,0 +1,103 @@
+Secrétaire d’Etat adjoint ya Etats-Unis mpo na mambi ya Afrika, Tibor Nagy, akosala mobembo na RDC banda le 13 tii le 15 mars. 
+ Akokutana mokonzi ya mboka ya sika, Félix Tshisekedi, na baye ya société civile mpe baye bazali na misala mingi ya politiki ya mboka RDC.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Le sec. adjoint aux Aff. africaines, Tibor Nagy, sera en Belgique, au \u0026lt;a href=\"https://twitter.com/hashtag/Cameroun?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Cameroun\u0026lt;/a\u0026gt;, en \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;, en France, au \u0026lt;a href=\"https://twitter.com/hashtag/Rwanda?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Rwanda\u0026lt;/a\u0026gt; \u0026amp; en \u0026lt;a href=\"https://twitter.com/hashtag/Ouganda?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Ouganda\u0026lt;/a\u0026gt; du 4 au 22 mars pour promouvoir des liens commerciaux USA - \u0026lt;a href=\"https://twitter.com/hashtag/Afrique?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Afrique\u0026lt;/a\u0026gt; + consolider des partenariats pour renforcer paix \u0026amp; sécurité. \u0026lt;a href=\"https://t.co/ZCEfNxq9Py\"\u0026gt;https://t.co/ZCEfNxq9Py\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/gF6khZuU9D\"\u0026gt;pic.twitter.com/gF6khZuU9D\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— USA en Français (@USAenFrancais) \u0026lt;a href=\"https://twitter.com/USAenFrancais/status/1101397933235363847?ref_src=twsrc%5Etfw\"\u0026gt;1 March 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Mobembo yango mozali mingi mpenza mpo na kokolisa bokambi ya malamu (bonne gouvernance), démocratie mpe boyokani (coopération) kati na Etats-Unis na RDC.
+Tibor Nagy akokende mpe lisusu na Belgique, na Cameroun, na France, na Rwanda mpe na Ouganda.
+Mposo moleki, ntoma to Envoyé spécial ya Etats-Unis mpo na région ya Grands Lacs, Peter Pham, azalaki na Kinshasa epayi wapi akutanaki na président ya sika Félix Tshisekedi.
+M. Pham asololaki mpe na opposant Martin Fayulu, na baye ya politiki basusu mpe baye ya société civile.
+Juedi na Bruxelles, M. Pham akutanki mpe na opposant Moïse Katumbi.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Katumbi akutani na ntoma ya Amerika na région ya Grands Lacs
+
+
+
+
+
+
+Envoyé spécial ya Etats-Unis ayebisi ete Etats-Unis ezali kozela mingi kosala na gouvernement ya sika mpe kopesa maboko na Congo.
+M. Pham alimbolaki ete etumbu Etats-Unis epesaki na bakambi ya CENI, président ya kala ya Assemblée nationale mpe président ya Cour constitutionnelle mposo moleki, ezali kolanda politi ya kokamba malamu mpe kobundisa kaniaka oyo président Félix Tshsiekedi abandi kosalela.
+Etats-Unis epekisi baye bazuwi etumbi liye koniata makolo mabele ya Amerika, bango elongo na mabota na bamgo.

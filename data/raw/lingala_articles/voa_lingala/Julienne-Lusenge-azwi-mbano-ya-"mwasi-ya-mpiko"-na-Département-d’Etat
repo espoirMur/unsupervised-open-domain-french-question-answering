@@ -1,0 +1,82 @@
+Julienne Lusenge azwi mbao ya "mwasi ya mpiko" na Département d’Etat. 
+ Départment d’Etat apesi ye mbano yango mpo bitumba na ye asalaka mpo na makoki ma basi, mingi mingi na bisika bya bitumba na monyele ya RDC.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Live now! \u0026lt;a href=\"https://twitter.com/SecBlinken?ref_src=twsrc%5Etfw\"\u0026gt;@SecBlinken\u0026lt;/a\u0026gt; and \u0026lt;a href=\"https://twitter.com/FLOTUS?ref_src=twsrc%5Etfw\"\u0026gt;@FLOTUS\u0026lt;/a\u0026gt; Jill Biden deliver remarks at the 2021 International Women of Courage Awards virtual ceremony from the Department of State. \u0026lt;a href=\"https://t.co/EDIm2fqnth\"\u0026gt;https://t.co/EDIm2fqnth\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Department of State (@StateDept) \u0026lt;a href=\"https://twitter.com/StateDept/status/1368941299282419714?ref_src=twsrc%5Etfw\"\u0026gt;March 8, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Mme Lusenge awutaki Beni, na Nord-Kivu, epayi basi bazwamaka mingi na makasi na mangomba ya basimba minduki malandama wuto 1996.
+Asungaka basi ebele na kobima na mpasi yango na bitumba na ye.
+Mme Luesenge akela SOFEPADI (Solidarite Feminine pour la paix et le developpement Integral – bondeko bwa basi mpo kimya mpe ntombwa ya solo) .
+Akelaki lingomna lya ngo na 2010.
+Mbano yango epesameli ye na nkombo ya mokonzi ya mboka ya Amerika Joe Biden na molongani wa ye Jill Biden.
+Ntoma ya Amerikan de alobelaki ye na milulu misalakaki na nzela ya internet.

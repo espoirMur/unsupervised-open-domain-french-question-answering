@@ -1,0 +1,339 @@
+Ba ambassadeurs to ba ntoma ba bikolo ya bapaya to mpe balakisi bilongi ya misala mya mboka ya bapaya bapekisami mibembo kati na bituka soki bazwi ndingisa ya mbulamatari ya RDC te. 
+ Yango moko na mikano misakolami nsima na likita lya bokengi président Félix Tshisekedi akambaki na Kinshasa, mokolo moko nsima na bobomi lundi ya ntoma ya Italie Luca Attanasio na Kibumba, pene na Goma, na Nord-Kivu.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; 23.02.2021|\u0026lt;a href=\"https://twitter.com/hashtag/PalaisdelaNation?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PalaisdelaNation\u0026lt;/a\u0026gt; Le Chef de l’État, Félix-Antoine Tshisekedi Tshilombo a présidé une réunion du Conseil de Sécurité relative à la situation sécuritaire sur l’ensemble du territoire national. \u0026lt;a href=\"https://t.co/YiFWSHFGVT\"\u0026gt;pic.twitter.com/YiFWSHFGVT\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— FATSHI News (@FatshiNews) \u0026lt;a href=\"https://twitter.com/FatshiNews/status/1364280798506057735?ref_src=twsrc%5Etfw\"\u0026gt;February 23, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Ba ntoma mpe bakambi ya bolakisi elongi ya misala songolo ya babpya bakoki te kolongwa Kinshasa mpo na kokende kati na bituka soki bayebisi te mokambi ya RDC ya misala ya bikolo bya bapaya (mokambi ya diplomatie) na misala misengeli, eyebisi bayi présidence nsima na bokutani bwango na kotangaka ministre ya mambi ma Bapaya Marie Ntumba Nzeza.
+Mbulamatari ya RDC ezwi mpe mokano ya koyikisa bokengi makasi na bisika bya likama.
+Lobi loleki, mbulamatari ya RDC epamelaki ba batomboki ba FDLR ba Rwanda na bobomi ya ntoma Attanasio.
+Kasi ba FDLR bawangani yango mpe bafundi nde mampinga ma Rwanda na ya RDC na bobomi bwango.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Obtenez Adobe Flash Player
+
+
+
+
+
+
+
+Embed
+
+
+
+share
+
+
+
+
+
+
+
+Liwa lya Attanasio: Molobeli ya ba FDLR Cure Ngoma alobi ezali mampinga ma Rwanda na ma RDC
+
+
+
+
+
+
+
+Embed
+
+
+
+share
+
+
+
+
+
+
+
+
+
+
+The code has been copied to your clipboard.
+
+
+
+
+
+
+
+
+width
+
+px
+
+
+height
+
+px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Partagez sur Facebook
+
+ 
+
+
+
+
+
+Partagez sur Twitter
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The URL has been copied to your clipboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+No media source currently available
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0:00
+
+0:01:08
+
+
+
+
+
+
+
+
+
+
+
+
+0:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Télécharger 
+
+
+
+
+
+
+240p | 3,4MB
+
+
+
+
+360p | 5,8MB
+
+
+
+
+480p | 12,7MB
+
+
+
+
+720p | 18,0MB
+
+
+
+
+
+
+
+
+Molobeli ya ba FDLR, Cure Ngoma ayebisi VOA Lingala ete bobomi bwango bosalami mpeza pene na esika mampinga ma RDC na ya Rwanda bazalaka.
+Mbualamtari ya RDC elobaki ekokaki te kobikisa ntoma Attanasio mpo ayebisaki te ete asalaki mobembo mpe bayebaki te epayi azalaki ntango ya likama yango.
+Ntoma Attanasio, mibu 43, azalaki na RDC wuto 2017.
+Nzoto w aye ezongisami na Italie na mpepo ya mampinga ekolo na ye etindaki na Goma.
+Akufaki elongo na mokumbi motuka wa ye, moyi RDC, na mobateli wa ye ya ekolo Italie.

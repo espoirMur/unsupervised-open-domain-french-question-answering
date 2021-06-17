@@ -1,0 +1,80 @@
+Ekolo Congo démocratique ekozala na matanga mpo na liwa ya maréchal Idriss Deby mokonzi ya Tchad vendredi, mokolo nkondo mokonzi ya Tchad akotiama na mabele na mboka na ye. 
+ Président Félix Tshisekedi oyo azwi mokano yango atindi maloba ma kobondisa mitena mya bana ya Tchad na nkombo na ye moko, ya RDC mpe ya Union africaine azali kokamba.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; 20.04.2021|\u0026lt;a href=\"https://twitter.com/hashtag/Palaisdelanation?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Palaisdelanation\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/Communique?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Communique\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/Presidence_RDC?ref_src=twsrc%5Etfw\"\u0026gt;@Presidence_RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/_AfricanUnion?ref_src=twsrc%5Etfw\"\u0026gt;@_AfricanUnion\u0026lt;/a\u0026gt; « Un jour de deuil National sera décrété en RDC, le vendredi 23 Avril 2021 date des obsèques du Maréchal du \u0026lt;a href=\"https://twitter.com/hashtag/Tchad?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Tchad\u0026lt;/a\u0026gt; » \u0026lt;a href=\"https://t.co/Ma3Thc41F6\"\u0026gt;pic.twitter.com/Ma3Thc41F6\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1384641802305736704?ref_src=twsrc%5Etfw\"\u0026gt;April 20, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Nzokande, na Tchad, bakonzi ya basoda bafungoli ndelo ya mboka bakangaki mardi na bosakoli liwa lya maréchal Idriss Deby Itno oyo akufaki mwa ntango nsima na kozwa masasi na bitmbu na bandongolomeso bawutaki na Libye.
+Bayi opposistion, mingi mingi batomboki ba FACT, lingomba lya batomboki litelamaki mpo na koboya maponami bandimi te Conseil militaire ya transition (CMT) ekambami na général de corps d’armee Mahamat Idriss Deby, mwana ya mowei.
+Général Mahamt Idriss Deby nde azwi bokonzi mpo na kokamba mboka na CMT.
+Vendredi nde president Deby akokundama.

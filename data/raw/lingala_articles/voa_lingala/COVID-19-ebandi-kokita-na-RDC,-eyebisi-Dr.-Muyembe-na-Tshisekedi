@@ -1,0 +1,78 @@
+Dr. Jean-Jacques Muyembe, mokambi ya secrétariat technique ya bitumba na COVID-19 ayebisi mokonzi ya mboka Félix Tshisekedi ete bokono bwa COVID-19 bobandi kokita na RDC. 
+ Président Tshisekedi ayambaki jeudi na Palais de la nation.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; 11.02.2021| \u0026lt;a href=\"https://twitter.com/hashtag/PalaisdelaNation?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PalaisdelaNation\u0026lt;/a\u0026gt; Reçu ce jeudi par le Président de la République , le Coordonnateur du secrétariat technique de la riposte contre la \u0026lt;a href=\"https://twitter.com/hashtag/COVID_19?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#COVID_19\u0026lt;/a\u0026gt; a déclaré que la courbe épidémique en RDC est descendante. \u0026lt;a href=\"https://t.co/Cfwlbr6xX0\"\u0026gt;pic.twitter.com/Cfwlbr6xX0\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1359913116503531521?ref_src=twsrc%5Etfw\"\u0026gt;February 11, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Mokambi ya bitumba na COVID-19 alobi ete apesi mokonzi ya mboka makanisi mpo na kolongola malembe malembe mikano mitiama na ntina ya kofungola bityelo mpe ba université," elobi présidence ya RDC.
+Mokonzi ya mboka akozwa mikano kolanda rapport eye mpe maye bayi zebi (ba scientifiques) balobi, Dr, Muyembe, ebakisi présidence.

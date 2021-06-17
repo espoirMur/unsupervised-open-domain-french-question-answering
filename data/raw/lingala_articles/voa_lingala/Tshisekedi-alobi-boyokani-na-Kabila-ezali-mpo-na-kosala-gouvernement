@@ -1,0 +1,83 @@
+Mokonzi ya sika ya RDC, Félix Tshisekedi, andimi ete boyokani mozali na président Joseph Kabila kasi mpo na kosala gouvernement. Alobi yango na koyanolaka motuna ya mpoanzi sango moko na mobembo na ye na Windhoek, na Namibie. 
+ "Ezali boyokani oyo tosalaki yambo mpeza mpo na alternance (mbongwana ya bokonzi) esalama na kimya. Boyokani yango esalamaki mpe na kimya mpo ete nsima ya maponami ya ba législatives mpe majorité oyo ebimaki kuna tozala na coalition (boyokani) na ngambo ya M. Kabila, ngambo oyo ebimi na bokonzi," eyanoli M. Tshiskedi.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Media Briefing of DRC President, H.E Felix Tshisekedi Tshilombo Official visit to Namibia \u0026lt;a href=\"https://t.co/29g4PG8MtZ\"\u0026gt;https://t.co/29g4PG8MtZ\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Presidency | Republic of Namibia (@NamPresidency) \u0026lt;a href=\"https://twitter.com/NamPresidency/status/1100400952790667265?ref_src=twsrc%5Etfw\"\u0026gt;26 February 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Elongo na mokonzi ya Namibie, Hage Geingob, oyo ayambaki ye, basolaki na bapanzi sango na Windhoek, engumba mokonzi ya Namibie. 
+M. Tshisekedi alimbolaki lisusu ete etikali bayokana na ngambo ya Kabila mpo na kosala gouvernement. Kasi yambo, esengeli basala programme (linaka) ya bomoko mpo na gouvernement.
+"Ngayi na koloba na bango totiya code de conduite (nzela ya kolanda) mpo na ndenge nini tokotambola na mosala tokosala mpo na bolamu ya bana ya Congo," elobaki M. Tshiskedi.
+Mokonzi ya mboka ya RDC ayebisaki mpe ete akombudisi kaniaka kino akosilisa yango.
+Ngomba na ye, mokonzi ya Namibie alobi koyokana ezali mabe te na démocratie.
+Mpo na M. Geingob, esengeli bakonzi ya kala bavanda na mboka na bango.

@@ -1,0 +1,158 @@
+Président Donald Trump akomeli kalaka mokonzi ya ONU mpo na koyebisa ete Etats-Unis elongwe na OMS (Mabongisi ma molongo mpo na bokolongono). Kasi Joe Biden, candidat ya ba démocrates oyo akowelela bokonzi na M. Trump na maponami ma novembre 2020, ayanoli ete soki alongi, Amerika ekozonga na OMS. 
+ "Congrès ezwi mokanda ya président eye elobi ete Etats-Unis elongwe na OMS ntango bokono boye bopanzi na molongo bozali kongala," esakoli na Twitter Robert Menendez, moko na ba démocrates ya Commission ya Sénat ya mambi ya mboka ya bapaya asakoli yango na compte Twitter na ye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Congress received notification that POTUS officially withdrew the U.S. from the \u0026lt;a href=\"https://twitter.com/WHO?ref_src=twsrc%5Etfw\"\u0026gt;@WHO\u0026lt;/a\u0026gt; in the midst of a pandemic.To call Trump’s response to COVID chaotic \u0026amp; incoherent doesn%27t do it justice. This won%27t protect American lives or interests—it leaves Americans sick \u0026amp; America alone.\u0026lt;/p\u0026gt;— Senator Bob Menendez (@SenatorMenendez) \u0026lt;a href=\"https://twitter.com/SenatorMenendez/status/1280556507365597190?ref_src=twsrc%5Etfw\"\u0026gt;July 7, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Nations unies mpe endimi ete ezwi mokanda mwango.
+Président Trump azali kopameli OMS, moko na biteni ya ONU, na kozanga kopesa eyano na lombango na pandémie ya coronavirus eye ebandaki na Chine na novembre 2019.
+Molobeli ya Antonion Guterres, kalaka mokonzi ya ONU, ayebisi ete Amerika ezali kati na OMS wuto 1948, esengeli ekokisa makambo mabale yambo na kolongwa ; yambo kokisa mobu moko nsima na kosenga kolonga mpe kopesa mosolo ndenge esengeli.
+Na ngambo na ye, Joe Biden, candidat ya ba démocrates oyo akowelela bokonzi na M. Trump na maponami ma novembre 2020, ayanoli ete soki alongi, Amerika ekozonga na OMS.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Americans are safer when America is engaged in strengthening global health. On my first day as President, I will rejoin the \u0026lt;a href=\"https://twitter.com/WHO?ref_src=twsrc%5Etfw\"\u0026gt;@WHO\u0026lt;/a\u0026gt; and restore our leadership on the world stage. \u0026lt;a href=\"https://t.co/8uazVIgPZB\"\u0026gt;https://t.co/8uazVIgPZB\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Joe Biden (@JoeBiden) \u0026lt;a href=\"https://twitter.com/JoeBiden/status/1280603719831359489?ref_src=twsrc%5Etfw\"\u0026gt;July 7, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Etats-Unis epesaka 15% ya misolo OMS ezwaka.
+M. Trump azwaki mokano ya kolongola Etats-Unis na OMS mwa sanza eleki kasi akomelaki nanu te bakambi ba ONU.

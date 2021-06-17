@@ -1,0 +1,160 @@
+Police epanzaki mbala mibale, na molinga mpe lokito, bituluku na bato batambolaki nzinganzinga ya Jean-Pierre Bemba na ntina ya kotelemela bondimami ya Ronsard Malonda bo’ mokambi ya CENI. Mbulamatari eboyaki botamboli bonso. 
+ Bituluku na bato babandaki botamboli na quartier na Pascal na Kinshasa kasi police ekangelaki bango nzela na pont (gbagba) ya Matete.
+Ba policiers bakotisaki Jean-Pierre Bemba, mokambi ya MLC mpe moko na bakambi bwa lingomba Lamuka na motuka mpe bapetaki masasi mpe lokito mpo kopanza baye bazalaki kolanda na makolo.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Un grand merci pour votre forte mobilisation. Unis et déterminés nous ferons basculer les décisions pernicieuses et arbitraitres à l%27encontre de la volonté du peuple. Merci également à la police d%27avoir encadré les manifestants tout au long de la marche.\u0026lt;a href=\"https://twitter.com/hashtag/AvecDieuNousVaincrons?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#AvecDieuNousVaincrons\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/nF66xHlnI3\"\u0026gt;pic.twitter.com/nF66xHlnI3\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Jean Pierre Bemba (@bembajp) \u0026lt;a href=\"https://twitter.com/bembajp/status/1282683615730704385?ref_src=twsrc%5Etfw\"\u0026gt;July 13, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Bakumbi tukutuku nde bakobaki na kolanda.
+Na balabala monene ya Libération, police ebetaki lisusu molinga mpe lokito mpe ebanzaki ndambo ya bakumbi tukutuku, ba nkama, baye bazalaki kokoba kolanda M. Bemba.
+"Mwa kimya na etando mobimba ya ekolo, moto moko te akufi, yango topesa fololo na bayi police nationale ya Congo. Bato banso bakangamaki batikami longola kaka ba kuluna," ekomi Police nationale congolaise na Twitter na yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Calme relatif sur toute l%27étendue de la République, aucune perte en vies humaines, alors des fleurs aux éléments de la police nationale congolaise. Toutes les personnes interpellées ont été élargies à part les kulunas .\u0026lt;/p\u0026gt;— PNC (@comgenpnc) \u0026lt;a href=\"https://twitter.com/comgenpnc/status/1282690199689068544?ref_src=twsrc%5Etfw\"\u0026gt;July 13, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Police elobi ete bililingi ya mowei na Bukavu (Sud-Kivu) bizali kotambola ya na réseaux sociaux esengeli etalama lokola lokuta.
+Na bituka mingi, police etikelaki bato kotambola te kolanda mokano ya état d’urgence mozwamaki wuto sanza minei na ntina ya kopekisa bopanzani bwa COVID19.
+Na Katanga, bakambi ya Lamuka bapusi botamboli bwango na mokolo mosusu mpo bokengi.
+Le 9 juillet bato bakufaki mibale, moko na Kinshasa mpe mosusu na Lubumbashi, na botamboli UDPS ebengisaki. Biloko mingi bibebisamaki.
+Mbulamatari atindi bazuzi kolandela bato basalaki mobulu na botamboli bwa UDPS.

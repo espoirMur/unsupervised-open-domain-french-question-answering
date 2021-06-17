@@ -1,0 +1,102 @@
+Mokambi ya CENI (Commission électorale nationale indépendante), Corneille Nangaa, atelemeli bofundi ya Amerika mpo etali kaniaka. 
+ Akomi na compte Twitter na ye ete atikala kokota ata mokolo moko te na kaniaka.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Contrairement aux sanctions américaines, je n’ai jamais été associé à une quelconque œuvre de corruption. Avec mes collègues, nous avons agi suivant les orientations de la plénière \u0026lt;a href=\"https://twitter.com/cenirdc?ref_src=twsrc%5Etfw\"\u0026gt;@cenirdc\u0026lt;/a\u0026gt; et sous le contrôle de l’\u0026lt;a href=\"https://twitter.com/AssembleeN?ref_src=twsrc%5Etfw\"\u0026gt;@AssembleeN\u0026lt;/a\u0026gt;. 1/1\u0026lt;/p\u0026gt;— Corneille Nangaa (@CNangaa) \u0026lt;a href=\"https://twitter.com/CNangaa/status/1109497038197219329?ref_src=twsrc%5Etfw\"\u0026gt;23 March 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+"Na bokeseni na etumbu ya mboka Amerika, nakota soki moke te na mosala songolo ya kaniaka. Na baninga na ngai ya mosala, tosalaki na kolanda mikano ya plénière ya Ceni mpe na nse ya kotalelama ya Assemblée nationale," ewangani Nangaa.
+"Tozali na lolendo mpo ete totambwisaki misala miye mipesaki na RDC mbongwana democratiki wa yambo banda lipanda," ebakisi mokonzi ya CENI.
+Nzokande, ekolo ya Amerika ebakiselaki etumbu na M. Nangaa, na basungi wa ye mibale, vice-président ya CENI, Norbert Basengezi, na Conseiller ya CENI, Marcellin Mukolo Basengezi. Trésor ya Amerika ekati ete biloko na bango nyonso ekangami na Etats-Unis mpe bana ya Amerika bakoki te kosala mobongo na bato baye misato.
+Trésor ya AMerika eyebisi ete M. Nangaa na basungi baye bazalaki na kaniaka banda 2016. Mpo na bakonzi ya Etats-Unis M. Nanga na basungi w aye bazwaki mosolo ya kosomba carburant, ba zongisika maponami nsima mpe bazwaki misolo nsima na mokano liye mpe babakisaki misolo 100 millions ya ba dollars na oyo esengelaki kosomba machine ya kopona (a voter).
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Etumbu mosusu ya Washington likolo ya Nangaa, Basengezi na Mukolo
+
+
+
+
+
+
+Misolo yango elingaki ezala mpo na candidat Joseph Kabila mpe batiya misusu na mabenga na bango.
+M. Nangaa na basungi na ye bafundami lisusu mpo basalaki mpe ba factures ya lokuta mpe bakosaki mpo etali komisalisa na lopitalo ya Norbert Basengezi. 
+Sanza moleki, Etats-Unis epakisa bango mpe president ya Cour constitutionnelle ko tiaya makolo na ekolo ya Amerika.

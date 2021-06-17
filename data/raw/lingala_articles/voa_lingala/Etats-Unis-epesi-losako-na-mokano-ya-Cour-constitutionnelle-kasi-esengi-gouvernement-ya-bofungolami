@@ -1,0 +1,98 @@
+Bakonzi ya Amerika basengi na gouvernement ya sika na RDC efungola bizipeli na baye politiki nyonso mpe epesa eyano na matata ya maponami. 
+ "Tolingi kosolama na gouvernement ya sika ya RDC. Tosengi na gouvernement kokotisa, na bonene, baye ya ngambo mingi ya politiki mpe kopesa eyano na mbeba ya maponamu," etalisi liyebisi ya Département d’Etat.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;The U.S. welcomes certification of Felix Tshisekedi as the next President of the \u0026lt;a href=\"https://twitter.com/hashtag/DRC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#DRC\u0026lt;/a\u0026gt;. We are committed to working with the new government and encourage it to include a broad representation of Congo’s political stakeholders and to address reports of electoral irregularities. \u0026lt;a href=\"https://t.co/jOhJf9CxIW\"\u0026gt;pic.twitter.com/jOhJf9CxIW\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Robert Palladino (@StateDeputySPOX) \u0026lt;a href=\"https://twitter.com/StateDeputySPOX/status/1088100463420026880?ref_src=twsrc%5Etfw\"\u0026gt;January 23, 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Washington epesi losako na mokano ya Cour constitutionnelle liye endimi mpe pesakoli Félix Tshisekedi lokola 5e président ya RDC na 38,57%.
+Bakonzi ya Amerika bapesi mpe losako na bana ya Congo mpo na mpiko na bitumba na bango mpo na mbongwana ya bokonzi na kimya mpe na démocratie.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Washington esengi polele emonisama na maponami ya RDC
+
+
+
+
+
+
+Etats-Unis etondi président Jopseh Kabila botondi mpo kondima kozala mokonzi wa yambo oyo azali kotika bokonzi na kimya nyonso nsima na maponami.

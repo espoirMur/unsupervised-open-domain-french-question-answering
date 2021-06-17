@@ -1,0 +1,232 @@
+Bakonzi ba bikolo bya CEEAC (Lisanga lya nkita lya bikolo bya Afrika ya kati kati) bakati ete bakotinda basoda na Centrafrique (RCA) mpe bazali kopesa maboko na maponami ma mokolo mwa eyenga na mboka eye. 
+ Félix Tshiksekedi ya RDC, Evariste Ndayishimiye ya Burundi na Teodoro Obiang ya Guinée Equatoriale basanganaki na visioconférence na bokambami ya Denis Sassou N’Guesso ya Congo- Brazzaville, motambwisi ya CEEAC, mpo na likambo yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/Congo?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Congo\u0026lt;/a\u0026gt;. La 10 eme session extraordinaire de la conférence des chefs d’Etat de la CEEAC tenue, le 26 décembre 2020, à décidé de la poursuite du processus électoral en RCA et de l’ouverture des enquêtes judiciaires sur la mort de trois soldats de la minusca. \u0026lt;a href=\"https://twitter.com/VOAAfrique?ref_src=twsrc%5Etfw\"\u0026gt;@VOAAfrique\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/emjDcDYM2g\"\u0026gt;pic.twitter.com/emjDcDYM2g\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Oko Valentin (@DirPressePdt) \u0026lt;a href=\"https://twitter.com/DirPressePdt/status/1342893396172660737?ref_src=twsrc%5Etfw\"\u0026gt;December 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Likita lisengi bokobi bwa misala mya maponami mazali kosalama mpe lisengi bana ba Centrafrique kokende ebele na maponami lobi le 27 décembre," elobi liyebisi lisukisi bokutani ya bakonzi ya bikolo ya CEEAC.
+Bakonzi baye bapameli na makasi nyonso bitumba bizangisi bomoi na ba soda basato ya Burundi ya misala mya ONU na Centrafrique (Minusca), ebakisi liyebisi.
+Basimba minduki basangani kati na CPC (Coalition des patrioites Centrafricains) bazali kosenga bopusi na maponami.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/Congo?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Congo\u0026lt;/a\u0026gt;. Justifiant la demande de la tenue de la réunion, le président centrafricain Faustin Touadera, après avoir dépeint la situation délétère qui prévaut en RCA, a clairement désigné l’ex président, François Bozizé, comme instigateur de cette rébellion. \u0026lt;a href=\"https://twitter.com/ICIBrazza?ref_src=twsrc%5Etfw\"\u0026gt;@ICIBrazza\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/ICIBrazza?ref_src=twsrc%5Etfw\"\u0026gt;@ICIBrazza\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Oko Valentin (@DirPressePdt) \u0026lt;a href=\"https://twitter.com/DirPressePdt/status/1342780619370209281?ref_src=twsrc%5Etfw\"\u0026gt;December 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Président Faustin Archange Touadera ya Centrafrique na mbulamatari bazali kolakisa mosapi na mokonzi ya kala François Bozize mpe kofunda ye na koluka kozwa bokonzi na coup d’Etat.
+Misala mya maponami mpe bazuzi balongolakai nkomba ya M. Bozize na maponami mpo balabi akokisi te maye mibeko misengi.
+Russie etindaki basoda kotangisa mampinga ya Centrafrique mpe Rwanda mpe etindaki basoda ba yango 300 na Minusca.
+Etats-Unis esengaki Russie kolimbola mpo na nini etinadaki ba soda baye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"ca\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/Burundi?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Burundi\u0026lt;/a\u0026gt; | Discours de SE Evariste NDAYISHIMIYE lors de la session extraordinaire de la \u0026lt;a href=\"https://twitter.com/hashtag/CEEAC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#CEEAC\u0026lt;/a\u0026gt;.\u0026lt;a href=\"https://t.co/lioJUyRY9d\"\u0026gt;https://t.co/lioJUyRY9d\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— APOLLINAIRE Ndayikeze (@Porinari3) \u0026lt;a href=\"https://twitter.com/Porinari3/status/1342860000365051907?ref_src=twsrc%5Etfw\"\u0026gt;December 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Bikolo bya CEEAC bilobelaki mpe embargo (bopekisi) ya kosomba minduki ya ONU na Centrafrique. Mpo na bango, yango ezali ebaka na ya mokonzi ya Centraqieu na kokamba ekolo malamu.

@@ -1,0 +1,87 @@
+Alanga nzembo Lutumba Ndomanueno Simaro Masiya azongisi molimo epayi ya Nkolo o’mokolo ya mposo na Paris, na ekolo France, eyebisi baye nzinganzinga na ye. 
+ Mobeti lindanda mpe mosali nzembo monene oyo, azalaki na 81 ans, akufi na 3 heures ya ntongo nsima ya 63 ans ya mosala ya mindule, kolanda maloba ya manager wa ye Willy Tafar.
+Mokonzi ya ekolo RDC ya kala, Joseph Kabila, apesi ye lotkumu.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; : \u0026lt;a href=\"https://twitter.com/hashtag/Joseph?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Joseph\u0026lt;/a\u0026gt; Kabila rend hommage au poète Simaro.Simaro Lutumba, un artiste exceptionnellement talentueux qui a su marquer son temps d%27une empreinte spéciale. Sincères condoléances à sa famille biologique et à l%27ensemble de la communauté artistique, nationale et internationale \u0026lt;a href=\"https://t.co/Cleeg8OX4j\"\u0026gt;pic.twitter.com/Cleeg8OX4j\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— FCC - Officiel (@FCC_RDC) \u0026lt;a href=\"https://twitter.com/FCC_RDC/status/1111984931608186880?ref_src=twsrc%5Etfw\"\u0026gt;30 March 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+
+"Simaro Lutumba, moto na ntoki (artiste) na boyebi oyo bato bazalaka na yango mingi te, atiki bilembo na ntango na ye. Na lendisi libota na ye mpe lisanga ya bato na ntoki nyonso na mboka na biso mpe na molongo mobima," ekomi M. Kabila na compte Twitter ya lingomba FCC (Front commun pour le Congo).
+Abetaki miziki mingi na Franco Luambo Makiadi na OK Jazz. Kasi akeli ya lingomba na baninga basusu, Bana OK, nsima ya kosuana na libota ya nkondo Luambo Makiadi mibu mike nsima ya liwa ya mokolo OK Jazz.
+Akobaki na kokamba Bana OK mpe kosala banzembo.
+Na 2018, asakoli ete atikeli lingomba ya Bana OK na Manda Chante, moko ya bilenge ya Wenge Musica ya kala mpe mokambi ya Wenge Reference.
+Kasi, Simaro Lutumba alobaki akokoba ka sala banzembo ata amoni ete akokosi wa ye mosala awa na nse.
+Asengaki mbala nzike bato na bomoi bayebaka kopesa losako mpe longonya na baninga na bango ntango bango bazali naino na bomoi.
+Baselaki ye monument moko.
+Banzembo na ye mingi bitonda na bwanya mpe toil na commune ya Lingwala epayi wapi azalaki kovanda.
