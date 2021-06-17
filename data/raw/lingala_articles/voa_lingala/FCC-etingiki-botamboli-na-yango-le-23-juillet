@@ -1,0 +1,80 @@
+FCC (Front commun pour le Congo), lingomba litongama nzinganzinga ya mokonzi ya kala Joseph Kabila, eyebisi ete epusi botamboli bwa yango bobongisamaki mpo na mardi 14 juillet, o’mokolo mwa le 23 juillet, mpo na mokambi ya etuka ya Kinshasa apesi nzela te. 
+ "Kolanda ndenge mokambi ya engumba ya Kinshasa aboyi ete totambola mardi 14 juillet 2020 mpo na état d’urgence mokonzi ya mboka asakolaki, FCC ezongisi botamboli bwa yango o'mokolo mokolanda suka na état d’urgence, toloba le 23 juillet 2020. Mboka ya mibeko (Etat de droit) ezali mpe kotosa bakonzi baye bazali na libonga !," ekomi Steve Mbikayi na Twitter.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Suite au refus du gouv de l ville de Kin de prendre acte de sa marche projetée ce mardi 14/07/20,suite à l’état d’urgence décrétée par le PR,le FCC reporte sa marche au lendemain de l’état d’urgence,soit le 23/07/2020.L’État de droit c’est aussi le respect d l’autorité établie! \u0026lt;a href=\"https://t.co/fONfL6F8re\"\u0026gt;pic.twitter.com/fONfL6F8re\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— STEVE MBIKAYI (@Cartesien243) \u0026lt;a href=\"https://twitter.com/Cartesien243/status/1282754735884374016?ref_src=twsrc%5Etfw\"\u0026gt;July 13, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+FCC elakaki kotambola mardi 14 juillet 2020 mpo na kopesa maboko na ba institutions.
+Nzokande, bituluku na bato bikitaki o’balabala lundi 13 juillet na bosengi ya lingomba ya opposition Lamuka, mpo na kotelemela bondimami na Assemblée nationale ya boponami bwa Ronsard Malonda bo’ mokambi ya CENI. Bituluku byango bitambolaki mpe mpo na koboya mibeko misatu mibongisami na ba députés Aubin Minaku na Garry Sakata na Assemblée nationale na ntina ya kokonza parquet mpe bazuzi.
+Police epanzaki bango nsima na mwango na Kinshasa, mpe epekisaki basusu kotambola na bituka misusu.
+Bato bakitaki mpe o’balabala le 9 juillet na bosengi ya UDPS nse mpo na koboya M. Malonda na mibeko miye. Batomboli baike babebisaki ndako ya mosala ya mangomba ya politiki maike lokola ya PPRD na PT (Parti travailliste), Steve Mbikayi.

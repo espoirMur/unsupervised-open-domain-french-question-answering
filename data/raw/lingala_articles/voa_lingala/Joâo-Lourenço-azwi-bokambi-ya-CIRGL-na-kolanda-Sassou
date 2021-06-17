@@ -1,0 +1,80 @@
+Joâo Lourenço, mokonzi ya Angola akitani na Denis Sassou N’Guesso ya Congo-Brazzaville na bokambi bwa CIRGL (Likita lya bikolo bya Grands lacs – Bitima binene). 
+ Bopesani bwa bokonzi bosalami na visio-conférence na likita lya mwambe lya bakonzi ba bikolo mpe mbulamatari ya CIRGL.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/Congo?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Congo\u0026lt;/a\u0026gt;. À l’issue de la 8è session ordinaire des chefs d’Etat et du gouvernement, ce 20/11/ 2020, le chef d’Etat angolais \u0026lt;a href=\"https://twitter.com/hashtag/Jo%C3%A2o_Louren%C3%A7o?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Joâo_Lourenço\u0026lt;/a\u0026gt;, succède à son homologue congolais, \u0026lt;a href=\"https://twitter.com/hashtag/Denis_Sassou_Nguesso?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Denis_Sassou_Nguesso\u0026lt;/a\u0026gt;, à la tête de la conférence internationale pour la région des grands lacs. \u0026lt;a href=\"https://twitter.com/ICIBrazza?ref_src=twsrc%5Etfw\"\u0026gt;@ICIBrazza\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Oko Valentin (@DirPressePdt) \u0026lt;a href=\"https://twitter.com/DirPressePdt/status/1329819845312000000?ref_src=twsrc%5Etfw\"\u0026gt;November 20, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Félix Tshisekedi ya RDC azali na likita lyango na bakambi basusu ya CIRGL.
+Bakmbi bikolo batalaki malako ma likita ma CIMR (bokutani ya ba ministres ya bikolo), malako ma ministres ya Bobateli mpo etali bokengi na etuka mpe malako ya ba ministres ya Bokolongono.
+Bakambi ba bikolo bandimi kotia secrétaire exécutif ya CIRGL.
+Balabaki misolo bikolo bisengeli kotiaka na Secrétariat mpe ndenge ya botamboli ya Fond sp♪0cial mpo kotanga lisusu mpe ntombwa na Likita liye.

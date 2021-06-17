@@ -1,0 +1,156 @@
+BCNUDH (Bureau conjoint ya ONU mpo na makoki ma bomoto) esengi mikano ya bokengi mpo na bapanzi sango mpe babundi ba mamkoki bamoto nsima na bobomi dimanche ya journaliste moko na Beni. Esengi mpe boluluki na lombango mposo moko nsima na liwa lya Imam Alia Amini. 
+ "BCNUDH epameli makasi bobomi ya Barthemy Kubunabandu Changamuka, molakisi ya maye matali bilei mpe mopanzi sango na radio communautaire ya Kisthanga," ekomi BCNUDH.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Aucune information n’est pour l’heure disponible sur l’identité et le mobile de ce meurtre. \u0026lt;a href=\"https://twitter.com/unjhro?ref_src=twsrc%5Etfw\"\u0026gt;@unjhro\u0026lt;/a\u0026gt; invite instamment les autorités à ouvrir promptement une enquête sur les circonstances de cet incident et de traduire les auteurs devant les juridictions compétentes. 2/3\u0026lt;/p\u0026gt;— UN Human Rights DRC (@unjhro) \u0026lt;a href=\"https://twitter.com/unjhro/status/1391797923827048466?ref_src=twsrc%5Etfw\"\u0026gt;May 10, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Mopanzi sango Kubanabandu abomamaki na lopango na ye nsima na kosilisa linaka ya radio.
+Bato babale na minduki bakotaki na loponga ya mopanzi sango Kubanabandu mpe babetaki ye masasi mwambe, kolanda litatoli ya molongani ya mowei na ONG JED, Journaliste en danger. 
+GED esengi mpe enketi mpe etumbu mpo na bato basali yango. 
+Bobomi yango bosalami ntango “état de siège" ebandaki wuto le 6 mai.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;[...] entre communautés dans la ville et la région de Beni. Il condamnait sans réserve les attaques des ADF contre les populations civiles et prônait le dialogue et la non-violence. \u0026lt;a href=\"https://twitter.com/unjhro?ref_src=twsrc%5Etfw\"\u0026gt;@unjhro\u0026lt;/a\u0026gt; invite les autorités à accélérer les enquêtes sur cet assassinat et à traduire 2/3\u0026lt;/p\u0026gt;— UN Human Rights DRC (@unjhro) \u0026lt;a href=\"https://twitter.com/unjhro/status/1391756420220178434?ref_src=twsrc%5Etfw\"\u0026gt;May 10, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+BCNUDH esengi na bakonzi ba RDC kosala na lombango bolukiluki mpo na liwa lya Imam Cheikh Ali Amini o’libandela lya mposo kati na losambo azalaki kokamba.
+Cheikh Ali Amini abetamaki masasi na bato bayebani te.

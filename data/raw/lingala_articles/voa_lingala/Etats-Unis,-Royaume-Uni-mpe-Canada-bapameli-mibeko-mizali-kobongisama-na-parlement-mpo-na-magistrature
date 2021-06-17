@@ -1,0 +1,85 @@
+Ba ambassadeurs ya Etats-Unis, Royaume-Uni mpe Canada bakebisi ete mibeko misato miye mizali kobongisama na Assemblée nationale mpo na mbogwana na misala mya bosembo mikoki kobotola bonsomi ya ba zuzi. 
+ Ba ambassadeurs ya Etats-Unis, Royaume-Uni mpe Canada bakomi liyebisi elongo mpe batelemeli mobulu mosalaki wuto mokolo mwa lundi na bisiki mingi na RDC.
+Tibor Nagy, Secrétaire d’Etat molandi ya Etats-Unis mpo na mambi ma Afrika apesi mpe maboko na ba ntoma ya Etats-Unis, Canada na Royaume-Uni.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Je me fais l’écho de \u0026lt;a href=\"https://twitter.com/USEmbKinshasa?ref_src=twsrc%5Etfw\"\u0026gt;@USEmbKinshasa\u0026lt;/a\u0026gt;, \u0026lt;a href=\"https://twitter.com/CanadaRDC?ref_src=twsrc%5Etfw\"\u0026gt;@CanadaRDC\u0026lt;/a\u0026gt;, et \u0026lt;a href=\"https://twitter.com/UKinDRC?ref_src=twsrc%5Etfw\"\u0026gt;@UKinDRC\u0026lt;/a\u0026gt; en faisant part de mes inquiétudes concernant toute menace à l%27État de droit, à la responsabilité et à la bonne gouvernance en \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;. Le peuple congolais mérite un avenir juste et prospère. \u0026lt;a href=\"https://t.co/cjN3ARjOYE\"\u0026gt;https://t.co/cjN3ARjOYE\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S.Embassy Kinshasa #PortezUnMasque (@USEmbKinshasa) \u0026lt;a href=\"https://twitter.com/USEmbKinshasa/status/1276188345245327365?ref_src=twsrc%5Etfw\"\u0026gt;June 25, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Nazali kopesa maboko na maloba ya ba ntoma ya Etats-Unis, Canada mpe Royaume-Uni na kolakisi mitungisami mya ngai na likama liye limonisami likolo ya mboka ya mibeko (Etata d’Etat), mikumba na moko na moko, mpe bokambi bolamu na RDC. Bana ba Congo basengeli na lobi ya sembo mpe ya kofulukisama," ekomi Tibor Nagy na Twitter. 
+Ba ambassadeurs ya Etats-Unis, Royaume-Uni mpe Canada basengi mpe mbongwana na misala mya maponami na Ekolo Congo démocratique mpe balobi yango esengeli endimama na banso.
+Ambassadeur ya Etats-Unis Mike Hammer asungaka RDC mingi na zela ya boyokani ya makasi PP4PP mboka mibale esala wuto Félix Tshisekedi akoma mokonzi.
+Na Kinshasa, mobulu mwa moke mosalamaki lisusu mercredi. Bato baike bapunzaki lisusu ndako y aba deputes na commune Limete.
+Nzokande Félix Tshisekedi apamelaki na makasi, mardi na mpokwa, mobulu, bobebisi mpe kombunzi biloko ya bato esalamaki lundi mpe mardi.
+Kolanda molebeli na ye, tata mokonzi ya Ekolo Congo démocratique akundoli ete makoki mabato mpo kotelemela makambo songolo to pakala mabatelami na Buku likonzi.
+Na ngambo na bango, bayi PPRD bakebisi ete soki bayi boyokani kati na FCC ya mokonzi ya kala Joseph Kabila na CACH ya président Tshisekedi balingi lisusu libala te bakokende na bokaboli ndako moko na bobanda (cohabitation).
+Bayi PPRD bakomi na liyebisi ete mibeko misato miye mizali kosalama na Assemblée nationale mpo na misala mya bosembo mizali kopesa parquet makasi ya kosala lokola loboko ya Mbulamatari na bokambami bwa Minsitre ya mambi ya bosembo.

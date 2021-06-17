@@ -1,0 +1,79 @@
+Nsima na bokutani na mopesi toli ya président Félix Tshisekedi mpo etali bokengi, François Beya, ba ntoma ya bikolo bya bapaya baike bakali kopesa maboko mpo na kobundisa bozangi bokengi na monyele ya RDC. 
+ Ba ntoma ya bikolo biike basolaki na M. Beya mikolo mibale nsima na bobomi ya moko na bango ya ekolo Italie, Luca Attanasio lundi na Kibumba, na 25 kms ya Goma, na Nord-Kivu na basimba minduki bayebani te.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Bien dit par mon collègue \u0026lt;a href=\"https://twitter.com/Jmchataigner?ref_src=twsrc%5Etfw\"\u0026gt;@Jmchataigner\u0026lt;/a\u0026gt;. Nous devons travailler ensemble pour soutenir les efforts du gouvernement pour mettre fin à la violence et aux meurtres brutaux dans l%27est de la RDC. Les Congolais ont trop souffert, cela doit cesser! \u0026lt;a href=\"https://twitter.com/hashtag/TousEnsemble?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TousEnsemble\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/cLDI7NCqbN\"\u0026gt;https://t.co/cLDI7NCqbN\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/1PN0KQHWwg\"\u0026gt;pic.twitter.com/1PN0KQHWwg\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Mike “Nzita” Hammer (@USAmbDRC) \u0026lt;a href=\"https://twitter.com/USAmbDRC/status/1364658086888275971?ref_src=twsrc%5Etfw\"\u0026gt;February 24, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+"Toyambamaki na Conseille spécial ya Tata mokonzi Félix Tshisekedi, François Beya. Toyebisaki ye makanisi ma biso mpo na maye matali bokengi na monyele ya Congo mpe boyikisi makasi ya misala tosalaka elongo na ntina ya kotia kimya ewumelaka," ekomaki na compte Twitter na ye Jean-Marc Châtaigner ntoma ya Unioni européenne na kisnahsa.
+"Tosengeli kosale elongo mpo na kopesa maboko na mbulamatari na kosilisa bitumba mpe bobomi ya mabe na monyele ya RDC. Bana ba Congo banyokwami mingi, esengeli esila," ebakisi ntoma ya Amerika na Kinshasa, Mike Hammer.

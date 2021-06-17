@@ -1,0 +1,78 @@
+Bakambi ya biyamba bayokani te mpo na kopona nani okozwa ebonga ya kokamba Commission électorale nationale indépendante, CENI, na esika ya Corneille Nangaa. 
+ Bakutanaki mercreci na complexe scolaire Cardinal Monsengwo na Kinshasa kasi bandimi nanu te kosala mapopnami.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: Les confessions religieuses échangent depuis le début de la semaine sur le renouvellement du bureau de la CENI). Ils ne se sont pas encore mis d’accord sur un nom. Une communication officielle est attendue ce mercredi. \u0026lt;a href=\"https://t.co/J8RR3n43Si\"\u0026gt;pic.twitter.com/J8RR3n43Si\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Stanis Bujakera Tshiamala (@StanysBujakera) \u0026lt;a href=\"https://twitter.com/StanysBujakera/status/1270719615102926859?ref_src=twsrc%5Etfw\"\u0026gt;June 10, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Kotala ndenge ngambo inso eboyi kopesa tika mpe kolanda nungu nungu makasi ya kaniaka, lisusu na makanisi makoluka boyokani, mokambi ya likita amoni malamu te koleka na maponami," ekomami na liyebisi litiami manzaka na cardinal Frindolin Ambongo, vice-président ya CENCO na pasteur André Bokundoa, président ya ECC.
+Ba candidats bazalaki misato. Bakambi ba biyamba balobi bakokutana mbala nsima kasi mokolo mopesami te. Bazalaki kokuktana na bosenga ya mokambi ya Assemblée nationale lokola mandat ya bureau ya CENI esili.

@@ -1,0 +1,154 @@
+TP Mazembe abeti CA Africain mangenda 8 contre 0 na match ya Ligue africaine des champions. 
+ Mongete ya yambo ya Mazembe etiyamaki na Mondeko na 11’.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;📽 HIGHLIGHTS .. TP Mazembe 8-0 CLUB AfricainMatchday 3 \u0026lt;a href=\"https://twitter.com/hashtag/TotalCAFCL?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TotalCAFCL\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/t4830kO1e7\"\u0026gt;pic.twitter.com/t4830kO1e7\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— CAF (@CAF_Online) \u0026lt;a href=\"https://twitter.com/CAF_Online/status/1091719466830966784?ref_src=twsrc%5Etfw\"\u0026gt;2 February 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Na nsimba nde mingete ekotaki lokola manoka. Mika na 13’, Muleka na 37’, Mondeko lisusu na 39’, Muleka na 61’, Mputu na 76’, Elia na 80’ mpe Mputu lisusu na 83’.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;DEUXIÈME MI-TEMPS | TP Mazembe - Club Africain 8-0 \u0026lt;a href=\"https://twitter.com/hashtag/TotalCAFCL?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TotalCAFCL\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/TPMCA?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#TPMCA\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/f5Bug5aeg3\"\u0026gt;pic.twitter.com/f5Bug5aeg3\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— CAF (FR) (@caf_online_FR) \u0026lt;a href=\"https://twitter.com/caf_online_FR/status/1091710459265331200?ref_src=twsrc%5Etfw\"\u0026gt;2 February 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Elonga ya Mazembe ezali record. Club moko te etiya mingete mwambe na niveau ya ba groupes na Ligue africaine des champions.

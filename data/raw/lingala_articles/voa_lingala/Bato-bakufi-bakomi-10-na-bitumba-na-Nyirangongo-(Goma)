@@ -1,0 +1,85 @@
+Mokambi ya etuka ya Nord-Kivu, Carly Nzanzu Kasivita alobi bato bakufi bakomi 10 na bitumba na Nyirangongo na est ya Goma, epayi wapi azali kosenga bavandi batika bitumba. 
+ "Lelo motango mwa bakufi mokomi 10 mpe bato bazoki bakomi 34 na bitumba kati masanga ya bato bazali na minduki mpe bibundeli misusu na bayi bakengi," eyebisaki na AFP M. Nzanzu.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Nous dénonçons cette énième bavure policière à \u0026lt;a href=\"https://twitter.com/hashtag/Nyamilima?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Nyamilima\u0026lt;/a\u0026gt; dans le Rutshuru. La violence est plutôt du côté de ceux qui répriment les manifestations pacifiques. \u0026lt;a href=\"https://twitter.com/LukondeSama?ref_src=twsrc%5Etfw\"\u0026gt;@LukondeSama\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/Presidence_RDC?ref_src=twsrc%5Etfw\"\u0026gt;@Presidence_RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/Q9PL05YTjt\"\u0026gt;pic.twitter.com/Q9PL05YTjt\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— LUCHA 🇨🇩 (@luchaRDC) \u0026lt;a href=\"https://twitter.com/luchaRDC/status/1381850854999883776?ref_src=twsrc%5Etfw\"\u0026gt;April 13, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Masasi mabetamaki mardi na Goma, engumba mokonzi ya Nord-Kivu. Misala mingi mitakalaki ya kokangama.
+Mokambi ya Nord-Kivu apekisaki lundi milulu minso ya botelemeli mizalaki kosalama wuto libandela ya mposo.
+Bato babale, bakumbi taxi ya tukutuku bakufaki mpe yango ememaki bitumba na machetti kati na ba Hutu na ba Nande na Muhene, na terrioitre ya Nyirangongo.
+Ba Hutu bazali kopemela ba Nande na koboma bakumbi tukutuku baye bazalaki ba Hutu.
+Bitumba byango bizali kosalama ntango bavandi bazali kotelemela MONUSCO, misala mya ONU na RDC, na kopamela yango na kosala eloko te mpo na kopekisa bobomi bato na monyele ya mboka.
+"Tosengi na bana mboka kolanda te maloba ma bato mabe mpo mbulamatari ya etuka ezali kosala mpo na kozongisa bokengi," elobaki M. Nzanzu.
+Mokambi ya etuka alobi ete bayi bokengi bakosala bouclage na commune ya Karisimbi mpe na mboka Bukumi mpo na yango.
+B’episkopo ya katoliko kati na CENCO balobaki o’libandela lya mposo ete bato 6.000 bakufi wuto 2013 na bitumba ya Beni (na likolo na Nord-Kivu).
+Mingi mingi, batomboki ya ADF baye basala boyokani na lingomba Etat islamique to ISIS to DAESH mpe masanga misusu ya basimba minduki bafundamaka na koboma bato na kokata bango.

@@ -1,0 +1,80 @@
+Bakonzi ya mambi ya bokolongono bayebisi ete koleka bato 400 basili kowa na épidémie ya Ebola liye lizali kongala na est too na monyele ya RDC. 
+ "Wuta ebandeli ya épidémie liye, motango ezali 658 (ya baye basimbami na bokono liye), kati na bango 609 confirmés mpe 49 oyo bakoki kozala na bokono. Na nyonso, ezali na bato 402 babawei," na bituka ya Nord-Kivu mpe ya Ituri, ekomi ministère ya bokolongono na liyebisi ya mokolo ya mibale.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;🚨\u0026lt;a href=\"https://twitter.com/hashtag/Ebola?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Ebola\u0026lt;/a\u0026gt; - Situation au mardi 15 janvier 2019- Au total, 658 cas (609 confirmés et 49 probables), 402 décès et 237 personnes guéries- 9 nouveaux cas confirmés- 6 nouveaux décès de cas confirmés- 200 cas suspects\u0026lt;a href=\"https://t.co/GhoN5FlRDL\"\u0026gt;https://t.co/GhoN5FlRDL\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/0OGgQiMpOK\"\u0026gt;pic.twitter.com/0OGgQiMpOK\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Ministère de la Santé RDC (@MinSanteRDC) \u0026lt;a href=\"https://twitter.com/MinSanteRDC/status/1085219797057576960?ref_src=twsrc%5Etfw\"\u0026gt;15 January 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Bakonzi ya bokolongono balobi bato 237 babikisami, kasi bato 200 bazali kotalama.
+Epidémie liye ezali ya monene koleka na RDC. Ebandaki na sanza ya mwambe ya 2018.
+Bato 60.460 bazuwi mangwele.

@@ -1,0 +1,3 @@
+- remove number in a staring lines
+- use polyglot to split the data into sentences
+- remove (a) (B) and other similar sentence in the begining of sentences

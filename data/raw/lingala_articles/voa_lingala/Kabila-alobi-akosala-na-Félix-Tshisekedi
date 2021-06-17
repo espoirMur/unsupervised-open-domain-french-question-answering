@@ -1,0 +1,120 @@
+Na lisikulu na ye suka, président Joseph Kabila alobi ete alingi lisanga na Félix Tshisekedi mpo na kotelemela baye balukaka kozwa bozwi ya Congo. 
+ "Nasengi nde lisanga monene ya ba ‘forces progressistes’, lisanga eko telemela ba ‘forces prédatrices’ oyo basangani mpe bakomekaka kaka kosangana mpo na kozuwa na makasi bozuwi ya mabele na biso mpe kopesa eloko te na bana na biso mpe bana ya bana na biso, lisanga oyo ekotelema ata na kondima komipesa mbeka mpo lipanda, bonsomi mpe bomoko ya etando ya mboka na biso," elobi na télévision ya mboka Joseph Kabila.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Foeildafrique%2Fvideos%2F2211171629122331%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+
+Mokonzi Kabila alendisi baye pilitiki kolanda majorité na parlement kasi kosalama majorité ya bolomu ya mboka.
+Apesi losoka Félix Tshsiekedi, mokitani na ye. Mpe alobi akopesaye bokonzi o’mokolo ya minei "na mpasi to kolele te" mpo "soki mbeba oyo ezalaka na misala ya moboko ya bato, Congo ewuti mosika".
+Asengi na bana ya Congo bapesa moboko mingi na mokitani na ye, mingi mingi mpeza bilenge.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Etats-Unis epesi losako na mokano ya Cour constitutionnelle kasi esengi gouvernement ya bofungolami
+
+
+
+
+
+
+Joseph Kabila andimi ete azwaki bokonzi na likama ya liwa ya tata na ye, Laurent-Désiré Kabila.
+Mpe na ndambo ya liseki, alobi azali elenge oyo ekotaki na bokonzi le 21 janvier kasi akomi lelo na suki ya pembe.

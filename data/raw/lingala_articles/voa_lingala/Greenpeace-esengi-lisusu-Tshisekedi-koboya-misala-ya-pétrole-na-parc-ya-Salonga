@@ -1,0 +1,80 @@
+Greenpeace Afrique, ONG ya kobatela environnement mpe zamba, esengi lisusu mokonzi ya Congo démocratique, Félix Tshisekedi, koboya misala minso ya boluki to ya kozuwa pétrole na parc ya Solnga, na Cuvette Centrale. 
+ ONG eye eyebisi ete ezuwaki te eyano ya malonga na mokanda etindaki le 21 juin 2018 na Premier ministre Bruno Tshibala, Union européenne, elongo na Etats-Unis, Canada mpe Suisse.
+Greenpeace ekundoli ete Cuvette Centrale etondisami to ezipami na ba tourbières (mabele etonda charbon to mabanga ya makala) eye bato na zebi (chercheurs scientifiques) bamonaki kala te mpe bakanisi ete ebombi milliards 30,6 ya tonnes ya carbone.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Il est temps que l%27UE mette à profit son pouvoir pour empêcher toute activité industrielle dans les \u0026lt;a href=\"https://twitter.com/hashtag/Tourbi%C3%A8res?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Tourbières\u0026lt;/a\u0026gt; du bassin du Congo. La zone devrait être laissée intacte, de peur qu%27elle ne déclenche une plus grande crise climatique \u0026gt;\u0026gt; \u0026lt;a href=\"https://t.co/t2XFoK2ydr\"\u0026gt;https://t.co/t2XFoK2ydr\u0026lt;/a\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/ForestsAreLife?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#ForestsAreLife\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Greenpeace Afrique (@GreenpeaceAfrik) \u0026lt;a href=\"https://twitter.com/GreenpeaceAfrik/status/1159446915295186944?ref_src=twsrc%5Etfw\"\u0026gt;August 8, 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+“Ba tourbières ezali bombe ya carbone, esengeli batala yango lokola etando ‘epekisami’ na misala minso ya ba compagnies. Greenpeace ebandeli kosenga, lokola esalaki le 12 mars, na président Félix Tshisekedi, koboya ba blocs pétroliers epesamaki na compagnie ya makele (mines) ya ekolo Congo SPRL (CoMico) mpe na DIG Oil,“ esengi Greenpeace.
+ONG eye eyebisi F. Tshisekedi “apekisa misala minso ya ba compagnies na parc ya Salonga mpe na ba troubières ya RDC mpo na kopesa nzela te na likama ya écologie na mboka mpe mokili mobimba“, ekomi Greenpeace.

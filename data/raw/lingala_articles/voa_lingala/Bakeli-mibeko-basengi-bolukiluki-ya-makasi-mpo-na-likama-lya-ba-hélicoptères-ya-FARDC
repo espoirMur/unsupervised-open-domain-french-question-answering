@@ -1,0 +1,80 @@
+Commission Défense et Sécurité ya Assemblée nationale, eye ekambami na Jaynet D. Kabila, lipasa lya mokonzi ya kala Joseh KJabila, esengi na mbulamatari kosala enketi ya makasi mpo likama ya ba hélicoptères mibale ya mampinga ya RDC (FARDC) mposo moleki na nzela ya Mambasa-Kisangani, 
+ Na liyebisi na yango, Commission Défense et Sécurité eleli "liwa lya mbalakaka ya basoda sambo ya FARDC na makama mabale malandamaki na nzela ya Mambasa-kisangani, le 30 mpe le 31 décembre 2020."
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;— \u0026lt;a href=\"https://twitter.com/hashtag/PalaisDuPeuple?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PalaisDuPeuple\u0026lt;/a\u0026gt; | 04.01.2021 —Message de condoléances de la Commission \u0026lt;a href=\"https://twitter.com/hashtag/D%C3%A9fense?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Défense\u0026lt;/a\u0026gt; et \u0026lt;a href=\"https://twitter.com/hashtag/S%C3%A9curit%C3%A9?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Sécurité\u0026lt;/a\u0026gt; de l’Assemblée nationale suite aux crash des Aéronefs militaires des \u0026lt;a href=\"https://twitter.com/FARDC_?ref_src=twsrc%5Etfw\"\u0026gt;@FARDC_\u0026lt;/a\u0026gt; . « Nous présentons nos sincères condoléances aux familles biologiques des illustres disparus.» \u0026lt;a href=\"https://t.co/obdpJACHel\"\u0026gt;pic.twitter.com/obdpJACHel\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Assemblée nationale RDC 🇨🇩 (@AssembleeN_RDC) \u0026lt;a href=\"https://twitter.com/AssembleeN_RDC/status/1346183103199539200?ref_src=twsrc%5Etfw\"\u0026gt;January 4, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Jaynet D, Kabila nde atie manzaka na liyebisi lyango. 
+"Mboka na biso ewuti kobungisa ba pilotes ya basoda banei bazwaki diplôme nsima na malakisi ya milayi mpe ya ntalo na misala mya komema mpepo mpe expériene emonisama eye ekolo na biso elukaka na eye esalaka mpo na kokomisa sika mampinga ma biso malikolo," ekomi Jayent D. Kabila na nkombo ya Commission.
+"Yango Commission Défense et Sécurité esengi na mbulamatari ya ekolo komema pole na lombango na nzela ya boluki ya bozindo mpo na ndenge ya mpasi makama mabale maye masalamaki mpe mpo na makama masusu mpepo ya ba FARDC esali mikolo miye," elobi liyebisi lya Commission.
+Bakeli mibeko baye balobi makama maye mapesi libaku ya kokanisa basoda banso ba mpiko bakufa na bitumba bisika binso bazalaki kosalela bendele ya ekolo.

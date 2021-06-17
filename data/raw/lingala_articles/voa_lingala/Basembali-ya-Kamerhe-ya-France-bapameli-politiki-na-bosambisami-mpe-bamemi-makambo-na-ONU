@@ -1,0 +1,90 @@
+Basambeli ba Vital Kamerhe, mokambi ya ndako ya mosala ye président Félix Tshisekedi, bapameli politiki na bosambi na ye. Basakoli ete bamemi makomba yango na ONU. 
+ "Soki tokeyi na Groupe ya mosala ya Nations unies mpo etali bokangami na bozangi sembo mpe Rapporteur spécial (molobeli ya motuya) mpo etali makoki ma bokolongo, emonisameli biso ete bosenga ya lombango mingi bomonisami," ekobi na liyebisi Me Clara Gérard-Rodriguez na bàtonnier Pierre-Olivier Sur.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La situation de Vital \u0026lt;a href=\"https://twitter.com/hashtag/Kamerhe?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Kamerhe\u0026lt;/a\u0026gt; est alarmante : détenu depuis avril 2020 malgré plusieurs alertes médicales et la violation flagrante de son droit à un procès équitable, il n%27a aujourd%27hui plus de contacts avec ses avocats. \u0026lt;a href=\"https://twitter.com/POSavocat?ref_src=twsrc%5Etfw\"\u0026gt;@POSavocat\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/fz2vteKcM0\"\u0026gt;pic.twitter.com/fz2vteKcM0\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Clara Gérard-Rodriguez (@ClaraGrrz) \u0026lt;a href=\"https://twitter.com/ClaraGrrz/status/1333436688656441344?ref_src=twsrc%5Etfw\"\u0026gt;November 30, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Mpo na bango, bosambisami bwa M. Kmerhe mpe bokangami na ye bozali ya politiki.
+Basambeli babale baye balobi M. Kamerhe atiama na esika moto ayebi te soki kaka libota na ye.
+Me Gérard-Rodriguez na bàtonnier Sur balobi bakokaka kosolola lisusu te na M. Kamerhe wuto bosambisami ya kozongela mpe botindami bwa na esika ya kobombabma bosalama.
+"Emonani lokola ba avocats na ye ya Congo bazali kokoka te komona ye. Mpe, tozwaka na bayi nzinganzinga na ye sango ya ndambu ndambu mpe ekokana te. Solo na yango ezali ete etindami na bobangi ya makasi," ekomi basembeli ba M. Kamerhe wuto France.
+Me Clara Grard-Rodriguez na bàtonnier Pierre-Olivier Sur bapameli lolenge bakonzi ya RDC mpe ambassade na yango na France ezali kokoba kopekisa bango visa na ntina ete bazali bayi France.
+
+"Na likambo liye lizali kaka politkiki, litali Vital Kamerhe, candidat ya kala na maponami ya mokonzi ya mboka, asangamaki na oyo alingaki kokoma molongi, mpe na nsima aponamaki bo’ mokambi ya ndako ya misala na ye, na ntina ya kozala dauphin na ye, tozali na bobangi ete : Yambo, mpo na bokolongono bwa nzoto na ye boye moto inso ayebi ete bozali kobeba… likambo ya liwa to bomoi," ekebisi basembeli babale baye.
+Bakundoli ete ,agistrat moko akufaki na kati kaosambisa M. Kamerhe.
+Balobi ete mpo na bosambisi na sembo inso, esengelaki basembeli bakowuta bikolo binso bandimama.
+Liyebisi ya ba avocats baye babale, libimi nsima na kalaka mokonzi ya UDPS ya président Félix Tshisekedi, Augustin Kabuya, kondima o’mokolo mwa mposo ete likambo lya bokangami mpe bosambisami ya M. Kamerhe ezalaki ya politki.
+Liboso ya balandi ba UDPS, M. Kabuya apalelaki bayi FCC, lingomba ya mokonzi Joseph Kabila, mingi mingi ministre wa Yambo na minsitre ya Sembo na kosala nyonso mpo na kokangisa M. Kamerhe, kosambisa ye mpe kokweyisa ye o’liklambo.
+Kasi na bosimbisami ya M. Kamerhe, boko na bayi UDPS mpe bayi ndako ya mosala ya M. Tshisekedi bafundaki mpe bapesaki bilembo bipesaki bazuzi nzela ya kokweyisa M. Kamerhe mpe kokatela ye etumbu ya mibu 20 ya boloko (misala makasi) bakisa na 10 ya bopimi makoki mapolitiki na sanza ya juin.
+Basambisi bwango bozengela na juillet, kasi M. Kamerhe azwa bokono mpe amemama na lopitalo.

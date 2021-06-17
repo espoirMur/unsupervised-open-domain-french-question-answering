@@ -1,0 +1,81 @@
+Mokonzi ya kala ya Ekolo Congo démocratique Joseph Kabila apesi mitindo ete PPRD, lingomba na ye, mpe FCC, lisanga lya mangambo masangana nzinga nzinga na ye, bakozala te na mbulamatari ezali kokelama na Monistre wa Yambo ya sika Jean-Michel Sama Lukonde. 
+ Bakangambi ba lisanga mpe lingomba liye nde bapesi sango yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\"Le PPRD n%27enverra aucun de ses membres au Gouvernement. En clair, il ne donne aucun mandat à personne pour l%27engager au sein du gouvernement.\"[Extrait du communiqué du \u0026lt;a href=\"https://twitter.com/hashtag/SP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#SP\u0026lt;/a\u0026gt; Emmanuel Ramazani Shadary ] \u0026lt;a href=\"https://t.co/VYEWRwP3vt\"\u0026gt;pic.twitter.com/VYEWRwP3vt\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— PPRD (@pprdofficiel) \u0026lt;a href=\"https://twitter.com/pprdofficiel/status/1375549247299403783?ref_src=twsrc%5Etfw\"\u0026gt;March 26, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Na etinda ya mokonzi ya PRRD (Parti du peuple pour la reconstruction na démocratie) na mboka, kalaka mokambi ayebisi ba banso na mboka mpe na mokili, ete akotinda ata moto te na bayi lingomba na mbulamatari ekoya," ekomi na liyebisi Emmanuel Ramazani Shadary na mokanda VOA Lingala ezwaki.
+"Na polele, PPRD epesi etinda na moto moko te mpo akenda na nkombo na yango na mbulamatari ezali kokelama," ebetisi sete M. Ramazani.
+Ndenge moko mpe lisanga linene lya mangomba masanganaka Nzinga nzinga ya mokonzi ya kala Joseph Kabila, FCC elobaki lobi ete ekozala te na mbulamatari yango.
+Liyebisi lya FCC litiamaki manzaka na Raymond Tshibanda, mokambi ya cellule ya crise likalamaki nsima na président Félix Tshisekedi kopanza libala CACH-FCC.
+FCC epameli bobuki lya Buku likonzi mpe mibeko mya Ekolo na bayi Union Sacree liboke president Félix Tshisekedi akeli nsima na kokata libala lya CAHC na FCC.

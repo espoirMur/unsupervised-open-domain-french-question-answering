@@ -1,0 +1,161 @@
+Général Gabriel Amisi alias "Tango Four" atiami na ebonga ya inspecteur général ya mampinga ya RDC, kolanda mikano miike ya président Félix Tshisekedi. 
+ Gén. Amisi azalaka kino sika chef d’état-major général adjoint (mokambi molandi) ya ba FARDC (Forces armées ya Ekolo Congo démocratique) mpo etali misalsa mpe mambi ma bokengi.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;J%27ajoute mes félicitations à celles de \u0026lt;a href=\"https://twitter.com/AsstSecStateAF?ref_src=twsrc%5Etfw\"\u0026gt;@AsstSecStateAF\u0026lt;/a\u0026gt; pour S.E. le Président Félix Tshisekedi (\u0026lt;a href=\"https://twitter.com/Presidence_RDC?ref_src=twsrc%5Etfw\"\u0026gt;@Presidence_RDC\u0026lt;/a\u0026gt;) sur le progrès continu du programme de réforme en \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;. \u0026lt;a href=\"https://twitter.com/hashtag/USA?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#USA\u0026lt;/a\u0026gt; soutient les aspirations du peuple congolais à la démocratie \u0026amp; à l%27état de droit. \u0026lt;a href=\"https://twitter.com/USEmbKinshasa?ref_src=twsrc%5Etfw\"\u0026gt;@USEmbKinshasa\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/BCMMR1cKKH\"\u0026gt;https://t.co/BCMMR1cKKH\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— J. Peter Pham (@DrJPPham) \u0026lt;a href=\"https://twitter.com/DrJPPham/status/1284206743011155968?ref_src=twsrc%5Etfw\"\u0026gt;July 17, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Secrétaire d'Etat molandi ya Amerika mpo na Afrika, Tibor Nagy, alobi bolongolami ya gén. John Numbi nas ebonga ya inspecteur général ya mampinga ya RDC ezali likambo lilamu.
+"Tosepeli mpo ete gén. John Numbi oyo azali na etumbu ya Etats-Unis azali lisusu te na ebonga na ye. Etats-Unis ezali kopesa maboko na misala mya président Félix Tshisekedi mpo na kobongisa makoki mabomoto mpe bosali mosala lokola esengeli na mampinga ya Congo," ekomi na Twitter na ye Tibor Nagy.
+Kasi bayi lingomba LUCHA bayebisi ete bolongoli ya gén. Numbi lokola inspecteur général ya FARDC bolingaki kozala likambo lilamu soki gén. Amisi atiamaki te na esika na ye.
+"Bato babte mabale. Esika na bango ezali liboso ya ba zuzi," ekomi LUCHA na Twittere na yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La mise à l’écart du Général John Numbi du commandement des FARDC aurait pu être une excellente nouvelle s’il n’était pas remplacé par aussi sulfureux que lui, le désormais Général d’armée Gabriel Amisi Kumba dit Tango4. La place de ces deux criminels notoires est à la barre. \u0026lt;a href=\"https://t.co/rJDbqcEWUI\"\u0026gt;pic.twitter.com/rJDbqcEWUI\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— LUCHA 🇨🇩 (@luchaRDC) \u0026lt;a href=\"https://twitter.com/luchaRDC/status/1284225643715207168?ref_src=twsrc%5Etfw\"\u0026gt;July 17, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Lokola gén. Numbi, gén. Amisi azalaka na nse ya etumbu ya Etats-Unis mpe Union européenne mpo kopekisa maponami na ntango esengelaki kosalema mpe mpo monyoloki ya bato.
+Gén. Amisi azwi bongo libonga ya gén. John Numbi bo' inspecteur général ya FARDC.
+Pene na ye, azali na ba généraux Charles Akili Muhindo mpe Etienne Kasereka Sindani baye balandi ye lokola ba inspecteurs adjoints.
+Gén Hugues Gaston Ilunga Kamepte Kabamba, oyo azali mpe na nse ya etumbu ya Etats-Unis mpe UE, atiami na ebonga ya commandant ya base militaire ya Kitona.
+Gé. Major Franck Buamunda Tunda akomi mokambi ya maison civile militaire ya mokonzi ya mboka.
+Gén Fall Sikabue ako mokambi ya forces terrestre. Bokambami bwa chancellerie ya orodre nationale Héros nationaux bopesami naAndré Matutezu Lewa.

@@ -1,0 +1,157 @@
+Roger Lumbala, mokambi ya RCD-N (Rassembment congolais pour la démocratie nationale) moko na mangomba ya basimba minduki ya kala, akangami na Paris mpo na mbeba ya bomoto na bitumba ya 2002. Parquet national antiterroriste ya France elobi akangamaki samedi. 
+ "Ezali bolandelami bosalami na nzela ya rapport Mapping ya ONU etali mbeba ya makasi ya makoki ma bomoto mpe makoki ma bomoto ya molongo (droit international humanitaire) esalamaki kati na mars 1993 mpe juin 2003 (na RDC), elakisi liyebisi lya parquet yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Pour plus d’informations sur le rapport mapping visiter la page suivante: \u0026lt;a href=\"https://t.co/GBPqW331oX\"\u0026gt;https://t.co/GBPqW331oX\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— UN Human Rights DRC (@unjhro) \u0026lt;a href=\"https://twitter.com/unjhro/status/1346173168214564867?ref_src=twsrc%5Etfw\"\u0026gt;January 4, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+M. Lumbala amemamaki na bazuzi na kofundama na kozala na mbeba ya bomoto mpe kati na lingomba likelamaki na ntina ya kosala mbeba yango na bitumba bibengamaki 'Effacer le tableau'," elobi parquet .
+Rapport mapping ya ONU ebimisamaki na 2010 mpe etangaki koleka mbeba 600 kati na bitumba mibale misalamaki na 1996-1998 mpe 1998-2003.
+RCD-N efundamaka na kozwa basi na makasi, koboma bato pamba pamba, komema bato, kokata bato mpe kolya bato na bitumba ezalaki kosala wuto 1998 na Ituri.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Sur la base des conclusions du \u0026lt;a href=\"https://twitter.com/hashtag/RapportMapping?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RapportMapping\u0026lt;/a\u0026gt;, les autorités françaises ont ouvert une procédure judiciaire contre M. Tshitenga Roger Lumbala, ancien leader du groupe armé Rassemblement Congolais pour la démocratie-National. \u0026lt;a href=\"https://twitter.com/Mukwege?ref_src=twsrc%5Etfw\"\u0026gt;@mukwege\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/thioyeziz?ref_src=twsrc%5Etfw\"\u0026gt;@thioyeziz\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/UNHumanRights?ref_src=twsrc%5Etfw\"\u0026gt;@UNHumanRights\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/lHHkp9MB0z\"\u0026gt;https://t.co/lHHkp9MB0z\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/O9AJD07pi7\"\u0026gt;pic.twitter.com/O9AJD07pi7\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— UN Human Rights DRC (@unjhro) \u0026lt;a href=\"https://twitter.com/unjhro/status/1346208619252088834?ref_src=twsrc%5Etfw\"\u0026gt;January 4, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+M. Lumbala, na mibu 62, akomaka ministre na 2004-2005 na mbulamatari esalamaki nsima na dialogue ya Sun City.
+Misala mitala mbeba ya bomoto ya parquet ya Paris milobi mikangi ye mpo ya molongo mopesa yango mpifo ya kolandela makambo ma motindo ya boye.
+RCD-N esimbamaki na bayi Ouganda lokala MLC (Mouvement de libération du Congo) ya Jean-Pierre Bemba oyo atikamaki na CPI (Cour pénale internationale) na 2018 nsima na pene na mibu zomi ya boloko.
+MLC mpe efundamaka na makambo ma lolenge wana.

@@ -1,0 +1,215 @@
+Bakambi ya Lamuka balobi o’mokolo ya mposo na Bruxelles (Belgique), ete batikali lisanga mpe bakomibongisa mpo na kobongola lisanga na bango na plateforme (lingomba ya monene) ya politiki. 
+ Moïse Katumbi, Jean-Pierre Bemba, Adolphe Muzito, Freddy Matungulu, ntoma ya Mbusa Nyamuisi mpe Martin Fayulu, candidat ya lingomba liye ntango ya maponami, batiyaki manzaka na mokanda basalaki nsima ya bokutani na bango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flexxuslegal%2Fvideos%2F2303480193224158%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+
+Lamuka ekokoma plateforme ya politiki. Ezali kaka likambo ya ntango moke. Kala te tokokuta lisusu mpo na kosolola makambo nyonso ya organisation (mabongisi). Kati na yango fonctionnement (lolenge ya kosala), elimboli Jean-Pierre na motuna ya bapanzi sango.
+Bato oyo bozomona na Lamuka bazali baye, ntango batiye manzaka na bango balongola yango te, ebakisi M. Bemba.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Nangaa awangani kaniaka
+
+
+
+
+
+
+Nzokande na mokanda batiye manzaka, bakambi ya Lamuka balobi, bakokoba elongo bitumba mpo na bizaleli ya democratie na oyo etali maponami na ntina ya komema mbongwana liye bana ya mboka bazali kozela.
+Na ngambo na ye, Moïse Katumbi alobi ete Felix Tshisekedi azali ndeko.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flla.queen%2Fvideos%2F3243885022304002%2F\u0026show_text=0\u0026width=267||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+
+Na tambolaki na ye ti na Genève. Mpe na Genève, toponaki Martin Fayulu mpo azala candidat na biso na ntina ya kolonga (Joseph) Kabila, mpe tolongaki ya. Kasi likambo ezali ya koyeba mabe ezali nini na mboka na biso. Mpo na nini mboka ezali kokende liboso te? Mpo na nini moyibi esalamaki (na maponami) ? Mabe nde Kabila, elobaki M. Katumbi.

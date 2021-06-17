@@ -1,0 +1,83 @@
+Basali sambo ya bitumba na Ebola na Mbandaka, na Equateur, batindami na bazuzi na mikano ya kobundisa "mombongo na nzima ya bokono", elobi ministre ya Bokolongono, Dr. Eteni Longondo. 
+ Dr. Eteni asakoli na liyebisi ete bolukiluki bozali kosalama mpo na kosukisa mombongo na nsima ya Ebola.
+Mposo moleki, ba ntoma ya Etats-Unis, Canada mpe Royaume Uni bapamelaki kaniaka mpe moyibi bakutaki kosalama na bitumba na Ebola ya mbala zomi ezali kongala na Equateur esika wapi balekisaki pene na mposo moko.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;After a working visit to Equateur to review the \u0026lt;a href=\"https://twitter.com/hashtag/Ebola?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Ebola\u0026lt;/a\u0026gt; response and other critical health and development needs there, 🇨🇦🇺🇸🇬🇧 and \u0026lt;a href=\"https://twitter.com/MTamfum?ref_src=twsrc%5Etfw\"\u0026gt;@MTamfum\u0026lt;/a\u0026gt; shared their impressions with \u0026lt;a href=\"https://twitter.com/Presidence_RDC?ref_src=twsrc%5Etfw\"\u0026gt;@Presidence_RDC\u0026lt;/a\u0026gt; and issue the following joint declaration. \u0026lt;a href=\"https://twitter.com/hashtag/StopEbola?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#StopEbola\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/StopCorruption?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#StopCorruption\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/326CH87fZk\"\u0026gt;pic.twitter.com/326CH87fZk\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S.Embassy Kinshasa (@USEmbKinshasa) \u0026lt;a href=\"https://twitter.com/USEmbKinshasa/status/1305848593971056640?ref_src=twsrc%5Etfw\"\u0026gt;September 15, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Bana ba RDC balembi kaniaka," ekomaki na liyebisi ban toma baye.
+Koleka bato 60 bakufi na Ebola na Equateur mpe bato 134 nde bayebani kozala na yango.
+"Na Mbadaka, bato 4.000 batindamaki mpo na Ebola kasi na esika ya mosala bazalaki kaka 120. Mpo na nini bato 4.000 ?" emitunaki na Top Congo ntoma ya Canada, Nicolas Simard.
+Nkombo ya "mombongo ya Ebola" ebengamaki na Ebola ya mbala 10 engalaki na monyele epayi wapi bato 2.000 bakufaki na pene na mibu mibale.
+Etats-Unis epesa 600 millions $ mpo na kobundisa Ebola na monyele ya RDC, yango nde Ebola ya mibale na makasi koleka na lisitwale na mokili.
+Royaume Uni nde epesa 250 millions $ mpe Canada, 135 millions $.

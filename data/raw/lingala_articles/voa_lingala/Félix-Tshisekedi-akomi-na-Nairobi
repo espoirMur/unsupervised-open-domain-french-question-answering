@@ -1,0 +1,100 @@
+Président Felix Tshisekedi akomi mercredi na Nairobi na Kenya. 
+ Azali kokoba mobembo waye wa yambo nsima ya kokoma mokonzi kolonda maponami ya le 30 décembre.
+Azali kosolola na président Uhutu Kenyatta ya Kenya oyo azalaki bobele mokambi ya ekolo ya bapaya moko oyo azali na milulu ya bozuwi bokonzi ya Félix Tshisekedi le 24 janvier na Palais de la nationa na Kinshasa.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\" data-lang=\"en-gb\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;Visite officielle du Président de la République S.E. Félix-Antoine Tshisekedi Tshilombo au Kenya.1. Arrivée à \u0026lt;a href=\"https://twitter.com/hashtag/Nairobi?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Nairobi\u0026lt;/a\u0026gt;, mercredi 6 février 2019. \u0026lt;a href=\"https://t.co/gaZy0IoG4S\"\u0026gt;pic.twitter.com/gaZy0IoG4S\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1093109278607585280?ref_src=twsrc%5Etfw\"\u0026gt;6 February 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Tokundola ete Lingomba liye momaki Felix Tshisekedi na maponami, CACH too Cap pour le Changement mobotamaki na Nairobi, engumba mokonzi ya Kenya.
+Esalamaki elongo na Vital Kamerhe oyo atiami mokambi ya cabinet ya Felix Tshisekedi.
+Nsima na Kenya, mokonzi ya sika ya RDC azelami na Congo-Brazzaville esika wapi asengeli akoma nsima ya nzanga.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Félix Tshisekedi na Angola mpo na mobembo wa ye wa yambo
+
+
+
+
+
+
+Kasi Félix Tshisekedi atikaki Luanda, na Angola epayi wapi akomaki lobi moleki. Kuna asololaki na président Joao Lourenco na ntina ya kokomisa makasi boyoka kati na mboka mibale baye.

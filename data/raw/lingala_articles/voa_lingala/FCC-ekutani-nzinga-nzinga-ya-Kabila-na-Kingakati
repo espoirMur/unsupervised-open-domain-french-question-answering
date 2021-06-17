@@ -1,0 +1,119 @@
+Ba membres ya FCC, Front commun pour le Congo, bakutani mercredi nzinga nzinga ya président ya kala Joseph Kabila, mpe balakeli ye bosembo. 
+ Ba signer mokanda moko na kati yango balobi bakotosa botamboli ya lingomba mpe baye nyonso ya lingomba.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Femmerence.luyindula.1%2Fvideos%2F1229832000505106%2F\u0026show_text=0\u0026width=560||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+
+Lolanda bokutani liye, FCC ezali na ba députés koleka 340 mpe ezali majorité na parlement.
+Batali mpe bamoni ete bazali mpe na majorité ya ba provinces, 25 likolo ya 26, elobi Audin Minaku, mokonzi ya kala ya Assemblée nationale.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Félix Tshisekedi asengi ete masolo ekende mbangu mpo ba kofungola Maison Schegen
+
+
+
+
+
+
+Na yango, bazali kozela ete président ya sika, Félix Tshisekedi atiya Premier ministre oyo akowuta na lingomba na bango.
+Balobi ete lingomba na bango elongwe plate-forme electorale mpe ekomi plateforme ya gouvernement.

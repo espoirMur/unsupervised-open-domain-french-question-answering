@@ -1,0 +1,83 @@
+"Mampinga ma Zambie matitaki mpenza mabele ma Ekolo Congo démocratique le 3 août," eyebisi molobeli ya président Félix Tshisekedi. Liyebisi na ye lipesami mokolo moko nsima na Sénatrice Francine Muyumba kotia ntembe na likambo lyango. 
+ Kolanda maloba ma Tina Salama, molobeli molandi ya président Tshisekedi, na compte Twiter na ye, "bavandi ya bisika byango bazongi".
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;1.Les troupes Zambiennes ont en effet quitté Kalubamba le 03 Août et la population y est revenue 2.Des bornes provisoires ont été posées et celles définitives en cours3.Des recommandations via un rapport de la commission du Pr de l%27organe défense et sécurité soumises à la SADC \u0026lt;a href=\"https://t.co/6XAQEFUdTW\"\u0026gt;https://t.co/6XAQEFUdTW\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Tina Salama (@TinaSalama2) \u0026lt;a href=\"https://twitter.com/TinaSalama2/status/1291381216919392258?ref_src=twsrc%5Etfw\"\u0026gt;August 6, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Ndelo (bornes) provisoires etiyami mpe ya défitinitives ezali kotiyama," ebakisi Mme Salama.
+Mercredi, Sénatrice Muyumba amitunaki na Tweet moko soki nani azalaki koloba solo kati na RDC na SADC.
+Mpo na Mme Myumba, SADC elobaki ete etindaki ba experts na yango baye bakomi nanu te rapport ya suka mpo likambo lyango.
+"Malako na nzela ya rapport moko ya commission ya président ya organe ya Défense na bokengi mapesami na SADC," eyanoli ngambo na ye Mme Salama.
+Basoda ya Zambie bakotaki na mboka Kalubamba na Kibanga, na Moliro, na etuka ya Tanganyika wuto mwa ba sanza.
+Molebeli ya mbulamatari David-Jolino Diwampovesa-Makelele asakolaki ete SADC epesaki mposo mibale na Zambie mpo na kolongwa.
+M. Makelele andimi ye mpe lokola ete Zambie elongoli ba soda ba yango na RDC.

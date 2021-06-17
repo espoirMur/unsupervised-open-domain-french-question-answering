@@ -1,0 +1,102 @@
+Milulu mya botiami manzaka na boyokani kati na Ouganda na RDC mpo na kotonga ba nzela na Congo mpe bokengi misalaki jeudi na Kampala. 
+ Président Yoweri Museveni ya Ouganda nde atiaki manzaka elongo na ministre ya RDC ya mambi ma bapaya Christophe Lutundula Apala oyo alakisa elongi ya mbulamatari naye.
+"Elongo na bokulaka Lutundula Apala vice-Premier ministre mpe ministre ya mambi ya bapaya ya RDC totie manzaka na boyokani kati na ba mbulamatari na biso (IGA), boyokani boye botali botiami o’mosala ya kotonga ba nzela na mabele ma RDC," ekomi président Museveni na compte Twitter na ye.
+"Natondi mwana nsomi Félix Tshisekedi mpo andimaki bobengisami na ngai mpe atindi Christophe Lutundula koya kotia manzaka na boyokani bokotikala na lisolo, boye bolakisi boyokani bokasi mpe bondeko kati na bikolo mibale," ebakisi M. Museveni.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;We also committed to the transboundary cooperation between the two nations in a wide range of areas including; defence and security, electricity connectivity, trade and investment with a view of promoting peace, stability and prosperity of the two countries.\u0026lt;/p\u0026gt;— Yoweri K Museveni (@KagutaMuseveni) \u0026lt;a href=\"https://twitter.com/KagutaMuseveni/status/1397949571595177988?ref_src=twsrc%5Etfw\"\u0026gt;May 27, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Mokonzi ya Ouganda alobi ete boyokani bwango botali mpe makambo misusu mingi lokola bobateli mpe bokengi, bopesani lotiliki, mombongo mpe botiami na misolo na bokeli misala to investissement nakotombolaka kimya mpe bofulukisami ya bikolo mibale.
+Boyokani boye bosalami ntango Ouganda na RDC bazali na bosambi na Cour internationale ya justice na Haye mpo na mbeba mampinga ma Ouganda (UDPF) masalaka na bitumba na mabele ma Congo.
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Cour internationale ya justice ekotinda ba experts mpo na kotala motuya ya mbeba Ouganda esala na RDC
+
+
+
+
+
+
+Ntango ya mokonzi ya kala Joseph Kabila, mbulamatari ya RDC esengaki Ouganda kofuta pene na milliards xomi ya ba dollars mpo na bobomi, bobebisi UPDF esalaki na Congo.
+Kasi Ouganda endimaki te mpe ekobaka na kowangana.
+Nzokande, bayi société civile na Beni, na Nord-Kivu, bayebisaki ete mampinga ma Ouganda makoataki na territoire ya Beni mikolo misato mileki mpo na kosala elongo na bayi FARDC, mampinga ma RDC.
+Bakeli mibeko baike ya RDC lokola Juvenal Munubo batelemeka likambo lyango mpoe likismaki te na Assemblée nationale.

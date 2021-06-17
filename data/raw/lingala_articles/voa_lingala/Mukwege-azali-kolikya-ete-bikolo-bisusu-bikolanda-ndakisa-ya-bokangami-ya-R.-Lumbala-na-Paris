@@ -1,0 +1,105 @@
+Dr Denis Mukwege, prix Nobel ya Kimya 2018, alobi ete azali na elikya ete bikolo bisusu bikolanda ndakisa ya bokangami bwa Roger Lumbala na Paris mpo na kolandela baye batangama na rapport Mapping ya ONU. 
+ Dr Mukwege azali moko na baye basengaka botiami na misala ya rapport eye etanga koleka mbeba 600 kati na 1993 kino 2003.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;L%27arrestation et la mise en examen de Mr Roger Lumbala à Paris est un pas important pour la justice internationale et la lutte contre l’impunité dont de nombreux auteurs présumés, congolais et étrangers, continuent de bénéficier \u0026lt;a href=\"https://twitter.com/hashtag/RapportMapping?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RapportMapping\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/lajusticecompte?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#lajusticecompte\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/nojusticenopeace?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#nojusticenopeace\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Denis Mukwege (@DenisMukwege) \u0026lt;a href=\"https://twitter.com/DenisMukwege/status/1346503934987415552?ref_src=twsrc%5Etfw\"\u0026gt;January 5, 2021\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Bokangami mpe bofundami na M. Roger Lumbala na Paris ezali ntaka ya liboso mpo na misala mya sembo mya molongo mpe bitumba na bozangi etumbu boye bosala ete bana mingi ba Congo mpe bapaya baye bafundama kosala yango bakoba kobika na kofulukisama," ekomi Dr. Mukwege na compte Twitter na ye.
+Rapport yango ebimisaki na 2010 kasi etiamaki nanu te na misala.
+Roger Lumbala, mokambi ya RCD-N (Rassembment congolais pour la démocratie nationale) moko na mangomba ya basimba minduki ya kala, akangamaki na Paris mpo na mbeba ya bomoto na bitumba ya 2002 na Ituri.
+Parquet national antiterroriste ya France elobi akangamaki samedi.
+M. Lumbala amemamaki na bazuzi na kofundama na kozala na mbeba ya bomoto mpe kati na lingomba likelamaki na ntina ya kosala mbeba yango na bitumba bibengamaki 'Effacer le tableau'," elobi parquet .
+
+
+
+
+
+ 
+
+
+Lire aussi :
+
+
+Roger Lumbala akangami na Paris mpo na mbeba ntango ya bitumba na Ituri
+
+
+
+
+
+
+Rapport mapping ya ONU ebimisamaki na 2010 mpe etangaki koleka mbeba 600 kati na bitumba mibale misalamaki na 1996-1998 mpe 1998-2003.
+RCD-N efundamaka na kozwa basi na makasi, koboma bato pamba pamba, komema bato, kokata bato mpe kolya bato na bitumba ezalaki kosala wuto 1998 na Ituri.
+M. Lumbala, na mibu 62, akomaka ministre na 2004-2005 na mbulamatari esalamaki nsima na dialogue ya Sun City.
+Misala mitala mbeba ya bomoto ya parquet ya Paris milobi mikangi ye mpo ya molongo mopesa yango mpifo ya kolandela makambo ma motindo ya boye.
+RCD-N esimbamaki na bayi Ouganda lokala MLC (Mouvement de libération du Congo) ya Jean-Pierre Bemba oyo atikamaki na CPI (Cour pénale internationale) na 2018 nsima na pene na mibu zomi ya boloko.
+MLC mpe efundamaka na makambo ma lolenge wana.

@@ -1,0 +1,79 @@
+Bato 71 bakufi nsima na explosion ya camion-citerne na mboka Morogoro, na west ya ya Dar es Salam, na Tanzanie. Mingi kati na bawei bakimaki mbangu kolokota essence ezalaki kobima na motuka monene moye. 
+ Mokambi na police ya engumba mokonzi ya Tanazanie, Dar es Salaam, ayebisi été mibali bazali 58 kati na bawei mpe basi basato. Kolanda maloba maye bato 72 nde bazali kosalisama mpo na mpota na bango lopitalo ya esika eye.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;Social media has left us heartless, guys are burning at Msamvu in \u0026lt;a href=\"https://twitter.com/hashtag/Morogoro?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Morogoro\u0026lt;/a\u0026gt; Town, \u0026lt;a href=\"https://twitter.com/hashtag/Tanzania?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#Tanzania\u0026lt;/a\u0026gt; and some good for nothing Senji is saying \"watu wanaungua\".If you can%27t jump in to help, kaa na mama yako! Bure Kabisa \u0026lt;a href=\"https://t.co/yPZuQnVbWl\"\u0026gt;pic.twitter.com/yPZuQnVbWl\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Cyprian Nyakundi Escobar (@CisNyakundi) \u0026lt;a href=\"https://twitter.com/CisNyakundi/status/1160128422024273921?ref_src=twsrc%5Etfw\"\u0026gt;August 10, 2019\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+
+Bilili bizuwami na bisika biye (Twitter #Tanzania) bimonisi motuka monene yango na moto makasi mpe molinga moyindo mingi elongo na nzoto ya bato eziki na eye etakali na nzoto esusu.
+Likama ya lolengo loye lisalamaki na Congo democratique RDC mbala mingi. Le 6 octobre 2018, bato 53 bakufaki mpe na moto mobimaki nsima na botutani ya camion-citerne na motuka mosusu na Kongocentral. Le 2 juillet 2010, bato 292 basusu bakufaki mpe lokola na moto mobimaki nsima na likama ya camion-ceterne na Sange, na Sud-Kivu.

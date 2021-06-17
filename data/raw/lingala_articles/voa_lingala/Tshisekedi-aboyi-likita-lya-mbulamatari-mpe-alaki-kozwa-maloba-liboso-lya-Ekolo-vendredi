@@ -1,0 +1,162 @@
+Président Félix Tshisekedi aboyi likita lya mbulamatari lya mokolo mwa mitano mokoya mpe asakoli ete akozwa maloba liboso na Ekolo. 
+ Yango esalami nsima milulu mya mokolo mwa misato mya bolapi ndayi bwa bazuzi basato batiamaki na président Félix Tshisekedi kasi bayi FCC, linigomba linene lya mokonzi ya kala Joseph Kabila, baye baleki mingi kati na misala (instutitions) ya mboka, bazalaki te. Ezala bayi mbulamatari to bayi suku mibale ya Parlement, longola moko moko ya botanga.
+Mpo na FCC, Felix Tshisekedi abukaki Buku likonzi.
+"Mokonzi ya mboka, tata ya ekolo, akozwa maloba vendredi 23 octobre 2020. Mpo na yango, bokutani bwa mbala 54 ya likita lya bayi mbulamatari lisengelaki kosalama mokolo wana litindami na mokolo mokoya nsima, ekomi na liyebisi mokambi molandi mwa ndako ya mosala ya président Tshisekedi," Désiré-Cashimir Kolongele Eberande.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"und\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/COMMUNIQUE?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#COMMUNIQUE\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PRESIDENCE?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PRESIDENCE\u0026lt;/a\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/VENDREDI?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#VENDREDI\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/FATSHI?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#FATSHI\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PR05?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PR05\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/Amu8NP6BZY\"\u0026gt;pic.twitter.com/Amu8NP6BZY\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— FATSHI News (@FatshiNews) \u0026lt;a href=\"https://twitter.com/FatshiNews/status/1319057738526265345?ref_src=twsrc%5Etfw\"\u0026gt;October 21, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Na ngambo na yango, Assemblée nationale mpe epusi na mokolo moyebani te makita manso.
+Molobeli to rapporteur na yango akomi na liyebisi ete ezali mpo na malako ma comité multisectoriel ya bitumba na bokono bwa COVID-19.
+Esengelaki Ministre ya Décentralisation Azarias Ruberwa apesa lobi loleki (jeudi) eyano na mituna mya bakeli mibeko mpo
+Matata mazali kati boyokani ya kokamba mboka bosalama na CACH, lingomba linene nsima na Félix Tshisekedi, na FCC.
+Bato baike bazali kosenga libala likufa kati na CACH na FCC. Kati bango, ONG ACAJ.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: La coalition FCC-CACH s’avère ANTINOMIQUE aux aspirations du peuple congolais ⁦\u0026lt;a href=\"https://twitter.com/Presidence_RDC?ref_src=twsrc%5Etfw\"\u0026gt;@Presidence_RDC\u0026lt;/a\u0026gt;⁩ ⁦\u0026lt;a href=\"https://twitter.com/PrimatureRDC?ref_src=twsrc%5Etfw\"\u0026gt;@PrimatureRDC\u0026lt;/a\u0026gt;⁩ ⁦\u0026lt;a href=\"https://twitter.com/MwilanyaNehemie?ref_src=twsrc%5Etfw\"\u0026gt;@MwilanyaNehemie\u0026lt;/a\u0026gt;⁩ ⁦\u0026lt;a href=\"https://twitter.com/drcJosephKabila?ref_src=twsrc%5Etfw\"\u0026gt;@drcJosephKabila\u0026lt;/a\u0026gt;⁩ ⁦\u0026lt;a href=\"https://twitter.com/KapiambaGeorges?ref_src=twsrc%5Etfw\"\u0026gt;@KapiambaGeorges\u0026lt;/a\u0026gt;⁩ ⁦\u0026lt;a href=\"https://twitter.com/mbelajosepha?ref_src=twsrc%5Etfw\"\u0026gt;@mbelajosepha\u0026lt;/a\u0026gt;⁩ \u0026lt;a href=\"https://t.co/VYwsu87CBg\"\u0026gt;pic.twitter.com/VYwsu87CBg\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— ACAJ (@acajasbl) \u0026lt;a href=\"https://twitter.com/acajasbl/status/1319237600939573249?ref_src=twsrc%5Etfw\"\u0026gt;October 22, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Kasi bamanyoli basusu balobi ekosenga yambo matata makasi mazala kati na ba instutions mpe matata yango mapekisa botamboli ya mboka.
+Mpe lisusu, eskosengela Félix Tshisekedi asolola yango na mokambi ya mbulamatari mpe na bayi Parlement.
+Basusu lokola lisanga lya maponami AETA (Agir pour des Elections Transparentes et Apaisées) esengi Félix Tshisekedi na Joseph Kabila basolola mpo na kosilisa matata maye.
+Martin Fayulu, opposant, mkambi ya ECIDE mpe motambwisi ya Lamuka asengaki ete bakambi ba biyamba bamema masolo na mboka.
+M. Fayulu asengaka maponami yambo na ngonga mpo na kosilisa nkwokoso na mboka.

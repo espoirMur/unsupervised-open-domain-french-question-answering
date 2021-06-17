@@ -1,0 +1,231 @@
+Mosambeli ya bitumba na kaniaka Akere Muna akutanaki na bakambi ya Agence ya bopekisi mpe kobundisa kaniaka (APLC)  elongo na bakambi ba PNUD mpe ya Misala mya sembo mpe bopekisi drogue to bangi  na ambassade ya Etats-Unis. 
+ Moyi Cameroun Akere Muna atimaki bo' mosambeli ya RDC mpo na bitumba na kaniaka, na président Félix Tshisekedi, na lisungi lya PNUD eye epesaka ye lifuta. 
+Tibor Nagy, sous-secrétaire d’Etat ya Amarika azalaki te na masolo mango kasi alakisi na Twitter ntima na yango.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"en\" dir=\"ltr\"\u0026gt;The United States is a steadfast partner in the fight against corruption - a top priority for the DRC to achieve its full potential. \u0026lt;a href=\"https://t.co/y4WcFyPYOB\"\u0026gt;https://t.co/y4WcFyPYOB\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Tibor Nagy (@AsstSecStateAF) \u0026lt;a href=\"https://twitter.com/AsstSecStateAF/status/1301144728193429505?ref_src=twsrc%5Etfw\"\u0026gt;September 2, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Etats-Unis ezali mosungi ya mpiko na bitumba na kaniaka, Yango nde linkambo lya motuya mpo ete Ekolo Congo démocratique ekoka kosalela makoki mango manso," ekomi Tibor Nagy na Twitter..
+Nzokande, ntoma ya Amerika na Kinshasa, Mike Hammer akutanaki kaka na Kinshasa mpe lokola na basi to ba mama bamikotisi na bitumba na kaniaka.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;La corruption est une anti-valeur qui nous touche tous. Honoré d rencontrer ces femmes menant la lutte contre la corruption en \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;, \u0026lt;a href=\"https://twitter.com/annytenga?ref_src=twsrc%5Etfw\"\u0026gt;@annytenga\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/RienSlesFemmes?ref_src=twsrc%5Etfw\"\u0026gt;@rienslesfemmes\u0026lt;/a\u0026gt;. Ce n%27est qu%27en impliquant tout l monde dans ce combat q nous pourrons débarrasser la RDC de ce mal. \u0026lt;a href=\"https://twitter.com/hashtag/NoImpunite?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#NoImpunite\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/PP4PP?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PP4PP\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/d50qo5oBND\"\u0026gt;pic.twitter.com/d50qo5oBND\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Mike “Nzita” Hammer (@USAmbDRC) \u0026lt;a href=\"https://twitter.com/USAmbDRC/status/1301120231813898240?ref_src=twsrc%5Etfw\"\u0026gt;September 2, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Kaka na mokolo moko wana, ambassade ya Etats-Unis na Kinshasa esalisaki bokutani na nzela ya internet kati na département ya trésor (Ministère ya Finances ya Amerika) na secrétaire exécutif ya cellule nationale ya renseignements financiers (CENAREF),
+Masolo na CENAREF mazalaki mpo na maye matali bobateli bwa secteur minier na RDC na mbeba inso ya kolekisa misolo mibe na nzela malamu, mpe kopesa misolo na misala ma dongolo miso (terrorists) mpe baye basalaka kaniaka.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;.\u0026lt;a href=\"https://twitter.com/USEmbKinshasa?ref_src=twsrc%5Etfw\"\u0026gt;@USEmbKinshasa\u0026lt;/a\u0026gt; a organisé 1e rencontr virtuel avc \u0026lt;a href=\"https://twitter.com/USTreasury?ref_src=twsrc%5Etfw\"\u0026gt;@USTreasury\u0026lt;/a\u0026gt; \u0026amp; Sec Exécutif d l Cellule Nationale d Renseignemts Financiers CENAREF pr discuter d l protection d secteur financier d \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; contr l abus commis pr d blanchisseurs d%27argent,financiers terroristes \u0026amp; acteurs corrompus. \u0026lt;a href=\"https://t.co/VoxKqPZEYW\"\u0026gt;pic.twitter.com/VoxKqPZEYW\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— U.S.Embassy Kinshasa (@USEmbKinshasa) \u0026lt;a href=\"https://twitter.com/USEmbKinshasa/status/1301200078514913281?ref_src=twsrc%5Etfw\"\u0026gt;September 2, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Etats-Unis ezali na RDC ne boyokani ya malamu mpe kimya mpe bofulukisami (PP4PP) wuto président Félix Tshisekedi azwaki bokonzi na janvier 2019.

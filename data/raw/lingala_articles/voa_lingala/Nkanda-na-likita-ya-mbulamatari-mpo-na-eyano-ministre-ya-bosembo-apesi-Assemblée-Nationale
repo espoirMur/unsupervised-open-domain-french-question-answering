@@ -1,0 +1,81 @@
+Nkanda mpe kobendana ezalaki na likita lya mbulamatari mpo na mokanda mwa eyano VPM, ministre ya bosembo apesaki assemblée nationationale na kolanda mibeko ya mbongwana ya magistrature. Baike na mbulamatari bayebisi ete président Tshisekedi atikaki likita lyango. 
+ Kolanda maloba ma baike na mbulamatari, mokonzi mboka mpe baike ya CACH bapamelaki mingi vice-Premier ministre, ministre ya mambi ma bosembo, Célestin Tunda, mpo na kotinda eyano elobamaki te na mbulamatari na commission Politique Administrative mpe poilitique ya Assemblée nationale.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: L’ACAJ appelle l Procureur Gl près la Cour de Cassation à ouvrir 1 enquête pénale urgente sur les circonstances troubles ds lesquelles le VPM TUNDA a envoyé à l’AN les avis,au nom du Gvt, sur les 3 textes MINAKU, alors que c dernier n’y avait jamais statué \u0026lt;a href=\"https://twitter.com/KapiambaGeorges?ref_src=twsrc%5Etfw\"\u0026gt;@KapiambaGeorges\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/t2VzcMj1wY\"\u0026gt;pic.twitter.com/t2VzcMj1wY\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— ACAJ (@acajasbl) \u0026lt;a href=\"https://twitter.com/acajasbl/status/1276580828689174528?ref_src=twsrc%5Etfw\"\u0026gt;June 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+ 
+Eyano yango azali kondima makasi mazali kati na mibeko misato mapesami na ba députés nationaux ya PPRD, lingolmba lya mokonzi ya kala Joseph Kabila, miye mizali kotalama na Commission PAJ ya Assemblée nationale.
+Mposo eye mobulu mozalaki na mboka mpo na yango.
+Biluku na bato, mingi mpeza ya CACH, bakitaki o’balabala, babisaki ndako mpe biloko ya bayi PPRD, mpo na kotelemela mabongisi ma mibeko miye.
+Na ngambo na yango, ONG ACAJ (Association congolaise pour l’accès à la justice) ya George Kapiamba, esengi na procureur général ya Cour ya cassation kofungola enketi mpo na koyeba lolenge nini VPM Tunda atindaki, na nkombo na mbulamatari, eyano eye na Assemblée nationale ntango yango epesaki ye ndingisa te.

@@ -1,0 +1,156 @@
+Président Tshisekedi ayambaki Moïse Katumbi ya Ensemble pour la République na Jean-Pierre Bemba ya MLC samedi na Cité ya Union africaine na Kinshasa ntango botiami na informateur bozali kozelama. Martin Fayulu ya ECIDE alaki kolba le 30 décembre. 
+ "Bokutani yango na mpokwa ya mokolo na mposo bozalaki mingi mingi mpenza mpo etali makambo ma motuya na RDC," elobi bayi présidence ya RDC.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Cette audience organisée dans la soirée du samedi, a essentiellement tourné autour des questions majeures relatives à la situation globale de la RDC.\u0026lt;/p\u0026gt;— Présidence RDC 🇨🇩 (@Presidence_RDC) \u0026lt;a href=\"https://twitter.com/Presidence_RDC/status/1342973684219318277?ref_src=twsrc%5Etfw\"\u0026gt;December 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+MM. Bemba na Katumbi, boko na bakambi ba lingomba Lamuka bandimaki kopesa mokonzi ya mboka maboko na mbongwana azali kosala na kotiaka na esika liboke libengami "Union sacrée" nsima na koboma libala kati na CACH, lingomba na ye (Tshisekedi) na FCC ya mokonziya kala Joseph Kabila.
+M. Tshisekedi alakaki kotia nae sika “informateuer” akotala ngambo nini ezali na majorité ya sika na Parlement nsima na bokweyisama ya Bureau ya Assemblée nationale.
+Bakeli mibeko mingi basakoli ete bakeyi ngambo ya Union sacrée, ata baike bawuti na FCC.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; : Le Président élu \u0026lt;a href=\"https://twitter.com/MartinFayulu?ref_src=twsrc%5Etfw\"\u0026gt;@MartinFayulu\u0026lt;/a\u0026gt; s’adressera à la Nation le Mercredi 30 décembre. Il éclairera l’opinion sur les nombreux enjeux auxquels est confronté notre pays ainsi que l’urgence pour le peuple de demeurer éveillé et alerte face à la théatralisation de la vie politique.\u0026lt;/p\u0026gt;— Presse Martin Fayulu (@PFayulu) \u0026lt;a href=\"https://twitter.com/PFayulu/status/1342914626946805762?ref_src=twsrc%5Etfw\"\u0026gt;December 26, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+"Président aponama na maponami akoloba na Ekolo mercredi 30 décembre. Akopesa pole na bato banso mpo etali makambo ya motuya maye mboka na biso ezali na yango lokola mpe bosenga ya lombango ya bana mboka ya kozala ya kolamuka mpe na bokengi liboso ya liseka bazali kosala na bomoi na bango," elobi bayi sango ya Martin Fayulu.
+M. Fayulu alobi nanu elok te wuta misala ya boyoki bato président Tshisekedi asalaki na novembre.
+Elongo na Adoplhe Muzito, mokambi mosusu ya Lamuka, M. Fayulu amonanaki te na boyoki bato boye.

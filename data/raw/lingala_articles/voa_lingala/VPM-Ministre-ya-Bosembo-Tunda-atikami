@@ -1,0 +1,253 @@
+Vice-Premier ministre mpe ministre ya mambi ma Bosembo Célestin Tunda wa Kasenda atikami nsima na koyanola na procureur ya Cour ya cassation samedi. 
+ VPM Tunda azongi ndako na ye kasi atiami na bokengelemi na esika avandaka, eyebisi bapanzi sango bazali na Cour ya cassation.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"src||https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Famiral.tamba%2Fvideos%2F3917413754998333%2F\u0026show_text=0\u0026width=261||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":true,"Type":"String"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+createHtml = function (htmlStr) {
+var frag = document.createDocumentFragment(),
+temp = document.createElement('div');
+temp.innerHTML = htmlStr;
+while (temp.firstChild) {
+frag.appendChild(temp.firstChild);
+}
+return frag;
+},
+render = function () {
+var thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("fbVideoSnippet") : d.querySelectorAll(".fbVideoSnippet"))[0];
+var embedUrl, container = thisSnippet.parentNode, showText = false,
+fbParse = function () {
+if (window.FB) {
+window.FB.XFBML.parse(thisSnippet);
+return true;
+} else {
+return false;
+}
+};
+if(userInput.substring(0,5) === "src||"){
+var arrParts = userInput.split("%2F");
+if(userInput.indexOf("show_text=1") !== -1)
+showText = true;
+embedUrl = "https://www.facebook.com/" + arrParts[3] + "/videos/" + arrParts[5] + "/";
+} else {
+userInputParts = userInput.split("||");
+embedUrl = decodeURIComponent(userInputParts[1]);
+}
+embedUrl += "?show_text=1";
+container.style.width = "100%";
+var fbVideo = document.createElement("div");
+fbVideo.setAttribute("class", "fb-video");
+fbVideo.dataset.allowfullscreen = 1;
+fbVideo.dataset.href = embedUrl;
+if(showText)
+fbVideo.setAttribute("data-show-text", "true");
+if (RFE.facebookInstanceId === undefined) RFE.facebookInstanceId = 1;
+else RFE.facebookInstanceId = RFE.facebookInstanceId + 1;
+fbVideo.setAttribute("id", "fb-video-" + RFE.facebookInstanceId);
+RFE.data(fbVideo, "facebook_snippet_id", RFE.facebookInstanceId);
+var fbXfbml = document.createElement("div");
+fbXfbml.setAttribute("class", "fb-xfbml-parse-ignore");
+fbVideo.setAttribute("cite", embedUrl);
+fbVideo.appendChild(fbXfbml);
+thisSnippet.appendChild(fbVideo);
+//parse XFBML, because it is not nativelly working onload
+if (!fbParse()) {
+var c = 0,
+FBParseTimer = window.setInterval(function () {
+c++;
+if (fbParse())
+clearInterval(FBParseTimer);
+if (c === 20) { //5s max
+thisSnippet.innerHTML = "Facebook API failed to initialize.";
+clearInterval(FBParseTimer);
+}
+}, 250);
+}
+thisSnippet.className = "fbVideoSnippetProcessed";
+// adding sticky mode functionality (wraping to .c-sticky-element and .c-sticky-container + .c-sticky-element__close-el)
+var stickyContainer = document.createElement('div');
+RFE.addClass("c-sticky-container", stickyContainer);
+var stickyElement = document.createElement('div');
+RFE.addClass("c-sticky-element", stickyElement);
+RFE.data(stickyElement, "sp_api", "facebook");
+var fragment = createHtml("<span class='c-sticky-element__close-el c-sticky-element__swipe-el ta-c'><span class='ico ico-close m-0'></span></span>");
+stickyElement.insertBefore(fragment, stickyElement.childNodes[0]);
+container.parentNode.insertBefore(stickyContainer, container);
+stickyContainer.appendChild(stickyElement);
+stickyElement.appendChild(container);
+};
+if (d.readyState === "uninitialized" || d.readyState === "loading")
+window.addEventListener("load", render);
+else
+render();
+})(document);
+
+
+
+Me Tunda akitaki nsima na bobimisa bwa ye na ndako ya PPRD, lingomba lya Joseph Kabila, mokkonzi ya kala, oyo azali moko kati na yango.
+"Bakoki kobangisa biso te!" elobaki kalaka mokambi ya PPRD na bokutani bwango epayi wapi boko na baye lingomba bazalaki mpe batalisaki nkanda na bango.
+Me Tunda aynolaki na procureur ya Cour ya cassationi mokolo moko nsima na matata mazalaki na likita lya mbulamatari epayi wapi apamelamaki na kotinda na Assemblée nationale mokanda ya kondima mabongisi ma mibeko misato matali misala mya bazuzi.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/PPRD?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#PPRD\u0026lt;/a\u0026gt;: « on ne peut pas nous intimider » \u0026lt;a href=\"https://twitter.com/EmmanuelShadary?ref_src=twsrc%5Etfw\"\u0026gt;@EmmanuelShadary\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://t.co/xJBvJYvOae\"\u0026gt;pic.twitter.com/xJBvJYvOae\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— PPRD (@pprdofficiel) \u0026lt;a href=\"https://twitter.com/pprdofficiel/status/1276978950665887750?ref_src=twsrc%5Etfw\"\u0026gt;June 27, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Mokonzi ya mboka atikaki likita lya mbulamatari mpe asilisaki kobamba lyango te. Kasi misala muya président bayebisaki ete ezalaki mpo na bokutani na bakonzi ba mboka misusu na video-conference.
+Mublamatari elobaki ete ntina ya mbongwana ya misala mwa bazuzi eye esengami na bayi FCC ezali nalitomba ya lombango te sik'oyo.
+Commission Politique Administrative mpe Justice ya Assemblée nationale elobaki mpe ete ntina na yango ezali te sik'oyo.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt; \u0026lt;a href=\"https://twitter.com/hashtag/URGENT?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#URGENT\u0026lt;/a\u0026gt; le vice-premier ministre Tunda est libéré après une audition au bureau du Parquet général près la Cour de Cassation. Il rentre chez lui à l’instant même... 20h40 | \u0026lt;a href=\"https://t.co/tuzFqCad3z\"\u0026gt;pic.twitter.com/tuzFqCad3z\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Eric Tshikuma (@erictshikuma) \u0026lt;a href=\"https://twitter.com/erictshikuma/status/1276964444527112193?ref_src=twsrc%5Etfw\"\u0026gt;June 27, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Bayi société civile lokola ACAJ mpe bato basusu basengaki bokangi mpe bolongolami bwa me Tunda na mbulamatari mpo na yango.
+Mabongisi ma mibeko misato mizali kopesa makoki na ministre ya Bosembo kopesa mitindo miike na bazuzi.
+Bato baike bakitaki o'balabala mikolo mingi mposo eye mpo na koboya mabongisi mango. Babunaki, ba mpunzaki mpe batiaki moto na ndako mpe biloko biike ya ba députés ya PPRD na FCC.

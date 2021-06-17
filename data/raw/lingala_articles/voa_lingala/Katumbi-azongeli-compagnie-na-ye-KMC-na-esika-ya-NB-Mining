@@ -1,0 +1,154 @@
+Moïse Katumbi azongeli compagnie na ye MCK (Mining Compagnie Katanga) na Lubumbashi na Haut-Katanga na esika NB Mining etiakamaki. Esalami nsima na mokano ya misala mya bosembo. 
+ Compagnie NB Mining Africa ya Pascal Beverragi, mosali ya kala ya MCK, ebimisami na esika ezalaki kala ya MCK.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;\u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;: \"Avec l%27avènement du président Félix Tshisekedi,la justice est en train de redevenir la justice...\", la réaction de \u0026lt;a href=\"https://twitter.com/MuyamboKyassa?ref_src=twsrc%5Etfw\"\u0026gt;@MuyamboKyassa\u0026lt;/a\u0026gt; au dossier \u0026lt;a href=\"https://twitter.com/moise_katumbi?ref_src=twsrc%5Etfw\"\u0026gt;@moise_katumbi\u0026lt;/a\u0026gt;-Pascal Beverragi [vidéo] \u0026lt;a href=\"https://t.co/FAfvK4LGol\"\u0026gt;pic.twitter.com/FAfvK4LGol\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Stanis Bujakera Tshiamala (@StanysBujakera) \u0026lt;a href=\"https://twitter.com/StanysBujakera/status/1309502017283514368?ref_src=twsrc%5Etfw\"\u0026gt;September 25, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Bayi Moise Katumbi baloki ete misala mya bosembo misali na lolenge elongobani.
+Moïse Katumbi, mokambi ya kala ya etuka monene ya kala ya Katanga, moko na bakambi ba Lamuka (lingomba ya opposition) mpe mokambi ya Ensemble pour la république, abimaki RDC na 2016 ntango azalaki kotelemela mokonzi ya kala Joseph Kabila na kopekisa ye kozala na maponami mpo na kokoknza mboka koleka mbala misato.
+
+
+
+initInfographics(
+{
+groups:[],
+params:[{"Name":"embed_html","Value":"\u0026lt;blockquote class=\"twitter-tweet\"\u0026gt;\u0026lt;p lang=\"fr\" dir=\"ltr\"\u0026gt;Il faut saluer cette décision de justice qui remet \u0026lt;a href=\"https://twitter.com/hashtag/MCK?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#MCK\u0026lt;/a\u0026gt; dans ses droits et rendre hommage au cours \u0026amp; tribunaux qui, en toute indépendance, ont dit le droit. Cette décision sonne le glas pour la voyoucratie qui a élu domicile en \u0026lt;a href=\"https://twitter.com/hashtag/RDC?src=hash\u0026amp;ref_src=twsrc%5Etfw\"\u0026gt;#RDC\u0026lt;/a\u0026gt;. C’est un vrai pas dans la bonne direction ! \u0026lt;a href=\"https://t.co/oWR3bzoJXe\"\u0026gt;https://t.co/oWR3bzoJXe\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;— Olivier Kamitatu Etsu (@OlivierKamitatu) \u0026lt;a href=\"https://twitter.com/OlivierKamitatu/status/1309550967671660546?ref_src=twsrc%5Etfw\"\u0026gt;September 25, 2020\u0026lt;/a\u0026gt;\u0026lt;/blockquote\u0026gt;||data-pangea-embed::\"true\"","DefaultValue":"","HtmlEncode":false,"Type":"HTML"}],
+isMobile:true
+});
+
+
+
+(function (d) {
+var userInput = Infographics.Param["embed_html"],
+thisSnippet = (d.getElementsByClassName ? d.getElementsByClassName("twitterSnippet") : d.querySelectorAll(".twitterSnippet"))[0],
+render = function () {
+var eval, bquote, sId = "twitterAPIForSnippet";
+try {
+eval = document.createElement("div");
+eval.innerHTML = userInput;
+} catch (e) {
+thisSnippet.innerHTML = "Twitter Embed Code is invalid or incomplete.";
+return;
+}
+bquote = eval.childNodes[0];
+if (bquote.tagName.toLowerCase() === "blockquote" && bquote.className.indexOf("twitter") !== -1) { //remove everything except paragraphs and links
+var all = bquote.getElementsByTagName("*");
+for (var i = all.length - 1; i >= 0; i--) {
+var elm = all[i];
+var tag = elm.tagName.toLowerCase();
+if (tag !== "a" && tag !== "p")
+all[i].parentNode.removeChild(all[i]);
+}
+} else {
+thisSnippet.innerHTML = "Twitter Embed Code does not contain proper Twitter blockquote.";
+return;
+}
+if (!window.twttr && !d.getElementById(sId)) { //async request Twitter API
+var js, firstJs = d.getElementsByTagName("script")[0];
+js = d.createElement("script");
+js.id = sId;
+js.src = "//platform.twitter.com/widgets.js";
+firstJs.parentNode.insertBefore(js, firstJs);
+}
+thisSnippet.parentNode.style.width = "100%";
+thisSnippet.appendChild(bquote);
+var renderTweets = function () {
+if (window.twttr && window.twttr.widgets) {
+window.twttr.widgets.load();
+window.twttr.events.bind("rendered", function (e) {
+//fix twitter bug rendering multiple embeds per tweet. Can be deleted after Twitter fix the issue
+if (e.target) {
+var par = e.target.parentElement;
+if (par && par.className === "twitterSnippetProcessed" &&
+e.target.previousSibling && e.target.previousSibling.nodeName.toLowerCase() === "iframe") {
+//this is duplicate embed, delete it
+par.removeChild(e.target);
+}
+}
+});
+}
+}
+renderTweets();
+};
+thisSnippet.className = "twitterSnippetProcessed";
+render();
+//if (d.readyState === "uninitialized" || d.readyState === "loading")
+// window.addEventListener("load", render);
+//else //liveblog, ajax
+// render();
+})(document);
+
+
+
+Moïse Katumbi afundamaki na nsima na yango mpo na kozala na ba mercenaires mpe mpo na kobotola ndako ya bato.
+Nsima na ye, NB Mining nde esalamaki mpe ezwaki esika ya MKC.
