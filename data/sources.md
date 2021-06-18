@@ -12,3 +12,4 @@
 - [] https://www.lexilogos.com/declaration/lingala.htm
 - [] http://www.mabiki.net/books/191?locale=fr
 - [] https://www.justice.gov/sites/default/files/criminal-fraud/legacy/2012/11/14/fcpa-english.pdf
+- [] look into genuis apis and see if we can get song lyrics for congolese musics https://docs.genius.com/#annotations-h2
