@@ -88,3 +88,5 @@ target/
 
 ## Virtual Env
 ./.venv
+/data
+/models
