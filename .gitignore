@@ -90,3 +90,4 @@ target/
 ./.venv
 /data
 /models
+venv
