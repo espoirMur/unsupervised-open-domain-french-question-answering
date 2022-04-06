@@ -15,10 +15,6 @@ class PoliticoItem(Item):
     content = Field(
         output_processor=TakeFirst()
     )
-    img_url = Field(
-        input_processor=MapCompose(str.strip),
-        output_processor=TakeFirst()
-    )
     posted_at = Field(
         input_processor=MapCompose(str.strip),
         output_processor=TakeFirst()
