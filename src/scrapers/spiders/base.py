@@ -3,8 +3,8 @@ import lxml.html
 from scrapy.spiders import CrawlSpider
 
 class BaseSpider(CrawlSpider):
-    def create_filename(self, title):
-        base_folder = Path.cwd().parent.joinpath("data", 'raw', "lingala_articles", self.name)
+    def create_filename(self, title, language='lingala'):
+        base_folder = Path.cwd().parent.joinpath("data", 'raw', f"{language}_articles", self.name)
         base_folder.mkdir(mode=0o777, parents=True, exist_ok=True)
         filename = base_folder.joinpath(title)
         return filename

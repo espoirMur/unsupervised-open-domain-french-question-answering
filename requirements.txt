@@ -13,7 +13,7 @@ constantly==15.1.0
 coverage==6.3.2
 cryptography==36.0.2
 cssselect==1.1.0
-docutils==0.17.1
+docutils
 filelock==3.6.0
 flake8==4.0.1
 hyperlink==21.0.0
@@ -60,7 +60,7 @@ sphinxcontrib-htmlhelp==2.0.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
--e git+https://github.com/jacob-js/multilingual-drc-news-chatbot.git@63094716544c1d468570d3df5d2507dd6982f099#egg=src
+-e .
 tldextract==3.2.0
 Twisted==22.2.0
 twisted-iocpsupport==1.0.2
