@@ -8,7 +8,7 @@ class PoliticoSpider(BaseSpider):
     allowed_domains = ['politico.cd']
     start_urls = ['https://www.politico.cd']
     rules = (
-        Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=False),
+        Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=True),
     )
     title_path = '.tdb-title-text::text'
     content_path = '.td-post-content * p::text'
