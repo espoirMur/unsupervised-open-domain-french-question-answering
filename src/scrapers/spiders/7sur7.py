@@ -10,9 +10,17 @@ class SevenPer7Spider(BaseSpider):
     rules = (
         Rule(LinkExtractor(allow_domains=('7sur7.cd')), callback='callback', follow=True),
     )
-
-    title_path = 'h1.page-header span::text'
-    content_path = '.content * p::text, .content * p > em::text, .content h3 > strong::text, .content * p::text'
     
     def callback(self, response):
-        return default_parser(self, response, self.title_path, self.content_path, "french")
+        title_path = 'h1.page-header span::text'
+        content_path = '.content * p::text, .content * p > em::text, .content h3 > strong::text, .content * p::text'
+        sumary_path = ''
+        posted_at_path = ''
+        author_path = '.content * p > strong::text'
+        return default_parser(self, response, "french", css_paths={
+            'title_path':title_path,
+            'content_path':content_path,
+            'sumary_path':sumary_path,
+            'posted_at_path': posted_at_path,
+            'author_path': author_path
+        })
