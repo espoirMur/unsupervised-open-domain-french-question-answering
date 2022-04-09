@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from .models import Article, create_table, db_connect
+from scrapers.models import Article, create_table, db_connect
 from sqlalchemy.orm import sessionmaker
 
 
