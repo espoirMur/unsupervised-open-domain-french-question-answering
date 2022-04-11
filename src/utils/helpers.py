@@ -9,8 +9,8 @@ def convert_date(date, format=None):
         if type(date) == datetime:
             return date
         else:
-            formatedDate = datetime.strptime(date, format)
-            return formatedDate
+            formated_date = datetime.strptime(date, format)
+            return formated_date
     except ParserError:
-        formatedDate = datetime.strptime(date, format)
-        return formatedDate
+        formated_date = datetime.strptime(date, format)
+        return formated_date
