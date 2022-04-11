@@ -1,7 +1,6 @@
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule
 from src.scrapers.spiders.base import BaseSpider
-from utils.helpers import default_parser
 
 
 class PoliticoSpider(BaseSpider):
@@ -9,12 +8,19 @@ class PoliticoSpider(BaseSpider):
     allowed_domains = ["politico.cd"]
     start_urls = ["https://www.politico.cd"]
     rules = (
-        Rule(LinkExtractor(deny=r".*rubrique+"), callback="callback", follow=False),
+        Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=True),
     )
-    title_path = ".tdb-title-text::text"
-    content_path = ".td-post-content * p::text"
-
+    
     def callback(self, response):
-        return default_parser(
-            self, response, self.title_path, self.content_path, "french"
-        )
+        title_path = '.tdb-title-text::text'
+        content_path = '.td-post-content * p::text'
+        author_path='.tdb-author-name::text'
+        posted_at_path='.td-module-date::attr(datetime)'
+        sumary_path='.sumary'
+        return self.default_parser(response, css_paths={
+            'title_path':title_path,
+            'content_path':content_path,
+            'sumary_path':sumary_path,
+            'posted_at_path': posted_at_path,
+            'author_path': author_path
+        })

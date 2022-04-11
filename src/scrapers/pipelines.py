@@ -6,8 +6,26 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapers.models import Article, create_table, db_connect
+from sqlalchemy.orm import sessionmaker
 
 
-class ScrapersPipeline:
+class SaveItemPipeline:
+    def __init__(self):
+        engine = db_connect()
+        create_table(engine)
+        self.Session = sessionmaker(bind=engine)
+
+
     def process_item(self, item, spider):
+        session = self.Session()
+        article = Article(**item)
+        try:
+            session.add(article)
+            session.commit()
+        except:
+            session.rollback()
+        finally:
+            session.close()
+
         return item

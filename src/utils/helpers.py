@@ -1,19 +1,16 @@
-from scrapy import Selector
+from datetime import datetime
+from dateutil.parser import parse
+from dateutil.parser._parser import ParserError
 
 
-def default_parser(
-    self, response, title_css_path, content_css_path, language="lingala"
-):
-    selector = Selector(response)
+def convert_date(date, format=None):
     try:
-        title = selector.css(title_css_path).get()
-        content = selector.css(content_css_path).getall()
-        title = "-".join(title.split(" ")).strip()
-        content = "".join(content)
-        filename = self.create_filename(title, language)
-        with open(filename, "w") as f:
-            f.write(content)
-        self.log(f"Saved file {filename}")
-    except Exception as e:
-        print(f"Error while parsing {response.url} : \n", e.__str__())
-        pass
+        date = parse(date)
+        if type(date) == datetime:
+            return date
+        else:
+            formated_date = datetime.strptime(date, format)
+            return formated_date
+    except ParserError:
+        formated_date = datetime.strptime(date, format)
+        return formated_date
