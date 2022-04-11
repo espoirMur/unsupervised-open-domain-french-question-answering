@@ -1,0 +1,1619 @@
+{
+    "file_extensions": [
+        ".py"
+    ],
+    "file_names_regex": [],
+    "flavor_suggestions": [
+        {
+            "flavor": "python",
+            "flavor_info": {
+                "descriptors": [
+                    "GIT"
+                ],
+                "label": "Optimized for PYTHON based projects",
+                "linters": [
+                    "ACTION_ACTIONLINT",
+                    "ANSIBLE_ANSIBLE_LINT",
+                    "BASH_EXEC",
+                    "BASH_SHELLCHECK",
+                    "BASH_SHFMT",
+                    "COPYPASTE_JSCPD",
+                    "CREDENTIALS_SECRETLINT",
+                    "CSS_STYLELINT",
+                    "CSS_SCSS_LINT",
+                    "DOCKERFILE_DOCKERFILELINT",
+                    "DOCKERFILE_HADOLINT",
+                    "EDITORCONFIG_EDITORCONFIG_CHECKER",
+                    "ENV_DOTENV_LINTER",
+                    "GIT_GIT_DIFF",
+                    "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
+                    "GROOVY_NPM_GROOVY_LINT",
+                    "HTML_HTMLHINT",
+                    "JSON_JSONLINT",
+                    "JSON_ESLINT_PLUGIN_JSONC",
+                    "JSON_V8R",
+                    "JSON_PRETTIER",
+                    "KOTLIN_KTLINT",
+                    "KUBERNETES_KUBEVAL",
+                    "KUBERNETES_KUBECONFORM",
+                    "MARKDOWN_MARKDOWNLINT",
+                    "MARKDOWN_REMARK_LINT",
+                    "MARKDOWN_MARKDOWN_LINK_CHECK",
+                    "MARKDOWN_MARKDOWN_TABLE_FORMATTER",
+                    "OPENAPI_SPECTRAL",
+                    "PROTOBUF_PROTOLINT",
+                    "PYTHON_PYLINT",
+                    "PYTHON_BLACK",
+                    "PYTHON_FLAKE8",
+                    "PYTHON_ISORT",
+                    "PYTHON_BANDIT",
+                    "PYTHON_MYPY",
+                    "RST_RST_LINT",
+                    "RST_RSTCHECK",
+                    "SNAKEMAKE_LINT",
+                    "SNAKEMAKE_SNAKEFMT",
+                    "SPELL_MISSPELL",
+                    "SPELL_CSPELL",
+                    "SQL_SQL_LINT",
+                    "SQL_SQLFLUFF",
+                    "TEKTON_TEKTON_LINT",
+                    "XML_XMLLINT",
+                    "YAML_PRETTIER",
+                    "YAML_YAMLLINT",
+                    "YAML_V8R"
+                ]
+            },
+            "linters_number": 49
+        }
+    ],
+    "has_updated_sources": 1,
+    "linters": [
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 0.7315253950000624,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "bandit",
+            "name": "PYTHON_BANDIT",
+            "number_errors": 1,
+            "number_fixed": 0,
+            "return_code": 0,
+            "status": "warning",
+            "total_number_errors": 1
+        },
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 0.9614329220000855,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "black",
+            "name": "PYTHON_BLACK",
+            "number_errors": 0,
+            "number_fixed": 13,
+            "return_code": 0,
+            "status": "success",
+            "total_number_errors": 0
+        },
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 0.6015151090000472,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "flake8",
+            "name": "PYTHON_FLAKE8",
+            "number_errors": 1,
+            "number_fixed": 0,
+            "return_code": 1,
+            "status": "error",
+            "total_number_errors": 13
+        },
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 0.5560443209999448,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "isort",
+            "name": "PYTHON_ISORT",
+            "number_errors": 0,
+            "number_fixed": 13,
+            "return_code": 0,
+            "status": "success",
+            "total_number_errors": 0
+        },
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 14.864545590000034,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "mypy",
+            "name": "PYTHON_MYPY",
+            "number_errors": 1,
+            "number_fixed": 0,
+            "return_code": 1,
+            "status": "error",
+            "total_number_errors": 2
+        },
+        {
+            "descriptor_id": "PYTHON",
+            "descriptor_type": "language",
+            "elapsed_time_s": 6.170073418000129,
+            "files": [
+                "/tmp/lint/docs/conf.py",
+                "/tmp/lint/src/__init__.py",
+                "/tmp/lint/src/data/__init__.py",
+                "/tmp/lint/src/data/make_dataset.py",
+                "/tmp/lint/src/features/__init__.py",
+                "/tmp/lint/src/features/build_features.py",
+                "/tmp/lint/src/models/__init__.py",
+                "/tmp/lint/src/models/predict_model.py",
+                "/tmp/lint/src/models/train_model.py",
+                "/tmp/lint/src/scrapers/__init__.py",
+                "/tmp/lint/src/scrapers/items.py",
+                "/tmp/lint/src/scrapers/middlewares.py",
+                "/tmp/lint/src/scrapers/pipelines.py",
+                "/tmp/lint/src/scrapers/settings.py",
+                "/tmp/lint/src/scrapers/spiders/__init__.py",
+                "/tmp/lint/src/scrapers/spiders/base.py",
+                "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                "/tmp/lint/src/utils/helpers.py",
+                "/tmp/lint/src/visualization/__init__.py",
+                "/tmp/lint/src/visualization/visualize.py",
+                "/tmp/lint/test_environment.py"
+            ],
+            "files_lint_results": [
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/docs/conf.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/data/make_dataset.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/features/build_features.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/predict_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/models/train_model.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/items.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/middlewares.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/pipelines.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/settings.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/base.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/cpi_reports.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/karisma_tv.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/lingala_institute.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/politico_cd.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/scrapers/spiders/voa_lingala.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/utils/helpers.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/__init__.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/src/visualization/visualize.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "/tmp/lint/test_environment.py",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null
+                }
+            ],
+            "files_number": 25,
+            "is_active": true,
+            "linter_name": "pylint",
+            "name": "PYTHON_PYLINT",
+            "number_errors": 1,
+            "number_fixed": 0,
+            "return_code": 1,
+            "status": "error",
+            "total_number_errors": 2
+        }
+    ],
+    "post_commands_results": [
+        {
+            "command_info": {
+                "command": "echo \"This is MegaLinter POST_COMMAND on own MegaLinter ! :)\"",
+                "cwd": "workspace"
+            },
+            "status": 0,
+            "stdout": "This is MegaLinter POST_COMMAND on own MegaLinter ! :)\n"
+        }
+    ],
+    "pre_commands_results": [
+        {
+            "command_info": {
+                "command": "echo \"This is MegaLinter PRE_COMMAND on own MegaLinter ! :)\"",
+                "cwd": "root"
+            },
+            "status": 0,
+            "stdout": "This is MegaLinter PRE_COMMAND on own MegaLinter ! :)\n"
+        }
+    ],
+    "report_folder": "/tmp/lint/report",
+    "reporters": [
+        {
+            "is_active": true,
+            "master": null,
+            "name": "CONFIG",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "CONSOLE",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "EMAIL",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "FILEIO",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "GITHUB_COMMENT",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "GITLAB_COMMENT",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "JSON",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "name": "UPDATED_SOURCES",
+            "processing_order": 0,
+            "report_folder": "/tmp/lint/report",
+            "report_items": []
+        }
+    ],
+    "return_code": 1,
+    "status": "error"
+}

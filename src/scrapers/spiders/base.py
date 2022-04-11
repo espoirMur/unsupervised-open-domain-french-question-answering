@@ -1,12 +1,16 @@
 from pathlib import Path
+
 import lxml.html
 from scrapy import Selector
 from scrapy.spiders import CrawlSpider
 from scrapers.items import WebsiteItem
 
+
 class BaseSpider(CrawlSpider):
-    def create_filename(self, title, language='lingala'):
-        base_folder = Path.cwd().parent.joinpath("data", 'raw', f"{language}_articles", self.name)
+    def create_filename(self, title, language="lingala"):
+        base_folder = Path.cwd().parent.joinpath(
+            "data", "raw", f"{language}_articles", self.name
+        )
         base_folder.mkdir(mode=0o777, parents=True, exist_ok=True)
         filename = base_folder.joinpath(title)
         return filename
