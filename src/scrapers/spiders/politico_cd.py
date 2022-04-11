@@ -1,11 +1,12 @@
-from src.scrapers.spiders.base import BaseSpider
-from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
+from scrapy.spiders import Rule
+from src.scrapers.spiders.base import BaseSpider
+
 
 class PoliticoSpider(BaseSpider):
-    name = 'politico'
-    allowed_domains = ['politico.cd']
-    start_urls = ['https://www.politico.cd']
+    name = "politico"
+    allowed_domains = ["politico.cd"]
+    start_urls = ["https://www.politico.cd"]
     rules = (
         Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=True),
     )

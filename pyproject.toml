@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "multilingual-drc-news-chatbot"
+version = "0.1.0"
+description = "A project to build a question answering system using a congo-drc-new-corpus"
+authors = ["espoir murhabazi <espoir.mur@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Scrapy = "^2.6.1"
+
+[tool.poetry.dev-dependencies]
+pycodestyle = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

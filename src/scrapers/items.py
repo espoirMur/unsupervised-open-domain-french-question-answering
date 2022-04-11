@@ -1,5 +1,4 @@
 from scrapy.item import Item, Field
-
 from src.utils.helpers import convert_date
 
 class WebsiteItem(Item):    
