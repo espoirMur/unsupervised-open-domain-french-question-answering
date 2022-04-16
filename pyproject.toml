@@ -2,7 +2,7 @@
 name = "multilingual-drc-news-chatbot"
 version = "0.1.0"
 description = "A project to build a question answering system using a congo-drc-new-corpus"
-authors = ["espoir murhabazi <espoir.mur@gmail.com>"]
+authors = ["espoir murhabazi <espoir.mur@gmail.com>", "merci jacob <mercihabam@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
