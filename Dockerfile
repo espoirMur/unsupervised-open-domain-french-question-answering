@@ -1,10 +1,6 @@
-FROM python:3.7
-COPY ./src src
-COPY pyproject.toml .
-COPY poetry.lock .
+FROM python:3.7 AS base
 
-ENV PYTHONPATH="${PYTHONPATH}:${CWD}" \
-    PYTHONUNBUFFERED=1 \
+ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=off \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
@@ -17,12 +13,19 @@ ENV PYTHONPATH="${PYTHONPATH}:${CWD}" \
     VENV_PATH="/opt/pysetup/.venv" \
     PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
 
+RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
+COPY pyproject.toml  poetry.lock ./
+RUN poetry install --no-dev  # respects
+
+FROM base
 RUN apt-get update \
     && apt-get install --no-install-recommends -y \
         curl \
-        build-essential \
-        software-properties-common \
-        curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python \
-        poetry install --no-dev  # respects
+        build-essential\
+        software-properties-common
+
+ENV PYTHONPATH="${PYTHONPATH}:${CWD}"
+COPY ./src src
 
 CMD [ "poetry", "run", "scrapy", "runspider", "./src/run_spiders.py" ]
