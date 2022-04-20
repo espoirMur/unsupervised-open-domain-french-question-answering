@@ -26,6 +26,6 @@ RUN apt-get update \
         software-properties-common
 
 ENV PYTHONPATH="${PYTHONPATH}:${CWD}"
-COPY ./src src
+COPY . .
 
 CMD [ "poetry", "run", "scrapy", "runspider", "./src/run_spiders.py" ]
