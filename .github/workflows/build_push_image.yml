@@ -17,7 +17,7 @@ jobs:
     - name: Build and Push Docker image
       run: docker build -t multilingual_drc_news_chatbot .
       with:
-        image: ${{ secrets.DOCKER_USERNAME }}/multilingual_drc_news_chatbot
+        image: ${{ secrets.DOCKERHUB_USERNAME }}/multilingual_drc_news_chatbot
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
