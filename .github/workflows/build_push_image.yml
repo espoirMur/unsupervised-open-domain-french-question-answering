@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      name: Check out code
 
     - uses: mr-smithers-excellent/docker-build-push@v4
-    - name: Build and Push Docker image
-      run: docker build -t multilingual_drc_news_chatbot .
+      name: Build and Push Docker image
       with:
         image: espymur/multilingual_drc_news_chatbot
         registry: docker.io
