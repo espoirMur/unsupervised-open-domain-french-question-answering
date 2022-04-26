@@ -33,5 +33,4 @@ jobs:
         COMMAND_TIMEOUT: 5m
         script: |
           docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
-          docker pull espymur/multilingual_drc_news_chatbot:develop
-          docker run multilingual_drc_news_chatbot
+          docker run espymur/multilingual_drc_news_chatbot:develop
