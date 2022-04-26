@@ -28,8 +28,6 @@ jobs:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
         USERNAME: ${{ secrets.HOST_USERNAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.PRIVATE_KEY }}
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
         script: |
