@@ -25,9 +25,9 @@ jobs:
     - uses: appleboy/ssh-action@master
       name: Executing remote command
       with:
-        host: ${{ secrets.HOST_IP_ADDRESS  }}
-        USERNAME: ${{ secrets.HOST_USERNAME  }}
-        PASSWORD: ${{ secrets.HOST_PASSWORD }}
+        host: 89.40.12.167
+        USERNAME: root
+        PASSWORD: bVP4H05!o1
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
         script: |
