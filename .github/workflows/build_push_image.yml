@@ -19,6 +19,7 @@ jobs:
       with:
         image: espymur/multilingual_drc_news_chatbot
         registry: docker.io
+        tag: develop
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
@@ -32,4 +33,5 @@ jobs:
         COMMAND_TIMEOUT: 5m
         script: |
           docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
-          docker image pull espymur/multilingual_drc_news_chatbot
+          docker pull espymur/multilingual_drc_news_chatbot:develop
+          docker run multilingual_drc_news_chatbot
