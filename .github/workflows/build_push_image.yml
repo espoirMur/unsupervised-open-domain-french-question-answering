@@ -27,7 +27,7 @@ jobs:
       name: Executing remote command
       with:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
-        USERNAME: ${{ secrets.HOST_USERNAME  }}
+        USERNAME: ${{ secrets.HOST_USER_NAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
