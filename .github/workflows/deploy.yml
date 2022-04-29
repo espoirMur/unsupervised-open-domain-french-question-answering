@@ -1,0 +1,33 @@
+name: Deploy the image to the new VPS
+on:
+  workflow_run:
+    workflows: ["Build and Publish Docker Image"]
+    types: [completed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Personal host
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v1
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_IP_ADDRESS  }}
+          USERNAME: ${{ secrets.HOST_USERNAME  }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.PRIVATE_KEY }}
+          TIMEOUT: 5m
+          COMMAND_TIMEOUT: 5m
+          script: |
+            docker pull espymur/multilingual_drc_news_chatbot
+            docker run multilingual_drc_news_chatbot

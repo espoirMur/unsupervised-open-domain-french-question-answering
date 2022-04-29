@@ -1,0 +1,36 @@
+name: Build and Publish Docker Image
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build_and_push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v4
+      name: Build and Push Docker image
+      with:
+        image: espymur/multilingual_drc_news_chatbot
+        registry: docker.io
+        tag: develop
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - uses: appleboy/ssh-action@master
+      name: Executing remote command
+      with:
+        host: ${{ secrets.HOST_IP_ADDRESS  }}
+        USERNAME: ${{ secrets.HOST_USER_NAME  }}
+        PASSWORD: ${{ secrets.HOST_PASSWORD  }}
+        TIMEOUT: 5m
+        COMMAND_TIMEOUT: 5m
+        script: |
+          docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
+          docker run espymur/multilingual_drc_news_chatbot:develop
