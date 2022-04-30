@@ -2,8 +2,9 @@ from src.scrapers.spiders.base import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 
+
 class SevenPer7Spider(BaseSpider):
-    name='7sur7'
+    name = '7sur7'
     allowed_domains = ['7sur7.cd']
     start_urls = ['https://www.7sur7.cd']
     rules = (

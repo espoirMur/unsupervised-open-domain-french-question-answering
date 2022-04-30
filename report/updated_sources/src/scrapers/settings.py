@@ -9,8 +9,8 @@
 
 BOT_NAME = "site_scrapers"
 
-SPIDER_MODULES = ["scrapers.spiders"]
-NEWSPIDER_MODULE = "scrapers.spiders"
+SPIDER_MODULES = ["src.scrapers.spiders"]
+NEWSPIDER_MODULE = "src.scrapers.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -4,12 +4,15 @@ from scrapy.utils.project import get_project_settings
 
 Base = declarative_base()
 
+
 def db_connect():
     engine = create_engine(get_project_settings().get("DB_CONNECTION_STRING"))
     return engine
 
+
 def create_table(engine):
     Base.metadata.create_all(engine)
+
 
 class Article(Base):
     __tablename__ = "article"

@@ -8,11 +8,7 @@ DOCS: https://github.com/my8100/files/blob/master/scrapydweb/README.md
 文档：https://github.com/my8100/files/blob/master/scrapydweb/README_CN.md
 """
 import os
-from dotenv import load_dotenv
-from urllib.parse import quote as urlquote
-
-load_dotenv()
-
+from config import DATABASE_URL
 
 ############################## QUICK SETUP start ##############################
 ############################## 快速设置 开始 ###################################
@@ -340,7 +336,7 @@ LOG_IGNORE_TRIGGER_FORCESTOP = False
 # The default is False, set it to True to enable debug mode and the interactive debugger
 # would be shown in the browser instead of the "500 Internal Server Error" page.
 # Note that use_reloader is set to False in run.py
-DEBUG = False
+DEBUG = True
 
 # The default is False, set it to True to change the logging level from INFO to DEBUG
 # for getting more information about how ScrapydWeb works, especially while debugging.
@@ -359,12 +355,5 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'postgres://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-POSTGRES_USER = os.environ.get('POSTGRES_USER', '')
-POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', '')
-POSTGRES_HOST = os.environ.get('POSTGRES_HOST', '')
-POSTGRES_PORT = os.environ.get('POSTGRES_PORT', '')
-POSTGRES_DB = os.environ.get('POSTGRES_DB', '')
-DATABASE_URL = "postgresql://{}:{}@{}:{}".format(POSTGRES_USER,
-                                                 urlquote(POSTGRES_PASSWORD),
-                                                 POSTGRES_HOST,
-                                                 POSTGRES_PORT)
+
+DATABASE_URL = DATABASE_URL or os.environ.get('DATABASE_URL', '')

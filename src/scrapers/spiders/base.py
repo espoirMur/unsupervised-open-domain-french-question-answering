@@ -3,7 +3,7 @@ from pathlib import Path
 import lxml.html
 from scrapy import Selector
 from scrapy.spiders import CrawlSpider
-from scrapers.items import WebsiteItem
+from src.scrapers.items import WebsiteItem
 
 
 class BaseSpider(CrawlSpider):

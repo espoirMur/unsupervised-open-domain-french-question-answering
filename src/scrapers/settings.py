@@ -7,12 +7,12 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-from src.scrapers.config import db_url
+from config import DATABASE_URL
 
 BOT_NAME = 'site_scrapers'
 
-SPIDER_MODULES = ["scrapers.spiders"]
-NEWSPIDER_MODULE = "scrapers.spiders"
+SPIDER_MODULES = ["src.scrapers.spiders"]
+NEWSPIDER_MODULE = "src.scrapers.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -88,4 +88,4 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-DB_CONNECTION_STRING=db_url
+DB_CONNECTION_STRING=DATABASE_URL
