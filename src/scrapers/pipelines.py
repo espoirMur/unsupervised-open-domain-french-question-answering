@@ -22,7 +22,8 @@ class SaveItemPipeline:
         try:
             session.add(article)
             session.commit()
-        except:
+            self.logger.info(f"done adding the post  to the database")
+        except Exception:
             session.rollback()
         finally:
             session.close()

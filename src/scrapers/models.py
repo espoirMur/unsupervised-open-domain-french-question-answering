@@ -1,12 +1,14 @@
 from sqlalchemy import create_engine, Column, String, DateTime, Text, Integer
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 from scrapy.utils.project import get_project_settings
+from sqlalchemy.sql import func
 
 Base = declarative_base()
 
 
 def db_connect():
-    engine = create_engine(get_project_settings().get("DB_CONNECTION_STRING"))
+    database_url = get_project_settings().get("DB_CONNECTION_STRING")
+    engine = create_engine(database_url)
     return engine
 
 
@@ -25,3 +27,4 @@ class Article(Base):
     website_origin = Column(String(250))
     url = Column(String(250))
     author = Column(String(250))
+    saved_at = Column(DateTime(timezone=True), server_default=func.now())

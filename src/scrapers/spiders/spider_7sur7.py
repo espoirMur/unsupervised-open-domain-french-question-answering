@@ -18,9 +18,9 @@ class SevenPer7Spider(BaseSpider):
         posted_at_path = '.post_date::text'
         author_path = '.content * p > strong::text'
         return self.default_parser(response, css_paths={
-            'title_path':title_path,
-            'content_path':content_path,
-            'sumary_path':sumary_path,
+            'title_path': title_path,
+            'content_path': content_path,
+            'sumary_path': sumary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })

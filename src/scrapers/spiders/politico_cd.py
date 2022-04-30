@@ -14,13 +14,13 @@ class PoliticoSpider(BaseSpider):
     def callback(self, response):
         title_path = '.tdb-title-text::text'
         content_path = '.td-post-content * p::text'
-        author_path='.tdb-author-name::text'
-        posted_at_path='.td-module-date::attr(datetime)'
-        sumary_path='.sumary'
+        author_path = '.tdb-author-name::text'
+        posted_at_path = '.td-module-date::attr(datetime)'
+        sumary_path = '.sumary'
         return self.default_parser(response, css_paths={
-            'title_path':title_path,
-            'content_path':content_path,
-            'sumary_path':sumary_path,
+            'title_path': title_path,
+            'content_path': content_path,
+            'sumary_path': sumary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })
