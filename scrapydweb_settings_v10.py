@@ -8,7 +8,7 @@ DOCS: https://github.com/my8100/files/blob/master/scrapydweb/README.md
 文档：https://github.com/my8100/files/blob/master/scrapydweb/README_CN.md
 """
 import os
-from config import DATABASE_URL
+
 
 ############################## QUICK SETUP start ##############################
 ############################## 快速设置 开始 ###################################
@@ -48,7 +48,8 @@ PASSWORD = ''
 SCRAPYD_SERVERS = [
     '127.0.0.1:6800',
     # 'username:password@localhost:6801#group',
-    ('username', 'password', 'localhost', '6800', 'group'),
+    'host.docker.internal:6800',
+    ('username', 'password', 'localhost', '6801', 'group'),
 ]
 
 
@@ -61,20 +62,20 @@ SCRAPYD_SERVERS = [
 # ScrapydWeb would try to directly read Scrapy logfiles from disk, instead of making a request
 # to the Scrapyd server.
 # e.g. '127.0.0.1:6800' or 'localhost:6801', do not forget the port number.
-LOCAL_SCRAPYD_SERVER = ''
+LOCAL_SCRAPYD_SERVER = '127.0.0.1:6800'
 
 # Enter the directory when you run Scrapyd, run the command below
 # to find out where the Scrapy logs are stored:
 # python -c "from os.path import abspath, isdir; from scrapyd.config import Config; path = abspath(Config().get('logs_dir')); print(path); print(isdir(path))"
 # Check out https://scrapyd.readthedocs.io/en/stable/config.html#logs-dir for more info.
 # e.g. 'C:/Users/username/logs' or '/home/username/logs'
-LOCAL_SCRAPYD_LOGS_DIR = ''
+LOCAL_SCRAPYD_LOGS_DIR = './logs'
 
 # The default is False, set it to True to automatically run LogParser as a subprocess at startup.
 # Note that you can run the LogParser service separately via command 'logparser' as you like.
 # Run 'logparser -h' to find out the config file of LogParser for more advanced settings.
 # Visit https://github.com/my8100/logparser for more info.
-ENABLE_LOGPARSER = False
+ENABLE_LOGPARSER = True
 ############################## QUICK SETUP end ################################
 ############################## 快速设置 结束 ###################################
 
@@ -102,6 +103,16 @@ SCRAPY_PROJECTS_DIR = ''
 # ScrapydWeb would try every extension in sequence to locate the Scrapy logfile.
 # The default is ['.log', '.log.gz', '.txt'].
 SCRAPYD_LOG_EXTENSIONS = ['.log', '.log.gz', '.txt']
+
+# The default is None, only set it up when you need to visit Scrapyd servers via reverse proxy.
+# Make sure that SCRAPYD_SERVERS_PUBLIC_URLS has same length with SCRAPYD_SERVERS above.
+# e.g.
+# SCRAPYD_SERVERS_PUBLIC_URLS = [
+    # 'https://a.b.com',  # visit the first Scrapyd server via reverse proxy.
+    # '',  # visit the second Scrapyd server without reverse proxy.
+# ]
+# See https://github.com/my8100/scrapydweb/issues/94 for more info.
+SCRAPYD_SERVERS_PUBLIC_URLS = None
 
 
 ############################## LogParser ######################################
@@ -352,8 +363,7 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # To use PostgreSQL backend, run command: pip install --upgrade psycopg2
 # e.g.
 # 'mysql://username:password@127.0.0.1:3306'
-# 'postgres://username:password@127.0.0.1:5432'
+# 'postgresql://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-
-DATABASE_URL = DATABASE_URL or os.environ.get('DATABASE_URL', '')
+DATABASE_URL = os.environ.get('DATABASE_URL', '')
