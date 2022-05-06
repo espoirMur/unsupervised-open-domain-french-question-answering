@@ -51,8 +51,8 @@ ENV PYTHONPATH="${PYTHONPATH}:${WORKING_DIR}"
 WORKDIR ${WORKING_DIR}
 RUN chown -R es.py:es.py ${WORKING_DIR}
 RUN chmod -R 755 ${WORKING_DIR}
-RUN chown -R es.py:es.py "/opt/"
-RUN chmod -R 755 "/opt/"
+RUN chown -R es.py:es.py "/opt/pysetup/.venv/"
+RUN chmod -R 755 "/opt/pysetup/.venv/"
 COPY src ${WORKING_DIR}/src
 COPY logs ${WORKING_DIR}/logs
 COPY config.py ${WORKING_DIR}
@@ -60,5 +60,5 @@ COPY scrapy.cfg ${WORKING_DIR}
 COPY scrapydweb_settings_v10.py ${WORKING_DIR}
 COPY docker-entrypoint.sh ${WORKING_DIR}
 USER es.py
-EXPOSE 8080 5555 8793
+EXPOSE 6800 5000 5555
 ENTRYPOINT [ "/bin/sh","-c" ]
