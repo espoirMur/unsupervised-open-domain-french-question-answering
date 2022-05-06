@@ -48,14 +48,16 @@ RUN mkdir /home/es.py/scrapers
 ENV WORKING_DIR=/home/es.py/scrapers
 ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:${WORKING_DIR}:$PATH"
 ENV PYTHONPATH="${PYTHONPATH}:${WORKING_DIR}"
-COPY src ${WORKING_DIR}
-COPY config.py ${WORKDIR}
+COPY src ${WORKING_DIR}/src
+COPY config.py ${WORKING_DIR}
 COPY scrapy.cfg ${WORKING_DIR}
 COPY scrapydweb_settings_v10.py ${WORKING_DIR}
-COPY docker-entrypoint.sh ${WORKING_DIR}/docker-entrypoint.sh
+COPY docker-entrypoint.sh ${WORKING_DIR}
 WORKDIR ${WORKING_DIR}
 RUN chown -R es.py:es.py ${WORKING_DIR}
 RUN chmod -R 755 ${WORKING_DIR}
+RUN chown -R es.py:es.py "/opt/"
+RUN chmod -R 755 "/opt/"
 USER es.py
 EXPOSE 8080 5555 8793
 ENTRYPOINT [ "/bin/sh","-c" ]
