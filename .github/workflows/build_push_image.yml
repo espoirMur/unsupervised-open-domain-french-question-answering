@@ -2,7 +2,7 @@ name: Build and Publish Docker Image
 
 on:
   push:
-    branches: [ setup-deployment-cluster ]
+    branches: [ master ]
 
 jobs:
 
@@ -32,4 +32,5 @@ jobs:
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
         script: |
-          docker-compose up --build
+          docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
+          docker run espymur/multilingual_drc_news_chatbot:develop
