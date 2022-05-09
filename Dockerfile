@@ -55,7 +55,7 @@ RUN chown -R es.py:es.py "/opt/"
 RUN chmod -R 755 "/opt/"
 
 COPY src ${WORKING_DIR}/src
-COPY logs ${WORKING_DIR}/logs
+RUN mkdir ${WORKING_DIR}/logs
 RUN chown -R es.py:es.py "${WORKING_DIR}/logs/"
 RUN chmod -R 755 "${WORKING_DIR}/logs/"
 
