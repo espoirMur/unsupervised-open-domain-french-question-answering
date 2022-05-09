@@ -51,10 +51,14 @@ ENV PYTHONPATH="${PYTHONPATH}:${WORKING_DIR}"
 WORKDIR ${WORKING_DIR}
 RUN chown -R es.py:es.py ${WORKING_DIR}
 RUN chmod -R 755 ${WORKING_DIR}
-RUN chown -R es.py:es.py "/opt/pysetup/.venv/"
-RUN chmod -R 755 "/opt/pysetup/.venv/"
+RUN chown -R es.py:es.py "/opt/"
+RUN chmod -R 755 "/opt/"
+
 COPY src ${WORKING_DIR}/src
 COPY logs ${WORKING_DIR}/logs
+RUN chown -R es.py:es.py "${WORKING_DIR}/logs/"
+RUN chmod -R 755 "${WORKING_DIR}/logs/"
+
 COPY config.py ${WORKING_DIR}
 COPY scrapy.cfg ${WORKING_DIR}
 COPY scrapydweb_settings_v10.py ${WORKING_DIR}

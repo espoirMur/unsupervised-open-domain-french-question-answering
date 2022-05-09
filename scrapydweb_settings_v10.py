@@ -46,9 +46,10 @@ PASSWORD = ''
 #   - it's recommended to pass in a tuple of 5 elements.
 #   - e.g. ('', '', '127.0.0.1', '6800', '') or ('username', 'password', 'localhost', '6801', 'group')
 SCRAPYD_SERVERS = [
-    'scraper-d:6800',
+    '127.0.0.1:6800',
     # 'username:password@localhost:6801#group',
     'host.docker.internal:6800',
+    ('username', 'password', 'host.docker.internal', '6800', 'group'),
     ('username', 'password', 'localhost', '6801', 'group'),
 ]
 
