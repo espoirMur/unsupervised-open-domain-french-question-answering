@@ -20,8 +20,7 @@ jobs:
         cp -TR . ../build
         tar -cvf deploy.tar ../build/
 
-    - uses: appleboy/ssh-action@master
-      name: Executing remote command
+    - name: Copy files into the server
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
@@ -31,6 +30,15 @@ jobs:
         COMMAND_TIMEOUT: 5m
         source: "deploy.tar"
         target: "multilingual_drc_news_chatbot"
+
+    - uses: appleboy/ssh-action@master
+      name: Executing remote command
+      with:
+        host: ${{ secrets.HOST_IP_ADDRESS  }}
+        USERNAME: ${{ secrets.HOST_USER_NAME  }}
+        PASSWORD: ${{ secrets.HOST_PASSWORD  }}
+        TIMEOUT: 5m
+        COMMAND_TIMEOUT: 5m
         script: |
           cd multilingual_drc_news_chatbot
           docker-compose up --build
