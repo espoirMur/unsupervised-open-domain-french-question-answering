@@ -26,8 +26,6 @@ jobs:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
         USERNAME: ${{ secrets.HOST_USER_NAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
-        TIMEOUT: 5m
-        COMMAND_TIMEOUT: 5m
         source: "./*"
         target: "multilingual_drc_news_chatbot"
 
@@ -37,8 +35,6 @@ jobs:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
         USERNAME: ${{ secrets.HOST_USER_NAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
-        TIMEOUT: 5m
-        COMMAND_TIMEOUT: 5m
         script: |
           cd multilingual_drc_news_chatbot
           docker-compose up --build
