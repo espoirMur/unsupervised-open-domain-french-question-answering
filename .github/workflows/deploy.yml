@@ -26,7 +26,6 @@ jobs:
         some_other_variable: foobar
         directory: './'
         file_name: .env.docker
-        fail_on_empty: fals
 
     - name: Zipe repo contents
       run: |
