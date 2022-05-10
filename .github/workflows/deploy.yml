@@ -19,7 +19,7 @@ jobs:
       with:
         envkey_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
         envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-        envkey_POSTGRES_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
+        envkey_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
         envkey_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
         envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
         envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
