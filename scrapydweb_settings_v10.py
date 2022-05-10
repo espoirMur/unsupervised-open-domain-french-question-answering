@@ -47,6 +47,7 @@ PASSWORD = ''
 #   - e.g. ('', '', '127.0.0.1', '6800', '') or ('username', 'password', 'localhost', '6801', 'group')
 SCRAPYD_SERVERS = [
     '127.0.0.1:6800',
+    'localhost:6800',
     # 'username:password@localhost:6801#group',
     '0.0.0.0:6800',
     'host.docker.internal:6800',
