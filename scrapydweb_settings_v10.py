@@ -51,7 +51,7 @@ SCRAPYD_SERVERS = [
     # 'username:password@localhost:6801#group',
     '0.0.0.0:6800',
     'host.docker.internal:6800',
-    ('root', 'bVP4H05!o1', '89.40.12.167', '6800', 'group'),
+    ('', '', '89.40.12.167', '6800', 'group'),
 ]
 
 
