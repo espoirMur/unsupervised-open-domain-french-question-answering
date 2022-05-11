@@ -347,7 +347,7 @@ LOG_IGNORE_TRIGGER_FORCESTOP = False
 # The default is False, set it to True to enable debug mode and the interactive debugger
 # would be shown in the browser instead of the "500 Internal Server Error" page.
 # Note that use_reloader is set to False in run.py
-DEBUG = True
+DEBUG = False
 
 # The default is False, set it to True to change the logging level from INFO to DEBUG
 # for getting more information about how ScrapydWeb works, especially while debugging.

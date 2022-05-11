@@ -53,4 +53,5 @@ jobs:
         COMMAND_TIMEOUT: 2h
         script: |
           cd multilingual_drc_news_chatbot
+          pip install logparser
           docker-compose up --build
