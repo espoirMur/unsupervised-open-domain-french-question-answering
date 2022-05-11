@@ -6,13 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: 
-    - |
-      scrapyd
-      ls
-      cat ./.env.docker
-      cd ..
-      ls
+    command: scrapyd
     ports:
       - "6800:6800"
   scrapy-web:
@@ -20,10 +14,6 @@ services:
     command:
     - |
        scrapyd-deploy production
-       ls
-       cat ./.env.docker
-       cd ..
-       ls
        scrapydweb
     depends_on:
       -  scraper-d

@@ -68,4 +68,10 @@ jobs:
         COMMAND_TIMEOUT: 2h
         script: |
           cd multilingual_drc_news_chatbot
+          export POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+          export POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+          export POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}
+          export POSTGRES_PORT=${{ secrets.POSTGRES_PORT }}
+          export POSTGRES_DB=${{ secrets.POSTGRES_DB }}
+          export HOST_IP_ADDRESS=${{ secrets.HOST_IP_ADDRESS }}
           docker-compose up --build
