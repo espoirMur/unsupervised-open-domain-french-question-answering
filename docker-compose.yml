@@ -9,6 +9,7 @@ services:
     command: 
     - |
       scrapyd
+      ls
       cat ./.env.docker
     ports:
       - "6800:6800"
@@ -17,6 +18,7 @@ services:
     command:
     - |
        scrapyd-deploy production
+       ls
        cat ./.env.docker
        scrapydweb
     depends_on:
