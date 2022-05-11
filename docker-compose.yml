@@ -14,7 +14,8 @@ services:
     command:
     - |
        scrapyd-deploy production
-       logparser
+       printenv POSTGRES_USER
+       printenv POSTGRES_PORT
        scrapydweb
     depends_on:
       -  scraper-d
