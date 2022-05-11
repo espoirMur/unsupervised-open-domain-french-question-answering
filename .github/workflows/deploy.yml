@@ -15,16 +15,18 @@ jobs:
       name: Check out code
 
     - name: Make envfile
-      uses: SpicyPizza/create-envfile@v1.3
+      uses: DeveloperRic/action-create-env@v1.0.2
       with:
-        envkey_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-        envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-        envkey_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
-        envkey_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-        envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-        envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
         directory: './'
         file_name: .env.docker
+        include_env_vars: true
+      env:
+        POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+        POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+        POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+        POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+        POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+        SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
 
     - name: Zipe repo contents
       run: |
