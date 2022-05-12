@@ -14,22 +14,8 @@ jobs:
     - uses: actions/checkout@v3
       name: Check out code
 
-    - name: Create env file
-      uses: SpicyPizza/create-envfile@v1.3
-      with:
-        envkey_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-        envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-        envkey_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
-        envkey_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-        envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-        envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
-        envkey_AUTHOR: "Jacob Dev"
-        file_name: '.env.docker'
-        directory: './'
-
     - name: Zipe repo contents
       run: |
-        ls
         mkdir ../build
         cp -TR . ../build
         tar -cvf deploy.tar ../build/
@@ -42,18 +28,31 @@ jobs:
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
-        source: "../*"
+        source: "./*"
         target: "multilingual_drc_news_chatbot"
 
     - uses: appleboy/ssh-action@master
       name: Executing remote command
+      env:
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+          POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+          HOST_IP_ADDRESS: ${{ secrets.HOST_IP_ADDRESS }}
       with:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
         USERNAME: ${{ secrets.HOST_USER_NAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
         TIMEOUT: 2h
         COMMAND_TIMEOUT: 2h
+        envs: POSTGRES_USER,POSTGRES_PASSWORD,POSTGRES_HOST,POSTGRES_PORT,POSTGRES_DB,HOST_IP_ADDRESS
         script: |
           cd multilingual_drc_news_chatbot
-          ls
+          touch .env
+          echo POSTGRES_USER="$POSTGRES_USER" >> .env
+          echo POSTGRES_PASSWORD="$POSTGRES_PASSWORD" >> .env
+          echo POSTGRES_HOST="$POSTGRES_HOST" >> .env
+          echo POSTGRES_PORT="$POSTGRES_PORT" >> .env
+          echo HOST_IP_ADDRESS="$HOST_IP_ADDRESS" >> .env
           docker-compose up --build
