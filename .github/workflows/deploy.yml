@@ -20,7 +20,7 @@ jobs:
         with:
           env-prefix: 'ENV_KEY_' # Optional (default: '')
           file-name: '.env.docker' # Optional (default : '.env')
-          directory: '.' # Optional (default: '.')
+          directory: './src' # Optional (default: '.')
         env: # env available for only this steps
           IS_SERVER: true
           ENV_KEY_USERNAME: admin
@@ -68,10 +68,5 @@ jobs:
         COMMAND_TIMEOUT: 2h
         script: |
           cd multilingual_drc_news_chatbot
-          export POSTGRES_USER=${{ secrets.POSTGRES_USER }}
-          export POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
-          export POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}
-          export POSTGRES_PORT=${{ secrets.POSTGRES_PORT }}
-          export POSTGRES_DB=${{ secrets.POSTGRES_DB }}
-          export HOST_IP_ADDRESS=${{ secrets.HOST_IP_ADDRESS }}
+          cat ./src/.env.docker
           docker-compose up --build
