@@ -41,7 +41,7 @@ jobs:
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
-        source: "./*"
+        source: "../*"
         target: "multilingual_drc_news_chatbot"
 
     - uses: appleboy/ssh-action@master
