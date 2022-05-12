@@ -15,22 +15,17 @@ jobs:
       name: Check out code
 
     - name: Create env file
-      uses: iamsauravsharma/create-dotenv@v1.2.1
+      uses: SpicyPizza/create-envfile@v1.3
         with:
-          env-prefix: 'ENV_KEY_' # Optional (default: '')
-          file-name: '.env.docker' # Optional (default : '.env')
-          directory: '.' # Optional (default: '.')
-        env: # env available for only this steps
+          file-name: '.env.docker'
+          directory: '.'
           IS_SERVER: true
-          ENV_KEY_USERNAME: admin
-          ENV_KEY_API_KEY: USER_API_KEY
-          ENV_KEY_SECRET_KEY: secret123
-          ENV_KEY_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-          ENV_KEY_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          ENV_KEY_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
-          ENV_KEY_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-          ENV_KEY_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-          ENV_KEY_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
+          envkey_POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          envkey_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+          envkey_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+          envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+          envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
 
     - name: Zipe repo contents
       run: |
