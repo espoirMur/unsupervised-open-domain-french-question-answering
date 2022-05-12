@@ -14,11 +14,9 @@ jobs:
     - uses: actions/checkout@v3
       name: Check out code
 
-    - name: Zipe repo contents
-      run: |
-        mkdir ../build
-        cp -TR . ../build
-        tar -cvf deploy.tar ../build/
+    - name: Add environment variables to .env
+        run: |
+          echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
 
     - name: Copy files into the server
       uses: appleboy/scp-action@master
@@ -28,33 +26,18 @@ jobs:
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
         TIMEOUT: 5m
         COMMAND_TIMEOUT: 5m
-        source: "./*"
-        target: "multilingual_drc_news_chatbot"
+        source: "."
+        target: "/Projects/multilingual_drc_news_chatbot"
 
     - uses: appleboy/ssh-action@master
       name: Executing remote command
-      env:
-          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
-          POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-          HOST_IP_ADDRESS: ${{ secrets.HOST_IP_ADDRESS }}
       with:
         host: ${{ secrets.HOST_IP_ADDRESS  }}
         USERNAME: ${{ secrets.HOST_USER_NAME  }}
         PASSWORD: ${{ secrets.HOST_PASSWORD  }}
-        TIMEOUT: 2h
-        COMMAND_TIMEOUT: 2h
-        envs: POSTGRES_USER,POSTGRES_PASSWORD,POSTGRES_HOST,POSTGRES_PORT,POSTGRES_DB,HOST_IP_ADDRESS
+        TIMEOUT: 30m
+        COMMAND_TIMEOUT: 30m
         script: |
-          cd multilingual_drc_news_chatbot
-          touch .env
-          echo POSTGRES_USER="$POSTGRES_USER" >> .env
-          echo POSTGRES_PASSWORD="$POSTGRES_PASSWORD" >> .env
-          echo POSTGRES_HOST="$POSTGRES_HOST" >> .env
-          echo POSTGRES_PORT="$POSTGRES_PORT" >> .env
-          echo HOST_IP_ADDRESS="$HOST_IP_ADDRESS" >> .env
+          cd /Projects/multilingual_drc_news_chatbot
           cat .env
-          ls
           docker-compose up --build

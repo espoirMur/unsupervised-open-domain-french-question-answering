@@ -9,6 +9,8 @@ services:
     command: scrapyd
     ports:
       - "6800:6800"
+    env_file:
+      - ./.env
   scrapy-web:
     image: scraper
     command:
