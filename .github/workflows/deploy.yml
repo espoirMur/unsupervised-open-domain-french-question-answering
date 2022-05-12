@@ -55,4 +55,6 @@ jobs:
           echo POSTGRES_HOST="$POSTGRES_HOST" >> .env
           echo POSTGRES_PORT="$POSTGRES_PORT" >> .env
           echo HOST_IP_ADDRESS="$HOST_IP_ADDRESS" >> .env
+          cat .env
+          ls
           docker-compose up --build
