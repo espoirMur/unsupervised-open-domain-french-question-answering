@@ -40,4 +40,4 @@ jobs:
         script: |
           cd /Projects/multilingual_drc_news_chatbot
           cat .env
-          docker-compose up --build
+          docker-compose up --build -d
