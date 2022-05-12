@@ -24,11 +24,12 @@ jobs:
         envkey_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
         envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
         envkey_AUTHOR: "Jacob Dev"
-        file-name: '.env.docker'
+        file_name: '.env.docker'
         directory: './'
 
     - name: Zipe repo contents
       run: |
+        ls
         mkdir ../build
         cp -TR . ../build
         tar -cvf deploy.tar ../build/
