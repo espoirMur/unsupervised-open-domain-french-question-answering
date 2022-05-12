@@ -15,8 +15,8 @@ jobs:
       name: Check out code
 
     - name: Add environment variables to .env
-        run: |
-          echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
+      run: |
+        echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
 
     - name: Copy files into the server
       uses: appleboy/scp-action@master
