@@ -25,7 +25,7 @@ jobs:
         envkey_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
         envkey_AUTHOR: "Jacob Dev"
         file-name: '.env.docker'
-        directory: './src'
+        directory: './'
 
     - name: Zipe repo contents
       run: |
