@@ -20,7 +20,7 @@ jobs:
         with:
           env-prefix: 'ENV_KEY_' # Optional (default: '')
           file-name: '.env.docker' # Optional (default : '.env')
-          directory: './multilingual_drc_news_chatbot' # Optional (default: '.')
+          directory: '.' # Optional (default: '.')
         env: # env available for only this steps
           IS_SERVER: true
           ENV_KEY_USERNAME: admin
