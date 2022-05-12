@@ -68,5 +68,7 @@ jobs:
         COMMAND_TIMEOUT: 2h
         script: |
           cd multilingual_drc_news_chatbot
-          cat ./src/.env.docker
+          ls
+          cd src
+          ls
           docker-compose up --build
