@@ -6,21 +6,20 @@ on:
 
 jobs:
 
-  create-env-file:
-    name: Create env file
-    runs-on: ubuntu-latest
-    env: # env available for all steps of jobs
-      ENV_KEY_DEBUG: true
-      ENV_KEY_USERNAME: root
-    
-    steps:
-      - uses: actions/checkout@v2
+  deploy:
 
-      - uses: iamsauravsharma/create-dotenv@v1.2.1
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      name: Check out code
+
+    - uses: iamsauravsharma/create-dotenv@v1.2.1
+      name: Create env file
         with:
           env-prefix: 'ENV_KEY_' # Optional (default: '')
           file-name: '.env.docker' # Optional (default : '.env')
-          directory: './src' # Optional (default: '.')
+          directory: '.' # Optional (default: '.')
         env: # env available for only this steps
           IS_SERVER: true
           ENV_KEY_USERNAME: admin
@@ -32,14 +31,6 @@ jobs:
           ENV_KEY_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
           ENV_KEY_POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
           ENV_KEY_SERVER_HOST: ${{ secrets.HOST_IP_ADDRESS  }}
-
-  build_and_push:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-      name: Check out code
 
     - name: Zipe repo contents
       run: |
@@ -68,7 +59,5 @@ jobs:
         COMMAND_TIMEOUT: 2h
         script: |
           cd multilingual_drc_news_chatbot
-          ls
-          cd src
           ls
           docker-compose up --build
