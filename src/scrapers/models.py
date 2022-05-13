@@ -28,3 +28,7 @@ class Article(Base):
     url = Column(String(250))
     author = Column(String(250))
     saved_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+engine = db_connect()
+create_table(engine)
