@@ -8,7 +8,9 @@ DOCS: https://github.com/my8100/files/blob/master/scrapydweb/README.md
 文档：https://github.com/my8100/files/blob/master/scrapydweb/README_CN.md
 """
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 ############################## QUICK SETUP start ##############################
 ############################## 快速设置 开始 ###################################
@@ -20,10 +22,10 @@ SCRAPYDWEB_BIND = '0.0.0.0'
 SCRAPYDWEB_PORT = 5000
 
 # The default is False, set it to True to enable basic auth for the web UI.
-ENABLE_AUTH = False
+ENABLE_AUTH = True
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
-USERNAME = ''
-PASSWORD = ''
+USERNAME = os.environ.get('ADMIN_USERNAME')
+PASSWORD = os.environ.get('ADMIN_PASSWORD')
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
@@ -366,4 +368,3 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'postgresql://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-DATABASE_URL = os.environ.get('DATABASE_URL', '')
