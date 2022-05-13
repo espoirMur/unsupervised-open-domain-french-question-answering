@@ -16,7 +16,7 @@ jobs:
 
     - name: Add environment variables to .env
       run: |
-        echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
+        echo '''${{ secrets.SCRAPY_WEB_CREDENTIALS }}''' >> .env
 
     - name: Copy files into the server
       uses: appleboy/scp-action@master
@@ -39,5 +39,4 @@ jobs:
         COMMAND_TIMEOUT: 30m
         script: |
           cd /Projects/multilingual_drc_news_chatbot
-          cat .env
           docker-compose up --build -d
