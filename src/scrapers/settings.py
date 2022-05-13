@@ -7,12 +7,12 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-from src.scrapers.config import db_url
+from config import DATABASE_URL
 
 BOT_NAME = 'site_scrapers'
 
-SPIDER_MODULES = ["scrapers.spiders"]
-NEWSPIDER_MODULE = "scrapers.spiders"
+SPIDER_MODULES = ["src.scrapers.spiders"]
+NEWSPIDER_MODULE = "src.scrapers.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -46,9 +46,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'scrapers.middlewares.ScrapersSpiderMiddleware': 543,
-# }
+SPIDER_MIDDLEWARES = {
+   'scrapers.middlewares.ScrapersSpiderMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrapers.pipelines.SaveItemPipeline': 300,
+   'src.scrapers.pipelines.SaveItemPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -88,4 +88,4 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-DB_CONNECTION_STRING=db_url
+DB_CONNECTION_STRING=DATABASE_URL

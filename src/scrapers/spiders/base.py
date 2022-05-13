@@ -3,7 +3,7 @@ from pathlib import Path
 import lxml.html
 from scrapy import Selector
 from scrapy.spiders import CrawlSpider
-from scrapers.items import WebsiteItem
+from src.scrapers.items import WebsiteItem
 
 
 class BaseSpider(CrawlSpider):
@@ -54,4 +54,4 @@ class BaseSpider(CrawlSpider):
                     
                 yield website_item
         except Exception as e:
-            print(f'Error while parsing {response.url} : \n', e.__str__())
+            self.logger.error(f'Error while parsing {response.url} : \n', e.__str__())

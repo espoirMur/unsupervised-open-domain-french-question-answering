@@ -16,4 +16,5 @@ runner.crawl(ActualiteSpider)
 runner.crawl(MediacongoSpider)
 d = runner.join()
 d.addBoth(lambda _: reactor.stop())
+
 reactor.run()

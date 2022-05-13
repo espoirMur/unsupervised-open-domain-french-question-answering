@@ -2,8 +2,9 @@ from src.scrapers.spiders.base import BaseSpider
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
 
+
 class SevenPer7Spider(BaseSpider):
-    name='7sur7'
+    name = '7sur7'
     allowed_domains = ['7sur7.cd']
     start_urls = ['https://www.7sur7.cd']
     rules = (
@@ -17,9 +18,9 @@ class SevenPer7Spider(BaseSpider):
         posted_at_path = '.post_date::text'
         author_path = '.content * p > strong::text'
         return self.default_parser(response, css_paths={
-            'title_path':title_path,
-            'content_path':content_path,
-            'sumary_path':sumary_path,
+            'title_path': title_path,
+            'content_path': content_path,
+            'sumary_path': sumary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })

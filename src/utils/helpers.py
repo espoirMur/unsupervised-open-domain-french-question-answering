@@ -1,6 +1,5 @@
 from datetime import datetime
 from dateutil.parser import parse
-from dateutil.parser._parser import ParserError
 
 
 def convert_date(date, format=None):
@@ -11,6 +10,6 @@ def convert_date(date, format=None):
         else:
             formated_date = datetime.strptime(date, format)
             return formated_date
-    except ParserError:
+    except ValueError: # Not sure about this one @jacob , you can check.. 
         formated_date = datetime.strptime(date, format)
         return formated_date
