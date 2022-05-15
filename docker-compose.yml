@@ -2,10 +2,10 @@ version: '3.7'
 
 services:
   scraper-d:
-    image: scraper
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: espymur/multilingual_drc_news_chatbot:develop
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     command: scrapyd
     ports:
       - "6800:6800"

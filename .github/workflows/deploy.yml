@@ -1,8 +1,10 @@
 name: Deploy to remote server
 
 on:
-  push:
-    branches: [ master ]
+  workflow_run:
+    workflows: [ Build and Publish Docker Image ]
+    types:
+      - completed
 
 jobs:
 
@@ -39,4 +41,5 @@ jobs:
         COMMAND_TIMEOUT: 30m
         script: |
           cd /Projects/multilingual_drc_news_chatbot
-          docker-compose up --build -d
+          docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
+          docker-compose up -d
