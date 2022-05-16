@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  scraper-d:
+    image: scraper
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: scrapyd
+    ports:
+      - "6800:6800"
+    env_file:
+      - ./.env
+  scrapy-web:
+    image: scraper
+    command:
+    - |
+       scrapyd-deploy production
+       scrapydweb
+    depends_on:
+      -  scraper-d
+    ports:
+      - "5000:5000"
+    restart: on-failure
+    env_file:
+      - ./.env.docker

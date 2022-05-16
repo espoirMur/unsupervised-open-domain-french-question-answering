@@ -27,7 +27,6 @@ ENABLE_AUTH = True
 USERNAME = os.environ.get('ADMIN_USERNAME')
 PASSWORD = os.environ.get('ADMIN_PASSWORD')
 
-
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
 # and started on all of your hosts.
 # Note that for remote access, you have to manually set 'bind_address = 0.0.0.0'
