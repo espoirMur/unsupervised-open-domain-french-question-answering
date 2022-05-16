@@ -1,7 +1,7 @@
 name: Deploy to remote server
 
 on:
-  pushes:
+  push:
     branches: [ master ]
   # workflow_run:
   #   workflows: [ Build and Publish Docker Image ]
