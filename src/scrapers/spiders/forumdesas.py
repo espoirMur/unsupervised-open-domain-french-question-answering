@@ -4,8 +4,9 @@ from src.scrapers.spiders.base import BaseSpider
 
 class ForumDesasSpider(BaseSpider):
     name = 'forumdesas'
-    start_urls = ['https://forumdesas.net/']
+    start_urls = ['https://forumdesas.net']
     allowed_domains = ['forumdesas.net']
+    website_origin='https://forumdesas.net'
     rules = (
         Rule(callback='callback', follow=True),
     )

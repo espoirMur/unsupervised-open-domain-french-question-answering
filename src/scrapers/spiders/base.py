@@ -30,7 +30,7 @@ class BaseSpider(CrawlSpider):
             title_css_path = css_paths['title_path']
             content_css_path = css_paths['content_path']
             sumary_path = css_paths['sumary_path']
-            posted_at_path = css_paths['posted_at_path']
+            posted_at_path = css_paths.get('posted_at_path', 'null')
             author_path = css_paths['author_path']
 
             title = selector.css(title_css_path).get()
@@ -44,7 +44,7 @@ class BaseSpider(CrawlSpider):
                     title=title,
                     content=content,
                     url=response.url,
-                    website_origin=self.start_urls[0],
+                    website_origin=self.website_origin,
                     author=author,
                     sumary=sumary
                 )

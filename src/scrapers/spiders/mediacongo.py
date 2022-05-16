@@ -7,6 +7,7 @@ class MediacongoSpider(BaseSpider):
     name = "mediacongo"
     allowed_domains = ["mediacongo.net"]
     start_urls = ["https://www.mediacongo.net"]
+    website_origin = "https://www.mediacongo.net"
     rules = (
         Rule(LinkExtractor(allow=r'.article-actualite*', allow_domains=('mediacongo.net')), callback='callback', follow=True),
     )
