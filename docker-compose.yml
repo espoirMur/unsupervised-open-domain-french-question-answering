@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   pull-image:
+    image: espymur/multilingual_drc_news_chatbot
     command: docker pull espymur/multilingual_drc_news_chatbot:develop
   scraper-d:
     command: scrapyd

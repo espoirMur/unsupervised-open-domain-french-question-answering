@@ -1,10 +1,12 @@
 name: Deploy to remote server
 
 on:
-  workflow_run:
-    workflows: [ Build and Publish Docker Image ]
-    types:
-      - completed
+  pushes:
+    branches: [ master ]
+  # workflow_run:
+  #   workflows: [ Build and Publish Docker Image ]
+  #   types:
+  #     - completed
 
 jobs:
 
