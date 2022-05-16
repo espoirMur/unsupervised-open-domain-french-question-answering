@@ -1,13 +1,9 @@
 version: '3.7'
 
 services:
-  pull-image:
-    image: espymur/multilingual_drc_news_chatbot
-    command: docker pull espymur/multilingual_drc_news_chatbot:develop
   scraper-d:
+    image: espymur/multilingual_drc_news_chatbot:develop
     command: scrapyd
-    depends_on:
-      -  pull-image
     ports:
       - "6800:6800"
   scrapy-web:
