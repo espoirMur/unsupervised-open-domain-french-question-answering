@@ -6,7 +6,7 @@ services:
     command:
     - |
        ls
-       scrapyd
+       docker ps
     ports:
       - "6800:6800"
   scrapy-web:
