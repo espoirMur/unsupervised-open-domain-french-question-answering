@@ -10,6 +10,7 @@ class KarismaTVScraper(BaseSpider):
     name = "karisma_tv"
     allowed_domains = ["karismatv.cd"]
     start_urls = ["https://www.karismatv.cd/"]
+    website_origin = "https://www.karismatv.cd"
 
     rules = (
         Rule(LinkExtractor(allow=r".*id=\d+$"), callback="parse_item", follow=True),

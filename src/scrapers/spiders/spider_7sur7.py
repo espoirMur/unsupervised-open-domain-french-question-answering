@@ -7,6 +7,8 @@ class SevenPer7Spider(BaseSpider):
     name = '7sur7'
     allowed_domains = ['7sur7.cd']
     start_urls = ['https://www.7sur7.cd']
+    website_origin = 'https://www.7sur7.cd'
+    
     rules = (
         Rule(LinkExtractor(allow_domains=('7sur7.cd')), callback='callback', follow=True),
     )
