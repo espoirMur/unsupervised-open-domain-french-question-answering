@@ -17,11 +17,11 @@ class ScooprdcSpider(BaseSpider):
         content_path = '.td-post-content * p::text'
         author_path = '.tdb-author-name::text'
         posted_at_path = '.td-module-date::attr(datetime)'
-        sumary_path = '.sumary'
+        summary_path = '.sumary'
         return self.default_parser(response, css_paths={
             'title_path': title_path,
             'content_path': content_path,
-            'sumary_path': sumary_path,
+            'summary_path': summary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })

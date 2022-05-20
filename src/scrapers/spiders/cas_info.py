@@ -17,10 +17,10 @@ class CasInfoSpider(BaseSpider):
         content_path = 'article p::text, article p > strong::text, article p > strong > em::text'
         author_path = '.mg-info-author-block .media-body .media-heading > a::text'
         posted_at_path = '.entry-date > span::text'
-        sumary_path = '.entry-summary * p::text'
+        summary_path = '.entry-summary * p::text'
         return self.default_parser(response, css_paths={
             'title_path': title_path,
             'content_path': content_path,
-            'sumary_path': sumary_path,
+            'summary_path': summary_path,
             'author_path': author_path
         })

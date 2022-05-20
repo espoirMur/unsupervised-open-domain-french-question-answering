@@ -17,12 +17,12 @@ class MediacongoSpider(BaseSpider):
         content_path = '.first_article_text > p::text, .first_article_text > p > strong::text'
         author_path='.one_article_who strong span::text'
         posted_at_path='.first_article > span::text'
-        sumary_path='.entry-content * p::text'
+        summary_path='.entry-content * p::text'
         date_format = '%Y-%m-%d'
         return self.default_parser(response, css_paths={
             'title_path':title_path,
             'content_path':content_path,
-            'sumary_path':sumary_path,
+            'summary_path':summary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         }, date_format=date_format)

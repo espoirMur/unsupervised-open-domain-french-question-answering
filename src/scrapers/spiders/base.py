@@ -29,14 +29,14 @@ class BaseSpider(CrawlSpider):
         try:
             title_css_path = css_paths['title_path']
             content_css_path = css_paths['content_path']
-            sumary_path = css_paths['sumary_path']
+            summary_path = css_paths['summary_path']
             posted_at_path = css_paths.get('posted_at_path', 'null')
             author_path = css_paths['author_path']
 
             title = selector.css(title_css_path).get()
             content = selector.css(content_css_path).getall()
             author = selector.css(author_path).get()
-            sumary = selector.css(sumary_path).get()
+            summary = selector.css(summary_path).get()
             posted_at = selector.css(posted_at_path).get()
             content = ''.join(content)
             if(title and content):
@@ -46,7 +46,7 @@ class BaseSpider(CrawlSpider):
                     url=response.url,
                     website_origin=self.website_origin,
                     author=author,
-                    sumary=sumary
+                    summary=summary
                 )
                 if posted_at:
                     date = website_item.get_date(posted_at, date_format)

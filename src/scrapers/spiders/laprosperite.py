@@ -16,10 +16,10 @@ class LaprosperiteSpyder(BaseSpider):
         content_path = 'section .entry-content p::text, section .entry-content p > strong::text, section .entry-content p > strong > em::text'
         author_path = '.entry-author > span::text'
         posted_at_path = '.entry-date > span::text'
-        sumary_path = '.entry-summary * p::text'
+        summary_path = '.entry-summary * p::text'
         return self.default_parser(response, css_paths={
             'title_path': title_path,
             'content_path': content_path,
-            'sumary_path': sumary_path,
+            'summary_path': summary_path,
             'author_path': author_path
         })

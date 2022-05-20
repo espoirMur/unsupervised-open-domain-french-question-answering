@@ -16,13 +16,13 @@ class SevenPer7Spider(BaseSpider):
     def callback(self, response):
         title_path = 'h1.page-header span::text'
         content_path = '.content * p::text, .content * p > em::text, .content h3 > strong::text, .content * p::text'
-        sumary_path = '.sumary::text'
+        summary_path = '.sumary::text'
         posted_at_path = '.post_date::text'
         author_path = '.content * p > strong::text'
         return self.default_parser(response, css_paths={
             'title_path': title_path,
             'content_path': content_path,
-            'sumary_path': sumary_path,
+            'summary_path': summary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })

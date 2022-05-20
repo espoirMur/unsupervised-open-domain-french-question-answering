@@ -16,11 +16,11 @@ class ActualiteSpider(BaseSpider):
         content_path = '.views-field .views-field-body .field-content > p::text, .field-content > blockquote > p::text'
         author_path='.field-content > p > strong::text'
         posted_at_path='.first_article > span::text'
-        sumary_path='.entry-content * p::text'
+        summary_path='.entry-content * p::text'
         return self.default_parser(response, css_paths={
             'title_path':title_path,
             'content_path':content_path,
-            'sumary_path':sumary_path,
+            'summary_path':summary_path,
             'posted_at_path': posted_at_path,
             'author_path': author_path
         })
