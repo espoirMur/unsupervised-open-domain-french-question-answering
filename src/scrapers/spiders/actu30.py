@@ -1,20 +1,19 @@
-from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule
 from src.scrapers.spiders.base import BaseSpider
 
 
-class PoliticoSpider(BaseSpider):
-    name = "politico"
-    allowed_domains = ["politico.cd"]
-    start_urls = ["https://www.politico.cd"]
-    website_origin = "https://www.politico.cd"
-    
+class Actu30Spider(BaseSpider):
+    name = 'actu30'
+    website_origin = 'https://actu30.cd'
+    start_urls = ['https://actu30.cd']
+    allowed_domains = ['actu30.cd']
+
     rules = (
-        Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=True),
+        Rule(callback='callback', follow=True),
     )
-    
+
     def callback(self, response):
-        title_path = '.tdb-title-text::text'
+        title_path = 'h1.tdb-title-text::text'
         content_path = '.td-post-content * p::text'
         author_path = '.tdb-author-name::text'
         posted_at_path = '.td-module-date::attr(datetime)'

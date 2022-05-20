@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = "src.scrapers.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'scrapers (+http://www.yourdomain.com)'
+USER_AGENT = 'scrapers'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,7 +47,7 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-   'scrapers.middlewares.ScrapersSpiderMiddleware': 543,
+   'src.scrapers.middlewares.ScrapersSpiderMiddleware': 543,
 }
 
 # Enable or disable downloader middlewares

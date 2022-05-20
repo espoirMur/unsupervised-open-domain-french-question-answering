@@ -1,18 +1,17 @@
-from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule
 from src.scrapers.spiders.base import BaseSpider
 
 
-class PoliticoSpider(BaseSpider):
-    name = "politico"
-    allowed_domains = ["politico.cd"]
-    start_urls = ["https://www.politico.cd"]
-    website_origin = "https://www.politico.cd"
-    
+class ScooprdcSpider(BaseSpider):
+    name = 'scooprdc'
+    website_origin = 'https://scooprdc.net'
+    start_urls = ['https://scooprdc.net/']
+    allowed_domains = ['scooprdc.net']
+
     rules = (
-        Rule(LinkExtractor(deny=r'.*rubrique+'), callback='callback', follow=True),
+        Rule(callback='callback', follow=True),
     )
-    
+
     def callback(self, response):
         title_path = '.tdb-title-text::text'
         content_path = '.td-post-content * p::text'

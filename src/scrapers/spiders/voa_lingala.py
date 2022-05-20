@@ -10,6 +10,7 @@ class VoaLingalaScraper(BaseSpider):
     name = "voa_lingala"
     allowed_domains = ["voalingala.com"]
     start_urls = ["https://www.voalingala.com/"]
+    website_origin = "https://www.voalingala.com/"
 
     rules = (
         Rule(LinkExtractor(allow=r".*/a($|/.*)"), callback="parse_item", follow=True),

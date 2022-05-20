@@ -10,6 +10,7 @@ class LingalaIntituteScraper(BaseSpider):
     name = "lingala_institute"
     allowed_domains = ["lingalainstitute.wordpress.com"]
     start_urls = ["https://lingalainstitute.wordpress.com"]
+    website_origin = "https://lingalainstitute.wordpress.com"
 
     rules = (
         Rule(
