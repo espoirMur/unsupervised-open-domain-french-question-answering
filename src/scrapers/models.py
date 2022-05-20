@@ -22,7 +22,7 @@ class Article(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String(250), nullable=False, unique=True)
     content = Column(Text, nullable=False)
-    sumary = Column(Text)
+    summary = Column(Text)
     posted_at = Column(DateTime)
     website_origin = Column(String(250))
     url = Column(String(250))

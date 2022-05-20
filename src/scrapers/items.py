@@ -8,7 +8,7 @@ class WebsiteItem(Item):
 
     title = Field()
     url = Field()
-    sumary = Field()
+    summary = Field()
     content = Field()
     author = Field()
     website_origin = Field()
