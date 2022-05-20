@@ -12,6 +12,7 @@ class CpiReportScraper(BaseSpider):
     # https://www.icc-cpi.int/test-new-master/Pages/pr-new.aspx?name=170331-otp-stat&ln=Lingala
     allowed_domains = ["icc-cpi.int"]
     start_urls = ["https://www.icc-cpi.int"]
+    website_info = "https://www.icc-cpi.int"
 
     rules = (Rule(LinkExtractor(), callback="parse_item", follow=True),)
 

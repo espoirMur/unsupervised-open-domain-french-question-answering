@@ -55,9 +55,8 @@ class ScrapersSpiderMiddleware:
             yield r
 
     def spider_opened(self, spider):
-        spider_start_url = spider.start_urls[0]
         session = sessionmaker(bind=engine)()
-        last_article = session.query(Article).filter_by(website_origin=spider_start_url).order_by(Article.saved_at.desc()).first()
+        last_article = session.query(Article).filter_by(website_origin=spider.website_origin).order_by(Article.saved_at.desc()).first()
         if(last_article):
             spider.start_urls = [last_article.url]
         spider.logger.info('Spider start urls: %s' % spider.start_urls)
