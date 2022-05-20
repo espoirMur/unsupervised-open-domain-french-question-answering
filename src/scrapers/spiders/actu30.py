@@ -17,7 +17,7 @@ class Actu30Spider(BaseSpider):
         content_path = '.td-post-content * p::text'
         author_path = '.tdb-author-name::text'
         posted_at_path = '.td-module-date::attr(datetime)'
-        summary_path = '.sumary'
+        summary_path = '.summary'
         return self.default_parser(response, css_paths={
             'title_path': title_path,
             'content_path': content_path,
