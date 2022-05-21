@@ -20,6 +20,7 @@ jobs:
       run: |
         echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
         echo '''${{ secrets.SCRAPY_WEB_CREDENTIALS }}''' >> .env
+        cat .env
 
     - name: Copy files into the server
       uses: appleboy/scp-action@master

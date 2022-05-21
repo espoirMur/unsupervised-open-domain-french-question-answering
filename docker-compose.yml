@@ -7,7 +7,7 @@ services:
     ports:
       - "6800:6800"
   scrapy-web:
-    image: scraper
+    image: espymur/multilingual_drc_news_chatbot:lat
     command:
     - |
        scrapyd-deploy production
