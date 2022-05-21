@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   scraper-d:
-    image: espymur/multilingual_drc_news_chatbot:test
+    image: espymur/multilingual_drc_news_chatbot:lat
     command: scrapyd
     ports:
       - "6800:6800"

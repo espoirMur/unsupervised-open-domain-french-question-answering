@@ -19,6 +19,6 @@ jobs:
       with:
         image: espymur/multilingual_drc_news_chatbot
         registry: docker.io
-        tag: test
+        tag: lat
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
