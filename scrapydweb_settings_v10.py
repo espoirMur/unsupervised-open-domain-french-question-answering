@@ -8,7 +8,7 @@ DOCS: https://github.com/my8100/files/blob/master/scrapydweb/README.md
 文档：https://github.com/my8100/files/blob/master/scrapydweb/README_CN.md
 """
 import os
-from .config import DATABASES
+from config import DATABASES
 from dotenv import load_dotenv
 
 load_dotenv()
