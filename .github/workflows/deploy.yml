@@ -20,7 +20,6 @@ jobs:
       run: |
         echo '''${{ secrets.DATABASE_CRENDENTIALS_ENV }}''' >> .env
         echo '''${{ secrets.SCRAPY_WEB_CREDENTIALS }}''' >> .env
-        cat .env
 
     - name: Copy files into the server
       uses: appleboy/scp-action@master
@@ -44,4 +43,4 @@ jobs:
         script: |
           cd /Projects/multilingual_drc_news_chatbot
           docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
-          docker-compose up --build -d
+          docker-compose up --build
