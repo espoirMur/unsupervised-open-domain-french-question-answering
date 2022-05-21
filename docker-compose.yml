@@ -2,12 +2,12 @@ version: '3.7'
 
 services:
   scraper-d:
-    image: espymur/multilingual_drc_news_chatbot:update
+    image: espymur/multilingual_drc_news_chatbot:other
     command: scrapyd
     ports:
       - "6800:6800"
   scrapy-web:
-    image: espymur/multilingual_drc_news_chatbot:update
+    image: espymur/multilingual_drc_news_chatbot:other
     command:
     - |
        scrapyd-deploy production

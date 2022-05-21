@@ -4,7 +4,7 @@ from urllib.parse import quote as urlquote
 
 load_dotenv()
 
-POSTGRES_USER = 'es_py' #os.environ.get('POSTGRES_USER', '')
+POSTGRES_USER = 'esp_py' #os.environ.get('POSTGRES_USER', '')
 POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', '')
 POSTGRES_HOST = '89.40.12.167' #os.environ.get('POSTGRES_HOST', '')
 POSTGRES_PORT = os.environ.get('POSTGRES_PORT', 5432)
