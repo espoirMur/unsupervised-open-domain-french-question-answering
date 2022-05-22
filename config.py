@@ -4,9 +4,9 @@ from urllib.parse import quote as urlquote
 
 load_dotenv()
 
-POSTGRES_USER = 'esp_py' #os.environ.get('POSTGRES_USER', '')
+POSTGRES_USER = os.environ.get('POSTGRES_USER', '')
 POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', '')
-POSTGRES_HOST = '89.40.12.167' #os.environ.get('POSTGRES_HOST', '')
+POSTGRES_HOST = os.environ.get('POSTGRES_HOST', '')
 POSTGRES_PORT = os.environ.get('POSTGRES_PORT', 5432)
 POSTGRES_DB = os.environ.get('POSTGRES_DB', '')
 DATABASE_URL = "postgresql://{}:{}@{}:{}/{}".format(POSTGRES_USER,
@@ -14,8 +14,3 @@ DATABASE_URL = "postgresql://{}:{}@{}:{}/{}".format(POSTGRES_USER,
                                                     POSTGRES_HOST,
                                                     POSTGRES_PORT,
                                                     POSTGRES_DB)
-                                
-DATABASES = "postgresql://{}:{}@{}:{}".format(POSTGRES_USER,
-                                                    urlquote(POSTGRES_PASSWORD),
-                                                    POSTGRES_HOST,
-                                                    POSTGRES_PORT)
