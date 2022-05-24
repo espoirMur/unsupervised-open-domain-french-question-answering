@@ -14,3 +14,8 @@ DATABASE_URL = "postgresql://{}:{}@{}:{}/{}".format(POSTGRES_USER,
                                                     POSTGRES_HOST,
                                                     POSTGRES_PORT,
                                                     POSTGRES_DB)
+
+DATABASES = "postgresql://{}:{}@{}:{}".format(POSTGRES_USER,
+                                                    urlquote(POSTGRES_PASSWORD),
+                                                    POSTGRES_HOST,
+                                                    POSTGRES_PORT)                                                    
