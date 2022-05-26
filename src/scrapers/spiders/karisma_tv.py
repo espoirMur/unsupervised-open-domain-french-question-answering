@@ -19,7 +19,7 @@ class KarismaTVScraper(BaseSpider):
     def parse_item(self, response):
         body_xpath = "/html/body/div[1]/div/div/div[1]/div/div/div[2]/div/div[2]"
         title_xpath = "/html/body/div[1]/div/div/div[1]/div/div/div[1]/a[1]/h6/text()"
-        author_path = '.post-author > a'
+        author_path = '.post-author > a::text'
         website_item = WebsiteItem()
         content_selector = Selector(response)
         title = content_selector.xpath(title_xpath).get()
