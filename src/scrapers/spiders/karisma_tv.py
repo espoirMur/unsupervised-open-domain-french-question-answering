@@ -30,5 +30,3 @@ class KarismaTVScraper(BaseSpider):
         website_item["website_origin"] = self.website_origin
         website_item["author"] = author
         website_item["url"] = response.url
-
-        yield website_item

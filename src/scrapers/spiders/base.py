@@ -52,6 +52,5 @@ class BaseSpider(CrawlSpider):
                     date = website_item.get_date(posted_at, date_format)
                     website_item['posted_at'] = date
                     
-                yield website_item
         except Exception as e:
             self.logger.error(f'Error while parsing {response.url} : \n', e.__str__())

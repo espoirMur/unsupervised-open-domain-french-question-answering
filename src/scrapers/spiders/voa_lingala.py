@@ -35,6 +35,4 @@ class VoaLingalaScraper(BaseSpider):
             website_item["author"] = author
             website_item["url"] = response.url
             website_item["website_origin"] = self.website_origin
-
-            yield website_item
         
