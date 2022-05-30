@@ -59,7 +59,7 @@ Make sure you have docker installed and running and docker-compose and then go i
 
 After running the docker container, you will find the scrapydweb dashoard for the monitoring and the scheduling of the scrapers at :
 
-`localhost:6800`
+`localhost:5000`
 
 
 <!-- CONTRIBUTING -->
