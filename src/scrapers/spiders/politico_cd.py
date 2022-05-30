@@ -3,7 +3,10 @@ from scrapy.spiders import Rule
 from src.scrapers.spiders.base import BaseSpider
 
 
-class PoliticoSpider(BaseSpider):
+class PoliticoSpider(BaseSpider): # pylint: disable=abstract-method
+    """
+    scraper for https://www.politico.cd
+    """
     name = "politico"
     allowed_domains = ["politico.cd"]
     start_urls = ["https://www.politico.cd"]
@@ -14,6 +17,9 @@ class PoliticoSpider(BaseSpider):
     )
     
     def callback(self, response):
+        """
+        callback for each page
+        """
         title_path = '.tdb-title-text::text'
         content_path = '.td-post-content * p::text'
         author_path = '.tdb-author-name::text'

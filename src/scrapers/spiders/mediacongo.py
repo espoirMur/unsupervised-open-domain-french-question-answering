@@ -3,7 +3,10 @@ from scrapy.linkextractors import LinkExtractor
 from src.scrapers.spiders.base import BaseSpider
 
 
-class MediacongoSpider(BaseSpider):
+class MediacongoSpider(BaseSpider): # pylint: disable=abstract-method
+    """
+    scraper for https://mediacongo.com
+    """
     name = "mediacongo"
     allowed_domains = ["mediacongo.net"]
     start_urls = ["https://www.mediacongo.net"]
@@ -13,6 +16,9 @@ class MediacongoSpider(BaseSpider):
     )
 
     def callback(self, response):
+        """
+        callback for each page
+        """
         title_path = '.first_article > h1::text'
         content_path = '.first_article_text > p::text, .first_article_text > p > strong::text'
         author_path='.one_article_who strong span::text'

@@ -1,4 +1,3 @@
-import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
 from scrapy.spiders import Rule
@@ -6,7 +5,12 @@ from src.scrapers.items import WebsiteItem
 from src.scrapers.spiders.base import BaseSpider
 
 
-class KarismaTVScraper(BaseSpider):
+class KarismaTVScraper(BaseSpider): #pylint: disable=abstract-method
+
+    """
+    scraper for https://www.karismatv.cd
+    """
+
     name = "karisma_tv"
     allowed_domains = ["karismatv.cd"]
     start_urls = ["https://www.karismatv.cd/"]
@@ -17,6 +21,11 @@ class KarismaTVScraper(BaseSpider):
     )
 
     def parse_item(self, response):
+        
+        """
+            parsing content from response
+        """
+
         body_xpath = "/html/body/div[1]/div/div/div[1]/div/div/div[2]/div/div[2]"
         title_xpath = "/html/body/div[1]/div/div/div[1]/div/div/div[1]/a[1]/h6/text()"
         author_path = '.post-author > a::text'

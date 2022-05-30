@@ -3,7 +3,13 @@ from src.utils.helpers import convert_date
 
 
 class WebsiteItem(Item):
-    def get_date(self, date, format):
+    """
+    scraped data
+    """
+    def get_date(self, date, format): #pylint: disable=redefined-builtin, no-self-use
+        """
+        given a date local string and a format return a date object
+        """
         return convert_date(date=date, format=format)
 
     title = Field()

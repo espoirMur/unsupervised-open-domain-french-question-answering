@@ -1,4 +1,3 @@
-import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
 from scrapy.spiders import Rule
@@ -6,7 +5,10 @@ from src.scrapers.items import WebsiteItem
 from src.scrapers.spiders.base import BaseSpider
 
 
-class VoaLingalaScraper(BaseSpider):
+class VoaLingalaScraper(BaseSpider): #pylint: disable=abstract-method
+    """
+    scraper for https://www.voa-lingala.com
+    """
     name = "voa_lingala"
     allowed_domains = ["voalingala.com"]
     start_urls = ["https://www.voalingala.com/"]
@@ -17,6 +19,9 @@ class VoaLingalaScraper(BaseSpider):
     )
 
     def parse_item(self, response):
+        """
+            parsing content from response
+        """
         content_path = '#article-content > div > p::text'
         title_path = '.title.pg-title::text'
         date_path = '.published .date time::attr(datetime)'
