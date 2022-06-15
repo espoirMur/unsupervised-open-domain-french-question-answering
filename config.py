@@ -14,3 +14,11 @@ DATABASE_URL = "postgresql://{}:{}@{}:{}/{}".format(POSTGRES_USER,
                                                     POSTGRES_HOST,
                                                     POSTGRES_PORT,
                                                     POSTGRES_DB)
+
+PRODIGY_LOCAL_DB_NAME = os.environ.get('PRODIGY_LOCAL_DB_NAME', '')
+PRODIGY_LOCAL_DB_USER = os.environ.get('PRODIGY_LOCAL_DB_USER', '')
+PRODIGY_DATABASE_URL = "postgresql://{}:{}@{}:{}/{}".format(PRODIGY_LOCAL_DB_USER,
+                                                            urlquote(POSTGRES_PASSWORD),
+                                                            "localhost",
+                                                            POSTGRES_PORT,
+                                                            PRODIGY_LOCAL_DB_NAME)
