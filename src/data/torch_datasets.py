@@ -89,3 +89,27 @@ class Collator(object):
                                                      self.text_maxlength)
 
         return (index, target_ids, target_mask, passage_ids, passage_masks)
+
+
+def load_data(data_path=None):
+    assert data_path
+    if data_path.endswith('.jsonl'):
+        data = open(data_path, 'r')
+    elif data_path.endswith('.json'):
+        with open(data_path, 'r') as fin:
+            data = json.load(fin)
+    examples = []
+    for k, example in enumerate(data):
+        if data_path is not None and data_path.endswith('.jsonl'):
+            example = json.loads(example)
+        if 'id' not in example:
+            example['id'] = k
+        for c in example['contexts']:
+            if 'score' not in c:
+                c['score'] = 1.0 / (k + 1)
+        examples.append(example)
+    ## egrave: is this needed?
+    if data_path is not None and data_path.endswith('.jsonl'):
+        data.close()
+
+    return examples

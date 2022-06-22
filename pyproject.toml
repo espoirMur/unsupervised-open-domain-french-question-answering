@@ -88,6 +88,7 @@ logparser = {git = "https://github.com/my8100/logparser.git"}
 [tool.poetry.dev-dependencies]
 pycodestyle = "^2.8.0"
 ipykernel = "^6.13.0"
+autopep8 = "^1.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
