@@ -247,5 +247,5 @@ class AllCorpusBuilder:
         """
         output_path = self.base_folder.joinpath(self.dataset_name)
         with open(output_path, "w", encoding='utf-8') as file_:
-            json.dump(self.json_docs, file_)
+            json.dump(self.json_docs, file_, ensure_ascii=False)
         print('Wrote {} records to {}'.format(len(self.json_docs), output_path))
