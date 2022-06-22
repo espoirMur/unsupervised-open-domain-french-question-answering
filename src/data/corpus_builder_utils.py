@@ -5,8 +5,8 @@ from haystack.nodes import BM25Retriever
 
 
 class Entity:
-    def __init__(self, name, start, end, group):
-        self.name = name
+    def __init__(self, word, start, end, group):
+        self.word = word
         self.start = start
         self.end = end
         self.group = group
@@ -25,11 +25,11 @@ class Entity:
         Yields:
             _type_: _description_
         """
-        name = dict.get("name")
+        word = dict.get("word")
         start = dict.get("start")
         end = dict.get("end")
         group = dict.get("group")
-        return cls(name, start, end, group)
+        return cls(word, start, end, group)
     
 
 class Sentence:
@@ -128,7 +128,7 @@ class Sentence:
         Args:
             entities (_type_): _description_
         """
-        return [entity for entity in entities if entity.get("entity_group") in ["PER", "ORG", "LOC", "DATE"] and entity.get("score") >= 0.85]
+        return [entity for entity in entities if entity.get("entity_group") in ["PER", "ORG", "LOC", "DATE"] and entity.get("score") >= 0.85 and self.is_valid_answer(entity.get("word"))]
     
     def to_squad_format(self, entity, bm25_retriever_positive):
 
@@ -163,6 +163,17 @@ class Sentence:
         question = self.get_search_query(entity_start, entity_end)
         answer = self.get_answer(entity_start, entity_end)
         return question, answer
+    
+    def is_valid_answer(self, answer):
+        """check if the lenf of the answer is greater than 5
+
+        Returns:
+            _type_: _description_
+
+        Yields:
+            _type_: _description_
+        """
+        return len(answer) >= 5
 
 
 class DocumentContext:
@@ -210,12 +221,14 @@ class AllCorpusBuilder:
     """the main corpus builder that takes the documents and save the content to the file
     it takes the ner pipeline , the transformer pipeline, and  the retriever 
     """
-    def __init__(self, ner_pipeline, transformer_pipeline, retriever, all_docs, base_folder):
+    def __init__(self, ner_pipeline, transformer_pipeline, retriever, all_docs, base_folder, corpus_name="drc-news-uqa.json"):
         self.ner_pipeline = ner_pipeline
         self.transformer_pipeline = transformer_pipeline
         self.retriever = retriever
         self.all_docs = all_docs
         self.base_folder = base_folder
+        self.dataset_name = corpus_name
+        self.json_docs = list()
     
     def build_corpus(self):
         for document in tqdm(self.all_docs, desc="generating dataset"):
@@ -224,4 +237,17 @@ class AllCorpusBuilder:
             for sentence in document_context.sentences:
                 sentence.build_entities(self.transformer_pipeline)
                 for entity in sentence.entities:
-                    sentence.to_json_file(entity, self.retriever, self.base_folder)
+                    id_, squad_format = sentence.to_squad_format(entity, self.retriever)
+                    if id_ and squad_format:
+                        self.json_docs.append(squad_format)
+
+    def combine_all_file_to_one(self):
+        """
+        this loop over the files in the directory and combine all of them into one json file
+        """
+        output_path = self.base_folder.joinpath(self.dataset_name)
+        with open(output_path, "w", encoding='utf-8') as file_:
+            for line in self.json_docs:
+                json_record = json.dumps(line, ensure_ascii=False)
+                file_.write(json_record + '\n')
+        print('Wrote {} records to {}'.format(len(self.json_docs), output_path))
