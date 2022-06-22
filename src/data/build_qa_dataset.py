@@ -26,21 +26,31 @@ from typing import ClassVar, Dict
 
 from datasets.features import Features, Sequence, Value
 from datasets.tasks.base import TaskTemplate
+from pathlib import Path
 
 
 @dataclass(frozen=True)
 class QuestionAnsweringExtractiveMultipleContext(TaskTemplate):
     # `task` is not a ClassVar since we want it to be part of the `asdict` output for JSON serialization
     task: str = "question-answering-extractive"
-    input_schema: ClassVar[Features] = Features({"question": Value("string"), "contexts": Sequence({"text": Value("string")}) })
-    label_schema: ClassVar[Features] = Features(Value("string"))
+    input_schema: ClassVar[Features] = Features({"question": Value("string"),
+                                                 "contexts": Sequence({"text": Value("string")}),
+                                                 "title": Value("string"),
+                                                 "id": Value("string")})
+    label_schema: ClassVar[Features] = Features({"answer": Value("string")})
     question_column: str = "question"
     context_column: str = "contexts"
     answers_column: str = "answer"
+    id_column: str = "id"
+    title_column: str = "title"
 
     @property
     def column_mapping(self) -> Dict[str, str]:
-        return {self.question_column: "question", self.context_column: "contexts", self.answer_column: "answer"}
+        return {self.question_column: "question",
+                self.context_column: "contexts",
+                self.answer_column: "answer",
+                self.id_column: "id",
+                self.title_column: "title"}
 
 
 logger = datasets.logging.get_logger(__name__)
@@ -80,6 +90,13 @@ class UnsupervisedQuestionAnswersConfig(datasets.GeneratorBasedBuilder):
         ),
     ]
 
+    DATA_PATH = Path.cwd().joinpath("data")
+    BASE_QA_PATH = DATA_PATH.joinpath("processed", "DRC-News-UQA")
+    assert BASE_QA_PATH.exists()
+    qa_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small.json")
+    assert qa_dataset_file.exists()
+    files_urls = {"train": qa_dataset_file}
+
     def _info(self):
         return datasets.DatasetInfo(
             description=_DESCRIPTION,
@@ -87,33 +104,36 @@ class UnsupervisedQuestionAnswersConfig(datasets.GeneratorBasedBuilder):
                 {
                     "id": datasets.Value("string"),
                     "title": datasets.Value("string"),
-                    "answers": datasets.Value("string"),
+                    "answer": datasets.Value("string"),
                     "question": datasets.Value("string"),
                     "contexts": datasets.features.Sequence(
                         {
-                            "text": datasets.Value("string"),
+                            "content": datasets.Value("string"),
                         }
                     ),
                 }
             ),
             # No default supervised_keys (as we have to pass both question
-            # and context as input).
+            # and contexts as input).
             supervised_keys=None,
             homepage="murhabazi.com",
             citation=_CITATION,
             task_templates=[
                 QuestionAnsweringExtractiveMultipleContext(
-                    question_column="question", context_column="context", answers_column="answers"
+                    question_column="question", 
+                    context_column="contexts", 
+                    answers_column="answer",
+                    id_column="id",
+                    title_column="title",
                 )
             ],
         )
 
     def _split_generators(self, dl_manager):
-        urls_to_download = _URLS
+        urls_to_download = self.qa_dataset_file
         downloaded_files = dl_manager.download_and_extract(urls_to_download)
-
         return [
-            datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"filepath": downloaded_files["train"]}),
+            datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"filepath": downloaded_files}),
         ]
 
     def _generate_examples(self, filepath):
@@ -121,26 +141,8 @@ class UnsupervisedQuestionAnswersConfig(datasets.GeneratorBasedBuilder):
         logger.info("generating examples from = %s", filepath)
         with open(filepath, encoding="utf-8") as f:
             dataset = json.load(f)
-            for article in dataset["data"]:
-                title = article.get("title", "").strip()
-                for paragraph in article["paragraphs"]:
-                    context = paragraph["context"].strip()
-                    for qa in paragraph["qas"]:
-                        question = qa["question"].strip()
-                        id_ = qa["id"]
-
-                        answer_starts = [answer["answer_start"] for answer in qa["answers"]]
-                        answers = [answer["text"].strip() for answer in qa["answers"]]
-
-                        # Features currently used are "context", "question", and "answers".
-                        # Others are extracted here for the ease of future expansions.
-                        yield id_, {
-                            "title": title,
-                            "context": context,
-                            "question": question,
-                            "id": id_,
-                            "answers": {
-                                "answer_start": answer_starts,
-                                "text": answers,
-                            },
-                        }
+            for question in dataset:
+                print(10 * "**** ")
+                print("the keys are: ", question.keys())
+                id = question.get("id")
+                yield id, question
