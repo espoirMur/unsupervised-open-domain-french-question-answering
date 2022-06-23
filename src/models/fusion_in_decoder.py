@@ -1,16 +1,8 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-
 import types
 import torch
 from transformers import T5ForConditionalGeneration
 import torch.nn.functional as F
 from torch import nn
-from torch.nn import CrossEntropyLoss
-import numpy as np
 
 
 class FusionInDecoderModel(T5ForConditionalGeneration):
@@ -153,6 +145,7 @@ class CheckpointWrapper(torch.nn.Module):
     """
     Wrapper replacing None outputs by empty tensors, which allows the use of
     checkpointing.
+    As well as this one
     """
     def __init__(self, module, use_checkpoint=False):
         super().__init__()
@@ -162,6 +155,7 @@ class CheckpointWrapper(torch.nn.Module):
     def forward(self, hidden_states, attention_mask, position_bias, **kwargs):
         if self.use_checkpoint and self.training:
             kwargs = {k: v for k, v in kwargs.items() if v is not None}
+            
             def custom_forward(*inputs):
                 output = self.module(*inputs, **kwargs)
                 empty = torch.tensor(
@@ -184,16 +178,17 @@ class CheckpointWrapper(torch.nn.Module):
         return output
 
 
-def apply_checkpoint_wrapper(t5stack, use_checkpoint):
+def apply_checkpoint_wrapper(t5encoder, use_checkpoint):
     """
-    Wrap each block of the encoder to enable checkpointing.
+    this is the specific part of the module I have to undrestand
+    Wrap each block of the encoder to enable check pointing.
     """
     blocks = []
-    for mod in t5stack.block:
+    for mod in t5encoder.block:
         wrapped_mod = CheckpointWrapper(mod, use_checkpoint)
         blocks.append(wrapped_mod)
     block = nn.ModuleList(blocks)
-    t5stack.block = block
+    t5encoder.block = block
 
 
 def cross_attention_forward(
