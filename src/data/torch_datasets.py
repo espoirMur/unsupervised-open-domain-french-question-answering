@@ -27,7 +27,7 @@ class Dataset(torch.utils.data.Dataset):
         question_ = example["question"].replace('<MASK>', '')  # replace because we wrongly put mask here, we can remove it and it will work.
         question = f"{self.passage_prefix} {question_} </s>"
         target = self.get_target(example)
-        contexts = example["context"][:self.n_context]
+        contexts = example["contexts"][:self.n_context]
         passages = [f'{self.passage_prefix} {context["content"]}' for context in contexts]
         # the current data does not have the score , we put it to the position of the data
         scores = [1.0 / (index + 1) for index in range(len(contexts))]
@@ -75,9 +75,7 @@ class Collator(object):
                 return [example['question']]
             return [example['question'] + " " + t for t in example['passages']]
         text_passages = [append_question(example) for example in batch]
-        passage_ids, passage_masks = self.encode_passages(text_passages,
-                                                          self.tokenizer,
-                                                          self.text_maxlength)
+        passage_ids, passage_masks = self.encode_passages(text_passages)
 
         return (index, target_ids, target_mask, passage_ids, passage_masks)
 
@@ -86,7 +84,7 @@ class Collator(object):
         for k, text_passages in enumerate(batch_text_passages):
             p = self.tokenizer.batch_encode_plus(
                 text_passages,
-                max_length=self.max_length,
+                max_length=self.text_maxlength,
                 pad_to_max_length=True,
                 return_tensors='pt',
                 truncation=True

@@ -3,25 +3,26 @@ from transformers import T5Tokenizer
 from src.data.torch_datasets import Dataset, Collator
 from torch.utils.data import DataLoader
 from argparse import ArgumentParser
+from pathlib import Path
 
 
 class T5DataModule(LightningDataModule):
     def __init__(self, **kwargs):
         super(T5DataModule, self).__init__()
-        self.pre_trained_module_name = kwargs.get('pre_trained_module_name')
+        self.pretrained_module_name = kwargs.get('pretrained_module_name')
         self.train_dataset_path = kwargs.get('train_dataset_path')
         self.val_dataset_path = kwargs.get('val_dataset_path')
         self.test_dataset_path = None
-        self.max_question_length = None
-        self.max_passage_length = None
-        self.max_answer_length = None
+        self.text_maxlength = kwargs.get('text_maxlength')
+        self.answer_maxlength = kwargs.get('answer_maxlength')
+        self.n_context = kwargs.get('n_context')
         self.tokenizer = None
         self.args = kwargs
         self.RANDOM_SEED = 42
     
     def prepare_data(self) -> None:
-        self.tokenizer = T5Tokenizer.from_pretrained(self.pre_trained_module_name)
-        self.collator = Collator(self.text_maxlength, self.tokenizer, answer_maxlength=self.max_answer_length)
+        self.tokenizer = T5Tokenizer.from_pretrained(self.pretrained_module_name)
+        self.collator = Collator(self.text_maxlength, self.tokenizer, answer_maxlength=self.answer_maxlength)
 
     def setup(self, stage: str) -> None:
         """Not using this was supposed to split the data into train, val, and test.
@@ -38,9 +39,13 @@ class T5DataModule(LightningDataModule):
         :param parent_parser: Application specific parser
         :return: Returns the augmented argument parser
         """
+        train_dataset_path, val_dataset_path = generate_dataset_file_names()
         parser = ArgumentParser(parents=[parent_parser], add_help=False)
-        parser.add_argument('--train_dataset_path', type=str, default='none', help='path of train data')
-        parser.add_argument('--eval_dataset_path', type=str, default='none', help='path of eval data')
+        parser.add_argument('--train_dataset_path', type=str, default=train_dataset_path, help='path of train data')
+        parser.add_argument('--val_dataset_path', type=str, default=val_dataset_path, help='path of eval data')
+        parser.add_argument("--batch_size", default=1, type=int, help="Batch size per GPU/CPU for training.")
+        parser.add_argument("--num_workers", default=8, type=int, help="Number of workers for data loading.")
+
         return parser
 
     def generate_data_loaders(self, split) -> DataLoader:
@@ -50,16 +55,31 @@ class T5DataModule(LightningDataModule):
         """
         dataset_path = getattr(self, f"{split}_dataset_path")
         test_dataset = Dataset(dataset_path,
-                               self.max_question_length,
-                               self.max_passage_length,
-                               self.max_answer_length)
-        return DataLoader(test_dataset, batch_size=self.args["batch_size"], num_workers=self.args["num_workers"])
+                               self.n_context)
+        return DataLoader(test_dataset,
+                          batch_size=self.args["batch_size"],
+                          num_workers=self.args["num_workers"],
+                          collate_fn=self.collator,)
     
-    def train_data_loader(self) -> DataLoader:
+    def train_dataloader(self) -> DataLoader:
         return self.generate_data_loaders("train")
     
-    def val_data_loader(self) -> DataLoader:
+    def val_dataloader(self) -> DataLoader:
         return self.generate_data_loaders("val")
     
-    def test_data_loader(self) -> DataLoader:
+    def test_dataloader(self) -> DataLoader:
         return self.generate_data_loaders("test")
+
+
+def generate_dataset_file_names() -> None:
+    """
+    This function reads the data and generates the data files
+    """
+    DATA_PATH = Path.cwd().joinpath("data")
+    BASE_QA_PATH = DATA_PATH.joinpath("processed", "DRC-News-UQA")
+    assert BASE_QA_PATH.exists()
+    train_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small.json")
+    val_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small-dev.json")
+    assert train_dataset_file.exists()
+    assert val_dataset_file.exists()
+    return train_dataset_file.__str__, val_dataset_file.__str__()

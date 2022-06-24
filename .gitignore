@@ -92,3 +92,6 @@ target/
 /data
 /models
 venv
+
+lightning_logs/
+mlruns/
