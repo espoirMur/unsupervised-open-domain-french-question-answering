@@ -20,7 +20,7 @@ class Dataset(torch.utils.data.Dataset):
         return len(self.data)
 
     def get_target(self, example):
-        return f"{example['answer']} </s>"
+        return f'{example.get("answer").get("text")}'
 
     def __getitem__(self, index):
         example = self.data[index]
@@ -46,7 +46,7 @@ class Dataset(torch.utils.data.Dataset):
         """
         with open(filepath, encoding="utf-8") as f:
             dataset = json.load(f)
-            return dataset
+            return dataset[:8]
 
 
 class Collator(object):
@@ -58,17 +58,16 @@ class Collator(object):
     def __call__(self, batch):
         assert(batch[0]['target'] is not None)
         index = torch.tensor([example['index'] for example in batch])
-        target = [example['target'] for example in batch]
+        target_text = [example['target'] for example in batch]
         target = self.tokenizer.batch_encode_plus(
-            target,
+            target_text,
             max_length=self.answer_maxlength if self.answer_maxlength > 0 else None,
-            pad_to_max_length=True,
+            padding='max_length',
             return_tensors='pt',
-            truncation=True if self.answer_maxlength > 0 else False,
         )
         target_ids = target["input_ids"]
         target_mask = target["attention_mask"].bool()
-        target_ids = target_ids.masked_fill(~target_mask, -100)
+        target_ids = target_ids.masked_fill(~target_mask, self.tokenizer.pad_token_id) # why are we doing this? 
 
         def append_question(example):
             if example['passages'] is None:
@@ -85,7 +84,7 @@ class Collator(object):
             p = self.tokenizer.batch_encode_plus(
                 text_passages,
                 max_length=self.text_maxlength,
-                pad_to_max_length=True,
+                padding='max_length',
                 return_tensors='pt',
                 truncation=True
             )

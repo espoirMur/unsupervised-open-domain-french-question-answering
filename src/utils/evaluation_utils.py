@@ -14,6 +14,8 @@ from functools import partial
 from multiprocessing import Pool as ProcessPool
 from typing import Tuple, List, Dict
 import numpy as np
+import torch.distributed as dist
+from torch import tensor
 
 """
 Evaluation code from DPR: https://github.com/facebookresearch/DPR
@@ -147,7 +149,7 @@ def exact_match_score(prediction, ground_truth):
 
 
 def ems(prediction, ground_truths):
-    return max([exact_match_score(prediction, gt) for gt in ground_truths])
+    return max([int(exact_match_score(prediction, gt)) for gt in ground_truths])
 
 ####################################################
 ########        RETRIEVER EVALUATION        ########
@@ -184,3 +186,22 @@ def score(x, inversions, avg_topk, idx_topk):
         # number of passages required to obtain all passages from gold top-k
         idx_gold_topk = len(x) - np.argmax(below_k[::-1])
         idx_topk[k].append(idx_gold_topk)
+
+
+def weighted_average(x, count, options):
+    if not options.get("is_distributed"):
+        return x, count
+    t_loss = tensor([x * count], device=options.get("device"))
+    t_total = tensor([count], device=options.get("device"))
+    t_loss = sum_main(t_loss, options)
+    t_total = sum_main(t_total, options)
+    return (t_loss / t_total).item(), t_total.item()
+
+
+def sum_main(x, options):
+    """this will not work in distributed mode correctly"""
+    if not options.get("is_distributed"):
+        return x
+    if options.world_size > 1:
+        dist.reduce(x, 0, op=dist.ReduceOp.SUM)
+    return x

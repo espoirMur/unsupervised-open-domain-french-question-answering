@@ -1,6 +1,7 @@
 
 import torch
-from src.utils.evaluation_utils import ems
+from src.utils.evaluation_utils import ems, weighted_average
+import numpy as np
 from transformers import AdamW
 from lightning_transformers.core.seq2seq.model import Seq2SeqTransformer
 from src.models.fusion_in_decoder import FusionInDecoderModel
@@ -65,20 +66,22 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         Returns:
             _type_: _description_
         """
-        (idx, target_ids, target_masks, context_ids, context_mask) = val_batch
-        exact_matches = list()
-
+        batch_size_length = val_batch[0].size(0)
+        three_random_indexes = np.random.choice(batch_size_length, 3, replace=False)
+        (_, target_ids, _, context_ids, context_mask) = val_batch
         predicted_strings = self.generate(
             input_ids=context_ids.to(self.device),
             attention_mask=context_mask.to(self.device),
         )
-        print(predicted_strings, "the predicted string")
-        print(10 * "**")
-        print(target_ids, "the target ids is of shape", target_ids.shape)
         gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
-        exact_matches = [ems(predicted_string, gold_string) for predicted_string, gold_string in zip(predicted_strings, gold_strings)]
-        avg_exact_matches = sum(exact_matches) / len(exact_matches)
-        return {'exact_matches': exact_matches}
+        exact_matches = [ems(predicted_string, [gold_string]) for predicted_string, gold_string in zip      (predicted_strings, gold_strings)]
+        total = len(exact_matches)
+        exact_matches = torch.tensor(exact_matches, dtype=torch.float16).to(self.device)
+        total = exact_matches.size(0)
+        sample_predictions = [predicted_strings[i] for i in three_random_indexes]
+        sample_gold_strings = [gold_strings[i] for i in three_random_indexes]
+        self.log("exact_matches", exact_matches.sum(), prog_bar=True)
+        return {'exact_matches': exact_matches, "total": total, "sample_predictions": sample_predictions,   "sample_gold_strings": sample_gold_strings}
     
     def generate(self, input_ids: torch.Tensor, attention_mask: torch.Tensor) -> List[str]:
         max_length = self.val_target_max_length if self.val_target_max_length else self.model.config.max_length
@@ -89,8 +92,6 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             generated_tokens = _pad_tensors_to_max_len(
                 model_cfg=self.model.config, tensor=generated_tokens, max_length=max_length
             )
-        print("generated_token", generated_tokens.size())
-        print(10 * "**")
         pred_str = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
         pred_str = [str.strip(s) for s in pred_str]
         return pred_str
@@ -101,8 +102,18 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         :param outputs: outputs after every epoch end
         :return: output - average valid loss
         """
-        avg_loss = torch.stack([x["exact_matches"] for x in outputs]).mean()
-        self.log("exact_matches", avg_loss, sync_dist=True)
+        totals = sum([output["total"] for output in outputs])
+        exact_matches = [output["exact_matches"].mean() for output in outputs]
+        sample_predictions = [output["sample_predictions"] for output in outputs]
+        sample_gold_strings = [output["sample_gold_strings"] for output in outputs]
+        for sample_prediction, sample_gold_string in zip(sample_predictions, sample_gold_strings):
+            self.print(f"sample gold strings: {sample_gold_string} ===== sample predictions: {sample_prediction}")
+        self.print("the sample matches are ", exact_matches)
+        exact_matches, total = weighted_average(np.mean(exact_matches),
+                                                totals, {"device": self.device,
+                                                         "is_distributed": self.args.get("is_distributed", False)})
+        self.log("exact_matches", exact_matches)
+        self.log("total", total)
     
     def configure_optimizers(self):
         """

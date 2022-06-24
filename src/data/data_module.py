@@ -54,9 +54,9 @@ class T5DataModule(LightningDataModule):
 
         """
         dataset_path = getattr(self, f"{split}_dataset_path")
-        test_dataset = Dataset(dataset_path,
-                               self.n_context)
-        return DataLoader(test_dataset,
+        dataset = Dataset(dataset_path,
+                          self.n_context)
+        return DataLoader(dataset,
                           batch_size=self.args["batch_size"],
                           num_workers=self.args["num_workers"],
                           collate_fn=self.collator,)
@@ -82,4 +82,4 @@ def generate_dataset_file_names() -> None:
     val_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small-dev.json")
     assert train_dataset_file.exists()
     assert val_dataset_file.exists()
-    return train_dataset_file.__str__, val_dataset_file.__str__()
+    return train_dataset_file.__str__(), val_dataset_file.__str__()
