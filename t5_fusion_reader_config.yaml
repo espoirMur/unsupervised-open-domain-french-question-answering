@@ -1,0 +1,19 @@
+# this contains the configuration to use with the fusion reader
+
+
+lr: 0.0005
+optim: adamw 
+scheduler: linear 
+weight_decay: 0.01
+text_maxlength: 250  
+n_context: 10
+total_step: 2
+warmup_step: 2 
+per_gpu_batch_size: 1
+train_data: data/processed/DRC-News-UQA/drc-news-uqa-small.json
+eval_data: data/processed/DRC-News-UQA/drc-news-uqa-small-dev.json 
+local_rank: -1
+epochs: 2
+batch_size: 1
+device: cpu
+
