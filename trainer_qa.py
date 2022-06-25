@@ -11,6 +11,10 @@ from pytorch_lightning.callbacks import (
 )
 import mlflow
 
+
+MLFLOW_TRACKING_URI = "https://dagshub.com/espoirMur/unsupervised-open-domain-french-question-answering.mlflow"
+
+
 if __name__ == "__main__":
     ###############################################################################
     ################################ TRAINER ######################################
@@ -48,6 +52,7 @@ if __name__ == "__main__":
     # For CPU Training
     experiment_name = 'unsupervised_qa_with_t5_fusion_in_decoder'
     mlflow.set_experiment(experiment_name)
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     if dict_args["gpus"] is None or int(dict_args["gpus"]) == 0:
         mlflow.pytorch.autolog()
     elif int(dict_args["gpus"]) >= 1 and trainer.global_rank == 0:
