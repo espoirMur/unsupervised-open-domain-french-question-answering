@@ -36,7 +36,7 @@ if __name__ == "__main__":
         dirpath=Path.cwd().joinpath("checkpoints"),
         save_top_k=1,
         verbose=True,
-        monitor="exact_match", # or va loss
+        monitor="exact_matches",
         mode="min",
     )
     lr_logger = LearningRateMonitor()

@@ -33,8 +33,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         model = FusionInDecoderModel(based_t5_model.config)
         model.load_t5(based_t5_model.state_dict())
         self.model = model
-        print("done overriding the model")
-        print(10 * "*")
+        model.set_checkpoint(self.args["use_checkpoint"]) ## need to find what this is doing
   
     def training_step(self, train_batch, *args, **kwargs):
         """the training step which return the loss for the batch
@@ -180,7 +179,7 @@ def add_optimizer_options(parser):
 
 def add_reader_options(parser):
     # parser.add_argument('--model_size', type=str, default='base') can put the model name here in the future
-    parser.add_argument('--use_checkpoint', action='store_true', help='use checkpoint in the encoder')
+    parser.add_argument('--use_checkpoint', action='store_false', help='use checkpoint in the encoder')
     parser.add_argument('--text_maxlength', type=int, default=500, help='maximum number of tokens in text segments (question+passage)')
     parser.add_argument('--answer_maxlength', type=int, default=15, help='maximum number of tokens used to train the model, no truncation if -1')
     parser.add_argument('--no_title', action='store_true', help='article titles not included in passages')

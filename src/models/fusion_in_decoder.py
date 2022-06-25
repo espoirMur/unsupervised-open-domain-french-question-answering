@@ -68,56 +68,14 @@ class FusionInDecoderModel(T5ForConditionalGeneration):
         self.unwrap_encoder()
         self.load_state_dict(state_dict)
         self.wrap_encoder()
-
+    
     def set_checkpoint(self, use_checkpoint):
         """
-        Enable or disable checkpointing in the encoder.
+        Enable or disable check pointing in the encoder.
         See https://pytorch.org/docs/stable/checkpoint.html
         """
         for mod in self.encoder.encoder.block:
             mod.use_checkpoint = use_checkpoint
-
-    def reset_score_storage(self):
-        """
-        Reset score storage, only used when cross-attention scores are saved
-        to train a retriever.
-        """
-        for mod in self.decoder.block:
-            mod.layer[1].EncDecAttention.score_storage = None
-
-    def get_crossattention_scores(self, context_mask):
-        """
-        Cross-attention scores are aggregated to obtain a single scalar per
-        passage. This scalar can be seen as a similarity score between the
-        question and the input passage. It is obtained by averaging the
-        cross-attention scores obtained on the first decoded token over heads,
-        layers, and tokens of the input passage.
-
-        More details in Distilling Knowledge from Reader to Retriever:
-        https://arxiv.org/abs/2012.04584.
-        """
-        scores = []
-        n_passages = context_mask.size(1)
-        for mod in self.decoder.block:
-            scores.append(mod.layer[1].EncDecAttention.score_storage)
-        scores = torch.cat(scores, dim=2)
-        bsz, n_heads, n_layers, _ = scores.size()
-        # batch_size, n_head, n_layers, n_passages, text_maxlength
-        scores = scores.view(bsz, n_heads, n_layers, n_passages, -1)
-        scores = scores.masked_fill(~context_mask[:, None, None], 0.)
-        scores = scores.sum(dim=[1, 2, 4])
-        ntokens = context_mask.sum(dim=[2]) * n_layers * n_heads
-        scores = scores/ntokens
-        return scores
-
-    def overwrite_forward_crossattention(self):
-        """
-        Replace cross-attention forward function, only used to save
-        cross-attention scores.
-        """
-        for mod in self.decoder.block:
-            attn = mod.layer[1].EncDecAttention
-            attn.forward = types.MethodType(cross_attention_forward, attn)
 
 
 class EncoderWrapper(torch.nn.Module):
@@ -126,19 +84,27 @@ class EncoderWrapper(torch.nn.Module):
     """
     def __init__(self, encoder, use_checkpoint=False):
         super().__init__()
-
         self.encoder = encoder
         self.main_input_name = self.encoder.main_input_name
         apply_checkpoint_wrapper(self.encoder, use_checkpoint)
 
     def forward(self, input_ids=None, attention_mask=None, **kwargs,):
+
+        """the encoder is taking number of pargraph with sence length
+                                                                             ---paraph one                        --paragraph one
+        long sentence(batch_size, paragraph_length * number of paragraphs)   ---paraph two  ====>>> encoder. ===> -- paragraph two ==> combine_in encoder output(hidden size)
+                                                                             ---paraph three                      --paragraph three
+        Returns:
+            _type_: _description_
+        """
         # total_length = n_passages * passage_length
-        bsz, total_length = input_ids.shape
-        passage_length = total_length // self.n_passages
-        input_ids = input_ids.view(bsz*self.n_passages, passage_length)
-        attention_mask = attention_mask.view(bsz*self.n_passages, passage_length)
+        batch_size, total_length = input_ids.shape
+        n_passages = getattr(self, "n_passages", 10)
+        passage_length = total_length // n_passages
+        input_ids = input_ids.view(batch_size*n_passages, passage_length)
+        attention_mask = attention_mask.view(batch_size*n_passages, passage_length)
         outputs = self.encoder(input_ids, attention_mask, **kwargs)
-        outputs = (outputs[0].view(bsz, self.n_passages*passage_length, -1), ) + outputs[1:]
+        outputs = (outputs[0].view(batch_size, n_passages*passage_length, -1), ) + outputs[1:]
         return outputs
 
 
@@ -146,7 +112,6 @@ class CheckpointWrapper(torch.nn.Module):
     """
     Wrapper replacing None outputs by empty tensors, which allows the use of
     checkpointing.
-    As well as this one
     """
     def __init__(self, module, use_checkpoint=False):
         super().__init__()
@@ -154,9 +119,9 @@ class CheckpointWrapper(torch.nn.Module):
         self.use_checkpoint = use_checkpoint
 
     def forward(self, hidden_states, attention_mask, position_bias, **kwargs):
-        if self.use_checkpoint and self.training:
+        if False and self.training: #disable checkpointing by using self.use_checkpoint
             kwargs = {k: v for k, v in kwargs.items() if v is not None}
-            
+
             def custom_forward(*inputs):
                 output = self.module(*inputs, **kwargs)
                 empty = torch.tensor(
@@ -176,80 +141,18 @@ class CheckpointWrapper(torch.nn.Module):
             output = tuple(x if x.size() != 0 else None for x in output)
         else:
             output = self.module(hidden_states, attention_mask, position_bias, **kwargs)
+        # this is called for each block or block and return the output
+        # output (batch_size, seq_len, hidden_size) and batch_size, n_layers, seq_len, seq_len
         return output
 
 
-def apply_checkpoint_wrapper(t5encoder, use_checkpoint):
+def apply_checkpoint_wrapper(t5stack, use_checkpoint):
     """
-    this is the specific part of the module I have to undrestand
-    Wrap each block of the encoder to enable check pointing.
+    Wrap each block of the encoder to enable checkpointing.
     """
-    blocks = []
-    for mod in t5encoder.block:
+    block = []
+    for mod in t5stack.block:
         wrapped_mod = CheckpointWrapper(mod, use_checkpoint)
-        blocks.append(wrapped_mod)
-    block = nn.ModuleList(blocks)
-    t5encoder.block = block
-
-
-def cross_attention_forward(
-        self,
-        input,
-        mask=None,
-        kv=None,
-        position_bias=None,
-        past_key_value_state=None,
-        head_mask=None,
-        query_length=None,
-        use_cache=False,
-        output_attentions=False,
-    ):
-    """
-    This only works for computing cross attention over the input
-    """
-    assert(kv is not None)
-    assert(head_mask is None)
-    assert(position_bias is not None or self.has_relative_attention_bias)
-
-    bsz, qlen, dim = input.size()
-    n_heads, d_heads = self.n_heads, self.d_kv
-    klen = kv.size(1)
-
-    q = self.q(input).view(bsz, -1, n_heads, d_heads).transpose(1, 2)
-    if past_key_value_state == None:
-        k = self.k(kv).view(bsz, -1, n_heads, d_heads).transpose(1, 2)
-        v = self.v(kv).view(bsz, -1, n_heads, d_heads).transpose(1, 2)
-    else:
-        k, v = past_key_value_state
-
-    scores = torch.einsum("bnqd,bnkd->bnqk", q, k)
-
-    if mask is not None:
-       scores += mask
-
-    if position_bias is None:
-        position_bias = self.compute_bias(qlen, klen)
-    scores += position_bias
-
-    if self.score_storage is None:
-        self.score_storage = scores
-
-    attn = F.softmax(scores.float(), dim=-1).type_as(scores)
-    attn = F.dropout(attn, p=self.dropout, training=self.training)
-
-    output = torch.matmul(attn, v)
-    output = output.transpose(1, 2).contiguous().view(bsz, -1, self.inner_dim)
-    output = self.o(output)
-
-    if use_cache:
-        output = (output,) + ((k, v),)
-    else:
-        output = (output,) + (None,)
-
-    if output_attentions:
-        output = output + (attn,)
-
-    if self.has_relative_attention_bias:
-        output = output + (position_bias,)
-
-    return output
+        block.append(wrapped_mod)
+    block = nn.ModuleList(block)
+    t5stack.block = block
