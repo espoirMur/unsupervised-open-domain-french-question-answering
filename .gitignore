@@ -89,10 +89,10 @@ target/
 
 ## Virtual Env
 ./.venv
-/data
 /models
 venv
 m_venv
 checkpoints/
 mlruns
 lightning_logs/
+data/

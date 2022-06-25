@@ -1,4 +1,0 @@
-[core]
-    remote = origin
-['remote "origin"']
-    url = https://dagshub.com/espoirMur/unsupervised-open-domain-french-question-answering.dvc
