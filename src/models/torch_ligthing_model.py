@@ -1,6 +1,6 @@
 
 import torch
-from src.utils.evaluation_utils import ems, weighted_average
+from src.utils.evaluation_utils import t5_qa_evaluate
 import numpy as np
 from transformers import AdamW
 from lightning_transformers.core.seq2seq.model import Seq2SeqTransformer
@@ -73,14 +73,12 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             attention_mask=context_mask.to(self.device),
         )
         gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
-        exact_matches = [ems(predicted_string, [gold_string]) for predicted_string, gold_string in zip      (predicted_strings, gold_strings)]
-        total = len(exact_matches)
-        exact_matches = torch.tensor(exact_matches, dtype=torch.float16).to(self.device)
-        total = exact_matches.size(0)
         sample_predictions = [predicted_strings[i] for i in three_random_indexes]
         sample_gold_strings = [gold_strings[i] for i in three_random_indexes]
-        self.log("exact_matches", exact_matches.sum(), prog_bar=True)
-        return {'exact_matches': exact_matches, "total": total, "sample_predictions": sample_predictions,   "sample_gold_strings": sample_gold_strings}
+        return {"labels": gold_strings,
+                "predictions": predicted_strings,
+                "sample_predictions": sample_predictions,
+                "sample_gold_strings": sample_gold_strings}
     
     def generate(self, input_ids: torch.Tensor, attention_mask: torch.Tensor) -> List[str]:
         max_length = self.val_target_max_length if self.val_target_max_length else self.model.config.max_length
@@ -101,18 +99,25 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         :param outputs: outputs after every epoch end
         :return: output - average valid loss
         """
-        totals = sum([output["total"] for output in outputs])
-        exact_matches = [output["exact_matches"].mean() for output in outputs]
-        sample_predictions = [output["sample_predictions"] for output in outputs]
-        sample_gold_strings = [output["sample_gold_strings"] for output in outputs]
-        for sample_prediction, sample_gold_string in zip(sample_predictions, sample_gold_strings):
-            self.print(f"sample gold strings: {sample_gold_string} ===== sample predictions: {sample_prediction}")
-        self.print("the sample matches are ", exact_matches)
-        exact_matches, total = weighted_average(np.mean(exact_matches),
-                                                totals, {"device": self.device,
-                                                         "is_distributed": self.args.get("is_distributed", False)})
-        self.log("exact_matches", exact_matches)
-        self.log("total", total)
+        for output in outputs:
+            for sample_prediction, sample_gold_string in zip(output.get("sample_predictions"),
+                                                             output.get("sample_gold_strings")):
+                self.print(f"sample gold strings: {sample_gold_string} ===== sample predictions: {sample_prediction}")
+        predictions, labels = [], []
+        for output in outputs:
+            for label, pred in zip(output['labels'], output['predictions']):
+                predictions.append(pred)
+                labels.append(label)
+
+        results = t5_qa_evaluate(labels, predictions)
+        exact = torch.tensor(results['exact'])
+        f1 = torch.tensor(results['f1'])
+
+        log = {
+            'exact_matches': exact,       # for monitoring checkpoint callback
+            'f1_score': f1,             # for monitoring checkpoint callback
+        }
+        self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
     
     def configure_optimizers(self):
         """
@@ -129,7 +134,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
                 min_lr=1e-6,
                 verbose=True,
             ),
-            "monitor": "exact_matches",
+            "monitor": "f1_score",
         }
         return [self.optimizer], [self.scheduler]
     

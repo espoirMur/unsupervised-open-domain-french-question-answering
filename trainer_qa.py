@@ -9,7 +9,7 @@ from pytorch_lightning.callbacks import (
     ModelCheckpoint,
     LearningRateMonitor,
 )
-import mlflow.pytorch as mlflow
+import mlflow
 
 if __name__ == "__main__":
     ###############################################################################
@@ -36,8 +36,8 @@ if __name__ == "__main__":
         dirpath=Path.cwd().joinpath("checkpoints"),
         save_top_k=1,
         verbose=True,
-        monitor="exact_matches",
-        mode="min",
+        monitor="f1_score",
+        mode="max",
     )
     lr_logger = LearningRateMonitor()
 
@@ -46,14 +46,16 @@ if __name__ == "__main__":
                       accelerator="auto",)
 
     # For CPU Training
+    experiment_name = 'unsupervised_qa_with_t5_fusion_in_decoder'
+    mlflow.set_experiment(experiment_name)
     if dict_args["gpus"] is None or int(dict_args["gpus"]) == 0:
-        mlflow.autolog()
+        mlflow.pytorch.autolog()
     elif int(dict_args["gpus"]) >= 1 and trainer.global_rank == 0:
         # In case of multi gpu training, the training script is invoked multiple times,
         # The following condition is needed to avoid multiple copies of mlflow runs.
         # When one or more gpus are used for training, it is enough to save
         # the model and its parameters using rank 0 gpu.
-        mlflow.autolog()
+        mlflow.pytorch.autolog()
     else:
         # This condition is met only for multi-gpu training when the global rank is non zero.
         # Since the parameters are already logged using global rank 0 gpu, it is safe to ignore

@@ -1,142 +1,28 @@
-#!/usr/bin/env python3
-# Copyright (c) Facebook, Inc. and its affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-
+""" Very heavily inspired by the official evaluation script for SQuAD version
+2.0 which was modified by XLNet authors to update `find_best_threshold`
+scripts for SQuAD V2.0 In addition to basic functionality, we also compute
+additional statistics and plot precision-recall curves if an additional
+na_prob.json file is provided. This file is expected to map question ID's to
+the model's predicted probability that a question is unanswerable. """
 import collections
-import logging
-import regex
+import re
 import string
-import unicodedata
-from functools import partial
-from multiprocessing import Pool as ProcessPool
-from typing import Tuple, List, Dict
-import numpy as np
-import torch.distributed as dist
-from torch import tensor
-
-"""
-Evaluation code from DPR: https://github.com/facebookresearch/DPR
-"""
+from typing import Dict, Optional
 
 
-class SimpleTokenizer(object):
-    ALPHA_NUM = r'[\p{L}\p{N}\p{M}]+'
-    NON_WS = r'[^\p{Z}\p{C}]'
-
-    def __init__(self):
-        """
-        Args:
-            annotators: None or empty set (only tokenizes).
-        """
-        self._regexp = regex.compile(
-            '(%s)|(%s)' % (self.ALPHA_NUM, self.NON_WS),
-            flags=regex.IGNORECASE + regex.UNICODE + regex.MULTILINE
-        )
-
-    def tokenize(self, text, uncased=False):
-        matches = [m for m in self._regexp.finditer(text)]
-        if uncased:
-            tokens = [m.group().lower() for m in matches]
-        else:
-            tokens = [m.group() for m in matches]
-        return tokens
-
-logger = logging.getLogger(__name__)
-
-QAMatchStats = collections.namedtuple('QAMatchStats', ['top_k_hits', 'questions_doc_hits'])
-
-
-def calculate_matches(data: List, workers_num: int):
-    """
-    Evaluates answers presence in the set of documents. This function is supposed to be used with a large collection of
-    documents and results. It internally forks multiple sub-processes for evaluation and then merges results
-    :param all_docs: dictionary of the entire documents database. doc_id -> (doc_text, title)
-    :param answers: list of answers's list. One list per question
-    :param closest_docs: document ids of the top results along with their scores
-    :param workers_num: amount of parallel threads to process data
-    :param match_type: type of answer matching. Refer to has_answer code for available options
-    :return: matching information tuple.
-    top_k_hits - a list where the index is the amount of top documents retrieved and the value is the total amount of
-    valid matches across an entire dataset.
-    questions_doc_hits - more detailed info with answer matches for every question and every retrieved document
-    """
-
-    logger.info('Matching answers in top docs...')
-
-    tokenizer = SimpleTokenizer()
-    get_score_partial = partial(check_answer, tokenizer=tokenizer)
-
-    processes = ProcessPool(processes=workers_num)
-    scores = processes.map(get_score_partial, data)
-
-    logger.info('Per question validation results len=%d', len(scores))
-
-    n_docs = len(data[0]['ctxs'])
-    top_k_hits = [0] * n_docs
-    for question_hits in scores:
-        best_hit = next((i for i, x in enumerate(question_hits) if x), None)
-        if best_hit is not None:
-            top_k_hits[best_hit:] = [v + 1 for v in top_k_hits[best_hit:]]
-
-    return QAMatchStats(top_k_hits, scores)
-
-def check_answer(example, tokenizer) -> List[bool]:
-    """Search through all the top docs to see if they have any of the answers."""
-    answers = example['answers']
-    ctxs = example['ctxs']
-
-    hits = []
-
-    for i, doc in enumerate(ctxs):
-        text = doc['text']
-
-        if text is None:  # cannot find the document for some reason
-            logger.warning("no doc in db")
-            hits.append(False)
-            continue
-
-        hits.append(has_answer(answers, text, tokenizer))
-
-    return hits
-
-
-def has_answer(answers, text, tokenizer) -> bool:
-    """Check if a document contains an answer string."""
-    text = _normalize(text)
-    text = tokenizer.tokenize(text, uncased=True)
-
-    for answer in answers:
-        answer = _normalize(answer)
-        answer = tokenizer.tokenize(answer, uncased=True)
-        for i in range(0, len(text) - len(answer) + 1):
-            if answer == text[i: i + len(answer)]:
-                return True
-    return False
-
-#################################################
-########        READER EVALUATION        ########
-#################################################
-
-
-def _normalize(text):
-    return unicodedata.normalize('NFD', text)
-
-
-
-#Normalization from SQuAD evaluation script https://worksheets.codalab.org/rest/bundles/0x6b567e1cf2e041ec80d7098f031c5c9e/contents/blob/
 def normalize_answer(s):
+    """Lower text and remove punctuation, articles and extra whitespace."""
+
     def remove_articles(text):
-        return regex.sub(r'\b(a|an|the)\b', ' ', text)
+        regex = re.compile(r"\b(a|an|the)\b", re.UNICODE)
+        return re.sub(regex, " ", text)
 
     def white_space_fix(text):
-        return ' '.join(text.split())
+        return " ".join(text.split())
 
     def remove_punc(text):
         exclude = set(string.punctuation)
-        return ''.join(ch for ch in text if ch not in exclude)
+        return "".join(ch for ch in text if ch not in exclude)
 
     def lower(text):
         return text.lower()
@@ -144,64 +30,95 @@ def normalize_answer(s):
     return white_space_fix(remove_articles(remove_punc(lower(s))))
 
 
-def exact_match_score(prediction, ground_truth):
-    return normalize_answer(prediction) == normalize_answer(ground_truth)
+def get_tokens(s):
+    if not s:
+        return []
+    return normalize_answer(s).split()
 
 
-def ems(prediction, ground_truths):
-    return max([int(exact_match_score(prediction, gt)) for gt in ground_truths])
-
-####################################################
-########        RETRIEVER EVALUATION        ########
-####################################################
+def compute_exact(a_gold, a_pred):
+    return int(normalize_answer(a_gold) == normalize_answer(a_pred))
 
 
-def eval_batch(scores, inversions, avg_topk, idx_topk):
-    for k, s in enumerate(scores):
-        s = s.cpu().numpy()
-        sorted_idx = np.argsort(-s)
-        score(sorted_idx, inversions, avg_topk, idx_topk)
+def compute_f1(a_gold, a_pred):
+    gold_toks = get_tokens(a_gold)
+    pred_toks = get_tokens(a_pred)
+    common = collections.Counter(gold_toks) & collections.Counter(pred_toks)
+    num_same = sum(common.values())
+    if len(gold_toks) == 0 or len(pred_toks) == 0:
+        # If either is no-answer, then F1 is 1 if they agree, 0 otherwise
+        return int(gold_toks == pred_toks)
+    if num_same == 0:
+        return 0
+    precision = 1.0 * num_same / len(pred_toks)
+    recall = 1.0 * num_same / len(gold_toks)
+    f1 = (2 * precision * recall) / (precision + recall)
+    return f1
 
 
-def count_inversions(arr):
-    inv_count = 0
-    lenarr = len(arr)
-    for i in range(lenarr):
-        for j in range(i + 1, lenarr):
-            if (arr[i] > arr[j]):
-                inv_count += 1
-    return inv_count
+def make_eval_dict(exact_scores, f1_scores, qid_list=None):
+    if not qid_list:
+        total = len(exact_scores)
+        return collections.OrderedDict(
+            [
+                ("exact", 100.0 * sum(exact_scores.values()) / total),
+                ("f1", 100.0 * sum(f1_scores.values()) / total),
+                ("total", total),
+            ]
+        )
+    else:
+        total = len(qid_list)
+        return collections.OrderedDict(
+            [
+                ("exact",
+                 100.0 * sum(exact_scores[k] for k in qid_list) / total),
+                ("f1", 100.0 * sum(f1_scores[k] for k in qid_list) / total),
+                ("total", total),
+            ]
+        )
 
 
-def score(x, inversions, avg_topk, idx_topk):
-    x = np.array(x)
-    inversions.append(count_inversions(x))
-    for k in avg_topk:
-        # ratio of passages in the predicted top-k that are
-        # also in the topk given by gold score
-        avg_pred_topk = (x[:k]<k).mean()
-        avg_topk[k].append(avg_pred_topk)
-    for k in idx_topk:
-        below_k = (x<k)
-        # number of passages required to obtain all passages from gold top-k
-        idx_gold_topk = len(x) - np.argmax(below_k[::-1])
-        idx_topk[k].append(idx_gold_topk)
+def get_raw_scores(answers, preds):
+    """Computes the exact and f1 scores from the examples and the model
+    predictions.
+
+    This version gets the answers and prediction in text format, as T5 returns.
+    """
+    exact_scores = {}
+    f1_scores = {}
+
+    for i, (answer, pred) in enumerate(zip(answers, preds)):
+        exact_scores[i] = compute_exact(answer, pred)
+        f1_scores[i] = compute_f1(answer, pred)
+
+    return exact_scores, f1_scores
 
 
-def weighted_average(x, count, options):
-    if not options.get("is_distributed"):
-        return x, count
-    t_loss = tensor([x * count], device=options.get("device"))
-    t_total = tensor([count], device=options.get("device"))
-    t_loss = sum_main(t_loss, options)
-    t_total = sum_main(t_total, options)
-    return (t_loss / t_total).item(), t_total.item()
+def t5_qa_evaluate(answers, preds, qid_dict: Optional[Dict] = None):
+    """Evaluates T5 predictions.
 
+    This is a siplification of `square_evaluate` to compute the exact and f1
+    scores from predictions from T5.
+    If required, this version returns subdicts with f1 and exact measures for
+    pre-selected groups of question-answers.
 
-def sum_main(x, options):
-    """this will not work in distributed mode correctly"""
-    if not options.get("is_distributed"):
-        return x
-    if options.world_size > 1:
-        dist.reduce(x, 0, op=dist.ReduceOp.SUM)
-    return x
+    Examples:
+        >>> qid_dict = {
+        >>>     'matriculas': [0, 4],
+        >>>     'comarca': [1, 4],
+        >>>     'estado': [2, 6]
+        >>>     'oficio': [3, 7]
+        >>> }
+        >>> t5_qa_evaluate(answers, preds, qid_dict=qid_dict)
+        >>> {'exact': x, 'f1': y, 'total': 8, 'matriculas': {'exact': z, 'f1': w, 'total': 2}, ... }
+    """
+    if qid_dict is None:
+        qid_dict = {}
+
+    exact, f1 = get_raw_scores(answers, preds)
+    evaluation = make_eval_dict(exact, f1)
+
+    for (kword, qid_list) in qid_dict.items():
+        evaluation[kword] = make_eval_dict(exact, f1, qid_list)
+
+    return evaluation
