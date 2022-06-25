@@ -7,6 +7,8 @@ class ActualiteSpider(BaseSpider):
     name = "actualite"
     allowed_domains = ["actualite.cd"]
     start_urls = ["https://www.actualite.cd"]
+    website_origin = 'https://www.actualite.cd'
+    
     rules = (
         Rule(LinkExtractor(allow_domains=('actualite.cd')), callback='callback', follow=True),
     )

@@ -6,8 +6,15 @@ from scrapy.spiders import CrawlSpider
 from src.scrapers.items import WebsiteItem
 
 
-class BaseSpider(CrawlSpider):
+class BaseSpider(CrawlSpider): #pylint: disable=abstract-method
+    """
+    Base spider class for our scrapers
+    """
+
     def create_filename(self, title, language="lingala"):
+        """
+        given a title return a path to the file
+        """
         base_folder = Path.cwd().parent.joinpath(
             "data", "raw", f"{language}_articles", self.name
         )
@@ -15,7 +22,8 @@ class BaseSpider(CrawlSpider):
         filename = base_folder.joinpath(title)
         return filename
 
-    def get_text_from_html(self, html_content):
+    @classmethod
+    def get_text_from_html(cls, html_content):
         """
         given a html content passed in parameter return the corresponding content
 
@@ -24,7 +32,10 @@ class BaseSpider(CrawlSpider):
         """
         return lxml.html.fromstring(html_content).text_content().strip()
 
-    def default_parser(self, response, css_paths={}, date_format=None):
+    def default_parser(self, response, css_paths={}, date_format=None): #pylint: disable=dangerous-default-value
+        """
+        default parser for a website giving css paths and date format
+        """
         selector = Selector(response)
         try:
             title_css_path = css_paths['title_path']
@@ -44,7 +55,7 @@ class BaseSpider(CrawlSpider):
                     title=title,
                     content=content,
                     url=response.url,
-                    website_origin=self.website_origin,
+                    website_origin=self.website_origin, #pylint: disable=no-member
                     author=author,
                     summary=summary
                 )
@@ -52,6 +63,5 @@ class BaseSpider(CrawlSpider):
                     date = website_item.get_date(posted_at, date_format)
                     website_item['posted_at'] = date
                     
-                yield website_item
-        except Exception as e:
-            self.logger.error(f'Error while parsing {response.url} : \n', e.__str__())
+        except Exception as error: #pylint: disable=broad-except
+            self.logger.error(f'Error while parsing {response.url} : \n', error.__str__())

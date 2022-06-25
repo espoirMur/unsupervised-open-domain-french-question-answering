@@ -9,6 +9,7 @@ DOCS: https://github.com/my8100/files/blob/master/scrapydweb/README.md
 """
 import os
 from dotenv import load_dotenv
+from config import DATABASE_URL, DATABASES
 
 load_dotenv()
 
@@ -369,4 +370,4 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
 
-DATABASE_URL = os.environ.get('DATABASE_URL', '')
+DATABASE_URL = DATABASES

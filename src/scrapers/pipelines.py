@@ -5,23 +5,24 @@
 
 
 # useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
-from src.scrapers.models import Article, engine
 from sqlalchemy.orm import sessionmaker
+from src.scrapers.models import Article, engine
 
 
 class SaveItemPipeline:
+    """
+    save scraped items to the database
+    """
     def __init__(self):
-        self.Session = sessionmaker(bind=engine)
+        self.session = sessionmaker(bind=engine)
 
-    def process_item(self, item, spider):
-        session = self.Session()
+    def process_item(self, item, spider): #pylint: disable=unused-argument, missing-docstring
+        session = self.session()
         article = Article(**item)
         try:
             session.add(article)
             session.commit()
-            self.logger.info(f"done adding the post  to the database")
-        except Exception:
+        except Exception: #pylint: disable=broad-except
             session.rollback()
         finally:
             session.close()

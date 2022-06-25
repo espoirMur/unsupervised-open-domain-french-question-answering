@@ -84,6 +84,7 @@ ipykernel = "^6.13.0"
 scrapydweb = {git = "https://github.com/my8100/scrapydweb.git"}
 Werkzeug = "2.0.3"
 logparser = {git = "https://github.com/my8100/logparser.git"}
+pylint = "^2.13.9"
 
 [tool.poetry.dev-dependencies]
 pycodestyle = "^2.8.0"

@@ -1,4 +1,3 @@
-import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
 from scrapy.spiders import Rule
@@ -6,7 +5,10 @@ from src.scrapers.items import WebsiteItem
 from src.scrapers.spiders.base import BaseSpider
 
 
-class VoaLingalaScraper(BaseSpider):
+class VoaLingalaScraper(BaseSpider): #pylint: disable=abstract-method
+    """
+    scraper for https://www.voa-lingala.com
+    """
     name = "voa_lingala"
     allowed_domains = ["voalingala.com"]
     start_urls = ["https://www.voalingala.com/"]
@@ -17,19 +19,25 @@ class VoaLingalaScraper(BaseSpider):
     )
 
     def parse_item(self, response):
-        summary_xpath = '//div[@id="content"]/div/div[2]/div/div/div/div[1]/div[1]'
-        body_xpath = '//*[@id="article-content"]/div[1]'
-        title_xpath = '//*[@id="content"]/div/div[1]/div/div[2]/h1/text()'
-        website_item = WebsiteItem()
+        """
+            parsing content from response
+        """
+        content_path = '#article-content > div > p::text'
+        title_path = '.title.pg-title::text'
+        date_path = '.published .date time::attr(datetime)'
+        author_path = '.links__item-link::text'
         content_selector = Selector(response)
-        title = content_selector.xpath(title_xpath).get()
-        title = "-".join(title.split(" ")).strip()
-        filename = self.create_filename(title)
-        content_html = content_selector.xpath(body_xpath).get()
-        summary_html = content_selector.xpath(summary_xpath).get()
-        website_item["text_content"] = self.get_text_from_html(content_html)
-        website_item["summary"] = self.get_text_from_html(summary_html)
-        website_item["title"] = title
-        with open(filename, "w") as f:
-            f.write(f"{website_item['summary']} \n {website_item['text_content']}")
-        self.log(f"Saved file {filename}")
+        title = content_selector.css(title_path).get()
+        date = content_selector.css(date_path).get()
+        author = content_selector.css(author_path).get()
+        content = content_selector.css(content_path).getall()
+        if(title and content):
+            website_item = WebsiteItem()
+            valid_date = website_item.get_date(date, None)
+            website_item["content"] = content
+            website_item["title"] = title
+            website_item["posted_at"] = valid_date
+            website_item["author"] = author
+            website_item["url"] = response.url
+            website_item["website_origin"] = self.website_origin
+        

@@ -92,7 +92,7 @@ target/
 /data
 /models
 venv
-
-lightning_logs/
-mlruns/
+m_venv
 checkpoints/
+mlruns
+lightning_logs/

@@ -1,4 +1,4 @@
 [core]
-    remote = gdrive
-['remote "gdrive"']
-    url = gdrive://1Zhdw8DVAIkoGJ8Qg7lDgbvldrTIeCzgR
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/espoirMur/multilingual-drc-news-chatbot.dvc
