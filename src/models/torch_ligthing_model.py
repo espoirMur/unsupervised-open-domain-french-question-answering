@@ -54,7 +54,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         )[0]
         self.log("train_loss", train_loss)
         return train_loss
-    
+        
     def validation_step(self, val_batch, *args, **kwargs):
         """the validation step of the model.
 
