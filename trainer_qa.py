@@ -45,7 +45,7 @@ if __name__ == "__main__":
     )
     lr_logger = LearningRateMonitor()
 
-    trainer = Trainer(max_epochs=1,
+    trainer = Trainer(max_epochs=2,
                       callbacks=[lr_logger, early_stopping, checkpoint_callback],
                       accelerator="auto",)
 

@@ -1,8 +1,11 @@
 import types
 import torch
 from transformers import T5ForConditionalGeneration
+import transformers
+from transformers.modeling_outputs import BaseModelOutput
 import torch.nn.functional as F
 from torch import nn
+from secrets import token_hex
 
 
 class FusionInDecoderModel(T5ForConditionalGeneration):
@@ -99,13 +102,14 @@ class EncoderWrapper(torch.nn.Module):
         """
         # total_length = n_passages * passage_length
         batch_size, total_length = input_ids.shape
-        n_passages = getattr(self, "n_passages", 10)
+        n_passages = getattr(self, "n_passages", 5)
         passage_length = total_length // n_passages
         input_ids = input_ids.view(batch_size*n_passages, passage_length)
         attention_mask = attention_mask.view(batch_size*n_passages, passage_length)
         outputs = self.encoder(input_ids, attention_mask, **kwargs)
         outputs = (outputs[0].view(batch_size, n_passages*passage_length, -1), ) + outputs[1:]
-        return outputs
+        encoder_outputs = BaseModelOutput(*outputs)
+        return encoder_outputs
 
 
 class CheckpointWrapper(torch.nn.Module):

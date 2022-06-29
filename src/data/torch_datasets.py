@@ -24,10 +24,10 @@ class Dataset(torch.utils.data.Dataset):
 
     def __getitem__(self, index):
         example = self.data[index]
-        question_ = example["question"].replace('<MASK>', '')  # replace because we wrongly put mask here, we can remove it and it will work.
-        question = f"{self.passage_prefix} {question_} </s>"
+        question_ = example["question"].replace('<MASK>', ' ')  # replace because we wrongly put mask here, we can remove it and it will work.
+        question = f"{self.question_prefix} {question_} </s>"
         target = self.get_target(example)
-        contexts = example["contexts"][:self.n_context]
+        contexts = example["contexts"][:1] # just getting the first context now for testing purposes
         passages = [f'{self.passage_prefix} {context["content"]}' for context in contexts]
         # the current data does not have the score , we put it to the position of the data
         scores = [1.0 / (index + 1) for index in range(len(contexts))]
@@ -46,7 +46,7 @@ class Dataset(torch.utils.data.Dataset):
         """
         with open(filepath, encoding="utf-8") as f:
             dataset = json.load(f)
-            return dataset[:8]
+            return dataset
 
 
 class Collator(object):
@@ -64,6 +64,7 @@ class Collator(object):
             max_length=self.answer_maxlength if self.answer_maxlength > 0 else None,
             padding='max_length',
             return_tensors='pt',
+            truncation=True
         )
         target_ids = target["input_ids"]
         target_mask = target["attention_mask"].bool()
@@ -72,7 +73,7 @@ class Collator(object):
         def append_question(example):
             if example['passages'] is None:
                 return [example['question']]
-            return [example['question'] + " " + t for t in example['passages']]
+            return [example['question'] + " " + passage for passage in example['passages']]
         text_passages = [append_question(example) for example in batch]
         passage_ids, passage_masks = self.encode_passages(text_passages)
 
@@ -90,7 +91,12 @@ class Collator(object):
             )
             passage_ids.append(p['input_ids'][None])
             passage_masks.append(p['attention_mask'][None])
+        try:
 
-        passage_ids = torch.cat(passage_ids, dim=0)
-        passage_masks = torch.cat(passage_masks, dim=0)
-        return passage_ids, passage_masks.bool()
+            passage_ids = torch.cat(passage_ids, dim=0)
+            passage_masks = torch.cat(passage_masks, dim=0)
+            return passage_ids, passage_masks.bool()
+        except RuntimeError:
+            print(batch_text_passages)
+            print(" I am having an issue with this paragraphs")
+            raise Exception

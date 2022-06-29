@@ -1,7 +1,7 @@
 from pytorch_lightning import LightningDataModule
 from transformers import T5Tokenizer
 from src.data.torch_datasets import Dataset, Collator
-from torch.utils.data import DataLoader
+from src.data.data_utils import FastDataLoader
 from argparse import ArgumentParser
 from pathlib import Path
 
@@ -44,11 +44,11 @@ class T5DataModule(LightningDataModule):
         parser.add_argument('--train_dataset_path', type=str, default=train_dataset_path, help='path of train data')
         parser.add_argument('--val_dataset_path', type=str, default=val_dataset_path, help='path of eval data')
         parser.add_argument("--batch_size", default=1, type=int, help="Batch size per GPU/CPU for training.")
-        parser.add_argument("--num_workers", default=8, type=int, help="Number of workers for data loading.")
+        parser.add_argument("--num_workers", default=4, type=int, help="Number of workers for data loading.")
 
         return parser
 
-    def generate_data_loaders(self, split) -> DataLoader:
+    def generate_data_loaders(self, split) -> FastDataLoader:
         """create the test set dataLoaders
         either for train, val, or test
 
@@ -56,18 +56,18 @@ class T5DataModule(LightningDataModule):
         dataset_path = getattr(self, f"{split}_dataset_path")
         dataset = Dataset(dataset_path,
                           self.n_context)
-        return DataLoader(dataset,
-                          batch_size=self.args["batch_size"],
-                          num_workers=self.args["num_workers"],
-                          collate_fn=self.collator,)
+        return FastDataLoader(dataset,
+                              batch_size=self.args["batch_size"],
+                              num_workers=self.args["num_workers"],
+                              collate_fn=self.collator)
     
-    def train_dataloader(self) -> DataLoader:
+    def train_dataloader(self) -> FastDataLoader:
         return self.generate_data_loaders("train")
     
-    def val_dataloader(self) -> DataLoader:
+    def val_dataloader(self) -> FastDataLoader:
         return self.generate_data_loaders("val")
     
-    def test_dataloader(self) -> DataLoader:
+    def test_dataloader(self) -> FastDataLoader:
         return self.generate_data_loaders("test")
 
 
