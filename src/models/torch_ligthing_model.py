@@ -1,5 +1,6 @@
 
 import torch
+from traitlets import default
 from src.utils.evaluation_utils import t5_qa_evaluate
 import numpy as np
 from transformers import AdamW
@@ -48,9 +49,9 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         (idx, labels, _, context_ids, context_mask) = train_batch
 
         train_loss = self.model(
-            input_ids=context_ids.to(self.device),
-            attention_mask=context_mask.to(self.device),
-            labels=labels.to(self.device)
+            input_ids=context_ids.cuda(),
+            attention_mask=context_mask.cuda(),
+            labels=labels.cuda()
         )[0]
         self.log("train_loss", train_loss)
         return train_loss
@@ -69,8 +70,8 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         three_random_indexes = np.random.choice(batch_size_length, 3, replace=False)
         (_, target_ids, _, context_ids, context_mask) = val_batch
         predicted_strings = self.generate(
-            input_ids=context_ids.to(self.device),
-            attention_mask=context_mask.to(self.device),
+            input_ids=context_ids,
+            attention_mask=context_mask,
         )
         gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
         sample_predictions = [predicted_strings[i] for i in three_random_indexes]
@@ -93,6 +94,11 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         pred_str = [str.strip(s) for s in pred_str]
         return pred_str
     
+    def test_step(self, batch, batch_idx):
+        self.print("I am not testing anything for now just returning 0")
+
+        return 0
+    
     def validation_epoch_end(self, outputs):
         """
         Computes average validation accuracy
@@ -108,10 +114,9 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             for label, pred in zip(output['labels'], output['predictions']):
                 predictions.append(pred)
                 labels.append(label)
-
         results = t5_qa_evaluate(labels, predictions)
-        exact = torch.tensor(results['exact'])
-        f1 = torch.tensor(results['f1'])
+        exact = torch.tensor(results['exact']).detach()
+        f1 = torch.tensor(results['f1']).detach()
 
         log = {
             'exact_matches': exact,       # for monitoring checkpoint callback
@@ -184,11 +189,19 @@ def add_optimizer_options(parser):
 
 def add_reader_options(parser):
     # parser.add_argument('--model_size', type=str, default='base') can put the model name here in the future
-    parser.add_argument('--use_checkpoint', action='store_false', help='use checkpoint in the encoder')
-    parser.add_argument('--text_maxlength', type=int, default=500, help='maximum number of tokens in text segments (question+passage)')
+    parser.add_argument('--use_checkpoint', action='store_true', help='use checkpoint in the encoder')
+    parser.add_argument('--text_maxlength', type=int, default=600, help='maximum number of tokens in text segments (question+passage)')
     parser.add_argument('--answer_maxlength', type=int, default=15, help='maximum number of tokens used to train the model, no truncation if -1')
     parser.add_argument('--no_title', action='store_true', help='article titles not included in passages')
-    parser.add_argument('--n_context', type=int, default=10)
+    parser.add_argument('--n_context', type=int, default=5, help="the number of passages for fusion")
     parser.add_argument('--num_beams', type=int, default=4)
     return parser
- 
+
+
+def print_memory_usage(step=""):
+    print(f"the memory when the {step}  is ")
+    free_memory, used_memmory = torch.cuda.mem_get_info()
+    print("the free memory is ", free_memory / 1024**2)
+    print("the used memory is ", used_memmory / 1024**2)
+    print(15 * "***")
+    print(torch.cuda.memory_summary())
