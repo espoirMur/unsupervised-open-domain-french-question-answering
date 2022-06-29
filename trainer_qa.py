@@ -47,26 +47,27 @@ if __name__ == "__main__":
 
     trainer = Trainer(max_epochs=2,
                       callbacks=[lr_logger, early_stopping, checkpoint_callback],
-                      accelerator="auto",)
+                      accelerator="auto",
+                      enable_checkpointing=True)
 
     # For CPU Training
     experiment_name = 'unsupervised_qa_with_t5_fusion_in_decoder'
-    mlflow.set_experiment(experiment_name)
+    experiment_id = mlflow.set_experiment(experiment_name).experiment_id
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     if dict_args["gpus"] is None or int(dict_args["gpus"]) == 0:
-        mlflow.pytorch.autolog()
+        mlflow.pytorch.autolog(log_models=False)
     elif int(dict_args["gpus"]) >= 1 and trainer.global_rank == 0:
         # In case of multi gpu training, the training script is invoked multiple times,
         # The following condition is needed to avoid multiple copies of mlflow runs.
         # When one or more gpus are used for training, it is enough to save
         # the model and its parameters using rank 0 gpu.
-        mlflow.pytorch.autolog()
+        mlflow.pytorch.autolog(log_models=False)
     else:
         # This condition is met only for multi-gpu training when the global rank is non zero.
         # Since the parameters are already logged using global rank 0 gpu, it is safe to ignore
         # this condition.
         trainer.log.info("Active run exists.. ")
-
-    trainer.fit(model, data_module)
+    with mlflow.start_run(experiment_id=experiment_id, run_name='training-uqua-test') as run:
+        trainer.fit(model, data_module)
 
 

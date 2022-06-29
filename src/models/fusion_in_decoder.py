@@ -123,9 +123,9 @@ class CheckpointWrapper(torch.nn.Module):
         self.use_checkpoint = use_checkpoint
 
     def forward(self, hidden_states, attention_mask, position_bias, **kwargs):
-        if False and self.training: #disable checkpointing by using self.use_checkpoint
+        if self.use_checkpoint and self.training:
             kwargs = {k: v for k, v in kwargs.items() if v is not None}
-
+            
             def custom_forward(*inputs):
                 output = self.module(*inputs, **kwargs)
                 empty = torch.tensor(

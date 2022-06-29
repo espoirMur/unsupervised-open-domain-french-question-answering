@@ -56,13 +56,6 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         self.log("train_loss", train_loss)
         return train_loss
     
-    def training_epoch_end(self, outputs):
-        print("done with the training epoch")
-        print(torch.cuda.memory_summary())
-        print("memory  before encoder step")
-        print(15 * "***")
-        return super().training_epoch_end(outputs)
-    
     def validation_step(self, val_batch, *args, **kwargs):
         """the validation step of the model.
 
@@ -196,10 +189,19 @@ def add_optimizer_options(parser):
 
 def add_reader_options(parser):
     # parser.add_argument('--model_size', type=str, default='base') can put the model name here in the future
-    parser.add_argument('--use_checkpoint', action='store_false', help='use checkpoint in the encoder')
+    parser.add_argument('--use_checkpoint', action='store_true', help='use checkpoint in the encoder')
     parser.add_argument('--text_maxlength', type=int, default=600, help='maximum number of tokens in text segments (question+passage)')
     parser.add_argument('--answer_maxlength', type=int, default=15, help='maximum number of tokens used to train the model, no truncation if -1')
     parser.add_argument('--no_title', action='store_true', help='article titles not included in passages')
     parser.add_argument('--n_context', type=int, default=5, help="the number of passages for fusion")
     parser.add_argument('--num_beams', type=int, default=4)
     return parser
+
+
+def print_memory_usage(step=""):
+    print(f"the memory when the {step}  is ")
+    free_memory, used_memmory = torch.cuda.mem_get_info()
+    print("the free memory is ", free_memory / 1024**2)
+    print("the used memory is ", used_memmory / 1024**2)
+    print(15 * "***")
+    print(torch.cuda.memory_summary())
