@@ -33,33 +33,19 @@ class ExetatCultGenSpider(BaseSpider):
                     tex = str(text).strip()
                     if tex != '':
                         options_array.append(tex)
-            # print('question : ', question)
-            # print('correct_index : ', correct_index)
-            # print('options : ', options_array)
-            # print('answer : ', options_array[int(correct_index)])
-
-            # Insert data into a json file
-            base_folder = Path.cwd().parent.joinpath(
+            base_folder = Path.cwd().joinpath(
                 "data", "json", self.name
             )
             base_folder.mkdir(mode=0o777, parents=True, exist_ok=True)
             file_name = base_folder.joinpath(
                 self.name + '.json'
             )
-            with open(file_name, 'w') as f:
+            with open(file_name, 'a') as file:
                 json.dump({
                     'question': question,
                     'correct_index': correct_index,
                     'options': options_array,
                     'answer': options_array[int(correct_index)]
-                }, f)
-                f.write('\n')
+                }, file)
+                file.write('\n')
                 print('saved to : ', file_name)
-
-            # with open('cult_gen.json', 'a') as file:
-            #     file.write(json.dumps({
-            #         'question': question,
-            #         'options': options_array,
-            #         'answer': options_array[int(correct_index)]
-            #     }))
-                # file.write('\n')
