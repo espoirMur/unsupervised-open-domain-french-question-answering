@@ -12,7 +12,7 @@ class ExetatCultGenSpider(BaseSpider):
     name = 'exetat_cult_gen'
     start_urls = ['http://exetat-rdc.com/index.php/culture-generale']
     allowed_domains = ['exetat-rdc.com']
-    website_origin='http://exetat-rdc.com'
+    website_origin = 'http://exetat-rdc.com'
     rules = (
         Rule(callback='callback', follow=True, link_extractor=LinkExtractor(allow=('index.php/culture-generale/[a-zA-Z0-9]'))),
     )
@@ -46,6 +46,6 @@ class ExetatCultGenSpider(BaseSpider):
                     'correct_index': correct_index,
                     'options': options_array,
                     'answer': options_array[int(correct_index)]
-                }, file)
+                }, file, ensure_ascii=False)
                 file.write('\n')
                 print('saved to : ', file_name)
