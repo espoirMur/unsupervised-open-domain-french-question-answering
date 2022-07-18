@@ -18,13 +18,14 @@ class SaveItemPipeline:
 
     def process_item(self, item, spider): #pylint: disable=unused-argument, missing-docstring
         session = self.session()
-        article = Article(**item)
-        try:
-            session.add(article)
-            session.commit()
-        except Exception: #pylint: disable=broad-except
-            session.rollback()
-        finally:
-            session.close()
+        if "title" in item:
+            article = Article(**item)
+            try:
+                session.add(article)
+                session.commit()
+            except Exception: #pylint: disable=broad-except
+                session.rollback()
+            finally:
+                session.close()
 
-        return item
+            return item
