@@ -9,26 +9,28 @@ class Dataset(torch.utils.data.Dataset):
                  data_path,
                  n_context=None,
                  question_prefix="question:",
-                 passage_prefix="context:"):
+                 passage_prefix="context:",
+                 title_prefix="title:"):
         self.data_path = data_path
         self.n_context = n_context
         self.question_prefix = question_prefix
         self.passage_prefix = passage_prefix
-        self.data = self._load_data(data_path)
+        self.title_prefix = title_prefix
+        self.text_files = list(data_path.glob('*.json'))[:10]
     
     def __len__(self):
-        return len(self.data)
+        return len(self.text_files)
 
     def get_target(self, example):
-        return f'{example.get("answer").get("text")}'
+        return example.get("answer")
 
     def __getitem__(self, index):
-        example = self.data[index]
+        example = self.get_example(index)
         question_ = example["question"].replace('<MASK>', ' ')  # replace because we wrongly put mask here, we can remove it and it will work.
         question = f"{self.question_prefix} {question_} </s>"
         target = self.get_target(example)
-        contexts = example["contexts"][:1] # just getting the first context now for testing purposes
-        passages = [f'{self.passage_prefix} {context["content"]}' for context in contexts]
+        contexts = example["contexts"]
+        passages = [f'{self.title_prefix} {context["title"]} {self.passage_prefix} {context["content"]}' for context in contexts]
         # the current data does not have the score , we put it to the position of the data
         scores = [1.0 / (index + 1) for index in range(len(contexts))]
         return {"index": index,
@@ -38,8 +40,11 @@ class Dataset(torch.utils.data.Dataset):
                 "scores": scores}
 
     def get_example(self, index):
-        return self.data[index]
-    
+        example_path = self.text_files[index]
+        with open(example_path, "r") as buffer:
+            example = json.load(buffer)
+        return example
+
     def _load_data(self, filepath):
         """This function returns the examples in the raw (text) form.
         it will return the content of the list as the examples

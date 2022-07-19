@@ -12,7 +12,7 @@ from pytorch_lightning.callbacks import (
 import mlflow
 
 
-MLFLOW_TRACKING_URI = "https://dagshub.com/espoirMur/unsupervised-open-domain-french-question-answering.mlflow"
+MLFLOW_TRACKING_URI = ""
 
 
 if __name__ == "__main__":
@@ -51,7 +51,7 @@ if __name__ == "__main__":
                       enable_checkpointing=True)
 
     # For CPU Training
-    experiment_name = 'unsupervised_qa_with_t5_fusion_in_decoder'
+    experiment_name = 't5-fusion-in-encoder-piaf-fsquad-bm25'
     experiment_id = mlflow.set_experiment(experiment_name).experiment_id
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     if dict_args["gpus"] is None or int(dict_args["gpus"]) == 0:
@@ -67,7 +67,7 @@ if __name__ == "__main__":
         # Since the parameters are already logged using global rank 0 gpu, it is safe to ignore
         # this condition.
         trainer.log.info("Active run exists.. ")
-    with mlflow.start_run(experiment_id=experiment_id, run_name='training-uqua-test') as run:
+    with mlflow.start_run(experiment_id=experiment_id) as run:
         trainer.fit(model, data_module)
 
 
