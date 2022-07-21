@@ -1,0 +1,8 @@
+compute_generate_metrics: true
+downstream_model_type: !!python/name:src.models.fusion_in_decoder.FusionInDecoderModel ''
+load_weights: true
+num_beams: 4
+pipeline_kwargs: null
+pretrained_model_name_or_path: plguillou/t5-base-fr-sum-cnndm
+tokenizer: null
+val_target_max_length: 25
