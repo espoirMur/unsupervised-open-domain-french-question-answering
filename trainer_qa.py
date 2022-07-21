@@ -38,6 +38,7 @@ if __name__ == "__main__":
 
     checkpoint_callback = ModelCheckpoint(
         dirpath=Path.cwd().joinpath("checkpoints"),
+        filename="best",
         save_top_k=1,
         verbose=True,
         monitor="f1_score",
@@ -45,10 +46,17 @@ if __name__ == "__main__":
     )
     lr_logger = LearningRateMonitor()
 
-    trainer = Trainer(max_epochs=5,
-                      callbacks=[lr_logger, early_stopping, checkpoint_callback],
-                      accelerator="auto",
-                      enable_checkpointing=True)
+    if dict_args["checkpoint_name_path"] is not None:
+        trainer = Trainer(max_epochs=5,
+                          callbacks=[lr_logger, early_stopping, checkpoint_callback],
+                          accelerator="auto",
+                          enable_checkpointing=True,
+                          resume_from_checkpoint=Path.cwd().joinpath("checkpoints").joinpath(dict_args["checkpoint_name_path"])),
+    else:
+        trainer = Trainer(max_epochs=5,
+                          callbacks=[lr_logger, early_stopping, checkpoint_callback],
+                          accelerator="auto",
+                          enable_checkpointing=True)
 
     # For CPU Training
     experiment_name = 't5-fusion-in-encoder-piaf-fsquad-bm25'
