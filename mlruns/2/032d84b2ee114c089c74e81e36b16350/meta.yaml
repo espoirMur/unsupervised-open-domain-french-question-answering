@@ -1,0 +1,15 @@
+artifact_uri: file:///home/es.py/school_stuff/unsupervised-open-domain-french-question-answering/mlruns/2/032d84b2ee114c089c74e81e36b16350/artifacts
+end_time: 1658236806225
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+name: ''
+run_id: 032d84b2ee114c089c74e81e36b16350
+run_uuid: 032d84b2ee114c089c74e81e36b16350
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1658236798679
+status: 4
+tags: []
+user_id: es.py
