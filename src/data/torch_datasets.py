@@ -16,7 +16,7 @@ class Dataset(torch.utils.data.Dataset):
         self.question_prefix = question_prefix
         self.passage_prefix = passage_prefix
         self.title_prefix = title_prefix
-        self.text_files = list(data_path.glob('*.json'))[:10]
+        self.text_files = list(data_path.glob('*.json'))
     
     def __len__(self):
         return len(self.text_files)
@@ -29,7 +29,7 @@ class Dataset(torch.utils.data.Dataset):
         question_ = example["question"].replace('<MASK>', ' ')  # replace because we wrongly put mask here, we can remove it and it will work.
         question = f"{self.question_prefix} {question_} </s>"
         target = self.get_target(example)
-        contexts = example["contexts"]
+        contexts = example["contexts"][:self.n_context]
         passages = [f'{self.title_prefix} {context["title"]} {self.passage_prefix} {context["content"]}' for context in contexts]
         # the current data does not have the score , we put it to the position of the data
         scores = [1.0 / (index + 1) for index in range(len(contexts))]
@@ -86,6 +86,7 @@ class Collator(object):
 
     def encode_passages(self, batch_text_passages):
         passage_ids, passage_masks = [], []
+        batch_text_passages = self.ensure_element_same_length(batch_text_passages)
         for k, text_passages in enumerate(batch_text_passages):
             p = self.tokenizer.batch_encode_plus(
                 text_passages,
@@ -97,7 +98,6 @@ class Collator(object):
             passage_ids.append(p['input_ids'][None])
             passage_masks.append(p['attention_mask'][None])
         try:
-
             passage_ids = torch.cat(passage_ids, dim=0)
             passage_masks = torch.cat(passage_masks, dim=0)
             return passage_ids, passage_masks.bool()
@@ -105,3 +105,15 @@ class Collator(object):
             print(batch_text_passages)
             print(" I am having an issue with this paragraphs")
             raise Exception
+
+    def ensure_element_same_length(self, batch_passage):
+        """
+        check if all the elements in the batch have the same length.
+        if not repeat the last element of the list to the li
+        """
+        max_length = max([len(passage) for passage in batch_passage])
+        for passage in batch_passage:
+            if len(passage) <= max_length:
+                difference = max_length - len(passage)
+                passage.extend([passage[-1] for _ in range(difference)])
+        return batch_passage

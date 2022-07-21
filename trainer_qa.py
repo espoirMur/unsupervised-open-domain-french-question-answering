@@ -45,7 +45,7 @@ if __name__ == "__main__":
     )
     lr_logger = LearningRateMonitor()
 
-    trainer = Trainer(max_epochs=2,
+    trainer = Trainer(max_epochs=5,
                       callbacks=[lr_logger, early_stopping, checkpoint_callback],
                       accelerator="auto",
                       enable_checkpointing=True)
@@ -53,6 +53,7 @@ if __name__ == "__main__":
     # For CPU Training
     experiment_name = 't5-fusion-in-encoder-piaf-fsquad-bm25'
     experiment_id = mlflow.set_experiment(experiment_name).experiment_id
+    print(experiment_id, "the experiment id")
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     if dict_args["gpus"] is None or int(dict_args["gpus"]) == 0:
         mlflow.pytorch.autolog(log_models=False)
