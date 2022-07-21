@@ -22,7 +22,7 @@ if __name__ == "__main__":
     ###############################################################################
     base_model_name = "plguillou/t5-base-fr-sum-cnndm"
     parser = ArgumentParser(description="drc-news-qa-lightning")
-    parser = Trainer.add_argparse_args(parent_parser=parser)
+    parser = Trainer.add_argparse_args( parent_parser=parser)
     parser = T5UQALighteningFineTuner.add_model_specific_args(parser)
     parser = T5DataModule.add_model_specific_args(parser)
     args = parser.parse_args()
