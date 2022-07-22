@@ -184,7 +184,7 @@ def add_optimizer_options(parser):
     parser.add_argument('--scheduler', type=str, default='fixed')
     parser.add_argument('--weight_decay', type=float, default=0.1)
     parser.add_argument('--fixed_lr', action='store_true')
-    parser.add_argument('--checkpoint_path', type=str, default="", help='path to the checkpoint file')
+    parser.add_argument('--checkpoint_name', type=str, default="", help='path to the checkpoint file')
     return parser
 
 

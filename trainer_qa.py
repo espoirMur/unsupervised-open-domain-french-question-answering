@@ -46,12 +46,13 @@ if __name__ == "__main__":
     )
     lr_logger = LearningRateMonitor()
 
-    if dict_args["checkpoint_name_path"] is not None:
-        trainer = Trainer(max_epochs=5,
+    if dict_args["checkpoint_name"] is not None:
+        print("loading checkpoint")
+        trainer = Trainer(max_epochs=10,
                           callbacks=[lr_logger, early_stopping, checkpoint_callback],
                           accelerator="auto",
                           enable_checkpointing=True,
-                          resume_from_checkpoint=Path.cwd().joinpath("checkpoints").joinpath(dict_args["checkpoint_name_path"])),
+                          resume_from_checkpoint=Path.cwd().joinpath("checkpoints").joinpath(dict_args["checkpoint_name"]))
     else:
         trainer = Trainer(max_epochs=5,
                           callbacks=[lr_logger, early_stopping, checkpoint_callback],
