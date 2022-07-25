@@ -89,7 +89,6 @@ target/
 
 ## Virtual Env
 ./.venv
-/models
 venv
 m_venv
 checkpoints/
