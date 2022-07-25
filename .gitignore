@@ -93,7 +93,6 @@ target/
 venv
 m_venv
 checkpoints/
-data/
 artifacts/
 .venv/
 /checkpoints

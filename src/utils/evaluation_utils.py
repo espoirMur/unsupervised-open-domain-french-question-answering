@@ -7,7 +7,7 @@ the model's predicted probability that a question is unanswerable. """
 import collections
 import re
 import string
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 
 def normalize_answer(s):
@@ -94,7 +94,7 @@ def get_raw_scores(answers, preds):
     return exact_scores, f1_scores
 
 
-def t5_qa_evaluate(answers, preds, qid_dict: Optional[Dict] = None):
+def t5_qa_evaluate(answers: list[List], preds: list[List], qid_dict: Optional[Dict] = None):
     """Evaluates T5 predictions.
 
     This is a siplification of `square_evaluate` to compute the exact and f1
