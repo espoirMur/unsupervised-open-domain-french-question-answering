@@ -7,6 +7,7 @@ the model's predicted probability that a question is unanswerable. """
 import collections
 import re
 import string
+import pandas as pd
 from typing import Dict, List, Optional
 
 
@@ -94,7 +95,7 @@ def get_raw_scores(answers, preds):
     return exact_scores, f1_scores
 
 
-def t5_qa_evaluate(answers: list[List], preds: list[List], qid_dict: Optional[Dict] = None):
+def t5_qa_evaluate(answers: List[List], preds: List[List], qid_dict: Optional[Dict] = None):
     """Evaluates T5 predictions.
 
     This is a siplification of `square_evaluate` to compute the exact and f1
@@ -122,3 +123,15 @@ def t5_qa_evaluate(answers: list[List], preds: list[List], qid_dict: Optional[Di
         evaluation[kword] = make_eval_dict(exact, f1, qid_list)
 
     return evaluation
+
+def prediction_to_csv(prediction, goldlabel, file_name):
+    """
+    create a dataframe from predictions and labels and save them to a dataframe
+
+    Args:
+        prediction (_type_): _description_
+        goldlabel (_type_): _description_
+        file_name (_type_): _description_
+    """
+    df = pd.DataFrame({"prediction": prediction, "goldlabel": goldlabel})
+    df.to_csv(file_name, index=False)

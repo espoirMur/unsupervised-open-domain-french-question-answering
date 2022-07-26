@@ -1,8 +1,9 @@
 
 import torch
 from traitlets import default
-from src.utils.evaluation_utils import t5_qa_evaluate
+from src.utils.evaluation_utils import t5_qa_evaluate, prediction_to_csv
 import numpy as np
+from pathlib import Path
 from transformers import AdamW
 from lightning_transformers.core.seq2seq.model import Seq2SeqTransformer
 from src.models.fusion_in_decoder import FusionInDecoderModel
@@ -94,10 +95,18 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         pred_str = [str.strip(s) for s in pred_str]
         return pred_str
     
-    def test_step(self, batch, batch_idx):
-        self.print("I am not testing anything for now just returning 0")
-
-        return 0
+    def test_step(self, test_batch, *args, **kwargs):
+        """
+        this is almost the same as the validation test
+        """
+        (_, target_ids, _, context_ids, context_mask) = test_batch
+        predicted_strings = self.generate(
+            input_ids=context_ids,
+            attention_mask=context_mask,
+        )
+        gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
+        return {"labels": gold_strings,
+                "predictions": predicted_strings}
     
     def validation_epoch_end(self, outputs):
         """
@@ -122,6 +131,28 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             'exact_matches': exact,       # for monitoring checkpoint callback
             'f1_score': f1,             # for monitoring checkpoint callback
         }
+        self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
+    
+    def test_epoch_end(self, outputs):
+        """
+        Computes average test accuracy
+        :param outputs: outputs after every epoch end
+        :return: output - average valid loss
+        """
+        predictions, labels = [], []
+        for output in outputs:
+            for label, pred in zip(output['labels'], output['predictions']):
+                predictions.append(pred)
+                labels.append(label)
+        results = t5_qa_evaluate(labels, predictions)
+        exact = torch.tensor(results['exact']).detach()
+        f1 = torch.tensor(results['f1']).detach()
+        log = {
+            'exact_matches': exact,       # for monitoring checkpoint callback
+            'f1_score': f1,             # for monitoring checkpoint callback
+        }
+        results_path = Path.cwd().joinpath("models-predictions.csv")
+        prediction_to_csv(prediction=predictions, goldlabel=labels, file_name=results_path)
         self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
     
     def configure_optimizers(self):

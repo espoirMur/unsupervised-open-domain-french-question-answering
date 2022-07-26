@@ -67,4 +67,5 @@ class T5DataModule(LightningDataModule):
         return self.generate_data_loaders("val")
     
     def test_dataloader(self) -> FastDataLoader:
-        return self.generate_data_loaders("test")
+        # for now we are testing on the validation datasest
+        return self.generate_data_loaders("val")

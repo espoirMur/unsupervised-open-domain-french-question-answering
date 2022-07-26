@@ -79,5 +79,6 @@ if __name__ == "__main__":
         trainer.log.info("Active run exists.. ")
     with mlflow.start_run(experiment_id=experiment_id) as run:
         trainer.fit(model, data_module)
+        trainer.test(model, datamodule=data_module)
 
 
