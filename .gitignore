@@ -95,3 +95,5 @@ checkpoints/
 artifacts/
 .venv/
 /checkpoints
+data/
+models/
