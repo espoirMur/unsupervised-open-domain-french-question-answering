@@ -7,15 +7,15 @@ the model's predicted probability that a question is unanswerable. """
 import collections
 import re
 import string
+from typing import Dict, Optional, List
 import pandas as pd
-from typing import Dict, List, Optional
 
 
 def normalize_answer(s):
     """Lower text and remove punctuation, articles and extra whitespace."""
 
     def remove_articles(text):
-        regex = re.compile(r"\b(a|an|the)\b", re.UNICODE)
+        regex = re.compile(r"\b(le|la|les|l’|du|des|au|aux|un|une)\b", re.UNICODE)
         return re.sub(regex, " ", text)
 
     def white_space_fix(text):
@@ -27,8 +27,11 @@ def normalize_answer(s):
 
     def lower(text):
         return text.lower()
-
-    return white_space_fix(remove_articles(remove_punc(lower(s))))
+    string_lower = lower(s)
+    string_without_punctuation = remove_punc(string_lower)
+    string_without_articles = remove_articles(string_without_punctuation)
+    string_without_whitespace = white_space_fix(string_without_articles)
+    return white_space_fix(string_without_whitespace)
 
 
 def get_tokens(s):
@@ -136,3 +139,5 @@ def prediction_to_csv(prediction, goldlabel, file_name):
     """
     df = pd.DataFrame({"prediction": prediction, "goldlabel": goldlabel})
     df.to_csv(file_name, index=False)
+
+
