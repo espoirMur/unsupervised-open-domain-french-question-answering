@@ -21,7 +21,7 @@ import json
 from multiprocessing import Value
 
 import datasets
-
+from haystack.schema import Document
 from dataclasses import dataclass
 from typing import ClassVar, Dict
 from datasets.tasks.base import TaskTemplate
