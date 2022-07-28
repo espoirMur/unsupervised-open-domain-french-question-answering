@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/es.py/Projects/Personal/multilingual-drc-news-chatbot/mlruns/0/d54741a2b0524bac8457347de180494b/artifacts
+end_time: 1656088892624
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: d54741a2b0524bac8457347de180494b
+run_uuid: d54741a2b0524bac8457347de180494b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1656088765405
+status: 4
+tags: []
+user_id: es.py

@@ -1,0 +1,4 @@
+artifact_location: file:///home/CAMPUS/mb21687/Projects/unsupervised-open-domain-french-question-answering/mlruns/3
+experiment_id: '3'
+lifecycle_stage: active
+name: t5-fusion-in-encoder-fsquad-bm25

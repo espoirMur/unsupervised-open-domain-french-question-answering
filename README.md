@@ -100,3 +100,10 @@ Project Link: [https://github.com/espoirMur/multilingual-drc-news-chatbot](https
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/espoirMur/multilingual-drc-news-chatbot/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+
+
+### Instruciton on Reproducing the Project
+
+Run the followign command : 
+
+python trainer_qa.py --batch_size 4 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context/valid/ --n_context 2 --checkpoint_name best.ckpt

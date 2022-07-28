@@ -10,8 +10,8 @@ class T5DataModule(LightningDataModule):
     def __init__(self, **kwargs):
         super(T5DataModule, self).__init__()
         self.pretrained_module_name = kwargs.get('pretrained_module_name')
-        self.train_dataset_path = kwargs.get('train_dataset_path')
-        self.val_dataset_path = kwargs.get('val_dataset_path')
+        self.train_dataset_path = Path(kwargs.get('train_dataset_path'))
+        self.val_dataset_path = Path(kwargs.get('val_dataset_path'))
         self.test_dataset_path = None
         self.text_maxlength = kwargs.get('text_maxlength')
         self.answer_maxlength = kwargs.get('answer_maxlength')
@@ -39,10 +39,9 @@ class T5DataModule(LightningDataModule):
         :param parent_parser: Application specific parser
         :return: Returns the augmented argument parser
         """
-        train_dataset_path, val_dataset_path = generate_dataset_file_names()
         parser = ArgumentParser(parents=[parent_parser], add_help=False)
-        parser.add_argument('--train_dataset_path', type=str, default=train_dataset_path, help='path of train data')
-        parser.add_argument('--val_dataset_path', type=str, default=val_dataset_path, help='path of eval data')
+        parser.add_argument('--train_dataset_path', type=str, default="", help='path of train data')
+        parser.add_argument('--val_dataset_path', type=str, default="", help='path of eval data')
         parser.add_argument("--batch_size", default=1, type=int, help="Batch size per GPU/CPU for training.")
         parser.add_argument("--num_workers", default=4, type=int, help="Number of workers for data loading.")
 
@@ -68,18 +67,5 @@ class T5DataModule(LightningDataModule):
         return self.generate_data_loaders("val")
     
     def test_dataloader(self) -> FastDataLoader:
-        return self.generate_data_loaders("test")
-
-
-def generate_dataset_file_names() -> None:
-    """
-    This function reads the data and generates the data files
-    """
-    DATA_PATH = Path.cwd().joinpath("data")
-    BASE_QA_PATH = DATA_PATH.joinpath("processed", "DRC-News-UQA")
-    assert BASE_QA_PATH.exists()
-    train_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small.json")
-    val_dataset_file = BASE_QA_PATH.joinpath("drc-news-uqa-small-dev.json")
-    assert train_dataset_file.exists()
-    assert val_dataset_file.exists()
-    return train_dataset_file.__str__(), val_dataset_file.__str__()
+        # for now we are testing on the validation datasest
+        return self.generate_data_loaders("val")
