@@ -15,7 +15,7 @@ def normalize_answer(s):
     """Lower text and remove punctuation, articles and extra whitespace."""
 
     def remove_articles(text):
-        regex = re.compile(r"\b(le|la|les|l’|du|des|au|aux|un|une)\b", re.UNICODE)
+        regex = re.compile(r"\b(le|la|les|l’|du|des|au|aux|un|une|d’|de|l'|d')\b", re.UNICODE)
         return re.sub(regex, " ", text)
 
     def white_space_fix(text):
@@ -28,9 +28,9 @@ def normalize_answer(s):
     def lower(text):
         return text.lower()
     string_lower = lower(s)
-    string_without_punctuation = remove_punc(string_lower)
-    string_without_articles = remove_articles(string_without_punctuation)
-    string_without_whitespace = white_space_fix(string_without_articles)
+    string_without_articles = remove_articles(string_lower)
+    string_without_punctuation = remove_punc(string_without_articles)
+    string_without_whitespace = white_space_fix(string_without_punctuation)
     return white_space_fix(string_without_whitespace)
 
 
