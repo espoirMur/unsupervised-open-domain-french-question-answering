@@ -47,7 +47,8 @@ if __name__ == "__main__":
     lr_logger = LearningRateMonitor()
 
     if dict_args["checkpoint_name"] is not None:
-        print("loading checkpoint")
+        print("loading checkpoint at ", dict_args["checkpoint_name"] )
+        print(10 * "****")
         trainer = Trainer(max_epochs=10,
                           callbacks=[lr_logger, early_stopping, checkpoint_callback],
                           accelerator="auto",
@@ -60,7 +61,7 @@ if __name__ == "__main__":
                           enable_checkpointing=True)
 
     # For CPU Training
-    experiment_name = 't5-fusion-in-encoder-piaf-fsquad-bm25'
+    experiment_name = 't5-fusion-in-encoder-fsquad-bm25'
     experiment_id = mlflow.set_experiment(experiment_name).experiment_id
     print(experiment_id, "the experiment id")
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
