@@ -1,0 +1,15 @@
+artifact_uri: file:///home/CAMPUS/mb21687/Projects/unsupervised-open-domain-french-question-answering/mlruns/3/39144efdc177499f8b4f01928414e03f/artifacts
+end_time: 1659012893873
+entry_point_name: ''
+experiment_id: '3'
+lifecycle_stage: active
+name: ''
+run_id: 39144efdc177499f8b4f01928414e03f
+run_uuid: 39144efdc177499f8b4f01928414e03f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659012886160
+status: 4
+tags: []
+user_id: mb21687
