@@ -1,0 +1,5 @@
+outs:
+- md5: 0901a403f8314a9ba501938e618bfc3f.dir
+  size: 5792632271
+  nfiles: 100
+  path: wikipedia

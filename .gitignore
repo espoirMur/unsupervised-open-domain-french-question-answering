@@ -98,3 +98,6 @@ artifacts/
 data/
 models/
 /documents_stores
+!data/processed.dvc
+/checkpoint
+!data/processed/wikipedia.dvc
