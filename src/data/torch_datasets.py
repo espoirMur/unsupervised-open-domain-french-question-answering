@@ -81,9 +81,10 @@ class Collator(object):
             return [example['question'] + " " + passage for passage in example['passages']]
         text_passages = [append_question(example) for example in batch]
         questions = [example['question'] for example in batch]
+        len_passages = [len(example["passages"]) for example in batch]
         passage_ids, passage_masks = self.encode_passages(text_passages)
 
-        return (index, questions, target_ids, target_mask, passage_ids, passage_masks)
+        return (index, questions, len_passages, target_ids, target_mask, passage_ids, passage_masks)
 
     def encode_passages(self, batch_text_passages):
         passage_ids, passage_masks = [], []

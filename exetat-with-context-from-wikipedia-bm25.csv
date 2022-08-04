@@ -1,0 +1,36 @@
+prediction,goldlabel,questions,passages_len
+Congo,Tchad,question: Indiquez le pays d'origine de Moussa Faki actuel Président de la Commission de l'Union Africaine </s>,2
+entites,Ubangi.,question: Le territoire de Yakoma situé dans la Province de l'Equateur est traversé par la rivière </s>,2
+le lieutenant-colonel Olsen,Tombeur.,question: L'une des personnalités ci-dessous commandait les troupes de la Force publique lors de la prise de kigali le 06 mai 1916. Il s'agit de: </s>,1
+Phenarete,SOCRATE.,"question: Né en 470 avant notre ère, maître de PLATON, donnait cours sans salaire, fondateur de la ''Maieutique'', mort en 399 sans laisser d'écrits. Cette courte biographie est de: </s>",2
+la Republique,Costa Rica,question: Indiquez le seul pays au monde qui a supprimé l'armée en 1949 et dont l'ordre publique est assurée par la Garde royale </s>,1
+une huile de sechage,lin.,question: La peinture est fabriqué à base d'huile de: </s>,1
+le lieutenant-colonel Olsen,Tombeur.,question: L'une des personnalités ci-dessous commandait les troupes de la Force publique lors de la prise de kigali le 06 mai 1916. Il s'agit de: </s>,1
+Chine,Australie.,question: Indiquez le premier pays producteur mondial d'uranium. </s>,2
+UNESCO,UNESCO.,"question: Déterminez l'organisme spécialisé de l'ONU qui s'occupe de l'éducation, la science et la culture. </s>",1
+examen du carré logique,E et A,"question: Après examen du carré logique, indiquez les propositions contraires </s>",2
+moulins,vésou.,question: Le jus extrait par le broyage de la canne à sucre est appelé: </s>,1
+l'ethique,l'éthique.,question: La branche de la philosophie qui essaie d'ériger une échelle de valeurs qui permet de distinguer le bien du mal est: </s>,1
+président,La république,question: Le statut politique de la Zambie est: </s>,2
+la province Orientale,Province Orientale,question: Indiquez la province de la République Démocratique du Congo qui contient à la fois les gisements diamantifères et l'or. </s>,1
+Aristote,Aristote,question: Indiquez l'auteur qui pense que ''le philosophe est celui qui possède la totalité du savoir dans la mesure du possible'': </s>,2
+savoir si en général nous possédons la vérité,Socrate,"question: Ce qui est important, c'est ''de savoir si en général nous possédons la vérité et quel moyen nous avons pour nous en assurer''. Indiquez l'auteur de cette préoccupation </s>",2
+moulins,vésou.,question: Le jus extrait par le broyage de la canne à sucre est appelé: </s>,1
+mont ou massif,Drakensberg,"question: Sur la carte muette de l'Afrique ci-contre, le dessinateur a indiqué par le chiffre 3 le mont ou massif (de,d'). </s>",1
+UNESCO,UNESCO.,"question: Déterminez l'organisme spécialisé de l'ONU qui s'occupe de l'éducation, la science et la culture. </s>",1
+"la Loire, le Rhin et le Danube",Danube.,question: indiquez le fleuve européen qui se jette dans la mer Noire. </s>,2
+mont ou massif,Drakensberg,"question: Sur la carte muette de l'Afrique ci-contre, le dessinateur a indiqué par le chiffre 3 le mont ou massif (de,d'). </s>",1
+Afrique,Manioc.,"question: Parmi les pays de culture vivrière et industrielle, indiquez celui qui est originaire de l'Afrique. </s>",1
+Afrique,Manioc.,"question: Parmi les pays de culture vivrière et industrielle, indiquez celui qui est originaire de l'Afrique. </s>",1
+Chine,Australie.,question: Indiquez le premier pays producteur mondial d'uranium. </s>,2
+une huile de sechage,lin.,question: La peinture est fabriqué à base d'huile de: </s>,1
+Commission europeenne,La Commission Européenne,question: L'institution de l'Union Européenne (U.E.) qui gère le budget est: </s>,2
+1969,Le travail,"question: En rapport avec l'histoire économique de la République Démocratique du Congo, l'année 1969 nous rappelle: </s>",1
+Il prend son nom,Kainji,question: indiquez le nom du barrage africain construit sur le fleuve Niger. </s>,2
+l'ethique,l'éthique.,question: La branche de la philosophie qui essaie d'ériger une échelle de valeurs qui permet de distinguer le bien du mal est: </s>,1
+Phenarete,SOCRATE.,"question: Né en 470 avant notre ère, maître de PLATON, donnait cours sans salaire, fondateur de la ''Maieutique'', mort en 399 sans laisser d'écrits. Cette courte biographie est de: </s>",2
+la province Orientale,Province Orientale,question: Indiquez la province de la République Démocratique du Congo qui contient à la fois les gisements diamantifères et l'or. </s>,1
+entites,Ubangi.,question: Le territoire de Yakoma situé dans la Province de l'Equateur est traversé par la rivière </s>,2
+Nelson Mandela et Frederik de Klerk,Nelson Mandela,"question: En 1993, le prix Nobel de la paix a été attribué à: </s>",2
+une huile de sechage,lin.,question: La peinture est fabriqué à base d'huile de: </s>,1
+UNESCO,UNESCO.,"question: Déterminez l'organisme spécialisé de l'ONU qui s'occupe de l'éducation, la science et la culture. </s>",1
