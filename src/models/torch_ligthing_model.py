@@ -1,8 +1,9 @@
 
 import torch
 from traitlets import default
-from src.utils.evaluation_utils import t5_qa_evaluate
+from src.utils.evaluation_utils import t5_qa_evaluate, prediction_to_csv
 import numpy as np
+from pathlib import Path
 from transformers import AdamW
 from lightning_transformers.core.seq2seq.model import Seq2SeqTransformer
 from src.models.fusion_in_decoder import FusionInDecoderModel
@@ -46,7 +47,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         Returns:
             _type_: _description_
         """
-        (idx, labels, _, context_ids, context_mask) = train_batch
+        (idx, _, labels, _, context_ids, context_mask) = train_batch
 
         train_loss = self.model(
             input_ids=context_ids.cuda(),
@@ -67,19 +68,15 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             _type_: _description_
         """
         batch_size_length = val_batch[0].size(0)
-        three_random_indexes = np.random.choice(batch_size_length, 3, replace=False)
-        (_, target_ids, _, context_ids, context_mask) = val_batch
+        
+        (_, _, target_ids, _, context_ids, context_mask) = val_batch
         predicted_strings = self.generate(
             input_ids=context_ids,
             attention_mask=context_mask,
         )
         gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
-        sample_predictions = [predicted_strings[i] for i in three_random_indexes]
-        sample_gold_strings = [gold_strings[i] for i in three_random_indexes]
         return {"labels": gold_strings,
-                "predictions": predicted_strings,
-                "sample_predictions": sample_predictions,
-                "sample_gold_strings": sample_gold_strings}
+                "predictions": predicted_strings}
     
     def generate(self, input_ids: torch.Tensor, attention_mask: torch.Tensor) -> List[str]:
         max_length = self.val_target_max_length if self.val_target_max_length else self.model.config.max_length
@@ -94,10 +91,19 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         pred_str = [str.strip(s) for s in pred_str]
         return pred_str
     
-    def test_step(self, batch, batch_idx):
-        self.print("I am not testing anything for now just returning 0")
-
-        return 0
+    def test_step(self, test_batch, *args, **kwargs):
+        """
+        this is almost the same as the validation test
+        """
+        (_, question, target_ids, _, context_ids, context_mask) = test_batch
+        predicted_strings = self.generate(
+            input_ids=context_ids,
+            attention_mask=context_mask,
+        )
+        gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
+        return {"labels": gold_strings,
+                "predictions": predicted_strings,
+                "question": question}
     
     def validation_epoch_end(self, outputs):
         """
@@ -105,10 +111,6 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         :param outputs: outputs after every epoch end
         :return: output - average valid loss
         """
-        for output in outputs:
-            for sample_prediction, sample_gold_string in zip(output.get("sample_predictions"),
-                                                             output.get("sample_gold_strings")):
-                self.print(f"sample gold strings: {sample_gold_string} ===== sample predictions: {sample_prediction}")
         predictions, labels = [], []
         for output in outputs:
             for label, pred in zip(output['labels'], output['predictions']):
@@ -122,6 +124,30 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             'exact_matches': exact,       # for monitoring checkpoint callback
             'f1_score': f1,             # for monitoring checkpoint callback
         }
+        self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
+    
+    def test_epoch_end(self, outputs):
+        """
+        Computes average test accuracy
+        :param outputs: outputs after every epoch end
+        :return: output - average valid loss
+        """
+        predictions, labels, questions = [], [], []
+        for output in outputs:
+            for label, pred, question in zip(output['labels'], output['predictions'], output['question']):
+                predictions.append(pred)
+                labels.append(label)
+                questions.append(question)
+
+        results = t5_qa_evaluate(labels, predictions)
+        exact = torch.tensor(results['exact']).detach()
+        f1 = torch.tensor(results['f1']).detach()
+        log = {
+            'exact_matches': exact,       # for monitoring checkpoint callback
+            'f1_score': f1,             # for monitoring checkpoint callback
+        }
+        results_path = Path.cwd().joinpath("models-predictions.csv")
+        prediction_to_csv(prediction=predictions, goldlabel=labels, questions=questions, file_name=results_path)
         self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
     
     def configure_optimizers(self):
@@ -184,6 +210,7 @@ def add_optimizer_options(parser):
     parser.add_argument('--scheduler', type=str, default='fixed')
     parser.add_argument('--weight_decay', type=float, default=0.1)
     parser.add_argument('--fixed_lr', action='store_true')
+    parser.add_argument('--checkpoint_name', type=str, default=None, help='path to the checkpoint file')
     return parser
 
 

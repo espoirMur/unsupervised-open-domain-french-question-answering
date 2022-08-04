@@ -1,0 +1,3 @@
+Training on FQuad without PIAF and evaluate on PIAF after updating the exact match data
+
+Batch size 4 , number of paragraph 2.

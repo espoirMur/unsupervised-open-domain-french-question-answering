@@ -92,8 +92,8 @@ target/
 venv
 m_venv
 checkpoints/
-mlruns
-lightning_logs/
-data/
 artifacts/
 .venv/
+/checkpoints
+data/
+models/

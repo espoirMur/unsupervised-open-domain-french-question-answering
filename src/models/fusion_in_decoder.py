@@ -18,7 +18,6 @@ class FusionInDecoderModel(T5ForConditionalGeneration):
             kwargs['input_ids'] = kwargs['input_ids'].view(kwargs['input_ids'].size(0), -1)
         if 'attention_mask' in kwargs:
             kwargs['attention_mask'] = kwargs['attention_mask'].view(kwargs['attention_mask'].size(0), -1)
-
         return super(FusionInDecoderModel, self).forward(
             **kwargs
         )

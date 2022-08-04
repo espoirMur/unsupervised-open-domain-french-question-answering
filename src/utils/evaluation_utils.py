@@ -7,14 +7,15 @@ the model's predicted probability that a question is unanswerable. """
 import collections
 import re
 import string
-from typing import Dict, Optional
+from typing import Dict, Optional, List
+import pandas as pd
 
 
 def normalize_answer(s):
     """Lower text and remove punctuation, articles and extra whitespace."""
 
     def remove_articles(text):
-        regex = re.compile(r"\b(a|an|the)\b", re.UNICODE)
+        regex = re.compile(r"\b(le|la|les|l’|du|des|au|aux|un|une|d’|de|l'|d')\b", re.UNICODE)
         return re.sub(regex, " ", text)
 
     def white_space_fix(text):
@@ -26,8 +27,11 @@ def normalize_answer(s):
 
     def lower(text):
         return text.lower()
-
-    return white_space_fix(remove_articles(remove_punc(lower(s))))
+    string_lower = lower(s)
+    string_without_articles = remove_articles(string_lower)
+    string_without_punctuation = remove_punc(string_without_articles)
+    string_without_whitespace = white_space_fix(string_without_punctuation)
+    return white_space_fix(string_without_whitespace)
 
 
 def get_tokens(s):
@@ -94,7 +98,7 @@ def get_raw_scores(answers, preds):
     return exact_scores, f1_scores
 
 
-def t5_qa_evaluate(answers, preds, qid_dict: Optional[Dict] = None):
+def t5_qa_evaluate(answers: List[List], preds: List[List], qid_dict: Optional[Dict] = None):
     """Evaluates T5 predictions.
 
     This is a siplification of `square_evaluate` to compute the exact and f1
@@ -122,3 +126,18 @@ def t5_qa_evaluate(answers, preds, qid_dict: Optional[Dict] = None):
         evaluation[kword] = make_eval_dict(exact, f1, qid_list)
 
     return evaluation
+
+
+def prediction_to_csv(prediction, goldlabel, questions,  file_name):
+    """
+    create a dataframe from predictions and labels and save them to a dataframe
+
+    Args:
+        prediction (_type_): _description_
+        goldlabel (_type_): _description_
+        file_name (_type_): _description_
+    """
+    df = pd.DataFrame({"prediction": prediction, "goldlabel": goldlabel, "questions": questions})
+    df.to_csv(file_name, index=False)
+
+

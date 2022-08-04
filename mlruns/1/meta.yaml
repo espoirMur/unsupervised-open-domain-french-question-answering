@@ -1,0 +1,4 @@
+artifact_location: file:///home/es.py/school_stuff/unsupervised-open-domain-french-question-answering/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: unsupervised_qa_with_t5_fusion_in_decoder
