@@ -47,7 +47,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         Returns:
             _type_: _description_
         """
-        (idx, labels, _, context_ids, context_mask) = train_batch
+        (idx, _, labels, _, context_ids, context_mask) = train_batch
 
         train_loss = self.model(
             input_ids=context_ids.cuda(),
@@ -69,7 +69,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         """
         batch_size_length = val_batch[0].size(0)
         
-        (_, target_ids, _, context_ids, context_mask) = val_batch
+        (_, _, target_ids, _, context_ids, context_mask) = val_batch
         predicted_strings = self.generate(
             input_ids=context_ids,
             attention_mask=context_mask,
@@ -95,14 +95,15 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         """
         this is almost the same as the validation test
         """
-        (_, target_ids, _, context_ids, context_mask) = test_batch
+        (_, question, target_ids, _, context_ids, context_mask) = test_batch
         predicted_strings = self.generate(
             input_ids=context_ids,
             attention_mask=context_mask,
         )
         gold_strings = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
         return {"labels": gold_strings,
-                "predictions": predicted_strings}
+                "predictions": predicted_strings,
+                "question": question}
     
     def validation_epoch_end(self, outputs):
         """
@@ -131,11 +132,13 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         :param outputs: outputs after every epoch end
         :return: output - average valid loss
         """
-        predictions, labels = [], []
+        predictions, labels, questions = [], []
         for output in outputs:
-            for label, pred in zip(output['labels'], output['predictions']):
+            for label, pred, question in zip(output['labels'], output['predictions'], output['question']):
                 predictions.append(pred)
                 labels.append(label)
+                questions.append(question)
+
         results = t5_qa_evaluate(labels, predictions)
         exact = torch.tensor(results['exact']).detach()
         f1 = torch.tensor(results['f1']).detach()
@@ -144,7 +147,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             'f1_score': f1,             # for monitoring checkpoint callback
         }
         results_path = Path.cwd().joinpath("models-predictions.csv")
-        prediction_to_csv(prediction=predictions, goldlabel=labels, file_name=results_path)
+        prediction_to_csv(prediction=predictions, goldlabel=labels, questions=questions, file_name=results_path)
         self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
     
     def configure_optimizers(self):

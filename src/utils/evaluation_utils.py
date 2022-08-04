@@ -128,7 +128,7 @@ def t5_qa_evaluate(answers: List[List], preds: List[List], qid_dict: Optional[Di
     return evaluation
 
 
-def prediction_to_csv(prediction, goldlabel, file_name):
+def prediction_to_csv(prediction, goldlabel, questions,  file_name):
     """
     create a dataframe from predictions and labels and save them to a dataframe
 
@@ -137,7 +137,7 @@ def prediction_to_csv(prediction, goldlabel, file_name):
         goldlabel (_type_): _description_
         file_name (_type_): _description_
     """
-    df = pd.DataFrame({"prediction": prediction, "goldlabel": goldlabel})
+    df = pd.DataFrame({"prediction": prediction, "goldlabel": goldlabel, "questions": questions})
     df.to_csv(file_name, index=False)
 
 

@@ -73,11 +73,13 @@ if __name__ == "__main__":
         # When one or more gpus are used for training, it is enough to save
         # the model and its parameters using rank 0 gpu.
         mlflow.pytorch.autolog(log_models=False)
+        mlflow.log_param("base_model_name", base_model_name)
     else:
         # This condition is met only for multi-gpu training when the global rank is non zero.
         # Since the parameters are already logged using global rank 0 gpu, it is safe to ignore
         # this condition.
         trainer.log.info("Active run exists.. ")
+        mlflow.log_param("base_model_name", base_model_name)
     with mlflow.start_run(experiment_id=experiment_id) as run:
         trainer.fit(model, data_module)
         trainer.test(model, datamodule=data_module)
