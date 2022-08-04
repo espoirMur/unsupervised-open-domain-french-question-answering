@@ -132,7 +132,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
         :param outputs: outputs after every epoch end
         :return: output - average valid loss
         """
-        predictions, labels, questions = [], []
+        predictions, labels, questions = [], [], []
         for output in outputs:
             for label, pred, question in zip(output['labels'], output['predictions'], output['question']):
                 predictions.append(pred)

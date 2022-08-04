@@ -1,6 +1,4 @@
 [core]
     autostage = true
 ['remote "origin"']
-    url = https://dagshub.com/espoirMur/unsupervised-open-domain-french-question-answering.dvc
-['remote "gdrive"']
     url = gdrive://127vsDsohnEmCvhUh7fgmcPVo1aX-8Exi
