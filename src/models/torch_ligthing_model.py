@@ -149,7 +149,7 @@ class T5UQALighteningFineTuner(Seq2SeqTransformer):
             'f1_score': f1,             # for monitoring checkpoint callback
         }
         validation_file_name = Path(self.args["val_dataset_path"]).stem
-        results_path = Path.cwd().joinpath(f"{validation_file_name}.csv")
+        results_path = Path.cwd().joinpath("results", f'{self.args["runner_name"]}_{validation_file_name}.csv')
         prediction_to_csv(prediction=predictions, goldlabel=labels, questions=questions, passages_len=passages_len, file_name=results_path)
         self.log_dict(log, logger=True, prog_bar=True, on_epoch=True)
     

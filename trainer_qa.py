@@ -22,6 +22,7 @@ if __name__ == "__main__":
     ###############################################################################
     base_model_name = "plguillou/t5-base-fr-sum-cnndm"
     parser = ArgumentParser(description="drc-news-qa-lightning")
+    parser.add_argument('--runner_name', type=str, help="puth the name of the runner ")
     parser = Trainer.add_argparse_args( parent_parser=parser)
     parser = T5UQALighteningFineTuner.add_model_specific_args(parser)
     parser = T5DataModule.add_model_specific_args(parser)
@@ -31,7 +32,6 @@ if __name__ == "__main__":
     data_module = T5DataModule(**dict_args)
     data_module.prepare_data()
     print("done preparing the data")
-
     model = T5UQALighteningFineTuner(pretrained_model_name_or_path=dict_args.get("pretrained_module_name"), other_args=dict_args)
     print("done created the model")
     early_stopping = EarlyStopping(monitor="train_loss", mode="min", verbose=True) # should change to exact matches
@@ -80,6 +80,6 @@ if __name__ == "__main__":
         # this condition.
         trainer.log.info("Active run exists.. ")
         mlflow.log_param("base_model_name", base_model_name)
-    with mlflow.start_run(experiment_id=experiment_id) as run:
+    with mlflow.start_run(experiment_id=experiment_id, run_name=dict_args["runner_name"]) as run:
         trainer.fit(model, data_module)
         trainer.test(model, datamodule=data_module)
