@@ -106,4 +106,14 @@ Project Link: [https://github.com/espoirMur/multilingual-drc-news-chatbot](https
 
 Run the followign command : 
 
-python trainer_qa.py --batch_size 4 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context/valid/ --n_context 2 --checkpoint_name best.ckpt
+
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context-from-wikipedia-bm25/valid/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-prarragrah-fquad-bm25
+
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/piaf-additional-with-from-wikipedia-bm25/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-paragraph-piaf-bm25
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/piaf-with-multi-context-from-wikipedia-bm25/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-pragraph-piaf-with-context
+
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context/valid/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-paragraph-fquad-valid

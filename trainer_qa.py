@@ -49,7 +49,7 @@ if __name__ == "__main__":
     if dict_args["checkpoint_name"] is not None:
         print("loading checkpoint at ", dict_args["checkpoint_name"] )
         print(10 * "****")
-        trainer = Trainer(max_epochs=5,
+        trainer = Trainer(max_epochs=2,
                           callbacks=[lr_logger, early_stopping, checkpoint_callback],
                           accelerator="auto",
                           enable_checkpointing=True,
