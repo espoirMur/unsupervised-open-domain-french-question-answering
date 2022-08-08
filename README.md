@@ -106,6 +106,7 @@ Project Link: [https://github.com/espoirMur/multilingual-drc-news-chatbot](https
 
 Run the followign command : 
 
+Experiments
 
 
 python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context-from-wikipedia-bm25/valid/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-prarragrah-fquad-bm25
@@ -117,3 +118,16 @@ python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-
 
 
 python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/train/ --val_dataset_path data/processed/french-qa/fquad-with-multi-context/valid/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-paragraph-fquad-valid
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context/test/ --val_dataset_path data/processed/french-qa/piaf-additional-with-from-wikipedia-bm25/ --n_context 1 --checkpoint_name best-v1-one-context-without-piaf.ckpt --runner_name one-paragraph-piaf-multi-context
+
+
+tmux new-session -d -s training
+  218  tmux select-window -t training
+  220  tmux attach -t training
+
+
+piaf-with-multi-context-with-or-without-answer/
+
+
+python trainer_qa.py --batch_size 1 --train_dataset_path  data/processed/french-qa/fquad-with-multi-context-with-without-answers/train --val_dataset_path  data/processed/french-qa/fquad-with-multi-context-with-without-answers/valid/ --n_context 1 --runner_name one-paragraph-train-fquad+piaf
