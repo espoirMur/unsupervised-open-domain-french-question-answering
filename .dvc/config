@@ -1,2 +1,5 @@
 ['remote "origin"']
     url = gdrive://127vsDsohnEmCvhUh7fgmcPVo1aX-8Exi
+
+
+zip -r archivename.zip directory_name
