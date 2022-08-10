@@ -23,7 +23,7 @@ if __name__ == "__main__":
     base_model_name = "plguillou/t5-base-fr-sum-cnndm"
     parser = ArgumentParser(description="drc-news-qa-lightning")
     parser.add_argument('--runner_name', type=str, help="puth the name of the runner ")
-    parser = Trainer.add_argparse_args(parent_parser=parser)
+    parser = Trainer.add_argparse_args( parent_parser=parser)
     parser = T5UQALighteningFineTuner.add_model_specific_args(parser)
     parser = T5DataModule.add_model_specific_args(parser)
     args = parser.parse_args()
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
     checkpoint_callback = ModelCheckpoint(
         dirpath=Path.cwd().joinpath("checkpoints"),
-        filename=f'{dict_args["runner_name"]}_best',
+        filename="best",
         save_top_k=1,
         verbose=True,
         monitor="f1_score",
@@ -47,9 +47,9 @@ if __name__ == "__main__":
     lr_logger = LearningRateMonitor()
 
     if dict_args["checkpoint_name"] is not None:
-        print("loading checkpoint at ", dict_args["checkpoint_name"])
+        print("loading checkpoint at ", dict_args["checkpoint_name"] )
         print(10 * "****")
-        trainer = Trainer(max_epochs=2,
+        trainer = Trainer(max_epochs=4,
                           callbacks=[lr_logger, early_stopping, checkpoint_callback],
                           accelerator="auto",
                           enable_checkpointing=True,
