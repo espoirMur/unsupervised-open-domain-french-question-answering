@@ -1,0 +1,454 @@
+,prediction,goldlabel,questions,passages_len,f1,exact,question_type,number_words,answer_length
+19,Congrès américain,Ulysses Grant, Quel personnalité officialisa la protection du parc ? ,4,0.0,0,quel,2,13
+65,chevaux de trait légers,mareyeur Boulonnais, Quelle race autre que le cob est favorisée par le changement de règlement de 1997 ? ,4,0.0,0,quel,2,19
+76,reproduction des esclaves,d’acheter un esclave, Qu'est ce qui est plus rentable que d'élever un esclave ? ,4,0.0,0,qu'est,3,20
+81,anxiété et la dépression,Sont observés également une tendance à l'auto, Quels sont les autres problèmes émotionnels et psychologiques observés ? ,4,0.0,0,quel,7,45
+82,une iconographie très riche,viennent puiser l’inspiration, Que cherche les poètes dans Pégase ? ,4,0.0,0,que,3,29
+89,Hyccara,Catane, Quelle est la ville voisine de Sicile ? ,4,0.0,0,quel,1,6
+98,l'innocence,imagination, De quoi Louisa est-elle totalement dépourvue ? ,4,0.0,0,quoi,1,11
+104,Campionissimo,Bianchi Freccia Celeste (Flèche, Comment la moto de Nuvolari est-elle surnommée ? ,4,0.0,0,comment,4,31
+113,précipite sa chute,"le rend vaniteux et, par là même, pré", Quel effet à sa victoire sur Bellérophon ? ,4,0.0,0,quel,8,37
+117,éclair,la luminosité et la splendeur, Que signifie pipa- ? ,4,0.0,0,que,5,29
+120,pyrotechnie,chimie appliquée aux arts militaires et, Qu'enseigne Monsieur Chevreuse ? ,4,0.0,0,Other,6,39
+129,ailes rapides,le pied, Quelle partie du corps de Pégase à fait jaillir l'eau ? ,4,0.0,0,quel,2,7
+141,rouge,vert, De quel couleur est l'ange musicien jouant de la vièle ? ,4,0.0,0,quel,1,4
+146,une troupe américaine de New burlesque,cinq femmes plantureuses et un homme, de qui la troupe avec laquelle Zand fait son come back est-elle composée ? ,4,0.0,0,qui,6,36
+156,se montrent trop fins et nerveux,tempérament plutôt bien adapté, Quel est l'avantage du Cob par rapport aux chevaux de sang ? ,4,0.0,0,quel,4,30
+161,des réminiscences évangéliques,l’Évangile selon Luc, À quoi fait référence le titre du premier chapitre ? ,4,0.0,0,quoi,3,20
+181,Hard Times,Nicholas Nickleby, Quel est le premier livre que Dickens écrit pour montrer la condition ouvrière ? ,4,0.0,0,quel,2,17
+184,Genèse,bon Samaritain, À quel personnage biblique est comparée Rachel ? ,4,0.0,0,quel,2,14
+194,Shinear,Babylone, A quelle ville fait référence Babel ? ,4,0.0,0,quel,1,8
+223,grec,hébreu, De quelle langue provient le nom Babel ? ,4,0.0,0,quel,1,6
+236,wapitis,peuplier faux-tremble, Sur quelle espèce d'arbre la réintroduction des loups a eu un effet ? ,4,0.0,0,quel,2,21
+238,ligne de bus PC1,boulevards des Maréchaux, Quel grand axe devrait bénéficier de ce tramway ? ,4,0.0,0,quel,3,24
+243,la fille du dieu,la foudre, Qu'utilise la déesse comme lance ? ,4,0.0,0,Other,2,9
+245,partagent la couche des prétendants,"veillent sur le foyer, préparent le festin des pr", Que font les servantes dans l'Odyssée ? ,4,0.0,0,que,9,49
+246,René Descartes,le « monde-machine », Dans quelle pensée de Descartes le canal s'inscrit-il ? ,4,0.0,0,dans,4,20
+250,"échec scolaire, et à abandonner des études",stress puis d'anxiété, Quelles sont les conséquences du harcèlement scolaire pour l'enfant Asperger ? ,4,0.0,0,quel,3,21
+252,une analogie,entre cette hauteur et la différence des températures pour les, Quelle analogie Carnot voyait-il dans les machines hydrauliques et la hauteur d'eau ? ,4,0.0,0,quel,10,62
+253,inscriptions de fondation du roi babylon,verdoyant, Qu'est-ce qui manque de son pays natal à l’épouse mède ? ,4,0.0,0,qu'est-ce,1,9
+263,stations,poste central de régulation du trafic, D'où est  controlée l'ensemble de la ligne ? ,4,0.0,0,d'ou,6,37
+268,l’amélioration des performances de la machine à vapeur,des évolutions importantes, Que promettent les travaux de Sadi Carnot ? ,4,0.0,0,que,3,26
+281,"quatre Grands Prix, en France, Allemagne, Suisse",des tracés allant de près de 364 km pour la, Quels types de tracés le championnat comporte-t-il ? ,4,0.0,0,quel,10,43
+286,grands mammifères,geysers, Quel phénomène abrite le parc en grande quantité ? ,4,0.0,0,quel,1,7
+293,dompteur de chevaux,un mariage heureux, Que signifier le dressage de pégase pour Bellérophon ? ,4,0.0,0,que,3,18
+294,cosmopolite,mal connue, Comment caractériser notre connaissance sur la vie des habitants ? ,4,0.0,0,comment,2,10
+300,terrasse,bastion Ouest, Qu'est ce qui se trouve à l'Ouest du Bâtiment perse ? ,4,0.0,0,qu'est,2,13
+305,"2,1 milliards de francs",321 millions d'euros, Quel est le coût en euros de la variante par le boulevard des Maréchaux ? ,4,0.0,0,quel,3,20
+310,inscriptions royales commémorant des travaux important,cunéiformes, En quelles écritures sont les divers textes retrouvés ? ,4,0.0,0,quel,1,11
+314,au cours du Miocène,"il y a entre 12,8 et 6,4", Quand le Méliphage à oreillons bleus s'est-il différencié des autres espèces du genre Melithreptus ? ,4,0.0,0,quand,7,24
+331,Sissy,Mrs Sparsit, Par qui est accompagné Bounderby ? ,4,0.0,0,qui,2,11
+335,Bounderby,semailles, Dans quel livre Louisa est-elle demandée en mariage ? ,4,0.0,0,dans,1,9
+336,un membre de l'equipage,l'insecte piqua le cheval ail, Qu'est-ce qui entraîne le chute de Bellérophon ? ,4,0.0,0,qu'est-ce,5,29
+347,Sarpanitu,Marduk, Qui est le père de Nabû ? ,1,0.0,0,qui,1,6
+351,Quatre-vingt-dix,soixante, Combien de chauffeurs a-t-on rajoutés pour le prolongement ? ,4,0.0,0,combien,1,8
+359,Neue mediopolis Filmproduktion,la société de production Les Films du Poisson, Quelle société a largement contribué au financement du film d'Amalric ? ,4,0.0,0,quel,8,45
+360,la Scuderia Ferrari,les monoplaces Maserati sont devenues plus performante, de quoi Nuvolari se rend-t-il compte ? ,4,0.0,0,quoi,7,54
+362,dinosaures,les chevaux, Selon Tony Attwood quel sujet est le plus souvent l'intérêt d'une fille ? ,4,0.0,0,selon,2,11
+367,renforcer le naturel de la situation et de ne,l'influence visuelle de certains films de John Cas, Que prône Amalric au sujet de son film ? ,4,0.0,0,que,8,50
+373,l'acteur réussit à surpasser la notori,toute l'équipe, Qui est éprouvé par le tournage des Aventuriers de l'arche perdue ? ,4,0.0,0,qui,2,14
+376,la mémoire des hommes,la source Castalie, Quelle est la source de l'éloquence ? ,4,0.0,0,quel,3,18
+378,célestes,les ailes, Quelle caractéristique de Pégase symbolise la nécessité de s'élever en poésie ? ,4,0.0,0,quel,2,9
+383,une seule trahison de la confiance,le plus souvent une rupture définitive, Qu'entraîne une rupture de la confiance dans une relation avec un Asperger ? ,4,0.0,0,Other,6,38
+389,le corps des lettrés du temple était recruté et,Le principal lieu de savoir de Babylone, Que représente l'Esagil ? ,4,0.0,0,que,7,39
+391,n'a pas encore piloté de voiture de la saison,dans le cadre d'essais privés destinés à, Pourquoi Nuvolari est-il invité à conduire pour Alfa Romeo en 1924 ? ,4,0.0,0,pourquoi,7,40
+420,une personne orgueilleuse,cette connaissance intime procurée par Pégase peut, Que signifie la chute de Bellérophon ? ,4,0.0,0,que,7,50
+421,chevaux ailés de Tarquinia chez,la popularité de cette créature, Que montrent les différentes versions nationales du cheval ailé ? ,4,0.0,0,que,5,31
+422,"élever au mieux, d'un besoin de contrôle",une incompréhension récurrente dans la manière de les, Quelles sont les difficultés rencontrées par certaines femmes Asperger ? ,4,0.0,0,quel,8,53
+428,au volant d'une Ansaldo 4CS,à Vérone, où Nuvolari gagne-t-il sa première course automobile ? ,4,0.0,0,ou,2,8
+461,ancienne divinité des orages connue des peuples louvit,des dieux lyciens et assyrien, D'où est issu le mythe de Pégase ? ,4,0.0,0,d'ou,5,29
+462,jalons,métaphore, Quel procédé littéraire Dickens a-t-il utilisé ? ,4,0.0,0,quel,1,9
+470,Stephen Blackpool,Bounderby, Qui dans le roman dirige l'usine ? ,4,0.0,0,qui,1,9
+482,tranquilles serviteurs aux visages impassibles e,travail abrutissant, Comment sont qualifiées les taches des ouvriers ? ,4,0.0,0,comment,2,19
+487,la guerre froide,une fuite de réacteur, Quel incident survient dans le sous-marin ? ,4,0.0,0,quel,4,21
+491,lourds et résistants,petits, Quelle est la taille des bidets ? ,4,0.0,0,quel,1,6
+493,Itti-Marduk-balattu,Muranu, Qui est le père de Ea-tabtana-bullit ? ,4,0.0,0,qui,1,6
+497,-s-,Le *-k- de *ekwo- se, Quel changement a eu lieu dans les langues anatoliennes ? ,4,0.0,0,quel,5,20
+502,8,une vingtaine, Quel est le nombre de pièces des plus grandes résidences ? ,4,0.0,0,quel,2,13
+510,conserver et protéger un centre névralgique qui,l'approche psychanalytique permet à la, Quelle vertu Myriam Noël-Winderling confère-t-elle également à l'approche psychanalytique ? ,4,0.0,0,quel,5,38
+533,son propriétaire,sa banque, Qui a repris la maison de Bourderby ? ,4,0.0,0,qui,2,9
+536,Grand Prix,la course de Nîmes, Quel Grand Prix Nuvolari remporte-t-il avant de perdre à deux reprises ? ,4,0.0,0,quel,4,18
+548,Près de Rochefort,la pointe de la Fumée à Fouras, sur quel site certaines scènes de la deuxième moitié du film ont-elles été tournées ? ,4,0.0,0,quel,7,30
+549,meilleure rentabilité socio-économique,réduction de la circulation automobile, Quelle hypothèse a été admise dans ce rapport ? ,4,0.0,0,quel,5,38
+552,à l'époque néo-babylonienne,Été, A quelle saison fait référence le seul monument connu de la partie de la ville formant un vaste triangle ? ,4,0.0,0,quel,1,3
+553,une ou deux,16 à 17 jours, Combien de temps dure la période de nichage ? ,4,0.0,0,combien,4,13
+556,symptômes,syndrome d'Asperger, De quelle forme d'autisme Will Graham est-il atteint ? ,4,0.0,0,quel,2,19
+582,Plusieurs de ses compatriotes,Hormuzd Rassam, Qui rapporte des objets de choix au British Museum ? ,4,0.0,0,qui,2,14
+583,pollen,banane, Quel fruit mange les méliphages ? ,4,0.0,0,quel,1,6
+585,reformer le processus de nomination,de ne point se joindre au syndicat, Quelle promesse est faite par Stephen ? ,4,0.0,0,quel,7,34
+590,lettres en capitales jaunes,cette affiche est un hommage à celles dessinées, Qu'est-ce que constitue l'affiche selon Alain Korkos ? ,4,0.0,0,qu'est-ce,8,47
+591,30 octobre 552,au début de l'année 554, Quand Narsès conquit-il finalement Culmes ? ,4,0.0,0,quand,5,23
+596,poursuit en tête et termine vainqueur,Nuvolari outrepasse la consigne, Nuvolari obéit-il ? ,4,0.0,0,Other,4,31
+599,englobant ses différentes parties,plus fortes, Quelle est la caractéristique des enceintes de la ville intérieure ? ,4,0.0,0,quel,2,11
+602,people mutht be amuthed,zozote, Quel est l'handicape de Sleary ? ,4,0.0,0,quel,1,6
+622,sachant parler,la faute, Dans quel sentiment tombe Emma ? ,4,0.0,0,dans,2,8
+630,vétérinaire-dresseur de chevaux,artiste de cirque, Quel était le métier du père de Gradgind ? ,4,0.0,0,quel,3,17
+645,progressivement,montés, Comment a évolué le niveau du fleuve pendant la période néo-babylonienne ? ,4,0.0,0,comment,1,6
+646,Mrs Sparsit,Sissy, Qui est destinée à servir chez les Gradgrind ? ,4,0.0,0,qui,1,5
+666,La question du financement,Jeux olympiques de 2012, Quel évènement a fait changer les projets initiaux ? ,4,0.0,0,quel,4,23
+669,Dickens,Mozart et celle de Weber, Quels compositeurs ont aidé Stuart Mil a sortir de sa dépression ? ,4,0.0,0,quel,5,24
+671,La bride,Athéna, Qui offre l'objet permettant de tempérer la fougue poétique  ? ,4,0.0,0,qui,1,6
+674,licencie Vittorio Jano,Alfa Romeo se retire de la compétition, Que fait Alfa Romeo avant même la fin de la saison ? ,4,0.0,0,que,7,38
+681,huitième,avec un corset en plâtre, Dans quel état Nuvolari reprend-il la course après son accident à Tripoli ? ,4,0.0,0,dans,5,24
+682,vocabulaire,l’Athénien asservi reste Athéni, Qu'est ce qui diffère entre la servitude pour dettes et la servitude classique ? ,4,0.0,0,qu'est,4,31
+683,l'Euphrate,Nabuchodonosor II, Sous quel roi est construite l'enceint extérieure ? ,4,0.0,0,Other,2,17
+686,caveaux voûtés,niches, Dans quoi sont glissés les sarcophages des plus riches ? ,4,0.0,0,dans,1,6
+689,Everybody Comes to Rick's,Algiers, Quel est le titre original de Casbah ? ,4,0.0,0,quel,1,7
+693,processus d’éjection de vapeurs,geysers, Quel phénomène naturel a de l'eau à température élevée ? ,4,0.0,0,quel,1,7
+704,alourdissement général,production de viande, Quel sort évite le cob normand ? ,4,0.0,0,quel,3,20
+716,fantastique,Apparences, Quel est le titre du film ? ,4,0.0,0,quel,1,10
+721,"au dieu de la cité, Marduk",aux divinités Ishtar et Zababa, A qui est dédiée la troisième cour principale ? ,4,0.0,0,qui,5,30
+727,Stephen,Mose, À quel personnage biblique de Slackbridge fait-il référence ? ,4,0.0,0,quel,1,4
+729,deuxième loi de la thermodynamique également appelée principe de,il est impossible de produire de la puissance motrice à, ?$Qu'énonce le corollaire de l'idée principale des Réflexions ? ,4,0.0,0,Other,10,55
+735,fond blanc,panneaux de limitation de vitesse, Sur quoi sont indiquées les vitesses ? ,4,0.0,0,quoi,5,33
+740,des préoccupations purement techniciennes,"toute centrale énergétique, toute automobile, tout moteur à réaction", Quelles conceptions s'appuient sur le travail de Sadi Carnot ? ,4,0.0,0,quel,9,68
+748,Mgr d'Anglure,Louis XIV, Quel roi est au pouvoir en 1662 ? ,4,0.0,0,quel,2,9
+750,la Renommée des gestes des conquerants,"monstre portant deux cornes sur la tête, avec", à quoi ressemble pégase selon l'auteur anonyme ? ,4,0.0,0,quoi,8,45
+760,le premier,Nabuchodonosor II, Qui a achevé les transformations de la ville ? ,4,0.0,0,qui,2,17
+768,1642,1635, Quand commence la construction du canal de Briare ? ,4,0.0,0,quand,1,4
+769,odieuse uniformité de la vie qu’on y,temps, Quelle notion ne s'arrête pas dans le livre et semble inexorable ? ,4,0.0,0,quel,1,5
+770,Cosmo Vitelli,par Ben Gazzara, Par qui est joué le personnage dont est inspiré celui de Joachim Zand ? ,4,0.0,0,qui,3,15
+772,2004,années 1970, Depuis quand les mesures sont prises sur le terrain ? ,4,0.0,0,depuis,2,11
+775,Magasin d'antiquités,John Forster, Qui aurait interdit la publication du texte de Dickens ? ,4,0.0,0,qui,2,12
+779,fleuves,le débit, Qu'est ce qui est facile à gérer pour un canal ? ,4,0.0,0,qu'est,2,8
+792,robotisation,esclave, Quel veut dire robot dans les langues nordiques ? ,4,0.0,0,quel,1,7
+806,380 cm,182, Combien de hauteur de neige tombe-t-il au moins par an ? ,4,0.0,0,combien,1,3
+821,l'imagination et l'inspiration,"symbolique positive du cheval, soit la fougue, l'", Selon le Dictionnaire des symboles que représente Pégase ? ,4,0.0,0,selon,8,49
+822,au domaine des dieux,Une profonde symbolique ésotérique, à quoi est rattachée l'énergie spirituelle ? ,4,0.0,0,quoi,4,34
+824,réduisant ainsi encore la perte de chaleur,condensa la vapeur dans un cylindre, Quel est le fonctionnement de la solution proposé par James watt ? ,4,0.0,0,quel,6,35
+827,322  190 m,18, Quelle est l'épaisseur minimale en mètre des murs du bastion Ouest ? ,4,0.0,0,quel,1,2
+829,"Pégase, premier cheval dressé",à une jeune femme qui n'a pas encore subi, à quoi Jacques desquels compare Pégase ? ,4,0.0,0,quoi,9,41
+830,la trace de Louisa,sa mère se meurt, Que se passe-t-il à Stone Lodge ? ,4,0.0,0,que,4,16
+841,un grand nombre d'addictions,treize souffrent d'alcoolisme sévère," Concernant les addictions, qu'est-ce qui a été révélé par l'étude de 2004 sur 100 hommes Asperger ? ",4,0.0,0,Other,4,36
+850,capitaines d'industrie,nouveaux riches," À travers Boudarby, qui Dickens critique-t-il ? ",4,0.0,0,Other,2,15
+852,2008,début 2015, Quand le Pentagone a-t-il révélé son rapport supposant Vladimir Poutine atteint d'Asperger ? ,4,0.0,0,quand,2,10
+858,River,Max Breverman, Quel personnage de la série Parenthood est-il atteint du SA ? ,4,0.0,0,quel,2,13
+869,interactions sociales,leur centre d’intérêt, Quel est le sujet préféré des Asperger ? ,4,0.0,0,quel,3,21
+874,trouble envahissant du développement,TSA, Quelle est l'abréviation donnée à trouble du spectre de l'autisme ? ,4,0.0,0,quel,1,3
+877,John Cassavetes,Colette, Tournée s'inspire du travail d'un écrivain du début du XXème siècle. De qui s'agit-il ? ,4,0.0,0,Other,1,7
+887,Sylvère Monod,Barnaby Rudge, À quel roman fait suite Le Conte des deux cités ? ,4,0.0,0,quel,2,13
+903,a sous-estimé les inimitiés e,Joachim tombe amoureux, quel est le comble quant aux problèmes rencontrés par Zand à son arrivée à Paris ? ,4,0.0,0,quel,3,22
+905,54 °C,1933, Quand le minimum de température a-t-il été atteint ? ,4,0.0,0,quand,1,4
+939,George Lucas,Le public," Qui est demandeur de ces films, selon l'acteur Harrison Ford ? ",4,0.0,0,qui,2,9
+946,500 km,cinq, Par combien d'endroit peut-on rentrer dans le parc ? ,4,0.0,0,combien,1,4
+950,à l'extase du chaman,"du mythe d'Icare, des sandales de", à quoi peut-on relier les ailes de Pégase ? ,4,0.0,0,quoi,6,33
+952,un projet de loi en débat au parlement,Sabbath Observances Bill, Qu'est ce qui était visé par le pamphlet de Dickens ? ,4,0.0,0,qu'est,3,24
+958,États-Unis,Wyoming, Le yellowstone est en haut de quel état ? ,4,0.0,0,Other,1,7
+960,ses strip-teaseuses,leur « ringardise et nia, Que reproche Joachim Zand aux femmes dans le couloir d'un hôtel impersonnel ? ,4,0.0,0,que,5,24
+964,120 mètres,plus petite, Quelle est sa taille par rapport au palais Sud ? ,4,0.0,0,quel,2,11
+974,par une enceinte formant une seule entité avec l,cours actuel du fleuve, Par quoi le deuxième ensemble est-il recouvert ? ,4,0.0,0,quoi,4,22
+975,Monod,Dickens, Qui a écrit le conte de deux cités ? ,4,0.0,0,qui,1,7
+983,janvier 1854,automne 1853, Quand a commencé la mobilisation ouvrière ? ,4,0.0,0,quand,2,12
+986,rivières,ponts-canaux, De quoi est jalonné le canal ? ,4,0.0,0,quoi,1,12
+988,jaune,bleues, Quelle est la couleur des joues de l'oiseau ? ,4,0.0,0,quel,1,6
+990,comme disparues,uvres mineures, Comment sont considérés les deux panneaux ? ,4,0.0,0,comment,2,14
+1005,Nabuchodonosor II,mède, Pour qui sont construits les Jardins suspendus ? ,4,0.0,0,pour,1,4
+1006,sans peur et sans reproches,quelque peu lâche, Comment est le personnage que joue Harrison Ford ? ,4,0.0,0,comment,3,17
+1018,écluse de la Garonne,lac de Saint-Ferréol, Où est posée la première pierre de l'entreprise commencée en janvier ? ,4,0.0,0,ou,3,20
+1024,ancien cours,gauche, De quel coté de l'Euphrate se situe le centre de la ville de Babylone ? ,4,0.0,0,quel,1,6
+1025,plateaux de tournage,la grande liberté et la folle ambiance, de quoi les filles de la troupe bénéficiaient-elles ? ,4,0.0,0,quoi,7,38
+1027,carrée,91 m de côté, Quelle est la dimension de la base de la ziggurat ? ,4,0.0,0,quel,4,12
+1044,les transgressions qui empêchent Rick de rentrer,freudienne, Quelle est la lecture de Greenberg ? ,4,0.0,0,quel,1,10
+1046,Toulouse,Béziers, De quelle ville part la commission ? ,4,0.0,0,quel,1,7
+1047,aux côtes,au fin fond de la Tunisie, Où est-ce que Harrison Ford se blesse-t-il ? ,4,0.0,0,ou,6,25
+1054,son patron,Slackbridge, Qui brise la confiance de Stephen Blackpool ? ,4,0.0,0,qui,1,11
+1056,35 $,20 $, Combien coûte l'entrée dans le parc pour une personne à pied ? ,4,0.0,0,combien,2,4
+1059,Nouveau Testament,Bible, À quel livre Dickens fait-il référence ? ,4,0.0,0,quel,1,5
+1061,autres,contraintes de publication, Qu'est ce que n'aimait pas Dickens ? ,4,0.0,0,qu'est,3,26
+1062,porter l'attribut de Zeus,transmettre des messages entre les différentes divinités, Que fait pégase pour Zeus ? ,4,0.0,0,que,7,56
+1069,platanes,iris, Quelle fleur est plantée le long du canal ? ,4,0.0,0,quel,1,4
+1073,il peut faire annuler la vente,marques au fer rouge, Quelle est la punition pour un esclave fugitif ? ,4,0.0,0,quel,4,20
+1076,bâtiment de forme trapézodale,bastion Ouest, Quel bâtiment se trouve à coté du palais Sud ? ,4,0.0,0,quel,2,13
+1080,une attention particulière,brumeux, Quel effet a le filtre appliqué à Ingrid Bergman ? ,4,0.0,0,quel,1,7
+1091,son site,l'emplacement, Qu'est-ce qui n'a jamais été oublié de Babylone ? ,4,0.0,0,qu'est-ce,1,13
+1098,se lit en creux,Louisa s'enfuit, Que fait Louisa à la fin de la scène ? ,4,0.0,0,que,2,15
+1114,bénéfice,une somme très importante, Que représente 950000 livres pour l'époque ? ,4,0.0,0,que,4,25
+1120,partager de la vie quotidienne,à suivre des routines inflexibles, Qu'ont tendance à aimer les Asperger ? ,4,0.0,0,Other,5,33
+1128,L’industrie du bâtiment,le salaire, Qu'est-ce qui ne diffère pas entre esclaves et hommes libres ? ,4,0.0,0,qu'est-ce,2,10
+1140,l'esprit du dénouement original,La fin, Qu'est ce qui est modifié dans le film re-monté ? ,4,0.0,0,qu'est,2,6
+1141,soumettre les royaumes qui l'entourent,victoire, Que manquait-il à la première partie du règne de Hammurabi ? ,4,0.0,0,que,1,8
+1154,un défi,le diagnostic différentiel du syndrome d'Asperger, Dans la pratique clinique quelle difficulté peut-on rencontrer dans l'élaboration du diagnostic du syndrome d'Asperger ? ,4,0.0,0,dans,6,49
+1158,Alcman,nourrices spartiates, Qui est très prisé par des aristocrates athéniens ? ,4,0.0,0,qui,2,20
+1160,métaphoriquement,en épisodes, Comment est découpée l'histoire ? ,4,0.0,0,comment,2,11
+1167,une Cisitalia-Abarth 204,course de côte à Palerme, de quel type la dernière course disputée par Nuvolari est-elle ? ,4,0.0,0,quel,5,24
+1172,30 juin 2010,décembre 2012, Quand le film est-il passé à la télévision québécoise ? ,4,0.0,0,quand,2,13
+1177,Columbia,Missouri, Quel fleuve rejoint la Yellowstone ? ,4,0.0,0,quel,1,8
+1179,Hygin,Hésiode, Qui a écrit Théogonie ? ,4,0.0,0,qui,1,7
+1194,triangulaire,trapèze, Quelle est en réalité la forme de l'enceinte extérieure ? ,4,0.0,0,quel,1,7
+1224,meilleurs producteurs de l'année écoulée,le prix Daniel Toscan du Plantier," Quelle récompense les deux productrices principales du film Tournée, Yaël Fogiel et Laetitia Gonzalez, ont-elles obtenue ? ",4,0.0,0,quel,6,33
+1229,ahuru,la dernière, Sur quelle terrasse se trouve un temple haut ? ,4,0.0,0,quel,2,11
+1230,Indy,Allan Quatermain, Comment s'appelle le personnage principal du film ? ,4,0.0,0,comment,2,16
+1231,Bellérophon,Hésiode, Qui a écrit une version antérieure à celle de Pindare ? ,4,0.0,0,qui,1,7
+1237,rente d'invalidité,un environnement de travail adapté, De quoi bénéficient les personnes atteintes du syndrome d'Asperger pour être intégrées sur le marché de l'emploi ? ,4,0.0,0,quoi,5,34
+1253,lobe frontal et les régions temporales,cerveau social, Quel cerveau présente un dysfonctionnement chez les personnes Asperger ? ,4,0.0,0,quel,2,14
+1261,Je me demande : « Où est-elle?,reste muette, Quelle est la réaction de Louisa ? ,4,0.0,0,quel,2,12
+1264,persuadée qu'elle va céder,se rend indispensable à Bounderby, Que fait Mrs Sparsit ? ,4,0.0,0,que,5,33
+1265,immigrés juifs,"Minsk, en Biélorussie", Quelle est l'origine des grand-parents maternels de Harrison Ford ? ,4,0.0,0,quel,3,21
+1267,"Penya-Rhin, de Hongrie et de",il remporte les Grands Prix de Penya-R, A quelles courses Nuvolari monte-t-il sur le podium après ses aventures à Tripoli ? ,4,0.0,0,quel,7,38
+1279,Nathaniel Hawthorne,Méduse, Qui possède des ailes en or ? ,4,0.0,0,qui,1,6
+1300,géométriquement,marionnette, À quel objet est comparé Gradgrind ? ,4,0.0,0,quel,1,11
+1310,un bras,temple du grand dieu local Marduk, Qu'est ce que l'Esagil ? ,4,0.0,0,qu'est,6,33
+1312,un drapeau rouge pour le ralentir et,l'écurie peut se permettre de choisir le classement, Comment la domination d'Alfa Romeo se manifeste-t-elle en France ? ,4,0.0,0,comment,8,51
+1317,"des critiques français et internationaux, ainsi que des spectateurs",à sa diffusion auprès d'un plus large, à quoi le succès du film a-t-il participé ? ,4,0.0,0,quoi,7,37
+1333,trop passager et trop léger [...] pour être une réussite »,le film ne devrait pas rencontrer de succès commercial h," Quel avis formulent les critiques du Hollywood Reporter, de Screen et du Guardian ? ",4,0.0,0,quel,10,56
+1338,T, New York Times,The Independent, Quel journal anglais a souligné positivement la touche décontractée et improvisée du film ? ,4,0.0,0,quel,2,15
+1342,d'utiliser la ligne ferroviaire de Petite Cein,l'utilisation de la voiture," Pour les opposants, qu'essaient de réduire la mairie de Paris avec ce projet ? ",4,0.0,0,pour,4,27
+1363,Iobatès,Bellérophon, Qui doit tuer la chimère ? ,4,0.0,0,qui,1,11
+1365,une vitesse commerciale de 15 à 20 km/h pour un,les correspondances avec les lignes de bus et le, Quel est l'intérêt de la solution par le boulevard des Maréchaux ? ,4,0.0,0,quel,9,48
+1371,Bounderby,Gradgrind, Quel personnage tente d'oublier son passé ? ,4,0.0,0,quel,1,9
+1376,cris,Méliphage à cou jaune, À quelle autre espèce ressemble le chant du Méliphage à oreillons bleus ? ,4,0.0,0,quel,4,21
+1379,bosquet,DINGIR, Comment écrire Dieu en sumériens ? ,4,0.0,0,comment,1,6
+1380,palais du Maharadjah,aux États-Unis, Où l'acteur doit-il être soigné ? ,4,0.0,0,ou,2,14
+1383,8C,une Tipo A, Quelle est la voiture de Nuvolari pour la compétition en Italie ? ,4,0.0,0,quel,3,10
+1395,des ennuis avec son passé qui bientôt le rattrap,"une ancienne maîtresse, un créancier flou", Quels sont les problèmes que Zand rencontre-t-il à son retour à Paris ? ,4,0.0,0,quel,6,41
+1397,rafraîchir des pièces,défensive, Quelle est la fonction du palais d'été ? ,4,0.0,0,quel,1,9
+1406,Sleary,Royal Amphitheatre d'Astley, De quel cirque Dickens s'est-il inspiré pour les spectacles ? ,4,0.0,0,quel,3,27
+1424,la RATP,la Cour des comptes, Quel organisme est chargé du contrôle de la performance des lignes ? ,4,0.0,0,quel,4,19
+1436,bol,de petits bâtons et de morceaux d, Qu'est ce qui est utilisé pour faire les nids des méliphanges ? ,4,0.0,0,qu'est,7,33
+1437,T, fin du règne de Nabû-shum-,le début d'un chaos, Que marque 1025 av. J.-C. pour Babylone ? ,4,0.0,0,que,4,19
+1475,loue un millier d’esclaves aux mines,stratège, Quel est le rôle de Nicias ? ,4,0.0,0,quel,1,8
+1477,misérable,le narrateur, Qui qualifie de jeune monstre ? ,4,0.0,0,qui,2,12
+1480,afin de ne pas « tuer l'action,"pouvoir recruter, sans frais pour un film à petit budget,", pourquoi Amalric décide-t-il d'inviter gratuitement les gens à assister aux scènes de spectacle pour le tournage de son film ? ,4,0.0,0,pourquoi,10,57
+1481,le cur a pu l'accompli,"something, not an Ology at all, that your father had missed", Que dit Mrs Gradgring juste avant de mourir ? ,4,0.0,0,que,11,59
+1487,Dita von Teese,dans les années 1970, Quand a eu lieu le renouveau du New burlesque ? ,4,0.0,0,quand,4,20
+1498,Bounderby,Harthouse, Qui tente de séduire Louisa ? ,4,0.0,0,qui,1,9
+1500,Horodote et Ctésia,politique de la ville, Sur quelle organisation les textes donnent-ils des informations ? ,4,0.0,0,quel,4,21
+1501,voltige,majorité des disciplines équestres, A quoi s'adapte la race de cheval en question ? ,4,0.0,0,quoi,4,34
+1508,"mauvaises interprétations, ou bien trop littérales",des intonations inhabituelles (dysproso, Quels défauts peuvent-être observés dans le langage des Asperger ? ,4,0.0,0,quel,4,39
+1511,assez peu,seulement 17 minutes sur les 110 minutes totales, Que représentent les scènes de spectacles par rapport à la durée du film ? ,4,0.0,0,que,8,48
+1523,cerf,termine en trophée dans son salon, Qu'advient-t-il de l'animal percuté par Nuvolari au cours des essais ? ,4,0.0,0,Other,6,33
+1526,dépression,un trouble du déficit de l'attention ou souffrent, de quoi souffrent plus de la moitié des personnes ayant fait l'objet de l'étude de 2015 ? ,4,0.0,0,quoi,8,49
+1528,une dizaine,un seul, Combien de réservoirs vont finalement être construits ? ,4,0.0,0,combien,2,7
+1556,une fausse clef,un vol, Que se passe-t-il à la banque une nuit ? ,4,0.0,0,que,2,6
+1559,est,vers le sud, Dans quel direction le chevet est-il décalé ? ,4,0.0,0,dans,3,11
+1561,mythe de Bellérophon,du thème de Roger chevauchant l’hippogriff, La figure de Persée chevauchant Pégase est une combinaison de quels mythes ? ,4,0.0,0,Other,6,42
+1568,une seule,une, Combien de nomination pour l'Oscar du meilleur acteur Harrison Ford a-t-il ? ,4,0.0,0,combien,1,3
+1579,un portrait légèrement caricatural d'un petit Jo,le titre est composé de lettres en capitales jaunes, Comment le mot Tournée est-il représenté sur l'affiche ? ,4,0.0,0,comment,9,51
+1580,Tom,les Bounderby, Chez qui James est-il invité ? ,4,0.0,0,Other,2,13
+1583,Beaucoup de témoignages,les animaux de compagnie, Qu'est-ce qui peut permettre de diminuer le sentiment de solitude ? ,4,0.0,0,qu'est-ce,4,24
+1591,météorologie ou en géophysique,à la fois à sa connaissance du fonctionnement des machines, à quelles compétences Carnot fait-il appel lors de l'écriture de ses textes ? ,4,0.0,0,quel,10,58
+1596,souvenir du passé de Babylone,pêché d'orgueil des hommes frappés, Que représente la tour de Babel chez les chrétiens ? ,4,0.0,0,que,5,34
+1598,le Ciel et la Terre,centre du monde, Où sont reliés terre et ciel ? ,4,0.0,0,ou,3,15
+1599,le premier,Nabopolossar, Qui a initié les transformations de Babylone ? ,4,0.0,0,qui,1,12
+1601,Service des Parcs Nationaux arrêta la chasse au loup,Endangered Species Act, Quel décision protégea le loup ? ,4,0.0,0,quel,3,22
+1611,augmentation du nombre de diagnostics,« une épidémie de syndrome d'Asperger, Comment Laurent Mottron illustre-t-il la notion de diagnostic abusif au Québec ? ,4,0.0,0,comment,6,37
+1631,commandant Marko Ramius,analyste de la CIA, Quel est le travail de Jack Ryan ? ,4,0.0,0,quel,4,18
+1635,supposer qu'ils dérivent d'une ex,l'inexistence des jardins, Quelle est l'autre idée pour clore le débat des Jardins de Babylone ? ,4,0.0,0,quel,3,25
+1636,celui qui vendit son droit d'aînesse pour un,traître à la cause ouvrière, De quoi Slackbridge accuse-t-il Stephen ? ,4,0.0,0,quoi,5,27
+1637,vin,céréales, Quel prix chute en 1660 ? ,4,0.0,0,quel,1,8
+1639,1775 à 1780,1810, A partir de quand le canal passe-t-il par Carcassonne ? ,4,0.0,0,partir,1,4
+1640,"1. According to Cocker (« Selon Cocker »), 2.","6, 13 et 14", Quels titres Dickens retient-il ? ,4,0.0,0,quel,4,11
+1666,un personnage disposant d'une dimension cynique,Han Solo, Quel rôle Harrison joue-t-il dans Star Wars ? ,4,0.0,0,quel,2,8
+1674,31 mars 2014,24 novembre 2018, Quand le prolongement de la ligne T3b a-t-il été ouvert ? ,4,0.0,0,quand,3,16
+1676,non,des enfants, Quel type de personnes ont été diagnostiquées ? ,4,0.0,0,quel,2,11
+1680,hippocampe,le centaure," Comment nomme-t-on la créature mi-homme, mi-cheval ? ",4,0.0,0,comment,2,11
+1700,l’hippogriffe,un monstre marin, Que combat Roger pour délivrer angélique ? ,4,0.0,0,que,3,16
+1707,l'allégorie de l'escalier,Louisa descendre inexorablement les marches, Qu'est-ce que Mrs Sparsit voit en esprit ? ,4,0.0,0,qu'est-ce,5,43
+1708,cylindre d'argile,une soixantaine, A combien de kilomètre de Babylone se situe la nouvelle capitale ? ,4,0.0,0,combien,2,15
+1713,ales,aerlus equus, comment dit-on cheval ailé en latin ? ,4,0.0,0,comment,2,12
+1722,25 %,50 %, De combien a été réduite la circulation automobile boulevards des Maréchaux ? ,4,0.0,0,combien,2,4
+1723,destinés à briser sa force lors des crue,perpendiculaires au courant, Comment était disposés les murets par rapport au courant ? ,4,0.0,0,comment,3,27
+1724,maximiser ses profits,condenser, Qu'essaie de faire Dickens avec son oeuvre North and South ? ,4,0.0,0,Other,1,9
+1741,Gary Oldman,Harrison Ford, Qui est suggéré par Kevin Costner lui-même pour le remplacer ? ,4,0.0,0,qui,2,13
+1744,officier,concessionnaire automobile, Quel métier Nuvolari exerce-t-il après la guerre ? ,4,0.0,0,quel,2,26
+1749,l'Iliade,Dans la version de l'histoire de Bellérophon fournie, Dans quel version de l'histoire de Bellérophon Pégase n'est-il pas mentionné ? ,4,0.0,0,dans,8,52
+1752,une fuite poussée dans l'imaginaire,ce risque d'évolution semble relativement faible, Quel est le risque d'évolution du syndrome d'Asperger vers une schizophrénie ? ,4,0.0,0,quel,6,48
+1754,L'Envers du music-hall,le quatrième long-métrage de Mathieu Amalric, Quel est le film dont-il est question ? ,4,0.0,0,quel,6,44
+1773,l'usine,école, Dans quoi Mr Gradgrind travaille-t-il ? ,4,0.0,0,dans,1,5
+1781,sources et aux fontaines,la source Hippocrène de l'Hélicon, Quelles sources sont apparues grâce à Pégase ? ,4,0.0,0,quel,5,33
+1785,"l'hôpital, la prison, l'hôtel de",machines à vapeur, Quels éléments sont très bruyants dans la ville ? ,4,0.0,0,quel,3,17
+1786,rectilignes,étroites, Qu'est-ce qui caractérise la largeur des rues du seul quartier d'habitation fouillé ? ,4,0.0,0,qu'est-ce,1,8
+1796,banque,choux, Quelle plant Bourderby installe-t-il chez lui ? ,4,0.0,0,quel,1,5
+1797,la difficulté à trouver leur place vis-à-vis des,ces personnes ont construit des défenses psychiques en réponse," Selon le psychanalyste Henri Rey-Flaud, à quelle difficulté les personnes Asperger sont-elles confrontées en termes de pensée visuelle et de symbolisation et relation à l'objet ? ",4,0.0,0,selon,9,62
+1801,pression et d’un volume à une autre,qui se dilatent ou sont comprimés d’une, Selon Carnot dans quelles situations tous les gaz absorbent ou dégagent de la chaleur ? ,4,0.0,0,selon,7,39
+1813,place un de ses fils sur le trône,révoltes, A quoi doit faire face Sennacherib ? ,4,0.0,0,quoi,1,8
+1824,selon leur statut,La condition, Qu'est-ce qui varie pour les esclaves ? ,4,0.0,0,qu'est-ce,2,12
+1837,ligne de tramway,T3, Quelle est la ligne la plus fréquentée entre le T1 et le T3 ? ,4,0.0,0,quel,1,2
+1840,Sleary,Bitzer, Qui détenait Tom ? ,4,0.0,0,qui,1,6
+1845,à la fin des années 1980,1988, Quand y-a-t-il eu des feus sur les bâtiments ? ,4,0.0,0,quand,1,4
+1853,entraînement aux compétences sociales,par la reconnaissance des émotions et de la communication, par quoi le guide recommande-t-il de commencer ? ,4,0.0,0,quoi,9,57
+1857,revanchard,fait alors obstacle à son recrutement, quelle attitude Varzi adopte-t-il quant au recrutement de Nuvolari ? ,4,0.0,0,quel,6,37
+1860,304,soixante-dix-huit, Combien de personnes peuvent s'assoir dans les rames ? ,4,0.0,0,combien,1,17
+1862,une publication dans le Recueil des Savants étranger,une présentation à l’académie sous forme, Qu'est-ce qui aurait permis une meilleure visibilité au sein de la communauté scientifique pour les travaux de Sadi Carnot ? ,4,0.0,0,qu'est-ce,6,40
+1877,1 645,217 meutes, Combien y a-t-il de groupement de loups ? ,4,0.0,0,combien,2,10
+1887,immense caldeira,Lava Creek Tuff, Quel élément géloogiue fut créé par l'éruption du volcan ? ,4,0.0,0,quel,3,15
+1897,se sépare,un certain nombre est revendu en Afrique du Sud, Qu'advient-il des véhicules dont se servait Nuvolari pour ses courses ? ,4,0.0,0,Other,9,47
+1905,tout d'empathie,les signaux sociaux, Qu'est-ce que les Asperger ne perçoivent pas chez leurs interlocuteurs ? ,4,0.0,0,qu'est-ce,3,19
+1906,de l'époque de Pierre-Paul Riquet,après la finalisation du canal, De quand datent la majorité des ponts-canaux ? ,4,0.0,0,quand,5,30
+1907,tramway,boulevards de Maréchaux, L'utilisation de quel axe a été critiquée par les opposants ? ,4,0.0,0,Other,3,23
+1928,hiéroglyphe hittite asu ou asuw,*ekwo-, Quel est le terme d'origine du mot cheval ? ,4,0.0,0,quel,1,6
+1940,un film rendant hommage aux serials de leur enfance,Indiana Jones, Quel est le titre de la saga ? ,4,0.0,0,quel,2,13
+1945,Castelnaudary,Narbonne, Où habite le cardinal ? ,4,0.0,0,ou,1,8
+1948,sur le coup,s'effraie en regardant la terre, Comment meurt Bellérophon ? ,4,0.0,0,comment,5,31
+1954,L'étude de l'esclavage en Gr,La documentation, Qu'est-ce qui est disparate et très fragmentaire ? ,4,0.0,0,qu'est-ce,2,16
+1960,un sommeil mauvais,il est sur la scène d'un théâtre et, Quel est le cauchemar ? ,4,0.0,0,quel,8,35
+1973,J.-C,perse, Qui conquiert Babylone et son empire ? ,4,0.0,0,qui,1,5
+1982,entendre parler,argumenter avec son mari, Pour quoi n'a-t-elle pas la force ? ,4,0.0,0,pour,4,24
+1993,Belgique,"en Allemagne, en Suisse et en", Dans quels autres pays le cob est aussi exporté ? ,4,0.0,0,dans,6,29
+1998,arthropodes,mouches, Quel espèce est présente toute l'année ? ,4,0.0,0,quel,1,7
+2000,Sissy,Harthouse, Qui cherche les faveur de Louisa ? ,4,0.0,0,qui,1,9
+2005,"les geysers, les fumerolles, les",les bisons (surtout en hiver e, Quels animaux peuvent être vus ? ,4,0.0,0,quel,6,30
+2010,sentiment de fierté,toute association entre le syndrome et une maladie mentale, Que réfutent certaines personnes Asperger sur Internet ? ,4,0.0,0,que,9,58
+2022,simples de la théorie de l'esprit,aux tests complexes, à quels tests les personnes Asperger se distinguent des sujets contrôles ? ,4,0.0,0,quel,3,19
+2047,Washington,Sunset Boulevard, Dans quel lieu les frères Epstein trouvent-ils la fin du film ? ,4,0.0,0,dans,2,16
+2053,Elle humilie son fils,soupçonnée, Pourquoi la vieille femme est-elle arrêtée ? ,4,0.0,0,pourquoi,1,10
+2065,Bellérophon,Pégase, Qui réussit à arriver à l'Olympe ? ,4,0.0,0,qui,1,6
+2077,remise aux vingt et une rames de tramway,"opérations d'inspection, de réparation ou encore", Que réalisent-ont sur les rames dans ce centre de maintenance ? ,4,0.0,0,que,6,48
+2102,monde-machine,la Nature ne peut pas être contrecarrée mais qu, Que pense Descartes ? ,4,0.0,0,que,9,47
+2130,pendant toute l'évolution humaine récente,constituent une contribution remarquable à l'histoire de l', Qu'estime Simon Baron-Cohen à propos des gènes responsables du syndrome d'Asperger ? ,4,0.0,0,Other,8,59
+2131,rejoint l'écurie officielle Maserati,"deux contre-performances, à Penya-Rhin", Que subit Nuvolari après sa victoire à Nîmes ? ,4,0.0,0,que,4,38
+2140,la grande période de temps qui s'écoule entre la,l'iconographie de Bellérophon et P, Qu'est-ce qui a influencé l'iconographie des saints sauroctones d'après certains historiens ? ,4,0.0,0,qu'est-ce,5,34
+2162,un portrait acide de la bourgeoisie dont la fortune,Dombey et Fils, Qu'est-ce qui est paru il y a 6 ans ? ,4,0.0,0,qu'est-ce,3,14
+2168,North Fork,36 %, Quelle part du Yellowstone fut dévasté ? ,4,0.0,0,quel,2,4
+2180,Scuderia Ferrari,Auto Union, Pour quelle écurie Nuvolari court-il le Grand Prix de Suisse ? ,4,0.0,0,pour,2,10
+2203,Harthouse,engrangement, Comment s'appelle le dernier livre ? ,4,0.0,0,comment,1,12
+2206,en utilisant des critères élargis,transmission génétique, Comment le symptôme se transmet-il probablement ? ,4,0.0,0,comment,2,22
+2208,les Amazones et les Solymes,les pirates de Carie puis la garde royale lyc, Qui est vaincu par Bellérophon seul ? ,4,0.0,0,qui,9,45
+2218,Ascari,les deux jambes brisées, Quelle blessure Nuvolari se fait-il au Grand Prix d'Italie en 1924 ? ,4,0.0,0,quel,4,23
+2228,Capricorne,"le Territoire du Nord, le Queensland et la Nouvelle", Dans quelle région le Méliphage ne bouge pas beaucoup ? ,4,0.0,0,dans,9,51
+2232,ces nouveaux riches font une mauvaise utilisation de leur argent,mobilité sociale, Quel concept ou croyance Dickens remet-il en cause avec l'exemple de Bounderby ? ,4,0.0,0,quel,2,16
+2233,tranche la tête,de tuer Méduse, Que doit faire Persée ? ,4,0.0,0,que,3,14
+2239,l'exemple d'adolescents As,que « le désir de corriger l'erreur prime sur, Qu'illustre l'exemple pris par Tony Atwood pour des personnes asperger ? ,4,0.0,0,Other,9,45
+2249,synesthésie,d'une mémoire exceptionnelle, De quel atout intrinsèque Daniel Tammet bénéficie-t-il ? ,4,0.0,0,quel,3,28
+2250,Great Harwood,Preston, Dans quelle vill Grimshaw a-t-il participé aux grèves ? ,4,0.0,0,dans,1,7
+2253,espèces des genres Chalcopteroides et,coléoptères, À quelle espèce appartiennent les Melolonthinae ? ,4,0.0,0,quel,1,11
+2269,Richard Darbois,Francis Lax, Qui était la première voix française de Harrison Ford ? ,4,0.0,0,qui,2,11
+2270,800,3 700, Combien d'emploi le parc crée-t-il ? ,4,0.0,0,combien,2,5
+2276,1 079,1000, Combien de bisons sont tués en 2005 ? ,4,0.0,0,combien,1,4
+2288,Poitou-Charentes,"régions Haute-Normandie, Pays de la L", Où les principales scènes du film d'Amalric ont-elles été tournées ? ,4,0.0,0,ou,6,37
+2289,la ligne d'Auteuil,métropolitain, Quel autre moyen de transport est le concurrent direct de ce chemin de fer ? ,4,0.0,0,quel,1,13
+2290,ministre des Travaux publics,Compagnie des chemins de fer du Midi, Qui signe la convention avec le ministre des travaux publics ? ,4,0.0,0,qui,7,36
+2293,Mercure du bassin du commerce,dans un grill de la zone commerciale de Montivilliers, où la scèene du restaurant a-t-elle été tournée ? ,4,0.0,0,ou,9,53
+2298,a composé vers le début du IIIe siècle av.,L'exemple le mieux connu des lettrés de l', Qu'est-ce que Bérose ? ,4,0.0,0,qu'est-ce,8,42
+2306,peuvent être complètement différents,Il y a une grande variété dans la reconnaissance du syndrome, La prise en charge du syndrome est-elle uniforme à travers la planète ou fait-elle l'objet de pratiques différentes ? ,4,0.0,0,Other,11,60
+2339,pour le faire ainsi donner une meilleure base de travail à l,permettant de cacher les séquelles, Pourquoi Wolfgang Peterson doit-il changer d'angle de caméra ? ,4,0.0,0,pourquoi,5,34
+2346,gouvernante,petite-nièce, Quel est le lien entre Mrs Sparsit et Lady Scadgers ? ,4,0.0,0,quel,1,12
+2350,du carrossier normand du XIXe siècle,le trotteur Norfolk puis avec le Pur-sang, De quel croisement est issu le cob normand ? ,4,0.0,0,quel,7,41
+2357,enlever la trace sur sa joue,essaye désespérément d'en enle, Que fait Louisa après le baiser de Bounderby ? ,4,0.0,0,que,4,30
+2358,cimetière communal d'Ivry-sur,la maison de santé d’Ivry, Où est-ce que Sadi finit-il sa vie ? ,4,0.0,0,ou,5,25
+2359,le manège de Harthouse,l'orage, Qu'est-ce qui devient de plus en plus violent ? ,4,0.0,0,qu'est-ce,1,7
+2363,l'avion,personnage de Han Solo, Quel était un ancien rôle de l'acteur Harrison Ford ? ,4,0.0,0,quel,4,22
+2364,embellir la routine et la trivialité de la,récompensés, Que se passe-t-il pour les bons ? ,4,0.0,0,que,1,11
+2368,trois cent mille spectateurs,victoire impossible, comment les spectateurs jugent-ils la victoire de Nuvolari ? ,4,0.0,0,comment,2,19
+2374,des réminiscences évangéliques,l’Évangile selon Matthieu, À quoi fait référence le titre du second chapitre ? ,4,0.0,0,quoi,3,25
+2386,polis et huilés,les pistons des machines, Que représentent les éléphants ? ,4,0.0,0,que,4,24
+2394,chevaux anglais,Ardennais belge, Quelle race donne le cob lorsqu'il est croisé ? ,4,0.0,0,quel,2,15
+2396,tendance de certains journalistes et biographes,la fascination, Que suscite le syndrome d'Asperger dans la société ? ,4,0.0,0,que,2,14
+2407,Hard Times,Stubborn Things, Que est le troisième titre proposé ? ,4,0.0,0,que,2,15
+2408,2 septembre,février, Quand Dickens a-t-il commencé son oeuvre North and South ? ,4,0.0,0,quand,1,7
+2416,son fruit,de Luc," D'où provient le verset ""Car chaque arbre [...] sur des ronces."" ? ",4,0.0,0,d'ou,2,6
+2422,Hal B. Wallis,Howard Koch, Qui succède aux frères Epstein ? ,4,0.0,0,qui,2,11
+2427,Sissy,Mr Gradgrind, Qui est le père de Louisa ? ,4,0.0,0,qui,2,12
+2443,1839,janvier 1854, Quand Dickens part-il visiter les manifestants ? ,4,0.0,0,quand,2,12
+2444,apporter l'indispensable part de rêve,dansent la polka, Que sont capables de faire les chevaux du cirque ? ,4,0.0,0,que,3,16
+2452,"usines du Creusot (bogies), de Tar",Ornans, Où les moteurs des rames ont-ils été conçus ? ,4,0.0,0,ou,1,6
+2456,à l'état de spéculation,en l'absence de preuves plus solides, Pourquoi la théorie reste incertaine ? ,4,0.0,0,pourquoi,6,36
+2457,partie sud-ouest du parc,Golfe du Mexique, Où se jette la Yellowstone ? ,4,0.0,0,ou,3,16
+2468,itlsa,Autrichien, Quelle est la nationalité de Henreid ? ,4,0.0,0,quel,1,10
+2471,Rodolphe,Emma Bovary, À quel autre personnage de roman Louisa est-elle comparée ? ,4,0.0,0,quel,2,11
+2483,Hans Asperger,Tony Attwood," Qui décrit les intérêts restreints dus au syndromes d'asperger comme des ""intérêts spéciaux"" ? ",4,0.0,0,qui,2,12
+2487,racines des arbres,L'abattage d'une partie de la v, Par quoi est fragilisé le canal ? ,4,0.0,0,quoi,6,31
+2488,l'Ancien Testament,La Bible hébraque, Dans quel livre Babylone occupe-t-elle une place importante ? ,4,0.0,0,dans,3,17
+2491,monde mécanique,L'image du feu et de la chaleur, Quelle notion est très présente dans le livre ? ,4,0.0,0,quel,7,31
+2519,dans les ondes,vers les extrémités de l'océan, Où est-ce que le flambeau du monde s'éteint ? ,4,0.0,0,ou,5,30
+2522,explosif,caldeira étendue, Quelle est la forme du volcan du Yellowstone ? ,4,0.0,0,quel,2,16
+2530,a traîné son ennui un peu partout,dandy libertin, Quel est l'attribu donné à Jem ? ,4,0.0,0,quel,2,14
+2532,dressage équestre,"au cinéma, dans les littératures de l'imaginaire", où retrouve le symbole de Pégase dans la culture populaire ? ,4,0.0,0,ou,7,48
+2539,sur la cour supérieure,Tablette de l'Esagil, Où trouve-t-on les dimensions de la troisième cour principale ? ,4,0.0,0,ou,3,20
+2556,réorienter son élevage vers la production de viande,le Cob normand, Que menace la motorisation ? ,4,0.0,0,que,3,14
+2558,elle met les organisateurs allemands dans l',il dépasse Manfred von Brauchitsch sur Mercedes-, par quel retournement de situation Nuvolari obtient-il la victoire ? ,4,0.0,0,quel,7,48
+2565,échappe aux limites du monde connu,Les ailes de Pégase, Quel détail fait de Pégase une créature surnaturelle ? ,4,0.0,0,quel,4,19
+2566,X 1811,à compte d’auteur, Sous quel titre A-J-E Guiraudet Saint-Amé publia-t-il un ouvrage de 118 pages ? ,4,0.0,0,Other,3,17
+2570,soulèvement d’un dôme près du lac Yellow,éruption, Quel phénomène semble impossible d'après le rapport géologique ? ,4,0.0,0,quel,1,8
+2592,son culte,On ignore de quelle façon, Comment le mythe de pégase s'est étendu en Grèce et en Lycie ? ,4,0.0,0,comment,5,25
+2593,auberge Aux Armes de Pégase,En chemin, Où rencontrent-ils Sissy ? ,4,0.0,0,ou,2,9
+2594,narrateur,Diable, À qui est comparé Harthouse ? ,4,0.0,0,qui,1,6
+2601,Alfred Neubauer,Bernd Rosemeyer," Qui termine à la première place, devant Nuvolari, en Italie ? ",4,0.0,0,qui,2,15
+2610,un journaliste allemand,consul d'Italie en Allemagne, Qui se montre inquiet pour la santé de Nuvolari ? ,4,0.0,0,qui,4,28
+2613,l'Avare et le Malotru,rustre celui qui s'entretient avec les esc, Que dépeint Théophraste ? ,4,0.0,0,que,7,42
+2614,soufre,hydrogène, Grâce a quelle matière les bactéries vivent-elles ? ,4,0.0,0,Other,1,9
+2641,Tony Attwood,en raison de leur capacité à masquer délibérément, Qui énonce qu'il est plus difficile de diagnostiquer le syndrome d'Asperger chez les femmes que chez les hommes ? ,4,0.0,0,qui,8,49
+2643,raisonné du moteur thermique,cette genèse se fit alors qu’aucun pré, Pourquoi le travail de Sadi Carnot est-il impressionnant ? ,4,0.0,0,pourquoi,7,38
+2644,tant le roman,Le seul critique moderne, Qu'est-ce qui est à condamner sans appel ? ,4,0.0,0,qu'est-ce,4,24
+2659,Illinois,Ripon College, Où Harrison Ford va-t-il après son lycée ? ,4,0.0,0,ou,2,13
+2660,premier cheval dressé,celui qui applique le mors ou les rênes, Quel est le rôle du mari dans la vision du mariage de Jacques Desautels ? ,4,0.0,0,quel,8,39
+2667,algorithme de priorité tramway,contrôleur de carrefour, Qu'est ce qui permet de synchroniser les feux ? ,4,0.0,0,qu'est,3,23
+2675,35 $,30 $, Combien coûte l'entrée du parc pour une personne en 2-roues ? ,4,0.0,0,combien,2,4
+2676,"bénir l'ouvrage, le convoi e",une procession, Que se passe-t-il après la cérémonie religieuse ? ,4,0.0,0,que,2,14
+2683,un manque de capacités intellectuelles,le résultat d'un stress accru ou du harcèle, Quelle est généralement la cause du décrochage scolaire ? ,4,0.0,0,quel,8,43
+2684,ge,Symbole de sagesse et surtout de, Que représente Pégase au Moyen âge? ,4,0.0,0,que,6,32
+2693,Persan Saadi de Shiraz,Gaspard Monge, Qui fut le professeur du père de Sadi Carnot ? ,4,0.0,0,qui,2,13
+2699,l'un de ses rares rôles de « méchant,Le concept très différent des autres films auxquels il a, Qu'est-ce qui attire Harrison Ford ? ,4,0.0,0,qu'est-ce,10,56
+2704,producteur délégué,un commandant de sous-marin nucléaire russe, Quel rôle Harrison Ford a-t-il ? ,4,0.0,0,quel,6,43
+2714,plusieurs,neuf,  Combien d'œuvres d'arts ont été installées tout au long de la ligne ? ,4,0.0,0,combien,1,4
+2715,la période islamique,parthe, Lors de quelle période Babylone se dépeuple ? ,4,0.0,0,lors,1,6
+2723,Hard Times,Alton Locke, Quel livre Kingsley a-t-il écrit ? ,4,0.0,0,quel,2,11
+2738,vieille ville sacrée de Mésopotamie,lu eu, Comment se traduit Ville neuve en akkadien ? ,4,0.0,0,comment,2,5
+2746,Conseil de Paris,RPR, Dans quelle organisation politique Jean Tiberi s'inscrit-il ? ,4,0.0,0,dans,1,3
+2751,examens complémentaires,Un examen de routine par un médecin généraliste ou un, Comment peuvent-être détectés les symptômes du syndrome d'Asperger ? ,4,0.0,0,comment,10,53
+2755,la demeure de Mr Gradgrind,Coketown, Jusqu'ou Mrs Sparsit conte l'aventure de Louisa ? ,4,0.0,0,Other,1,8
+2757,pianiste Sam,batteur, Quel type de musicien est Dooley Wilson ? ,4,0.0,0,quel,1,7
+2761,à trois jours de la remise des diplômes,prend part aux cours d'art dramatique, Comment Harrison découvre-t-il sa profession ? ,4,0.0,0,comment,6,37
+2769,hausse du nombre de diagnostics,Les aides sociales aux personnes diagnostiquées, Quelles ont été les conséquences de la révision de nombreuses personnes SA bénéficiant de prestations sociales ? ,4,0.0,0,quel,6,47
+2770,20 sols,dimanches, Quel jour de la semaine est payé pour les ouvriers ? ,4,0.0,0,quel,1,9
+2778,Alfa Romeo se retire de la compétition avant même la fin de saison,licencie Vittorio Jano, Quelle décision prend Alfa Roméo quand à son ingénieur en Chef ? ,4,0.0,0,quel,3,22
+2781,le sens d'Eco,défauts, De quoi est rempli le film selon Chauvin ? ,4,0.0,0,quoi,1,7
+2790,emploient peu de gestuelle,déficit spécifique de la reconnaissance des émotions, Pourquoi les personnes asperger regardent peu leur interlocuteur et gardent un visage inexpressif ? ,4,0.0,0,pourquoi,7,52
+2797,en vol,souvent seul à lutter contre la Chimère, Comment Pégase est-il représenté dans l'époque archaïque ? ,4,0.0,0,comment,7,39
+2807,les vagues de la passion,"une lutte contre le plaisir des sens, qui est contraire à la", Que représente le combat contre la Chimère d'après le chanoine ? ,4,0.0,0,que,12,60
+2808,la cavale,aux régions inconnues du savoir, à quoi mène Pégase ? ,4,0.0,0,quoi,5,31
+2825,harcèlement moral continu,tendance à refouler leurs sentiments et, Quelle tendance des Asperger peut les faire échouer dans leurs tentatives d'intégration sociale ? ,4,0.0,0,quel,6,39
+2829,13 bandes,326, Combien y avait-il de loup en 2005 ? ,4,0.0,0,combien,1,3
+2830,président du Conseil régional d'Île-de-France,élus locaux, Qui formet l'organisation Île-de-France mobilités ? ,4,0.0,0,qui,2,11
+2835,sites de la Mésopotamie antique,assyriens, Par quels sites commencent les explorations ? ,4,0.0,0,quel,1,9
+2846,"Personnification de l'eau, mythe solaire, mon",son lien avec l'imagination humaine, Que met en valeur les travaux de Carl Gustav Jung ? ,4,0.0,0,que,5,35
+2851,Merkes,Voie processionnelle, Quelle voie se situe à l'ouest du seul quartier d'habitation fouillé ? ,4,0.0,0,quel,2,20
+2863,Louis XIV,archevêque de Toulouse, Qui est Mgr d'Anglure ? ,4,0.0,0,qui,3,22
+2868,Indiana Jones,Josh Hartnett, Avec qui Harrison Ford joue-t-il un policier ? ,4,0.0,0,avec,2,13
+2871,Bellérophon,Pégase, Qui est le cheval de Flamme ? ,4,0.0,0,qui,1,6
+2895,539-331 av. J.-C.,539, Quand commence la période achéménide ? ,4,0.0,0,quand,1,3
+2906,dans le sud de l'Irak,British Museum, Où est exposé le cylindre de Cyrus ? ,4,0.0,0,ou,2,14
+2911,jument psychopompe ailée à tête de,éclair), Que signifie Bouraq ? ,4,0.0,0,que,1,7
+2919,irlandais,allemande, Quelle est l'origine de la grand-mère paternelle de Harrison Ford ? ,4,0.0,0,quel,1,9
+2924,un accident de voiture,perd le contrôle de son véhicule et percute un pot, Quel accident a-t-il ? ,4,0.0,0,quel,10,50
+2930,mystérieux et libéral,bon côté, De quel coté est Bogart ? ,4,0.0,0,quel,2,8
+2939,plus remarquable,rapide, Comment qualifier l'ascension de Babylone dans l'histoire de la Mésopotamie ? ,4,0.0,0,comment,1,6
+2942,inscriptions de fondation et les noms d,un nouveau mur d'enceinte, Qu'a construit le premier roi de la dynastie ? ,4,0.0,0,Other,4,25
+2947,1993,1995, Quand le projet de tramway est-il mis à l'étude ? ,4,0.0,0,quand,1,4
+2952,coche,mouche, À quel animal fait penser le nom de Bitzer ? ,4,0.0,0,quel,1,6
+2953,Sartor Resartus,Thomas Carlyle, Qui a inspiré Dickens pour l'écriture de son roman ? ,4,0.0,0,qui,2,14
+2978,malmené,Nuvolari sort de la route, Pourquoi l'officier sermonne-t-il Nuvolari ? ,4,0.0,0,pourquoi,5,25
+2984,son lot ici-bas,continuera à travailler, Qu'arrive-t-il à Rachel ? ,4,0.0,0,Other,3,23
+2992,infantile,chez des Asperger, Quel type d'autisme est principalement touché par la maladresse ? ,4,0.0,0,quel,3,17
+2993,un quartier résidentiel,complexe religieux, Qu'est ce qui se trouve à l'ouest du site de Merkes ? ,4,0.0,0,qu'est,2,18
+3006,une île de l'Atlantique,les inimitiés et rancurs qui, Que Zand a-t-il omis avant d'arriver à Paris ? ,4,0.0,0,que,5,28
+3013,Ivry,boulevard Masséna, Quel axe routier suit la ligne lorsqu'elle s'arrête à la porte de Choisy ? ,4,0.0,0,quel,2,17
+3024,iconographique,très peu innovants, Quel est le point de vue des critiques d'art sur les deux panneaux latéraux ? ,4,0.0,0,quel,3,18
+3026,Josiah Bounderby,Mrs Sparsit, Qui a un excès de zèle ? ,4,0.0,0,qui,2,11
+3030,plus de 600,500, Combien y-avait-il de grizzly dans le parc au maximum? ,4,0.0,0,combien,1,3
+3031,Cassavetes,"les films américains des années 1970, et ceux de Ca", Quels films inspirent Joachim Zand ? ,4,0.0,0,quel,10,51
+3034,une sorte d'ange tutélaire,une présence lumineuse, Qu'est-elle pour Stephen ? ,4,0.0,0,Other,3,22
+3036,une description précise des modalités,divorce, Qu'est ce que conseil Mrs Sparsit ? ,4,0.0,0,qu'est,1,7
+3039,28 km/h,17 000 voyageurs par heure, Quel est le débit de la ligne dans la variante Petite Ceinture ? ,4,0.0,0,quel,5,26
+3043,Persan Saadi de Shiraz,Lazare Carnot, Qui est le père de Sadi Carnot ? ,4,0.0,0,qui,2,13
+3046,dans de nombreux lieux du monde antique et sur plusieurs siècles,"en Lycie (actuelle Turquie), à A", ou retrouve-t-on des représentations du mythe durant l'époque grecque ? ,4,0.0,0,ou,6,32
+3048,"Albert Einstein, Isaac Newton, Charles Darwin, William Butler Yeat",Mark Zuckerberg (Facebook) et Bill Gates, Quelles personnalités pourraient être atteintes d'Asperger selon certains journalistes américains ? ,4,0.0,0,quel,6,40
+3053,mer Méditerranée et l'At,Atlantique, Quel est l'océan qui serait relié par le canal du Midi ? ,4,0.0,0,quel,1,10
+3057,Eucalyptus phoenicea,les Xanthorrhoea et, Quel arbre fournit le nectar aux méliphages ? ,4,0.0,0,quel,3,19
+3062,époque achéménide,crues, Lors de quelles périodes l'Euphrate devient-il menaçant ? ,4,0.0,0,lors,1,5
+3074,mygdale,Le dysfonctionnement de l'amygdale, Quel dysfonctionnement d'organe semble impliqué dans le manque de théorie de l'esprit des personnes Asperger ? ,4,0.0,0,quel,4,34
+3080,harcèlement scolaire,Leur besoin fréquent de réfléchir avant de répondre dans les contexte," Quel comportement n'est pas apprécié par les autres enfants au point que ceux-ci peuvent considérer un enfant Asperger comme pédant, formel ou intellectuellement retardé ? ",4,0.0,0,quel,11,69
+3087,février,juillet, Quand le Méliphage finit-il de muer ? ,4,0.0,0,quand,1,7
+3106,richesses et pauvres,une société très hiérarchisée, Que met en avant la différence de taille entre les résidences ? ,4,0.0,0,que,4,29
+3111,Samsu-ditana,un raid sur Babylone, Que réussit Mursili en 1595 av. J.-C. ? ,4,0.0,0,que,4,20
+3119,faste et de civilisation,Sept Merveilles du monde, De quoi font partis les jardins suspendus de Babylone ? ,4,0.0,0,quoi,4,24
+3136,tas,aucune, Quelles formations possède Riquet ? ,4,0.0,0,quel,1,6
+3141,antipsychotiques atypiques rispéridone,Il n'existe aucun médicament, Quels sont les médicaments permettant de traiter le syndrome de base du SA ? ,4,0.0,0,quel,4,28
+3146,deux ans et demi de travaux,vingt-cinq millions, Quel est le débit annuel de la ligne ? ,4,0.0,0,quel,2,19
+3156,au music-hall de Colette,sur différentes scènes nationales et internationales, Où Amalric assiste-t-il à des shows de cabaret New Burlesque ? ,4,0.0,0,ou,6,52
+3161,dinosaures (chez les garçons) et les,Les enfants Asperger, Quels enfant sont sensibilisés à la cause animale ? ,4,0.0,0,quel,3,20
+3171,Du fait de ces limitations,Peu diplomates et peu persuas, Pourquoi les Asperger éprouvent des difficultés à résoudre des conflits ? ,4,0.0,0,pourquoi,5,29
+3173,la plus complète définition qu'ait jamais donnée Dickens,mal social dans son ensemble, Que décrit le discours de Dickens d'après Sylvère Monod ? ,4,0.0,0,que,5,28
+3180,cette méthode se révélant a priori non-viable,vaccination, Quelle méthode propose l'APHIS pour qu'il n'y plus la maladie ? ,4,0.0,0,quel,1,11
+3183,K.DINGIR,Shar-kali-sharri, Quel est le nom du roi de l'empire d'Akkad ? ,4,0.0,0,quel,1,16
+3184,l'écluse de Prades,gauche, Sur quelle rive est située la prise d'eau d'Agde ? ,4,0.0,0,quel,1,6

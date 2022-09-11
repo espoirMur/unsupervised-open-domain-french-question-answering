@@ -9,6 +9,7 @@ import re
 import string
 from typing import Dict, Optional, List
 import pandas as pd
+from gensim.utils import deaccent
 
 
 def normalize_answer(s):
@@ -27,7 +28,8 @@ def normalize_answer(s):
 
     def lower(text):
         return text.lower()
-    string_lower = lower(s)
+    string_without_accent = deaccent(s)
+    string_lower = lower(string_without_accent)
     string_without_articles = remove_articles(string_lower)
     string_without_punctuation = remove_punc(string_without_articles)
     string_without_whitespace = white_space_fix(string_without_punctuation)

@@ -1,0 +1,72 @@
+Start Time,Duration,Run ID,Name,Source Type,Source Name,User,Status,betas,correct_bias,epochs,eps,lr,min_delta,mode,monitor,optimizer_name,patience,stopped_epoch,weight_decay,exact_matches,f1_score,train_loss,Mode
+2022-08-10 19:25:23,13.7min,206f95da5fc44e468115d6d9ad26634b,one-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,32.111412048339844,50.83681106567383,,testing
+2022-08-10 19:24:50,6.5s,ddca64348370483e8fd45f3ba6034ede,one-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-10 18:58:17,14.3min,bc9dce06cd554b06b27e65ae86921d78,two-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,es.py,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,32.991912841796875,50.83605194091797,,testing
+2022-08-10 18:57:37,16.8s,120035f7bd33461ea604a830e77c98b3,two-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,es.py,FINISHED,"(0.9, 0.999)",True,3,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-10 18:56:35,31.1s,049f10da144c4db19043ceda2155a197,two-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,es.py,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-10 18:35:28,19.6min,75d0889991814ae1868565e63328bbdb,four-paragraph-train-fquad+piaf_test,LOCAL,trainer_qa.py,es.py,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,33.74663162231445,51.299564361572266,,testing
+2022-08-09 08:10:21,20.0h,39727788efc14ed7ae5010ea32390788,four-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,es.py,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,58.56336212158203,76.14044189453125,0.005340974312275648,testing
+2022-08-08 20:42:18,13.9min,153fa1a80f094eb3b2cb73f93c3c5460,train-on-squad-with-piaf-test-piaf-additional,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,32.111412048339844,50.83681106567383,,testing
+2022-08-08 20:23:18,10.2h,9e17c255a9274e55ad4c15bd71f175aa,two-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,es.py,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,55.42660140991211,73.86442565917969,0.004622419364750385,testing
+2022-08-08 11:12:36,9.0h,24b265f4320a4f5397b5047a881b8994,one-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,mb21687,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,57.120452880859375,74.94600677490234,0.013977378606796265,testing
+2022-08-08 11:08:54,1.9s,de61a1e6454d4a6e9f97ce160535e644,one-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-08 11:07:37,1.9s,535c966db9044bb793d4969864b6660a,one-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-05 15:08:34,39.9s,d3f4167b288946b9ae2de86940f26dff,one-paragraph-train-fquad+piaf,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-05 13:19:35,13.5min,1d3e5f5922184cb3b5311a5cf3a08a59,one-paragraph-piaf-multi-context,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,27.74483299255371,45.60445785522461,,testing
+2022-08-05 13:04:28,9.6min,5ba0e4fdd06549b1887e7b519d1eb128,one-pragraph-piaf-with-context,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,38.956974029541016,55.87486267089844,,testing
+2022-08-05 12:44:44,13.6min,4b73c411c2b54ec2a0ed5c0eef81bb32,one-paragraph-piaf-bm25,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,27.74483299255371,45.60445785522461,,testing
+2022-08-05 12:35:48,7.9min,d9e98034c5d54c9db78723c8a346d401,one-prarragrah-fquad-bm25,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,54.67377853393555,72.96392822265625,,testing
+2022-08-05 12:17:22,8.0min,cec78ff798424f0b917087aa9941f1a5,one-paragraph-fquad-valid,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,54.67377853393555,72.96392822265625,,testing
+2022-08-05 12:09:23,5.0min,b0c539dd22b040e39ef50cc7d53a8cf6,one-pragraph-valid-fquad,LOCAL,trainer_qa.py,mb21687,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-04 19:37:17,9.4min,855c8cc1b500436abf96cec580e97466,two-paragraph-piaf-base-questions,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,86.57105255126953,91.42613220214844,,testing
+2022-08-04 19:17:24,9.4min,7bcb6c1f7ae741d4bc3e4afd6dbe7704,two-paragraph-piaf-base-questions,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,86.57105255126953,91.42613220214844,,testing
+2022-08-04 18:52:02,13.7min,238143b09a0b4564a034a58b8ca1e3fb,two-paragraph-piaf-additional-questions,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,35.48966598510742,53.66748809814453,,testing
+2022-08-04 18:42:51,7.9min,9186e3d022704eb4b8ea7578eff63450,two-paragraph-fquad-with-multi-contexts-with-exact-answers,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.6850700378418,75.61459350585938,,testing
+2022-08-04 18:35:14,7.3min,2d0541431f924ac7894f475907f2ceff,two-paragraph-fquad-with-multi-contexts-with-exact-answers,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 18:24:51,8.4min,7c7bb390624649229f5d81f422944283,two-paragraph-fquad-with-multi-contexts,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.120452880859375,75.00089263916016,,testing
+2022-08-04 17:35:29,13.7min,531dfca9eb444e83b690a7edfedfb917,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,27.74483299255371,45.60445785522461,,testing
+2022-08-04 17:32:32,10.0s,65fc59e26bcb4276a9ff05a75f875e6e,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 17:21:31,8.0min,94931878eea74d92a569aca1b1fadf73,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,54.67377853393555,72.96392822265625,,testing
+2022-08-04 17:08:47,9.7min,b7539d9586b04cfab93f66215b05cf80,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,38.956974029541016,55.87486267089844,,testing
+2022-08-04 16:53:12,13.5min,0077d1f0eca84dbeb53ad96e23b93751,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,27.74483299255371,45.60445785522461,,testing
+2022-08-04 16:38:43,8.0min,1944ee35cc2c4ffaa7fc2dbfe507767b,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,54.67377853393555,72.96392822265625,,testing
+2022-08-04 16:28:43,7.7min,b028355c917d4b6eaa0a340236a3e9a8,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,54.67377853393555,72.96392822265625,,testing
+2022-08-04 16:27:52,20.8s,1f8cfec754834d858a9a898321eeb09f,,LOCAL,trainer_qa.py,mb21687,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-04 16:25:19,13.4s,4852170761a547c4a12476e6237ff6a2,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-04 16:23:36,13.8s,a11384bfeb6d4eb9a2991cdd7d2fcb5f,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-08-04 16:05:19,18.7s,03ffbe86b5974fe596db521220a3b455,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,17.14285659790039,21.346939086914062,,testing
+2022-08-04 15:38:01,13.8min,59d9eccea9ac4ebe91f2b98176b252fc,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,35.48966598510742,53.66748809814453,,testing
+2022-08-04 15:26:36,7.9min,6d7b2501adba439587d16d9be93d2351,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.6850700378418,75.61459350585938,,testing
+2022-08-04 15:14:07,8.4min,c8107de27ec0462fbf8dd1615bc40d9c,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.120452880859375,75.00089263916016,,testing
+2022-08-04 14:59:14,8.4min,20b6202790074f24aef533f35e29f858,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 14:50:20,8.4min,315f3248fda24f42b5e4a3f40ac35757,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 14:38:09,8.4min,b3240924a79b4275a693b65c377f694a,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.120452880859375,75.00089263916016,,testing
+2022-08-04 14:23:47,5.6min,42ed24db232f4eba8ae735860fc23027,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 14:03:39,19.9min,ef01d83ed6e64032810d92b9686d557f,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 13:44:01,13.8min,7f59edbc37e94903b06a7563d534038d,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,35.48966598510742,53.66748809814453,,testing
+2022-08-04 13:20:45,12.3s,4295ad22d15647b49868f2cb1c01bcb4,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-08-04 12:46:48,9.7min,c0a42a2ed971491d8828232a5eeb21a0,,LOCAL,trainer_qa.py,es.py,FINISHED,,,,,,-0.0,min,train_loss,,3,0,,57.120452880859375,75.00089263916016,,testing
+2022-08-04 12:36:12,9.8min,1781c76915ae484cb3e32ee34f764d6c,,LOCAL,trainer_qa.py,es.py,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-28 14:22:12,10.9h,0f8323b94abf49d98c2af77c9eaa91d7,,LOCAL,trainer_qa.py,es.py,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,57.120452880859375,75.00089263916016,0.002232889411970973,testing
+2022-07-28 13:59:05,,576d3e3a0ede4da7aa8a8874138842b7,,LOCAL,trainer_qa.py,mb21687,RUNNING,"(0.9, 0.999)",True,10,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-28 13:54:46,7.7s,39144efdc177499f8b4f01928414e03f,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-28 13:54:02,6.7s,75d477b1997943ceaa902b82af957cd2,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-28 13:52:57,15.5s,422e3385085d435da95f85c23e4ac40b,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,10,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-28 13:00:43,11.9min,984a0431c5254d96a66b95314c3cb459,,LOCAL,trainer_qa.py,mb21687,FINISHED,,,,,,,,,,,,,,,,
+2022-07-28 12:59:52,25.7s,8b3b12e1db4041dcb95ba6883f5ecfed,,LOCAL,trainer_qa.py,mb21687,FINISHED,"(0.9, 0.999)",True,10,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 15:03:22,7.8h,2323e0c341ba4053a0da561481d72fde,,LOCAL,trainer_qa.py,mb21687,FINISHED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,52.854454040527344,70.7522201538086,0.11582013219594955,testing
+2022-07-27 15:02:54,7.7s,494f597085d1461b98b2edd28629fe39,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 15:00:59,5.3s,18a792a885964bc2b22e95b1441a2276,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:59:21,7.8s,e5c421b6d51b4a1e98ee23925573870a,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 14:58:35,8.4s,cb53acf731444b9482e5db4828fc3966,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 14:56:42,8.3s,3731c35877844c9d8a3a2d756a568105,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 14:54:59,5.1s,c38d91df817c41869db539fec7bfddca,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:54:13,7.4s,aa21b6913767424e9b96b857616e390a,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 14:48:25,7.3s,8c775416a63e43ae850ddde0706a8e53,,LOCAL,trainer_qa.py,mb21687,FAILED,"(0.9, 0.999)",True,5,1e-06,0.0001,-0.0,min,train_loss,AdamW,3,0,0.0,,,,training
+2022-07-27 14:46:42,1.9s,23b78e03bc904df7a9e2f8c3fea6c28e,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:45:58,1.9s,8f791b6675c048adba77c03c36e8b6da,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:44:56,1.9s,c515756dfe4d442f9bbf8bb629ef2c91,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:40:15,1.9s,9ab86eb4f57f43d9a256ffd7dead9d35,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:33:03,1.9s,804bc58e2c274dbdb02f8a229bf0b5fd,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:31:35,1.9s,1c6ef49c07ce49ba9e36fb3d56cc180b,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
+2022-07-27 14:30:28,1.9s,9cb775db8c464f52b0e6d75c285c8a79,,LOCAL,trainer_qa.py,mb21687,FAILED,,,,,,-0.0,min,train_loss,,3,0,,,,,
